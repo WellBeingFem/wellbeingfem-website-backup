@@ -33,15 +33,17 @@ const navigation: NavigationItem[] = [
       { label: "Members' Library", href: "/guided-meditations/members-library" },
     ],
   },
+  { label: "Resources", href: "/resources" },
   {
     label: "Research",
+    href: "/research",
     children: [
-      { label: "ONDAMED", href: "/research/ondamed" },
-      { label: "Healy", href: "/research/healy" },
-      { label: "Guided Meditations", href: "/research/guided-meditations" },
+      { label: "ONDAMED", href: "/research#ondamed" },
+      { label: "Healy", href: "/research#healy" },
+      { label: "Guided Meditations", href: "/research#guided-meditations" },
     ],
   },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact", href: "/research#contact" },
 ];
 
 export default function SiteHeader() {
@@ -75,14 +77,21 @@ export default function SiteHeader() {
               <li className="desktop-menu-item" key={item.label}>
                 {item.children ? (
                   <>
-                    <button
-                      className="desktop-menu-trigger"
-                      type="button"
-                      aria-haspopup="true"
-                    >
-                      <span>{item.label}</span>
-                      <ChevronDown aria-hidden="true" size={14} strokeWidth={1.5} />
-                    </button>
+                    {item.href ? (
+                      <a className="desktop-menu-trigger" href={item.href} aria-haspopup="true">
+                        <span>{item.label}</span>
+                        <ChevronDown aria-hidden="true" size={14} strokeWidth={1.5} />
+                      </a>
+                    ) : (
+                      <button
+                        className="desktop-menu-trigger"
+                        type="button"
+                        aria-haspopup="true"
+                      >
+                        <span>{item.label}</span>
+                        <ChevronDown aria-hidden="true" size={14} strokeWidth={1.5} />
+                      </button>
+                    )}
                     <ul className="desktop-submenu" aria-label={`${item.label} submenu`}>
                       {item.children.map((child) => (
                         <li key={child.label}>
@@ -129,7 +138,13 @@ export default function SiteHeader() {
               {item.children ? (
                 <details className="mobile-submenu">
                   <summary>
-                    <span>{item.label}</span>
+                    {item.href ? (
+                      <a href={item.href} onClick={(event) => event.stopPropagation()}>
+                        {item.label}
+                      </a>
+                    ) : (
+                      <span>{item.label}</span>
+                    )}
                     <ChevronDown aria-hidden="true" size={16} strokeWidth={1.5} />
                   </summary>
                   <ul>

@@ -3,6 +3,7 @@
  * It must remain complete, unedited, uncropped, and free of extra visible overlays.
  */
 import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 
 const HERO_URL = "/manus-storage/NewHeroAug13_e95140e6.png";
 const DESKTOP_HERO_URL = "/manus-storage/DeaktopHeroWBF_921006d2.png";
@@ -25,7 +26,7 @@ export default function Home() {
             </picture>
             <a
               className="hero-booking-link"
-              href="/research"
+              href="/research#contact"
               aria-label="Open the Research page for the Contact and Booking Form"
             >
               <span className="visually-hidden">
@@ -35,6 +36,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <SiteFooter />
     </div>
   );
 }

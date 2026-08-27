@@ -1,5 +1,11 @@
 # Hero-Only Correction Checklist
 
+- [x] Add Resources in the specified main-navigation position and connect `/resources`.
+- [x] Create the branded Resources page structure with only its approved heading.
+- [x] Create the structured Research page with contact, ONDAMED, Healy, and Guided Meditations anchors.
+- [x] Connect Research submenu anchors, Contact navigation, and the hero overlay to the Contact Form anchor.
+- [x] Add the responsive sage-green footer using the supplied logo and the approved navigation links.
+- [x] Verify every route and hash anchor while preserving the header and responsive hero behavior.
 - [x] Upload the supplied wide desktop hero into private project storage.
 - [x] Use the supplied wide hero only above 1024px, preserving the original hero at tablet and mobile widths.
 - [x] Realign the single transparent Research link to the embedded button position in each hero asset.
