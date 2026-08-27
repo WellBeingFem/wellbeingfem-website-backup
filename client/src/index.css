@@ -486,6 +486,11 @@
   transform: scale(0.98);
 }
 
+.service-card-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.76;
+}
+
 .homepage-contact-cta {
   display: flex;
   justify-content: center;
@@ -534,6 +539,21 @@
   margin-top: 55px;
   padding-top: 24px;
   border-top: 1px solid color-mix(in srgb, var(--wbf-gold) 48%, transparent);
+}
+
+.homepage-philosophy p {
+  margin: 17px auto 0;
+  color: var(--wbf-green);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(16px, 1.5vw, 19px);
+  line-height: 1.58;
+}
+
+.homepage-philosophy__closing {
+  margin-top: 29px !important;
+  color: var(--wbf-gold) !important;
+  font-size: clamp(17px, 1.65vw, 20px) !important;
+  letter-spacing: 0.08em;
 }
 
 @media (max-width: 1160px) and (min-width: 721px) {

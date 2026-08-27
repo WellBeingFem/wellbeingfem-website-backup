@@ -55,7 +55,9 @@ export default function Home() {
                 <p className="service-card__subheading">In-person sessions in Dublin</p>
                 <p>Personalised ONDAMED PEMF sessions supporting relaxation, balance and wellbeing.</p>
                 <div className="service-card__fees" aria-label="ONDAMED fees">
-                  <p>€120 per session</p>
+                  <p>In-person session</p>
+                  <p>Duration: Approx. 60 minutes</p>
+                  <p>Fee: €120</p>
                   <p>Course of three sessions: €300</p>
                 </div>
                 <div className="service-card__actions">
@@ -74,8 +76,10 @@ export default function Home() {
                 <p className="service-card__subheading">Remote sessions via Zoom or WhatsApp</p>
                 <p>Personalised frequency sessions that can be experienced remotely in the comfort of your own space.</p>
                 <div className="service-card__fees" aria-label="Healy fees">
-                  <p>€80 per Healy session</p>
-                  <p>€90 for Healy Reiki</p>
+                  <p>Remote session</p>
+                  <p>Duration: Approx. 60 minutes</p>
+                  <p>Healy session: €80</p>
+                  <p>Healy Reiki session: €90</p>
                 </div>
                 <div className="service-card__actions">
                   <a className="service-card-button" href="/research#healy">Learn More</a>
@@ -91,9 +95,9 @@ export default function Home() {
               <div className="service-card__body">
                 <h2>Guided Meditations</h2>
                 <p className="service-card__subheading">Free Guided Meditations</p>
-                <p>Explore guided meditation journeys and wellbeing practices through the WellBeingFem YouTube Channel.</p>
+                <p>Explore guided meditation journeys and wellbeing practices through the Imagine Well YouTube Channel.</p>
                 <div className="service-card__actions service-card__actions--single">
-                  <a className="service-card-button" href="https://www.youtube.com/@wellbeingfem" target="_blank" rel="noreferrer">Visit WellBeingFem on YouTube</a>
+                  <button className="service-card-button" type="button" disabled title="Imagine Well YouTube destination to be supplied">Visit Imagine Well on YouTube</button>
                 </div>
               </div>
             </article>
@@ -111,6 +115,10 @@ export default function Home() {
 
           <section className="homepage-philosophy" aria-labelledby="philosophy-heading">
             <h2 id="philosophy-heading">Our Philosophy</h2>
+            <p>At WellBeingFem, we believe wellbeing begins by creating space to rest, reflect and renew every day.</p>
+            <p>Through guided meditations, personalised wellbeing sessions, educational resources and reflective practices, we support women in developing lasting habits that nurture wellbeing in everyday life.</p>
+            <p>Our aim is not simply to offer individual sessions, but to create a supportive wellbeing journey that encourages learning, self-awareness and personal reflection long after each session has ended.</p>
+            <p className="homepage-philosophy__closing">Rest • Reflect • Renew</p>
           </section>
         </section>
       </main>
