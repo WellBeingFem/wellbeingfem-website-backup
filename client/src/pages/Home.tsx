@@ -5,6 +5,7 @@
 import SiteHeader from "@/components/SiteHeader";
 
 const HERO_URL = "/manus-storage/NewHeroAug13_e95140e6.png";
+const DESKTOP_HERO_URL = "/manus-storage/DeaktopHeroWBF_921006d2.png";
 
 export default function Home() {
   return (
@@ -13,12 +14,15 @@ export default function Home() {
       <main>
         <section className="hero-image-container" aria-label="WellBeingFem ONDAMED PEMF">
           <div className="hero-media">
-            <img
-              src={HERO_URL}
-              alt="ONDAMED PEMF Healy Frequency Sessions for Women, with a Contact WellBeingFem button"
-              width="1448"
-              height="1086"
-            />
+            <picture className="hero-picture">
+              <source media="(min-width: 1025px)" srcSet={DESKTOP_HERO_URL} />
+              <img
+                src={HERO_URL}
+                alt="ONDAMED PEMF Healy Frequency Sessions for Women, with a Contact WellBeingFem button"
+                width="1448"
+                height="1086"
+              />
+            </picture>
             <a
               className="hero-booking-link"
               href="/research"

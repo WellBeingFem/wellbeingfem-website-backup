@@ -1,5 +1,9 @@
 # Hero-Only Correction Checklist
 
+- [x] Upload the supplied wide desktop hero into private project storage.
+- [x] Use the supplied wide hero only above 1024px, preserving the original hero at tablet and mobile widths.
+- [x] Realign the single transparent Research link to the embedded button position in each hero asset.
+- [x] Verify that no existing content beneath the hero is removed or changed.
 - [x] Change only the desktop hero maximum height from 650px to the user-approved 720px.
 - [x] Remove any unnecessary gap above the homepage hero.
 - [x] Increase desktop and tablet hero width to reduce cream side borders without cropping or distortion.
