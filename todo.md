@@ -1,5 +1,9 @@
 # Hero-Only Correction Checklist
 
+- [x] Confirm the Client Experiences placement directly after the philosophy closing line while Women’s Wisdom is absent.
+- [x] Add six reusable no-testimonial carousel cards directly after the philosophy closing line.
+- [x] Preserve More/Less support and build lightweight desktop, tablet, and touch-swipe mobile carousel behavior.
+- [x] Verify placement, no fabricated client content, card counts, and responsive carousel behavior in the private draft.
 - [x] Equalize the three card introductory-content heights above the gold practical-information divider on desktop only.
 - [x] Preserve all card content, image, control, colour, width, and lower-area positions while allowing tablet/mobile layout to remain natural.
 - [x] Verify perfectly aligned desktop dividers and unchanged tablet/mobile behavior in the private draft.

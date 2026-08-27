@@ -4,12 +4,33 @@
  */
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const HERO_URL = "/manus-storage/NewHeroAug13_e95140e6.png";
 const DESKTOP_HERO_URL = "/manus-storage/DeaktopHeroWBF_921006d2.png";
 const ONDAMED_IMAGE_URL = "/manus-storage/ondamedwlogo_d68ec81a.png";
 const HEALY_IMAGE_URL = "/manus-storage/Healyandphone_52ac329b.png";
 const GUIDED_MEDITATIONS_IMAGE_URL = "/manus-storage/06_WBF_QR_YouTube_Channel_d57f9130.png";
+
+const clientExperienceCards = [
+  "Healy Wellbeing",
+  "Healy Aura Analysis",
+  "Healy I Ching",
+  "ONDAMED PEMF",
+  "ONDAMED PEMF",
+  "ONDAMED PEMF",
+];
+
+const clientExperiencePreview =
+  "A genuine client experience will be added here after client approval.";
+const clientExperiencePlaceholder =
+  "A genuine client experience will be added here after it has been supplied by the client, verified as approved for publication, and restored as part of this private recovery draft.";
 
 export default function Home() {
   return (
@@ -130,6 +151,35 @@ export default function Home() {
             <p>Through guided meditations, personalised wellbeing sessions, educational resources and reflective practices, we support women in developing lasting habits that nurture wellbeing in everyday life.</p>
             <p>Our aim is not simply to offer individual sessions, but to create a supportive wellbeing journey that encourages learning, self-awareness and personal reflection long after each session has ended.</p>
             <p className="homepage-philosophy__closing">Rest • Reflect • Renew</p>
+          </section>
+
+          <section className="client-experiences" aria-labelledby="client-experiences-heading">
+            <header className="client-experiences__heading">
+              <div className="homepage-gold-divider" aria-hidden="true" />
+              <h2 id="client-experiences-heading">Client Experiences</h2>
+            </header>
+            <Carousel className="client-experiences__carousel" opts={{ align: "start", loop: false }}>
+              <CarouselContent>
+                {clientExperienceCards.map((serviceTitle, index) => (
+                  <CarouselItem className="client-experiences__slide" key={`${serviceTitle}-${index}`}>
+                    <article className="client-experience-card">
+                      <h3>{serviceTitle}</h3>
+                      <details className="client-experience-card__details">
+                        <summary aria-label={`Show more placeholder content for ${serviceTitle}`}>
+                          <span className="client-experience-card__preview">{clientExperiencePreview}</span>
+                          <span className="client-experience-card__more">More</span>
+                          <span className="client-experience-card__less">Less</span>
+                        </summary>
+                        <p>{clientExperiencePlaceholder}</p>
+                      </details>
+                      <p className="client-experience-card__name">Client name to be supplied</p>
+                    </article>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="client-experiences__previous" />
+              <CarouselNext className="client-experiences__next" />
+            </Carousel>
           </section>
         </section>
       </main>
