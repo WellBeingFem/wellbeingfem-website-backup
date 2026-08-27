@@ -1,5 +1,9 @@
 # Hero-Only Correction Checklist
 
+- [x] Keep both compact policy cards visible while rendering the selected complete policy in one full-width panel beneath them.
+- [x] Make Privacy and Terms expansion mutually exclusive and preserve all approved policy wording unchanged.
+- [x] Increase the policy-section scroll offset so its heading remains visible below navigation.
+- [x] Reverify footer Policies, Contact, and Research targets plus desktop, tablet, and mobile policy behavior.
 - [x] Extract the two complete approved policy documents without changing any legal wording or dates.
 - [x] Replace only the existing Privacy/GDPR and Terms card placeholders with their respective complete approved text.
 - [x] Preserve More/Less behavior and keep policy, Contact, and Research destinations distinct.

@@ -5,12 +5,26 @@
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { PrivacyPolicyDocument, TermsAndConditionsDocument } from "@/components/PolicyDocuments";
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 
 export default function Research() {
   const [submissionNotice, setSubmissionNotice] = useState("");
-  const [privacyExpanded, setPrivacyExpanded] = useState(false);
-  const [gdprExpanded, setGdprExpanded] = useState(false);
+  const [expandedPolicy, setExpandedPolicy] = useState<"privacy" | "terms" | null>(null);
+
+  useEffect(() => {
+    const scrollToCurrentAnchor = () => {
+      const targetId = window.location.hash.slice(1);
+      if (!targetId) return;
+
+      window.requestAnimationFrame(() => {
+        document.getElementById(targetId)?.scrollIntoView({ block: "start" });
+      });
+    };
+
+    scrollToCurrentAnchor();
+    window.addEventListener("hashchange", scrollToCurrentAnchor);
+    return () => window.removeEventListener("hashchange", scrollToCurrentAnchor);
+  }, []);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -135,36 +149,34 @@ export default function Research() {
                 <button
                   className="policy-card-toggle"
                   type="button"
-                  aria-expanded={privacyExpanded}
+                  aria-expanded={expandedPolicy === "privacy"}
                   aria-controls="privacy-policy-content"
-                  onClick={() => setPrivacyExpanded((expanded) => !expanded)}
+                  onClick={() => setExpandedPolicy((current) => current === "privacy" ? null : "privacy")}
                 >
-                  {privacyExpanded ? "Less" : "More"}
+                  {expandedPolicy === "privacy" ? "Less" : "More"}
                 </button>
-                {privacyExpanded ? (
-                  <div id="privacy-policy-content" className="policy-card-content">
-                    <PrivacyPolicyDocument />
-                  </div>
-                ) : null}
               </article>
               <article className="policy-card">
                 <h3>Terms &amp; Conditions</h3>
                 <button
                   className="policy-card-toggle"
                   type="button"
-                  aria-expanded={gdprExpanded}
-                  aria-controls="gdpr-policy-content"
-                  onClick={() => setGdprExpanded((expanded) => !expanded)}
+                  aria-expanded={expandedPolicy === "terms"}
+                  aria-controls="terms-conditions-content"
+                  onClick={() => setExpandedPolicy((current) => current === "terms" ? null : "terms")}
                 >
-                  {gdprExpanded ? "Less" : "More"}
+                  {expandedPolicy === "terms" ? "Less" : "More"}
                 </button>
-                {gdprExpanded ? (
-                  <div id="gdpr-policy-content" className="policy-card-content">
-                    <TermsAndConditionsDocument />
-                  </div>
-                ) : null}
               </article>
             </div>
+            {expandedPolicy ? (
+              <div
+                id={expandedPolicy === "privacy" ? "privacy-policy-content" : "terms-conditions-content"}
+                className="policy-expanded-panel"
+              >
+                {expandedPolicy === "privacy" ? <PrivacyPolicyDocument /> : <TermsAndConditionsDocument />}
+              </div>
+            ) : null}
           </section>
 
           <div id="research-content" className="research-content-anchor">

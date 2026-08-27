@@ -577,7 +577,7 @@
 
 .policies-client-information {
   margin-top: 68px;
-  scroll-margin-top: 24px;
+  scroll-margin-top: 120px;
 }
 
 .policies-client-information > h2 {
@@ -644,14 +644,17 @@
   transform: scale(0.98);
 }
 
-.policy-card-content {
-  margin-top: 20px;
-  padding-top: 17px;
-  border-top: 1px solid color-mix(in srgb, var(--wbf-gold) 36%, transparent);
+.policy-expanded-panel {
+  width: 100%;
+  margin-top: 24px;
+  padding: 32px;
+  background: color-mix(in srgb, var(--wbf-cream) 77%, white);
+  border: 1px solid color-mix(in srgb, var(--wbf-gold) 53%, transparent);
 }
 
 .policy-document {
-  max-width: 43rem;
+  width: 100%;
+  max-width: none;
   color: var(--wbf-green);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 16px;
@@ -1287,6 +1290,11 @@
   .policy-card {
     min-height: 168px;
     padding: 23px 21px;
+  }
+
+  .policy-expanded-panel {
+    margin-top: 20px;
+    padding: 24px 21px;
   }
 
   .research-category-navigation {
