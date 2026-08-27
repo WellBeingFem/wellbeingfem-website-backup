@@ -1,5 +1,8 @@
 # Hero-Only Correction Checklist
 
+- [x] Equalize the three card introductory-content heights above the gold practical-information divider on desktop only.
+- [x] Preserve all card content, image, control, colour, width, and lower-area positions while allowing tablet/mobile layout to remain natural.
+- [x] Verify perfectly aligned desktop dividers and unchanged tablet/mobile behavior in the private draft.
 - [x] Add only the three approved practical-information lines to the Guided Meditations card before its existing button.
 - [x] Verify the existing three-card desktop alignment and stacked mobile layout remain unchanged and private.
 - [x] Add only the approved ONDAMED and Healy duration and fee labels within the existing card fee areas.

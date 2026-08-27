@@ -51,9 +51,11 @@ export default function Home() {
                 <img src={ONDAMED_IMAGE_URL} alt="ONDAMED equipment with WellBeingFem branding" width="1448" height="1086" />
               </div>
               <div className="service-card__body">
-                <h2>ONDAMED PEMF</h2>
-                <p className="service-card__subheading">In-person sessions in Dublin</p>
-                <p>Personalised ONDAMED PEMF sessions supporting relaxation, balance and wellbeing.</p>
+                <div className="service-card__intro">
+                  <h2>ONDAMED PEMF</h2>
+                  <p className="service-card__subheading">In-person sessions in Dublin</p>
+                  <p>Personalised ONDAMED PEMF sessions supporting relaxation, balance and wellbeing.</p>
+                </div>
                 <div className="service-card__fees" aria-label="ONDAMED fees">
                   <p>In-person session</p>
                   <p>Duration: Approx. 60 minutes</p>
@@ -72,9 +74,11 @@ export default function Home() {
                 <img src={HEALY_IMAGE_URL} alt="Healy device and phone" width="1024" height="1024" />
               </div>
               <div className="service-card__body">
-                <h2>Healy Frequency Sessions</h2>
-                <p className="service-card__subheading">Remote sessions via Zoom or WhatsApp</p>
-                <p>Personalised frequency sessions that can be experienced remotely in the comfort of your own space.</p>
+                <div className="service-card__intro">
+                  <h2>Healy Frequency Sessions</h2>
+                  <p className="service-card__subheading">Remote sessions via Zoom or WhatsApp</p>
+                  <p>Personalised frequency sessions that can be experienced remotely in the comfort of your own space.</p>
+                </div>
                 <div className="service-card__fees" aria-label="Healy fees">
                   <p>Remote session</p>
                   <p>Duration: Approx. 60 minutes</p>
@@ -93,9 +97,11 @@ export default function Home() {
                 <img src={GUIDED_MEDITATIONS_IMAGE_URL} alt="WellBeingFem YouTube Channel QR code" width="1254" height="1254" />
               </div>
               <div className="service-card__body">
-                <h2>Guided Meditations</h2>
-                <p className="service-card__subheading">Free Guided Meditations</p>
-                <p>Explore guided meditation journeys and wellbeing practices through the Imagine Well YouTube Channel.</p>
+                <div className="service-card__intro">
+                  <h2>Guided Meditations</h2>
+                  <p className="service-card__subheading">Free Guided Meditations</p>
+                  <p>Explore guided meditation journeys and wellbeing practices through the Imagine Well YouTube Channel.</p>
+                </div>
                 <div className="service-card__fees" aria-label="Guided Meditations access information">
                   <p>Free access on YouTube</p>
                   <p>Duration: Varies by meditation</p>
