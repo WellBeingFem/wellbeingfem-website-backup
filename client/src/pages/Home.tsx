@@ -1,24 +1,35 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
-
 /**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+ * WellBeingFem restoration reminder: the supplied finished hero is authoritative.
+ * It must remain complete, unedited, uncropped, and free of extra visible overlays.
  */
-export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
+import SiteHeader from "@/components/SiteHeader";
 
+const HERO_URL = "/manus-storage/NewHeroAug13_e95140e6.png";
+
+export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="site-shell">
+      <SiteHeader />
       <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
+        <section className="hero-image-container" aria-label="WellBeingFem ONDAMED PEMF">
+          <div className="hero-media">
+            <img
+              src={HERO_URL}
+              alt="ONDAMED PEMF Healy Frequency Sessions for Women, with a Contact WellBeingFem button"
+              width="1448"
+              height="1086"
+            />
+            <a
+              className="hero-booking-link"
+              href="/research"
+              aria-label="Open the Research page for the Contact and Booking Form"
+            >
+              <span className="visually-hidden">
+                Open the Research page for the Contact and Booking Form
+              </span>
+            </a>
+          </div>
+        </section>
       </main>
     </div>
   );
