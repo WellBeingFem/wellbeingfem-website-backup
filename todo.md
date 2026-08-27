@@ -1,5 +1,7 @@
 # Hero-Only Correction Checklist
 
+- [x] Add only the three approved practical-information lines to the Guided Meditations card before its existing button.
+- [x] Verify the existing three-card desktop alignment and stacked mobile layout remain unchanged and private.
 - [x] Add only the approved ONDAMED and Healy duration and fee labels within the existing card fee areas.
 - [x] Change only Guided Meditations wording and button label to the separate Imagine Well identity without inventing its URL.
 - [x] Restore the exact approved Our Philosophy copy and Rest • Reflect • Renew closing line below the preserved Welcome section.

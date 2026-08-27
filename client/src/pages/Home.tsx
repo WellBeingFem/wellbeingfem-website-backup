@@ -96,6 +96,11 @@ export default function Home() {
                 <h2>Guided Meditations</h2>
                 <p className="service-card__subheading">Free Guided Meditations</p>
                 <p>Explore guided meditation journeys and wellbeing practices through the Imagine Well YouTube Channel.</p>
+                <div className="service-card__fees" aria-label="Guided Meditations access information">
+                  <p>Free access on YouTube</p>
+                  <p>Duration: Varies by meditation</p>
+                  <p>Access to the Imagine Well Members’ Library — Coming Soon</p>
+                </div>
                 <div className="service-card__actions service-card__actions--single">
                   <button className="service-card-button" type="button" disabled title="Imagine Well YouTube destination to be supplied">Visit Imagine Well on YouTube</button>
                 </div>
