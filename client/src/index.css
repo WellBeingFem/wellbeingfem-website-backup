@@ -380,8 +380,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 208px;
-  padding: 12px;
+  height: 244px;
+  padding: 6px;
   border-bottom: 1px solid color-mix(in srgb, var(--wbf-gold) 37%, transparent);
   background: var(--wbf-cream-deep);
 }
@@ -437,12 +437,6 @@
   font-family: Georgia, "Times New Roman", serif;
   font-size: 15px;
   line-height: 1.35;
-}
-
-.service-card__fees p:first-child {
-  color: var(--wbf-green);
-  font-size: 14px;
-  font-style: italic;
 }
 
 .service-card__actions {
@@ -573,8 +567,8 @@
   }
 
   .service-card__image {
-    height: 245px;
-    padding: 12px;
+    height: 270px;
+    padding: 8px;
   }
 
   .service-card__body {

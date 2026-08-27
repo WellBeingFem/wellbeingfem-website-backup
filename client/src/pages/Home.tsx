@@ -55,7 +55,6 @@ export default function Home() {
                 <p className="service-card__subheading">In-person sessions in Dublin</p>
                 <p>Personalised ONDAMED PEMF sessions supporting relaxation, balance and wellbeing.</p>
                 <div className="service-card__fees" aria-label="ONDAMED fees">
-                  <p>In-person session</p>
                   <p>€120 per session</p>
                   <p>Course of three sessions: €300</p>
                 </div>
@@ -75,7 +74,6 @@ export default function Home() {
                 <p className="service-card__subheading">Remote sessions via Zoom or WhatsApp</p>
                 <p>Personalised frequency sessions that can be experienced remotely in the comfort of your own space.</p>
                 <div className="service-card__fees" aria-label="Healy fees">
-                  <p>Remote session</p>
                   <p>€80 per Healy session</p>
                   <p>€90 for Healy Reiki</p>
                 </div>

@@ -1,5 +1,9 @@
 # Hero-Only Correction Checklist
 
+- [x] Increase only the existing desktop service-card image presentation without cropping any supplied asset.
+- [x] Remove only the redundant ONDAMED and Healy delivery-method lines in the fee areas.
+- [x] Preserve equal card proportions, all remaining card content and styles, responsive stacking, and booking routes.
+- [x] Verify enlarged desktop images and proportional mobile images in the private draft.
 - [x] Restore the exact approved gold line and single homepage H1 immediately after the hero.
 - [x] Add the three specified cards and preserve the current Guided Meditations/WellBeingFem YouTube card and destination.
 - [x] Use only approved ONDAMED and Healy pricing, booking routes, and the centred Contact Form button.
