@@ -1,5 +1,11 @@
 # Hero-Only Correction Checklist
 
+- [x] Extract the authoritative Contact Form content and privacy confirmation from the uploaded source.
+- [x] Replace only the Research title/placeholder area with the responsive Contact Form at `#contact`.
+- [x] Add the `#research-content` anchor and preserve the three existing Research category anchors below the form.
+- [x] Connect the header, hero, and footer Contact and Research destinations exactly as specified.
+- [x] Refine the footer with approved identity and contact details using the established sage-green family.
+- [x] Verify responsive form behavior, visible footer content, and every affected route/anchor without publishing.
 - [x] Add Resources in the specified main-navigation position and connect `/resources`.
 - [x] Create the branded Resources page structure with only its approved heading.
 - [x] Create the structured Research page with contact, ONDAMED, Healy, and Guided Meditations anchors.

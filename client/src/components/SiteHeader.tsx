@@ -36,7 +36,7 @@ const navigation: NavigationItem[] = [
   { label: "Resources", href: "/resources" },
   {
     label: "Research",
-    href: "/research",
+    href: "/research#research-content",
     children: [
       { label: "ONDAMED", href: "/research#ondamed" },
       { label: "Healy", href: "/research#healy" },
