@@ -20,10 +20,10 @@ const GUIDED_MEDITATIONS_IMAGE_URL = "/manus-storage/06_WBF_QR_YouTube_Channel_d
 
 const clientExperienceCards = [
   "Healy Wellbeing",
+  "ONDAMED PEMF",
   "Healy Aura Analysis",
+  "ONDAMED PEMF",
   "Healy I Ching",
-  "ONDAMED PEMF",
-  "ONDAMED PEMF",
   "ONDAMED PEMF",
 ];
 

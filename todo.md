@@ -1,5 +1,7 @@
 # Hero-Only Correction Checklist
 
+- [x] Reorder only the six existing Client Experiences cards to Healy Wellbeing, ONDAMED PEMF, Healy Aura Analysis, ONDAMED PEMF, Healy I Ching, ONDAMED PEMF.
+- [x] Verify the first desktop carousel view alternates services and all existing carousel behavior remains unchanged.
 - [x] Confirm the Client Experiences placement directly after the philosophy closing line while Women’s Wisdom is absent.
 - [x] Add six reusable no-testimonial carousel cards directly after the philosophy closing line.
 - [x] Preserve More/Less support and build lightweight desktop, tablet, and touch-swipe mobile carousel behavior.

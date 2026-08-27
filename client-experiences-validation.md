@@ -15,3 +15,7 @@ The previous control returned the visible carousel to its first three cards. The
 ## Tablet and mobile
 
 At 768px, the carousel shows two compact readable cards at a time, with manual controls retained. At 390px, it remains a horizontal draggable carousel: one full readable card is visible with a clear portion of the next card, rather than stacking all six cards vertically. The surrounding homepage remains in its approved order, with Client Experiences directly after Rest • Reflect • Renew.
+
+## Alternating service order
+
+The cards now appear in the approved order: Healy Wellbeing, ONDAMED PEMF, Healy Aura Analysis, ONDAMED PEMF, Healy I Ching, ONDAMED PEMF. The first desktop view shows the intended mixed Healy–ONDAMED–Healy sequence, while the existing mobile horizontal carousel remains unchanged.
