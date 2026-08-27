@@ -650,11 +650,64 @@
   border-top: 1px solid color-mix(in srgb, var(--wbf-gold) 36%, transparent);
 }
 
-.policy-card-content p {
-  margin: 0;
+.policy-document {
+  max-width: 43rem;
+  color: var(--wbf-green);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.policy-document__intro {
+  margin: 0 0 17px;
+}
+
+.policy-document__intro:first-child {
+  color: var(--wbf-ink);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.policy-document__intro:nth-child(2) {
   color: var(--wbf-green);
   font-size: 15px;
-  line-height: 1.55;
+  font-style: italic;
+}
+
+.policy-document__section {
+  margin-top: 31px;
+}
+
+.policy-document__section h4 {
+  margin: 0 0 13px;
+  color: var(--wbf-ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.32;
+}
+
+.policy-document__section p {
+  margin: 0 0 14px;
+}
+
+.policy-document__section ul {
+  margin: 0 0 15px;
+  padding-left: 20px;
+}
+
+.policy-document__section li {
+  margin: 0 0 7px;
+}
+
+.policy-document__details {
+  margin: 0 0 15px;
+  padding-left: 15px;
+  border-left: 1px solid color-mix(in srgb, var(--wbf-gold) 50%, transparent);
+}
+
+.policy-document__details p {
+  margin: 0 0 3px;
 }
 
 .page-main {

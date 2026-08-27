@@ -1,5 +1,9 @@
 # Hero-Only Correction Checklist
 
+- [x] Extract the two complete approved policy documents without changing any legal wording or dates.
+- [x] Replace only the existing Privacy/GDPR and Terms card placeholders with their respective complete approved text.
+- [x] Preserve More/Less behavior and keep policy, Contact, and Research destinations distinct.
+- [x] Verify desktop side-by-side cards, mobile stack, policy link destinations, and private status.
 - [x] Repair the header and footer About links to the existing homepage anchor without creating another home page.
 - [x] Remove the footer logo tint, blend mode, filter, and card-like presentation while retaining the supplied logo.
 - [x] Add the linked Policies & Client Information section beneath the Contact Form with Privacy and GDPR expandable cards only.

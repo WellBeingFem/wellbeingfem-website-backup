@@ -4,6 +4,7 @@
  */
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+import { PrivacyPolicyDocument, TermsAndConditionsDocument } from "@/components/PolicyDocuments";
 import { useState, type FormEvent } from "react";
 
 export default function Research() {
@@ -129,8 +130,8 @@ export default function Research() {
           >
             <h2 id="policies-client-information-heading">Policies &amp; Client Information</h2>
             <div className="policy-card-grid">
-              <article className="policy-card">
-                <h3>Privacy Policy</h3>
+              <article className="policy-card" id="privacy-policy-gdpr-notice">
+                <h3>Privacy Policy / GDPR Notice</h3>
                 <button
                   className="policy-card-toggle"
                   type="button"
@@ -141,11 +142,13 @@ export default function Research() {
                   {privacyExpanded ? "Less" : "More"}
                 </button>
                 {privacyExpanded ? (
-                  <div id="privacy-policy-content" className="policy-card-content" />
+                  <div id="privacy-policy-content" className="policy-card-content">
+                    <PrivacyPolicyDocument />
+                  </div>
                 ) : null}
               </article>
               <article className="policy-card">
-                <h3>GDPR Policy</h3>
+                <h3>Terms &amp; Conditions</h3>
                 <button
                   className="policy-card-toggle"
                   type="button"
@@ -156,7 +159,9 @@ export default function Research() {
                   {gdprExpanded ? "Less" : "More"}
                 </button>
                 {gdprExpanded ? (
-                  <div id="gdpr-policy-content" className="policy-card-content" />
+                  <div id="gdpr-policy-content" className="policy-card-content">
+                    <TermsAndConditionsDocument />
+                  </div>
                 ) : null}
               </article>
             </div>
