@@ -8,6 +8,8 @@ import { useState, type FormEvent } from "react";
 
 export default function Research() {
   const [submissionNotice, setSubmissionNotice] = useState("");
+  const [privacyExpanded, setPrivacyExpanded] = useState(false);
+  const [gdprExpanded, setGdprExpanded] = useState(false);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -108,7 +110,7 @@ export default function Research() {
               <label className="consent-check">
                 <input type="checkbox" name="privacy-confirmation" required />
                 <span>
-                  I confirm that I have read the WellBeingFem <a href="/privacy-policy">Privacy Policy / GDPR Notice</a>. <b aria-hidden="true">*</b>
+                  I confirm that I have read the WellBeingFem <a href="/research#policies-client-information">Privacy Policy / GDPR Notice</a>. <b aria-hidden="true">*</b>
                 </span>
               </label>
             </fieldset>
@@ -119,6 +121,46 @@ export default function Research() {
             </div>
             {submissionNotice ? <p className="form-submission-notice" role="status">{submissionNotice}</p> : null}
           </form>
+
+          <section
+            id="policies-client-information"
+            className="policies-client-information"
+            aria-labelledby="policies-client-information-heading"
+          >
+            <h2 id="policies-client-information-heading">Policies &amp; Client Information</h2>
+            <div className="policy-card-grid">
+              <article className="policy-card">
+                <h3>Privacy Policy</h3>
+                <button
+                  className="policy-card-toggle"
+                  type="button"
+                  aria-expanded={privacyExpanded}
+                  aria-controls="privacy-policy-content"
+                  onClick={() => setPrivacyExpanded((expanded) => !expanded)}
+                >
+                  {privacyExpanded ? "Less" : "More"}
+                </button>
+                {privacyExpanded ? (
+                  <div id="privacy-policy-content" className="policy-card-content" />
+                ) : null}
+              </article>
+              <article className="policy-card">
+                <h3>GDPR Policy</h3>
+                <button
+                  className="policy-card-toggle"
+                  type="button"
+                  aria-expanded={gdprExpanded}
+                  aria-controls="gdpr-policy-content"
+                  onClick={() => setGdprExpanded((expanded) => !expanded)}
+                >
+                  {gdprExpanded ? "Less" : "More"}
+                </button>
+                {gdprExpanded ? (
+                  <div id="gdpr-policy-content" className="policy-card-content" />
+                ) : null}
+              </article>
+            </div>
+          </section>
 
           <div id="research-content" className="research-content-anchor">
             <nav className="research-category-navigation" aria-label="Research categories">

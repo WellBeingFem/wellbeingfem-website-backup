@@ -1,5 +1,9 @@
 # Hero-Only Correction Checklist
 
+- [x] Repair the header and footer About links to the existing homepage anchor without creating another home page.
+- [x] Remove the footer logo tint, blend mode, filter, and card-like presentation while retaining the supplied logo.
+- [x] Add the linked Policies & Client Information section beneath the Contact Form with Privacy and GDPR expandable cards only.
+- [x] Preserve the existing Research-content anchor below the policies and verify all affected header/footer routes and controls.
 - [x] Extract the authoritative Contact Form content and privacy confirmation from the uploaded source.
 - [x] Replace only the Research title/placeholder area with the responsive Contact Form at `#contact`.
 - [x] Add the `#research-content` anchor and preserve the three existing Research category anchors below the form.

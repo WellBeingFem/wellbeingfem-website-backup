@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="site-shell">
       <SiteHeader />
-      <main>
+      <main id="about">
         <section className="hero-image-container" aria-label="WellBeingFem ONDAMED PEMF">
           <div className="hero-media">
             <picture className="hero-picture">

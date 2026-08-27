@@ -14,7 +14,7 @@ type NavigationItem = {
 };
 
 const navigation: NavigationItem[] = [
-  { label: "About", href: "/about" },
+  { label: "About", href: "/#about" },
   { label: "ONDAMED", href: "/ondamed" },
   {
     label: "Healy",

@@ -5,13 +5,14 @@
 const LOGO_URL = "/manus-storage/WellBeingfemlogofinal_e0e51dae.png";
 
 const footerLinks = [
-  { label: "About", href: "/about" },
+  { label: "About", href: "/#about" },
   { label: "ONDAMED", href: "/ondamed" },
   { label: "Healy", href: "/healy" },
   { label: "Guided Meditations", href: "/guided-meditations" },
   { label: "Resources", href: "/resources" },
   { label: "Research", href: "/research#research-content" },
   { label: "Contact", href: "/research#contact" },
+  { label: "Policies & Client Information", href: "/research#policies-client-information" },
 ];
 
 export default function SiteFooter() {
