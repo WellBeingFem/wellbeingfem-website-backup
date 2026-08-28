@@ -1825,3 +1825,148 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Women’s Wisdom recovery section: supplied image first on mobile, left of
+ * the approved copy on wider screens; no image cropping or decorative overlays. */
+.womens-wisdom {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: clamp(30px, 5vw, 72px);
+  align-items: start;
+  margin-top: 84px;
+  padding-top: 44px;
+  border-top: 1px solid color-mix(in srgb, var(--wbf-gold) 48%, transparent);
+}
+
+.womens-wisdom__image-wrap {
+  min-width: 0;
+  background: var(--wbf-cream-deep);
+  border: 1px solid color-mix(in srgb, var(--wbf-gold) 44%, transparent);
+}
+
+.womens-wisdom__image-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.womens-wisdom__content {
+  min-width: 0;
+  padding-top: 3px;
+}
+
+.womens-wisdom__content h2,
+.womens-wisdom__content h3 {
+  color: var(--wbf-ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.womens-wisdom__content h2 {
+  margin: 0;
+  font-size: clamp(30px, 3.3vw, 46px);
+  line-height: 1.15;
+}
+
+.womens-wisdom__content h3 {
+  margin: 22px 0 11px;
+  font-size: clamp(20px, 2.1vw, 28px);
+  line-height: 1.25;
+}
+
+.womens-wisdom__content > p,
+.womens-wisdom__details p {
+  margin: 0;
+  color: var(--wbf-green);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(16px, 1.45vw, 19px);
+  line-height: 1.62;
+}
+
+.womens-wisdom__details {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid color-mix(in srgb, var(--wbf-gold) 35%, transparent);
+}
+
+.womens-wisdom__details p + p {
+  margin-top: 16px;
+}
+
+.womens-wisdom__more,
+.womens-wisdom__launch-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 9px 17px;
+  border: 1px solid var(--wbf-gold);
+  border-radius: var(--radius);
+  background: var(--wbf-sage);
+  color: var(--wbf-cream);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background-color 170ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 140ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.womens-wisdom__more {
+  margin-top: 19px;
+  cursor: pointer;
+}
+
+.womens-wisdom__more:hover,
+.womens-wisdom__more:focus-visible,
+.womens-wisdom__launch-button:hover,
+.womens-wisdom__launch-button:focus-visible {
+  background: #686c58;
+  color: var(--wbf-cream);
+  outline: none;
+}
+
+.womens-wisdom__more:active,
+.womens-wisdom__launch-button:active {
+  transform: scale(0.98);
+}
+
+.womens-wisdom__launch-button {
+  display: flex;
+  width: fit-content;
+  margin-top: 30px;
+}
+
+.womens-wisdom__notice {
+  margin-top: 11px !important;
+  color: var(--wbf-green) !important;
+  font-size: 15px !important;
+  font-style: italic;
+}
+
+@media (max-width: 760px) {
+  .womens-wisdom {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+    margin-top: 58px;
+    padding-top: 32px;
+  }
+
+  .womens-wisdom__content {
+    padding-top: 0;
+  }
+
+  .womens-wisdom__content h3 {
+    margin-top: 20px;
+  }
+
+  .womens-wisdom__content > p,
+  .womens-wisdom__details p {
+    font-size: 16px;
+  }
+}

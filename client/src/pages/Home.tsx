@@ -3,6 +3,7 @@
  * It must remain complete, unedited, uncropped, and free of extra visible overlays.
  */
 import SiteHeader from "@/components/SiteHeader";
+import { useState } from "react";
 import SiteFooter from "@/components/SiteFooter";
 import {
   Carousel,
@@ -17,6 +18,7 @@ const DESKTOP_HERO_URL = "/manus-storage/DeaktopHeroWBF_921006d2.png";
 const ONDAMED_IMAGE_URL = "/manus-storage/ondamedwlogo_d68ec81a.png";
 const HEALY_IMAGE_URL = "/manus-storage/Healyandphone_52ac329b.png";
 const GUIDED_MEDITATIONS_IMAGE_URL = "/manus-storage/06_WBF_QR_YouTube_Channel_d57f9130.png";
+const WOMENS_WISDOM_IMAGE_URL = "/manus-storage/WomensWisdom1image_c8dbd7a7.png";
 
 const clientExperienceCards = [
   "Healy Wellbeing",
@@ -33,6 +35,9 @@ const clientExperiencePlaceholder =
   "A genuine client experience will be added here after it has been supplied by the client, verified as approved for publication, and restored as part of this private recovery draft.";
 
 export default function Home() {
+  const [changeDetailsOpen, setChangeDetailsOpen] = useState(false);
+  const [membersLibraryOpen, setMembersLibraryOpen] = useState(false);
+
   return (
     <div className="site-shell">
       <SiteHeader />
@@ -180,6 +185,58 @@ export default function Home() {
               <CarouselPrevious className="client-experiences__previous" />
               <CarouselNext className="client-experiences__next" />
             </Carousel>
+          </section>
+
+          <section className="womens-wisdom" aria-labelledby="womens-wisdom-heading">
+            <div className="womens-wisdom__image-wrap">
+              <img
+                src={WOMENS_WISDOM_IMAGE_URL}
+                alt="Women’s Wisdom in Times of Change companion book in a calm wellbeing setting"
+                width="1536"
+                height="1024"
+              />
+            </div>
+            <div className="womens-wisdom__content">
+              <h2 id="womens-wisdom-heading">Women’s Wisdom in Times of Change</h2>
+              <h3>Forthcoming Meditation Series &amp; Companion Books</h3>
+              <p>The forthcoming Women’s Wisdom in Times of Change series will bring together guided meditation journeys, archetypal symbolism and reflective companion books created to support deeper self-understanding, inner renewal and mind–body–spirit awareness.</p>
+              <button
+                className="womens-wisdom__more"
+                type="button"
+                aria-expanded={changeDetailsOpen}
+                aria-controls="womens-wisdom-change-details"
+                onClick={() => setChangeDetailsOpen((open) => !open)}
+              >
+                {changeDetailsOpen ? "Less" : "More"}
+              </button>
+              {changeDetailsOpen ? (
+                <div id="womens-wisdom-change-details" className="womens-wisdom__details">
+                  <p>The first book, Seven Archetypal Journeys of Self-Discovery, is set within an ancient forest landscape. Across seven guided meditation journeys, you are invited to move through symbolic pathways, thresholds, natural elements and archetypal encounters that open space for reflection, insight and reconnection with your own wisdom.</p>
+                  <p>Each companion volume is designed to deepen the meditation experience. The books will offer archetypal background, reflective insight before each journey, and wisdom-led exploration to help you work with the symbols, themes and inner knowing that arise.</p>
+                </div>
+              ) : null}
+
+              <h3>WellBeingFem Members’ Library</h3>
+              <p>The launch of Women’s Wisdom in Times of Change will also open the WellBeingFem online Members Library, where the first meditation series and companion book will be included with membership.</p>
+              <button
+                className="womens-wisdom__more"
+                type="button"
+                aria-expanded={membersLibraryOpen}
+                aria-controls="womens-wisdom-members-details"
+                onClick={() => setMembersLibraryOpen((open) => !open)}
+              >
+                {membersLibraryOpen ? "Less" : "More"}
+              </button>
+              {membersLibraryOpen ? (
+                <div id="womens-wisdom-members-details" className="womens-wisdom__details">
+                  <p>Members will also receive access to two monthly guided meditations aligned with each month’s New Moon for intention, creation and new beginnings, and Full Moon for reflection, release and renewal.</p>
+                  <p>The series will continue with future companion books exploring deeper reflection, energy awareness, spiritual dialogue and self-understanding.</p>
+                </div>
+              ) : null}
+
+              <a className="womens-wisdom__launch-button" href="/research#contact">Join the Women’s Wisdom Launch List</a>
+              <p className="womens-wisdom__notice">Be notified when Women’s Wisdom in Times of Change becomes available.</p>
+            </div>
           </section>
         </section>
       </main>

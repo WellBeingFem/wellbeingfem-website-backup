@@ -63,3 +63,36 @@
 - [x] Preserve and align the single transparent clickable overlay over the embedded Contact & Booking Form artwork.
 - [x] Verify desktop, tablet, and mobile proportions and the `/research` hero-link destination.
 - [x] Save an updated private checkpoint without publishing.
+
+- [x] Add the supplied Women’s Wisdom image only to the existing Women’s Wisdom section with uncropped proportional rendering.
+- [x] Restore the exact Women’s Wisdom headings, visible copy, and two green More/Less content blocks.
+- [x] Preserve the launch-list button, notice, cream/sage/gold styling, desktop side-by-side layout, and mobile image-first stacking.
+- [x] Verify More/Less behavior and confirm no other homepage section changes before saving a private checkpoint.
+
+## Current Task: Women’s Wisdom Section Restoration
+
+- [x] Add the supplied Women’s Wisdom image only to the existing Women’s Wisdom section with uncropped proportional rendering.
+- [x] Restore the exact Women’s Wisdom headings, visible copy, and two green More/Less content blocks.
+- [x] Preserve the launch-list button, notice, cream/sage/gold styling, desktop side-by-side layout, and mobile image-first stacking.
+- [x] Verify More/Less behavior and confirm no other homepage section changes before saving a private checkpoint.
+- [x] Save the verified private Women’s Wisdom update without publishing.
+
+## Previous Attempt Note
+
+- [x] Reverted the unnecessary capability-change attempt; project is stable at the prior private checkpoint.
+- [x] Add the supplied Women’s Wisdom image and exact approved section copy to the stable private draft.
+- [x] Verify the Women’s Wisdom section only and save a new private checkpoint.
+
+## Women’s Wisdom Restoration (Current)
+
+- [x] Add the supplied Women’s Wisdom image only to the existing homepage section.
+- [x] Add exact visible headings, summary text, More/Less blocks, launch-list CTA, and notice.
+- [x] Verify desktop/mobile layout and no changes outside the section.
+- [x] Save the verified private draft without publishing.
+
+## Women’s Wisdom Task Checklist
+
+- [x] Insert the supplied image without crop, stretch, or regeneration.
+- [x] Restore the exact approved copy and More/Less controls.
+- [x] Verify responsive side-by-side/stacked layout and preserve all other sections.
+- [x] Save private checkpoint without publishing.
