@@ -25,9 +25,9 @@
 - [x] Restore the exact Welcome subtext and an empty Our Philosophy section without inventing body wording.
 - [x] Verify desktop/mobile layout, card order, pricing, and all new Contact Form routes while keeping the project private.
 - [x] Store and use only the three supplied ONDAMED, Healy, and QR visual assets for the new homepage service cards.
-- [ ] Insert the three required cards directly below the existing homepage heading area without altering existing homepage content.
-- [ ] Preserve the supplied service descriptions, fees, routes, and Imagine Well brand distinction without inventing a channel URL.
-- [ ] Verify desktop three-up layout, responsive stacking, uncropped visible assets, and Contact booking links.
+- [x] Insert the three required cards directly below the existing homepage heading area without altering existing homepage content.
+- [x] Preserve the supplied service descriptions, fees, routes, and Imagine Well brand distinction without inventing a channel URL.
+- [x] Verify desktop three-up layout, responsive stacking, uncropped visible assets, and Contact booking links.
 - [x] Keep both compact policy cards visible while rendering the selected complete policy in one full-width panel beneath them.
 - [x] Make Privacy and Terms expansion mutually exclusive and preserve all approved policy wording unchanged.
 - [x] Increase the policy-section scroll offset so its heading remains visible below navigation.
