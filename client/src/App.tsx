@@ -9,6 +9,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
+import Ondamed from "./pages/Ondamed";
 import Research from "./pages/Research";
 import Resources from "./pages/Resources";
 
@@ -24,7 +25,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
-      <Route path="/ondamed">{() => <RouteAlias to="/research#ondamed" />}</Route>
+      <Route path="/ondamed" component={Ondamed} />
       <Route path="/healy">{() => <RouteAlias to="/research#healy" />}</Route>
       <Route path="/healy/what-is-healy">{() => <RouteAlias to="/research#healy" />}</Route>
       <Route path="/healy/wellbeing">{() => <RouteAlias to="/research#healy" />}</Route>

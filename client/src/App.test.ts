@@ -29,8 +29,8 @@ describe("WellBeingFem production readiness", () => {
   it("resolves every existing service navigation URL to recovered content", () => {
     const appSource = readProjectFile("client/src/App.tsx");
 
-    expect(appSource).toContain('<Route path="/ondamed">');
-    expect(appSource).toContain('<RouteAlias to="/research#ondamed" />');
+    expect(appSource).toContain('<Route path="/ondamed" component={Ondamed} />');
+    expect(appSource).not.toContain('<RouteAlias to="/research#ondamed" />');
     expect(appSource).toContain('<Route path="/healy">');
     expect(appSource.match(/<Route path="\/healy\//g)).toHaveLength(5);
     expect(appSource.match(/<RouteAlias to="\/research#healy" \/>/g)).toHaveLength(6);

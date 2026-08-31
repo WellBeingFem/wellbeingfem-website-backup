@@ -2114,3 +2114,83 @@
 .hero-booking-link:active {
   transform: none !important;
 }
+
+/* Dedicated ONDAMED page: the supplied image sits beside the existing service
+ * copy on desktop, allowing the text to continue below naturally. */
+.ondamed-page__intro {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.ondamed-page__intro::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.ondamed-page__figure {
+  float: right;
+  width: min(47%, 540px);
+  margin: 4px 0 28px clamp(28px, 4vw, 56px);
+}
+
+.ondamed-page__figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ondamed-page__booking {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+  padding: 11px 22px;
+  border: 1px solid var(--wbf-gold);
+  border-radius: 2px;
+  background: #3f6b4f;
+  color: var(--wbf-cream);
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: transform 160ms var(--ease-out), background-color 160ms var(--ease-out);
+}
+
+.ondamed-page__booking:hover,
+.ondamed-page__booking:focus-visible {
+  background: #3f6b4f;
+  color: var(--wbf-cream);
+  outline: 2px solid var(--wbf-gold);
+  outline-offset: 3px;
+}
+
+.ondamed-page__booking:active {
+  transform: scale(0.97);
+}
+
+.ondamed-page__text h1 {
+  margin: 0 0 12px;
+}
+
+.ondamed-page__subheading {
+  margin: 0 0 24px;
+  color: var(--wbf-green);
+}
+
+.ondamed-page__text > p:not(.page-eyebrow):not(.ondamed-page__subheading) {
+  max-width: 68ch;
+  margin: 0 0 16px;
+}
+
+@media (max-width: 900px) {
+  .ondamed-page__figure {
+    float: none;
+    width: min(100%, 720px);
+    margin: 0 auto 30px;
+  }
+
+  .ondamed-page__booking {
+    margin-top: 16px;
+  }
+}

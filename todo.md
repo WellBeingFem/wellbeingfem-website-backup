@@ -155,4 +155,13 @@
 - [x] Open and close the restored mobile navigation to verify its original cream/sage/gold styling and layout.
 - [x] Verify representative Healy, Guided Meditations, Research, and Contact navigation destinations after restoring menu colors.
 - [x] Save the verified instruction and navigation correction checkpoint and publish it automatically.
-- [ ] Confirm the published wellbeingfem.com navigation correction on the live domain.
+- [x] Confirm the published wellbeingfem.com navigation correction on the live domain.
+
+## ONDAMED Page Image Addition
+
+- [x] Preserve the homepage ONDAMED card unchanged and use the supplied ONDAMED WellBeingFem image only on the `/ondamed` page.
+- [x] Add the image beside the existing ONDAMED text with desktop wrapping and clean tablet/mobile image-first stacking.
+- [x] Add a #3F6B4F Make a Booking button directly beneath the page-only image linking to `/research#contact`.
+- [x] Verify `/ondamed` desktop/mobile layout, the booking destination, unchanged homepage card, focused tests, TypeScript, and production build.
+- [x] Save the verified ONDAMED page update checkpoint and publish it automatically.
+- [ ] Confirm the published `/ondamed` page on wellbeingfem.com.
