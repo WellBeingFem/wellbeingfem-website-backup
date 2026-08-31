@@ -13,10 +13,10 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-const HERO_URL = "/manus-storage/NewHeroAug13_e95140e6.png";
-const DESKTOP_HERO_URL = "/manus-storage/DeaktopHeroWBF_921006d2.png";
-const HERO_WEBP_URL = "/manus-storage/NewHeroAug13-900_4621e54c.webp";
-const DESKTOP_HERO_WEBP_URL = "/manus-storage/DeaktopHeroWBF-1600_b63db271.webp";
+const HERO_URL = "/manus-storage/NewHeroAug13-contact-green_24848412.png";
+const DESKTOP_HERO_URL = "/manus-storage/DeaktopHeroWBF-contact-green_7266dbc9.png";
+const HERO_WEBP_URL = "/manus-storage/NewHeroAug13-contact-green-900_f5dca042.webp";
+const DESKTOP_HERO_WEBP_URL = "/manus-storage/DeaktopHeroWBF-contact-green-1600_0b9672ec.webp";
 const ONDAMED_IMAGE_URL = "/manus-storage/ondamedwlogo_d68ec81a.png";
 const HEALY_IMAGE_URL = "/manus-storage/Healyandphone_52ac329b.png";
 const GUIDED_MEDITATIONS_IMAGE_URL = "/manus-storage/06_WBF_QR_YouTube_Channel_d57f9130.png";
@@ -74,9 +74,7 @@ export default function Home() {
               className="hero-booking-link"
               href="/research#contact"
               aria-label="Open the Research page for the Contact and Booking Form"
-            >
-              <span>Contact WellBeingFem</span>
-            </a>
+            />
           </div>
         </section>
 

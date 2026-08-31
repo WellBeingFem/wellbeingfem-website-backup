@@ -4,10 +4,11 @@ import { describe, expect, it } from "vitest";
 
 const styles = readFileSync(resolve(process.cwd(), "client/src/index.css"), "utf8");
 
-describe("Hero border and unified button color correction", () => {
-  it("keeps the hero overlay footprint while leaving only the original gold border visible", () => {
-    expect(styles).toContain(".hero-booking-link {\n  border-color: transparent;");
-    expect(styles).toContain("background-clip: padding-box;");
+describe("Hero design restoration and unified button color correction", () => {
+  it("keeps the hero click target entirely invisible so the embedded original button is the only visible control", () => {
+    expect(styles).toContain(".hero-booking-link {\n  position: absolute;");
+    expect(styles).toContain("border: 0 !important;\n  border-radius: 0 !important;\n  background: transparent !important;");
+    expect(styles).toContain("font-size: 0 !important;");
   });
 
   it("applies #3F6B4F to every existing site button treatment", () => {

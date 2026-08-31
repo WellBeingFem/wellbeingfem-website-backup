@@ -136,3 +136,12 @@
 - [x] Apply `#3F6B4F` as the background for every existing website button without changing any button’s wording, size, border, link, or surrounding layout.
 - [x] Verify desktop/mobile hero alignment, single gold border, unified button green, route integrity, focused tests, TypeScript, and production build.
 - [x] Save the corrected final checkpoint and publish it to wellbeingfem.com.
+
+## Hero Button Design Restoration
+
+- [x] Restore the original embedded flower icon, typography, dimensions, position, rounded shape, and one thin gold border on the homepage hero Contact WellBeingFem button.
+- [x] Change only the embedded button fill to `#3F6B4F` across desktop and mobile hero sources without changing any other hero pixels, crop, text, or layout.
+- [x] Restore a fully transparent, borderless, backgroundless `/research#contact` click overlay precisely over the embedded button.
+- [x] Verify desktop/mobile design fidelity, single visible button, Contact Form destination, source integrity, focused tests, TypeScript, and production build.
+- [x] Request approval before saving because this project auto-publishes checkpoints.
+- [x] Save and deliver the approved hero-only correction.

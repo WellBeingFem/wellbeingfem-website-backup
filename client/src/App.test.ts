@@ -19,9 +19,9 @@ describe("WellBeingFem production readiness", () => {
   it("preloads the optimized hero for desktop and mobile", () => {
     const indexHtml = readProjectFile("client/index.html");
 
-    expect(indexHtml).toContain('href="/manus-storage/DeaktopHeroWBF-1600_b63db271.webp"');
+    expect(indexHtml).toContain('href="/manus-storage/DeaktopHeroWBF-contact-green-1600_0b9672ec.webp"');
     expect(indexHtml).toContain('media="(min-width: 1025px)"');
-    expect(indexHtml).toContain('href="/manus-storage/NewHeroAug13-900_4621e54c.webp"');
+    expect(indexHtml).toContain('href="/manus-storage/NewHeroAug13-contact-green-900_f5dca042.webp"');
     expect(indexHtml).toContain('media="(max-width: 1024px)"');
     expect(indexHtml.match(/fetchpriority="high"/g)).toHaveLength(2);
   });

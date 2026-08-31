@@ -42,9 +42,10 @@ describe("Final pre-publication corrections", () => {
   it("keeps the hero Contact action on the existing Contact Form with the stronger primary treatment", () => {
     expect(homeSource).toContain('className="hero-booking-link"');
     expect(homeSource).toContain('href="/research#contact"');
-    expect(homeSource).toContain("Contact WellBeingFem");
+    expect(homeSource).toContain('alt="ONDAMED PEMF Healy Frequency Sessions for Women, with a Contact WellBeingFem button"');
+    expect(homeSource).not.toContain("<span>Contact WellBeingFem</span>");
     expect(styleSource).toContain(".hero-booking-link {\n  position: absolute;");
-    expect(styleSource).toContain("background: #3f6b4f;");
+    expect(styleSource).toContain("border: 0 !important;\n  border-radius: 0 !important;\n  background: transparent !important;");
   });
 
   it("restores WellBeingFem-only Guided Meditations copy and its existing YouTube destination", () => {
@@ -64,8 +65,8 @@ describe("Final pre-publication corrections", () => {
 
 describe("Primary CTA and hero performance update", () => {
   it("serves responsive WebP hero sources without lazy loading", () => {
-    expect(homeSource).toContain('const HERO_WEBP_URL = "/manus-storage/NewHeroAug13-900_4621e54c.webp";');
-    expect(homeSource).toContain('const DESKTOP_HERO_WEBP_URL = "/manus-storage/DeaktopHeroWBF-1600_b63db271.webp";');
+    expect(homeSource).toContain('const HERO_WEBP_URL = "/manus-storage/NewHeroAug13-contact-green-900_f5dca042.webp";');
+    expect(homeSource).toContain('const DESKTOP_HERO_WEBP_URL = "/manus-storage/DeaktopHeroWBF-contact-green-1600_0b9672ec.webp";');
     expect(homeSource).toContain('<source media="(min-width: 1025px)" type="image/webp" srcSet={DESKTOP_HERO_WEBP_URL} />');
     expect(homeSource).toContain('<source type="image/webp" srcSet={HERO_WEBP_URL} />');
     expect(homeSource).toContain('loading="eager"');
