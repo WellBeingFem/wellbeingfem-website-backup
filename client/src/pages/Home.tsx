@@ -102,7 +102,7 @@ export default function Home() {
                   <p>Course of three sessions: €300</p>
                 </div>
                 <div className="service-card__actions">
-                  <a className="service-card-button" href="/research#ondamed">Learn More</a>
+                  <a className="service-card-button" href="/ondamed">Learn More</a>
                   <a className="service-card-button service-card-button--primary" href="/research#contact">Make a Booking</a>
                 </div>
               </div>

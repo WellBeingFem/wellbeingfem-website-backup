@@ -23,15 +23,84 @@ export default function Ondamed() {
             </figure>
 
             <div className="ondamed-page__text">
-              <p className="page-eyebrow">WellBeingFem</p>
-              <h1 id="ondamed-page-heading">ONDAMED PEMF</h1>
-              <p className="ondamed-page__subheading">In-person sessions in Dublin</p>
+              <h1 id="ondamed-page-heading">ONDAMED PEMF Wellbeing Sessions</h1>
               <p>
-                Personalised ONDAMED PEMF sessions supporting relaxation, balance and wellbeing.
+                ONDAMED is a powerful, non-invasive biofeedback system that combines focused pulsed
+                electromagnetic field stimulation with a personalised frequency-based approach.
               </p>
-              <p>Each session is approximately 60 minutes.</p>
-              <p>Individual session: €120</p>
-              <p>Course of three sessions: €300</p>
+              <p>
+                At WellBeingFem, ONDAMED sessions are offered in Dublin for women seeking deeper support
+                around stress regulation, nervous system calm, sleep, low energy, hormonal change and
+                transition, digestive wellbeing and inflammation-related concerns.
+              </p>
+
+              <h2>Why Choose ONDAMED PEMF?</h2>
+              <p>ONDAMED is a German-developed system that combines focused PEMF stimulation with biofeedback.</p>
+              <p>
+                Rather than using a standard one-size-fits-all PEMF approach, ONDAMED uses your body’s
+                responses to help guide the selection of frequencies, applicators and areas of focus. This
+                allows each session to be shaped around what appears most relevant for you at that time.
+              </p>
+
+              <p>Women may choose ONDAMED to support:</p>
+              <ul className="ondamed-page__support-list">
+                <li>Stress regulation and nervous system balance</li>
+                <li>Poor sleep and rest disruption</li>
+                <li>Low energy and physical depletion</li>
+                <li>Hormonal change, perimenopause and menopause</li>
+                <li>Digestive wellbeing and bloating-related concerns</li>
+                <li>Inflammation-related wellbeing concerns</li>
+                <li>Metabolic wellbeing and weight-management concerns</li>
+                <li>Emotional overwhelm and body disconnection</li>
+                <li>Recovery, restoration and resilience</li>
+              </ul>
+
+              <h2>What to Expect During Your ONDAMED Session</h2>
+              <p>Your ONDAMED session lasts approximately 60 minutes.</p>
+              <p>
+                During your session, the ONDAMED biofeedback system helps guide the frequencies and
+                applicators selected.
+              </p>
+              <p>
+                Focused pulsed electromagnetic field stimulation is then delivered through applicators
+                positioned on or near selected areas of the body. The session is non-invasive and designed to
+                support the body’s natural capacity for regulation, restoration and balance.
+              </p>
+              <p>
+                You remain fully clothed throughout and can simply sit or recline comfortably while the
+                session runs.
+              </p>
+
+              <h2>ONDAMED Frequency-Charged Water</h2>
+              <p>
+                As an optional addition to your ONDAMED experience, clients can receive water prepared using
+                selected ONDAMED frequencies focused around women’s wellbeing.
+              </p>
+              <p>
+                Many clients enjoy bringing their own water bottle to each session so they can take their
+                frequency-charged water home and continue enjoying it after their appointment.
+              </p>
+              <p>
+                ONDAMED guidance states that charged water can be diluted at a ratio of 1 part charged water to
+                5 parts water.
+              </p>
+
+              <h2>A Personalised Approach to Wellbeing</h2>
+              <p>
+                Women often come to ONDAMED when they feel that something in their body, energy or inner
+                balance has shifted — perhaps through stress, poor sleep, low energy, hormonal change,
+                digestive imbalance, metabolic changes or periods of nervous system overwhelm.
+              </p>
+              <p>
+                Some women choose ONDAMED as part of an ongoing wellbeing routine, while others prefer a short
+                course of sessions when they feel depleted, overstimulated or simply no longer quite like
+                themselves.
+              </p>
+              <p>
+                Every session is individual. Clients may notice changes in areas such as energy, sleep, stress
+                response, body awareness, emotional balance, focus, digestion and physical comfort. Some
+                experiences may be gradual, while others can feel more immediate or deeply restorative.
+              </p>
             </div>
           </section>
         </div>

@@ -76,7 +76,7 @@ describe("Primary CTA and hero performance update", () => {
 
   it("uses stronger green only for primary homepage actions", () => {
     expect(homeSource.match(/service-card-button service-card-button--primary/g)).toHaveLength(2);
-    expect(homeSource).toContain('className="service-card-button" href="/research#ondamed">Learn More');
+    expect(homeSource).toContain('className="service-card-button" href="/ondamed">Learn More');
     expect(homeSource).toContain('className="service-card-button" href="/research#healy">Learn More');
     expect(styleSource).toContain(".service-card-button--primary,\n.homepage-contact-button {\n  background: #3f6b4f;");
     expect(styleSource).toContain(".womens-wisdom__more,\n.womens-wisdom__launch-button {");

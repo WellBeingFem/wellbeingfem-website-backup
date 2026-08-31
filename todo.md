@@ -164,4 +164,13 @@
 - [x] Add a #3F6B4F Make a Booking button directly beneath the page-only image linking to `/research#contact`.
 - [x] Verify `/ondamed` desktop/mobile layout, the booking destination, unchanged homepage card, focused tests, TypeScript, and production build.
 - [x] Save the verified ONDAMED page update checkpoint and publish it automatically.
-- [ ] Confirm the published `/ondamed` page on wellbeingfem.com.
+- [x] Confirm the published `/ondamed` page on wellbeingfem.com.
+
+## ONDAMED Text Restoration
+
+- [x] Locate the complete uploaded ONDAMED text and preserve its approved wording.
+- [x] Restore the complete supplied ONDAMED text on the dedicated `/ondamed` page and change only the existing homepage ONDAMED Learn More destination to `/ondamed`, as specified in the uploaded task.
+- [x] Preserve the existing supplied image, responsive text-wrap/stack layout, and Make a Booking route to `/research#contact`.
+- [x] Verify full text rendering on desktop/mobile, page-only image use, booking link, approved homepage ONDAMED Learn More destination, unchanged homepage card content/visuals, focused tests, TypeScript, and production build.
+- [x] Save the verified ONDAMED text restoration checkpoint and publish it automatically.
+- [ ] Confirm the restored text is live on wellbeingfem.com/ondamed.

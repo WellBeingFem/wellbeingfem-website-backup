@@ -2170,17 +2170,25 @@
 }
 
 .ondamed-page__text h1 {
-  margin: 0 0 12px;
+  margin: 0 0 20px;
 }
 
-.ondamed-page__subheading {
-  margin: 0 0 24px;
-  color: var(--wbf-green);
+.ondamed-page__text h2 {
+  margin: 32px 0 15px;
 }
 
-.ondamed-page__text > p:not(.page-eyebrow):not(.ondamed-page__subheading) {
-  max-width: 68ch;
+.ondamed-page__text > p {
   margin: 0 0 16px;
+}
+
+.ondamed-page__support-list {
+  margin: 0 0 20px;
+  padding-left: 1.25rem;
+}
+
+.ondamed-page__support-list li {
+  margin: 0 0 8px;
+  font-weight: 400;
 }
 
 @media (max-width: 900px) {
@@ -2192,5 +2200,10 @@
 
   .ondamed-page__booking {
     margin-top: 16px;
+  }
+
+  .ondamed-page__text > p,
+  .ondamed-page__support-list {
+    max-width: 65ch;
   }
 }
