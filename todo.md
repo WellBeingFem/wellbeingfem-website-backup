@@ -96,3 +96,16 @@
 - [x] Restore the exact approved copy and More/Less controls.
 - [x] Verify responsive side-by-side/stacked layout and preserve all other sections.
 - [x] Save private checkpoint without publishing.
+
+## Live Publication Readiness
+
+- [x] Preserve checkpoint 586614ec exactly except for deployment-critical technical corrections.
+- [x] Verify the production build, homepage, responsive layout, navigation, service routes, Contact/Booking destinations, logo, hero, footer, and managed assets.
+- [x] Remove the private-draft `noindex`/`nofollow` directives and ensure the public robots configuration does not block indexing.
+- [x] Inspect the current wellbeingfem.com maintenance page, HTTPS certificate, and domain response without changing DNS or publishing.
+- [x] Save a new production-ready checkpoint before the user publishes.
+- [ ] Guide the user to publish through the Management UI and bind wellbeingfem.com as the primary custom domain while preserving HTTPS.
+- [ ] After the user completes publication, verify wellbeingfem.com, maintenance-page removal, desktop/mobile rendering, routes, assets, footer, HTTPS, and public crawler settings.
+- [ ] Report the live URL and concise post-publication test checklist.
+- [x] Add deployment-only route aliases so existing ONDAMED, Healy, and Guided Meditations navigation URLs resolve to their recovered content instead of the 404 page.
+- [x] Verify every alias preserves the existing URL structure and redirects only to approved recovered homepage or Research sections.

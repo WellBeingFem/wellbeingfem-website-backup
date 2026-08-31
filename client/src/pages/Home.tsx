@@ -3,7 +3,7 @@
  * It must remain complete, unedited, uncropped, and free of extra visible overlays.
  */
 import SiteHeader from "@/components/SiteHeader";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SiteFooter from "@/components/SiteFooter";
 import {
   Carousel,
@@ -37,6 +37,15 @@ const clientExperiencePlaceholder =
 export default function Home() {
   const [changeDetailsOpen, setChangeDetailsOpen] = useState(false);
   const [membersLibraryOpen, setMembersLibraryOpen] = useState(false);
+
+  useEffect(() => {
+    const targetId = window.location.hash.slice(1);
+    if (!targetId) return;
+
+    window.requestAnimationFrame(() => {
+      document.getElementById(targetId)?.scrollIntoView({ block: "start" });
+    });
+  }, []);
 
   return (
     <div className="site-shell">
@@ -187,7 +196,7 @@ export default function Home() {
             </Carousel>
           </section>
 
-          <section className="womens-wisdom" aria-labelledby="womens-wisdom-heading">
+          <section id="womens-wisdom" className="womens-wisdom" aria-labelledby="womens-wisdom-heading">
             <div className="womens-wisdom__image-wrap">
               <img
                 src={WOMENS_WISDOM_IMAGE_URL}
@@ -216,7 +225,7 @@ export default function Home() {
                 </div>
               ) : null}
 
-              <h3>WellBeingFem Members’ Library</h3>
+              <h3 id="members-library">WellBeingFem Members’ Library</h3>
               <p>The launch of Women’s Wisdom in Times of Change will also open the WellBeingFem online Members Library, where the first meditation series and companion book will be included with membership.</p>
               <button
                 className="womens-wisdom__more"
