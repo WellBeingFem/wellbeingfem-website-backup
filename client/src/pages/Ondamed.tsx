@@ -1,15 +1,25 @@
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+import { useState } from "react";
 
 const ONDAMED_PAGE_IMAGE = "/manus-storage/ondamedwlogo-page_477a3f15.png";
 
 export default function Ondamed() {
+  const [introExpanded, setIntroExpanded] = useState(false);
+  const [expectationsExpanded, setExpectationsExpanded] = useState(false);
+  const [approachExpanded, setApproachExpanded] = useState(false);
+
   return (
     <div className="site-shell ondamed-route">
       <SiteHeader />
       <main className="page-main ondamed-page" aria-label="ONDAMED PEMF">
         <div className="page-main__inner">
           <section className="ondamed-page__intro" aria-labelledby="ondamed-page-heading">
+            <header className="ondamed-page__title-group">
+              <h1 id="ondamed-page-heading">ONDAMED PEMF</h1>
+              <p className="ondamed-page__subtitle">Wellbeing Sessions</p>
+            </header>
+
             <figure className="ondamed-page__figure">
               <img
                 src={ONDAMED_PAGE_IMAGE}
@@ -23,16 +33,29 @@ export default function Ondamed() {
             </figure>
 
             <div className="ondamed-page__text">
-              <h1 id="ondamed-page-heading">ONDAMED PEMF Wellbeing Sessions</h1>
               <p>
                 ONDAMED is a powerful, non-invasive biofeedback system that combines focused pulsed
                 electromagnetic field stimulation with a personalised frequency-based approach.
               </p>
               <p>
-                At WellBeingFem, ONDAMED sessions are offered in Dublin for women seeking deeper support
-                around stress regulation, nervous system calm, sleep, low energy, hormonal change and
-                transition, digestive wellbeing and inflammation-related concerns.
+                At WellBeingFem, ONDAMED sessions are offered in Dublin
+                {introExpanded ? (
+                  <span id="ondamed-intro-more">
+                    {" "}for women seeking deeper support around stress regulation, nervous system calm,
+                    sleep, low energy, hormonal change and transition, digestive wellbeing and
+                    inflammation-related concerns.
+                  </span>
+                ) : null}
               </p>
+              <button
+                className="ondamed-page__more"
+                type="button"
+                aria-expanded={introExpanded}
+                aria-controls="ondamed-intro-more"
+                onClick={() => setIntroExpanded((expanded) => !expanded)}
+              >
+                {introExpanded ? "Less" : "More"}
+              </button>
 
               <h2>Why Choose ONDAMED PEMF?</h2>
               <p>ONDAMED is a German-developed system that combines focused PEMF stimulation with biofeedback.</p>
@@ -61,15 +84,28 @@ export default function Ondamed() {
                 During your session, the ONDAMED biofeedback system helps guide the frequencies and
                 applicators selected.
               </p>
-              <p>
-                Focused pulsed electromagnetic field stimulation is then delivered through applicators
-                positioned on or near selected areas of the body. The session is non-invasive and designed to
-                support the body’s natural capacity for regulation, restoration and balance.
-              </p>
-              <p>
-                You remain fully clothed throughout and can simply sit or recline comfortably while the
-                session runs.
-              </p>
+              <button
+                className="ondamed-page__more"
+                type="button"
+                aria-expanded={expectationsExpanded}
+                aria-controls="ondamed-expectations-more"
+                onClick={() => setExpectationsExpanded((expanded) => !expanded)}
+              >
+                {expectationsExpanded ? "Less" : "More"}
+              </button>
+              {expectationsExpanded ? (
+                <div id="ondamed-expectations-more">
+                  <p>
+                    Focused pulsed electromagnetic field stimulation is then delivered through applicators
+                    positioned on or near selected areas of the body. The session is non-invasive and designed to
+                    support the body’s natural capacity for regulation, restoration and balance.
+                  </p>
+                  <p>
+                    You remain fully clothed throughout and can simply sit or recline comfortably while the
+                    session runs.
+                  </p>
+                </div>
+              ) : null}
 
               <h2>ONDAMED Frequency-Charged Water</h2>
               <p>
@@ -91,16 +127,29 @@ export default function Ondamed() {
                 balance has shifted — perhaps through stress, poor sleep, low energy, hormonal change,
                 digestive imbalance, metabolic changes or periods of nervous system overwhelm.
               </p>
-              <p>
-                Some women choose ONDAMED as part of an ongoing wellbeing routine, while others prefer a short
-                course of sessions when they feel depleted, overstimulated or simply no longer quite like
-                themselves.
-              </p>
-              <p>
-                Every session is individual. Clients may notice changes in areas such as energy, sleep, stress
-                response, body awareness, emotional balance, focus, digestion and physical comfort. Some
-                experiences may be gradual, while others can feel more immediate or deeply restorative.
-              </p>
+              <button
+                className="ondamed-page__more"
+                type="button"
+                aria-expanded={approachExpanded}
+                aria-controls="ondamed-approach-more"
+                onClick={() => setApproachExpanded((expanded) => !expanded)}
+              >
+                {approachExpanded ? "Less" : "More"}
+              </button>
+              {approachExpanded ? (
+                <div id="ondamed-approach-more">
+                  <p>
+                    Some women choose ONDAMED as part of an ongoing wellbeing routine, while others prefer a short
+                    course of sessions when they feel depleted, overstimulated or simply no longer quite like
+                    themselves.
+                  </p>
+                  <p>
+                    Every session is individual. Clients may notice changes in areas such as energy, sleep, stress
+                    response, body awareness, emotional balance, focus, digestion and physical comfort. Some
+                    experiences may be gradual, while others can feel more immediate or deeply restorative.
+                  </p>
+                </div>
+              ) : null}
             </div>
           </section>
         </div>

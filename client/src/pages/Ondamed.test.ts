@@ -17,11 +17,15 @@ describe("ONDAMED page image addition", () => {
   });
 
   it("restores the complete approved ONDAMED copy with unbolded support list items", () => {
-    const page = readProjectFile("client/src/pages/Ondamed.tsx").replace(/\s+/g, " ");
+    const page = readProjectFile("client/src/pages/Ondamed.tsx")
+      .replace(/\{\" \"\}/g, " ")
+      .replace(/\s+/g, " ");
     const approvedPhrases = [
-      "ONDAMED PEMF Wellbeing Sessions",
+      "ONDAMED PEMF",
+      "Wellbeing Sessions",
       "ONDAMED is a powerful, non-invasive biofeedback system that combines focused pulsed electromagnetic field stimulation with a personalised frequency-based approach.",
-      "At WellBeingFem, ONDAMED sessions are offered in Dublin for women seeking deeper support around stress regulation, nervous system calm, sleep, low energy, hormonal change and transition, digestive wellbeing and inflammation-related concerns.",
+      "At WellBeingFem, ONDAMED sessions are offered in Dublin",
+      "for women seeking deeper support around stress regulation, nervous system calm, sleep, low energy, hormonal change and transition, digestive wellbeing and inflammation-related concerns.",
       "Why Choose ONDAMED PEMF?",
       "ONDAMED is a German-developed system that combines focused PEMF stimulation with biofeedback.",
       "Rather than using a standard one-size-fits-all PEMF approach, ONDAMED uses your body’s responses to help guide the selection of frequencies, applicators and areas of focus. This allows each session to be shaped around what appears most relevant for you at that time.",
@@ -57,10 +61,24 @@ describe("ONDAMED page image addition", () => {
     const styles = readProjectFile("client/src/index.css");
 
     expect(styles).toContain(".ondamed-page__figure");
-    expect(styles).toContain("float: right");
+    expect(styles).toContain("float: left");
     expect(styles).toContain(".ondamed-page__figure img");
     expect(styles).toContain("height: auto");
     expect(styles).toContain("@media (max-width: 900px)");
     expect(styles).toContain("float: none");
+  });
+
+  it("keeps the requested title hierarchy and three independent green More/Less controls", () => {
+    const page = readProjectFile("client/src/pages/Ondamed.tsx");
+    const styles = readProjectFile("client/src/index.css");
+
+    expect(page).toContain('<h1 id="ondamed-page-heading">ONDAMED PEMF</h1>');
+    expect(page).toContain('className="ondamed-page__subtitle">Wellbeing Sessions</p>');
+    expect(page.match(/className="ondamed-page__more"/g)).toHaveLength(3);
+    expect(page).toContain("setIntroExpanded");
+    expect(page).toContain("setExpectationsExpanded");
+    expect(page).toContain("setApproachExpanded");
+    expect(styles).toContain(".ondamed-page__more");
+    expect(styles).toContain("background: #3f6b4f;");
   });
 });

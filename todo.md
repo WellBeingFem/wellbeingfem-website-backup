@@ -173,4 +173,15 @@
 - [x] Preserve the existing supplied image, responsive text-wrap/stack layout, and Make a Booking route to `/research#contact`.
 - [x] Verify full text rendering on desktop/mobile, page-only image use, booking link, approved homepage ONDAMED Learn More destination, unchanged homepage card content/visuals, focused tests, TypeScript, and production build.
 - [x] Save the verified ONDAMED text restoration checkpoint and publish it automatically.
-- [ ] Confirm the restored text is live on wellbeingfem.com/ondamed.
+- [x] Confirm the restored text is live on wellbeingfem.com/ondamed.
+
+## ONDAMED Layout and More/Less Update
+
+- [x] Present ONDAMED PEMF as the large title with Wellbeing Sessions as the smaller subtitle, retaining the existing dark-green serif typography and cream background.
+- [x] Move the supplied ONDAMED image to the left on desktop with text flowing on its right and beneath, and stack title, subtitle, image, then text on tablet/mobile without cropping.
+- [x] Keep the first introductory paragraph visible and add an independent #3F6B4F More/Less control for the remaining approved text in the second introductory paragraph.
+- [x] Add independent #3F6B4F More/Less controls for the remaining approved text under What to Expect During Your ONDAMED Session and A Personalised Approach to Wellbeing.
+- [x] Preserve all approved ONDAMED wording, booking button, links, colors, and all other pages unchanged.
+- [x] Verify desktop/mobile layout, exact text, three disclosure controls, booking route, focused tests, TypeScript, and production build.
+- [x] Save the verified ONDAMED layout update checkpoint and publish it automatically.
+- [ ] Confirm the published ONDAMED layout update on wellbeingfem.com.

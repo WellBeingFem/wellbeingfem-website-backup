@@ -2129,9 +2129,9 @@
 }
 
 .ondamed-page__figure {
-  float: right;
+  float: left;
   width: min(47%, 540px);
-  margin: 4px 0 28px clamp(28px, 4vw, 56px);
+  margin: 4px clamp(28px, 4vw, 56px) 28px 0;
 }
 
 .ondamed-page__figure img {
@@ -2169,8 +2169,25 @@
   transform: scale(0.97);
 }
 
-.ondamed-page__text h1 {
-  margin: 0 0 20px;
+.ondamed-page__title-group {
+  margin: 0 0 24px;
+}
+
+.ondamed-page__title-group h1 {
+  margin: 0;
+  color: var(--wbf-ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 4.1vw, 58px);
+  font-weight: 400;
+  line-height: 1.04;
+}
+
+.ondamed-page__subtitle {
+  margin: 6px 0 0;
+  color: var(--wbf-green);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(20px, 2.3vw, 28px);
+  line-height: 1.2;
 }
 
 .ondamed-page__text h2 {
@@ -2191,11 +2208,47 @@
   font-weight: 400;
 }
 
+.ondamed-page__more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 22px;
+  padding: 7px 15px;
+  border: 1px solid var(--wbf-gold);
+  border-radius: 2px;
+  background: #3f6b4f;
+  color: var(--wbf-cream);
+  font: inherit;
+  font-size: 0.84rem;
+  line-height: 1.2;
+  transition: transform 160ms var(--ease-out), background-color 160ms var(--ease-out);
+}
+
+.ondamed-page__more:hover,
+.ondamed-page__more:focus-visible {
+  background: #3f6b4f;
+  color: var(--wbf-cream);
+  outline: 2px solid var(--wbf-gold);
+  outline-offset: 3px;
+}
+
+.ondamed-page__more:active {
+  transform: scale(0.97);
+}
+
+.ondamed-page__text > div[id^="ondamed-"] {
+  margin: -6px 0 22px;
+}
+
 @media (max-width: 900px) {
   .ondamed-page__figure {
     float: none;
     width: min(100%, 720px);
     margin: 0 auto 30px;
+  }
+
+  .ondamed-page__title-group {
+    margin-bottom: 22px;
   }
 
   .ondamed-page__booking {
