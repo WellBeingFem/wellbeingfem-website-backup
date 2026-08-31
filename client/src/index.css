@@ -2066,11 +2066,33 @@
 .womens-wisdom__more,
 .womens-wisdom__launch-button,
 .client-experiences__previous,
-.client-experiences__next,
-.desktop-menu-trigger,
-.mobile-menu-button {
+.client-experiences__next {
   background: #3f6b4f;
   color: var(--wbf-cream);
+}
+
+/* Navigation is deliberately excluded from the action-button color. Restore
+ * the original transparent desktop/menu-control treatment and cream menus. */
+.desktop-menu-trigger {
+  background: transparent;
+  color: var(--wbf-green);
+}
+
+.desktop-menu-trigger:hover,
+.desktop-menu-trigger:focus-visible {
+  background: transparent;
+  color: #2f4336;
+}
+
+.mobile-menu-button {
+  background: transparent;
+  color: var(--wbf-green);
+}
+
+.mobile-menu-button:hover,
+.mobile-menu-button:focus-visible {
+  background: var(--wbf-cream-deep);
+  color: #2f4336;
 }
 
 /* The restored hero artwork contains the only visible Contact button. This

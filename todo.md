@@ -145,3 +145,14 @@
 - [x] Verify desktop/mobile design fidelity, single visible button, Contact Form destination, source integrity, focused tests, TypeScript, and production build.
 - [x] Request approval before saving because this project auto-publishes checkpoints.
 - [x] Save and deliver the approved hero-only correction.
+
+## Project Instructions and Navigation Restoration
+
+- [x] Update the project name and standing instructions to use WellBeingFem, publish requested changes automatically, and limit #3F6B4F to clickable buttons only unless preview-only instructions are given.
+- [x] Restore Healy, Guided Meditations, Research, and other navigation/menu controls to their pre-button-pass cream/sage/gold background and layout treatment.
+- [x] Preserve #3F6B4F on clickable content buttons only and leave all content, images, routes, hero design, headings, page sections, footer, and decorative elements unchanged.
+- [x] Verify desktop and mobile navigation, dropdown behavior, button-color separation, existing links, focused tests, TypeScript, and production build.
+- [x] Open and close the restored mobile navigation to verify its original cream/sage/gold styling and layout.
+- [x] Verify representative Healy, Guided Meditations, Research, and Contact navigation destinations after restoring menu colors.
+- [x] Save the verified instruction and navigation correction checkpoint and publish it automatically.
+- [ ] Confirm the published wellbeingfem.com navigation correction on the live domain.

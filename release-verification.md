@@ -45,3 +45,19 @@ The managed production domain subsequently served the corrected checkpoint: the 
 For the pending hero design restoration, desktop and mobile preview captures confirm the original embedded Contact WellBeingFem button is again the single visible hero control. Its gold flower icon, cream lettering, original typography, original rounded footprint, and a single thin gold outline are intact; only the fill is now the requested `#3F6B4F`. The hero image composition and responsive dimensions remain unchanged.
 
 The restored hero variants retain their original full dimensions—1672×941 for desktop and 1448×1086 for mobile/tablet—while their no-crop optimized WebP derivatives are 1600×900 (224 KB) and 900×675 (104 KB). Direct activation of the empty, transparent homepage hero anchor opened the existing `/research#contact` Contact Form, confirming that the artwork is the only visible button and the click target remains intact.
+
+Checkpoint `39a4a264` was published after explicit user approval. Once propagation completed, the live custom-domain bundle included both restored `contact-green` hero sources and no longer contained visible anchor text. A cache-busted production visit confirmed the original embedded Contact button is the only visible control, and its transparent hit area opened the live `https://wellbeingfem.com/research#contact` Contact Form successfully.
+
+For the pending navigation restoration, desktop and mobile private-preview captures confirm that Healy, Guided Meditations, and Research no longer have solid dark-green backgrounds. Desktop navigation now returns to the original cream-header, sage-text treatment, and the mobile hamburger returns to a transparent cream control with its thin gold border. The hero button remains the only stronger-green element in the above-the-fold capture.
+
+Desktop hover verification confirmed the Healy dropdown still opens normally with its original cream background, gold border, and sage navigation links. The trigger retains the transparent header treatment, so no dark-green background has been introduced to navigation, menus, or dropdowns.
+
+Computed styles confirm the restored separation: the desktop menu trigger is transparent with dark sage text, the desktop submenu is cream with a gold border, submenu links are transparent sage text, and the mobile menu control is transparent sage when rendered. Existing content/action buttons retain the requested `rgb(63, 107, 79)` fill with cream text and gold borders.
+
+The restored mobile control was directly exercised through its React event handler: `aria-expanded` and the `is-open` class changed from false to true and returned to false on close. A representative Healy submenu link was followed after the color restoration and resolved correctly to the existing `/research#healy` destination.
+
+The restored Guided Meditations dropdown also opens with its original cream menu treatment; its Women’s Wisdom link resolves to the existing `/#womens-wisdom` content. The top-level Research navigation still resolves to `/research#research-content`, confirming that representative navigation destinations remain intact after the color restoration.
+
+The restored top-level Contact link was also followed and loaded the existing `/research#contact` Contact Form. This completes direct checks for the mobile menu toggle, desktop dropdowns, representative Healy and Guided Meditations routes, Research, and Contact following navigation color restoration.
+
+A true 375×812 headless mobile capture with the menu open confirms the restored navigation layout: transparent mobile toggle with a thin gold border, cream menu surface, sage text, subtle gold dividers, and no solid dark-green backgrounds. Project metadata now identifies the project as `WellBeingFem`.
