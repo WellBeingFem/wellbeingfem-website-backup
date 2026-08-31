@@ -127,5 +127,12 @@
 - [x] Hide Client Experiences from the public homepage without deleting its existing project component or content.
 - [x] Replace the Women’s Wisdom desktop grid with an image-left float so the exact existing text wraps right and continues beneath, while retaining mobile image-first stacking.
 - [x] Verify desktop/mobile display, hero Contact target and color, Guided Meditations copy and destination, hidden carousel, Women’s Wisdom controls, tests, and production build.
-- [ ] Save the approved final checkpoint and publish it to wellbeingfem.com.
-- [ ] Recheck the live domain’s homepage, mobile layout, navigation, Contact target, assets, footer, crawler settings, and HTTPS after publication.
+- [x] Save the approved final checkpoint and publish it to wellbeingfem.com.
+- [x] Recheck the live domain’s homepage, mobile layout, navigation, Contact target, assets, footer, crawler settings, and HTTPS after publication.
+
+## Hero Border and Unified Button Color Correction
+
+- [x] Preserve the hero Contact WellBeingFem button’s current position, dimensions, wording, and `/research#contact` destination while leaving only one clean gold border.
+- [x] Apply `#3F6B4F` as the background for every existing website button without changing any button’s wording, size, border, link, or surrounding layout.
+- [x] Verify desktop/mobile hero alignment, single gold border, unified button green, route integrity, focused tests, TypeScript, and production build.
+- [x] Save the corrected final checkpoint and publish it to wellbeingfem.com.

@@ -2020,3 +2020,55 @@
     margin: 3px clamp(28px, 4vw, 60px) 18px 0;
   }
 }
+
+/* Final button-color correction: retain every established control’s geometry,
+ * text, existing borders, and destinations while unifying its background. The
+ * hero overlay border is transparent so the original embedded gold outline is
+ * the sole visible border. */
+.hero-booking-link {
+  border-color: transparent;
+  background: #3f6b4f;
+  background-clip: padding-box;
+}
+
+.hero-booking-link:hover,
+.hero-booking-link:focus-visible,
+.service-card-button:hover,
+.service-card-button:focus-visible,
+.homepage-contact-button:hover,
+.homepage-contact-button:focus-visible,
+.service-card-button--primary:hover,
+.service-card-button--primary:focus-visible,
+.send-enquiry-button:hover,
+.send-enquiry-button:focus-visible,
+.policy-card-toggle:hover,
+.policy-card-toggle:focus-visible,
+.womens-wisdom__more:hover,
+.womens-wisdom__more:focus-visible,
+.womens-wisdom__launch-button:hover,
+.womens-wisdom__launch-button:focus-visible,
+.client-experiences__previous:hover,
+.client-experiences__previous:focus-visible,
+.client-experiences__next:hover,
+.client-experiences__next:focus-visible,
+.desktop-menu-trigger:hover,
+.desktop-menu-trigger:focus-visible,
+.mobile-menu-button:hover,
+.mobile-menu-button:focus-visible {
+  background: #3f6b4f;
+  color: var(--wbf-cream);
+}
+
+.service-card-button,
+.homepage-contact-button,
+.send-enquiry-button,
+.policy-card-toggle,
+.womens-wisdom__more,
+.womens-wisdom__launch-button,
+.client-experiences__previous,
+.client-experiences__next,
+.desktop-menu-trigger,
+.mobile-menu-button {
+  background: #3f6b4f;
+  color: var(--wbf-cream);
+}
