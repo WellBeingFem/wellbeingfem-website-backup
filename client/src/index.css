@@ -2209,12 +2209,16 @@
 }
 
 .ondamed-page__support-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(22px, 3vw, 42px);
+  row-gap: 8px;
   margin: 0 0 20px;
   padding-left: 1.25rem;
 }
 
 .ondamed-page__support-list li {
-  margin: 0 0 8px;
+  margin: 0;
   font-weight: 400;
 }
 
@@ -2295,6 +2299,10 @@
   .ondamed-page__text > p,
   .ondamed-page__support-list {
     max-width: 65ch;
+  }
+
+  .ondamed-page__support-list {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .ondamed-page__support-card {

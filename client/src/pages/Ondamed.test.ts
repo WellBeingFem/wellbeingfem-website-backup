@@ -9,7 +9,16 @@ describe("ONDAMED page image addition", () => {
     const page = readProjectFile("client/src/pages/Ondamed.tsx");
     const home = readProjectFile("client/src/pages/Home.tsx");
 
-    expect(page).toContain('/manus-storage/ondamedwlogo-page_477a3f15.png');
+    expect(page).toContain('/manus-storage/ondamedwlogo-page-1448_113a94c2.webp');
+    expect(page).toContain('/manus-storage/ondamedwlogo-page-720_a87d4d44.webp');
+    expect(page).toContain('/manus-storage/ondamedwlogo-page-1448_147a2994.jpg');
+    expect(page).toContain('/manus-storage/ondamedwlogo-page-720_6f3bbdb0.jpg');
+    expect(page).toContain('<source media="(max-width: 900px)" type="image/webp"');
+    expect(page).toContain('<source media="(max-width: 900px)" type="image/jpeg"');
+    expect(page).toContain('loading="eager"');
+    expect(page).toContain('fetchPriority="high"');
+    expect(page).toContain('width={1448}');
+    expect(page).toContain('height={1086}');
     expect(page).toContain('href="/research#contact"');
     expect(page).toContain("Make a Booking");
     expect(home).not.toContain("ondamedwlogo-page_477a3f15.png");
@@ -85,5 +94,7 @@ describe("ONDAMED page image addition", () => {
     expect(styles).toContain("background: #3f6b4f;");
     expect(styles).toContain(".ondamed-page__support-card");
     expect(styles).toContain("border: 1px solid var(--wbf-green);");
+    expect(styles).toContain("grid-template-columns: repeat(2, minmax(0, 1fr));");
+    expect(styles).toContain("grid-template-columns: minmax(0, 1fr);");
   });
 });

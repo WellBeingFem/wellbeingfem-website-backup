@@ -2,7 +2,10 @@ import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { useState } from "react";
 
-const ONDAMED_PAGE_IMAGE = "/manus-storage/ondamedwlogo-page_477a3f15.png";
+const ONDAMED_PAGE_IMAGE_FALLBACK = "/manus-storage/ondamedwlogo-page-1448_147a2994.jpg";
+const ONDAMED_PAGE_IMAGE_WEBP = "/manus-storage/ondamedwlogo-page-1448_113a94c2.webp";
+const ONDAMED_PAGE_IMAGE_MOBILE_WEBP = "/manus-storage/ondamedwlogo-page-720_a87d4d44.webp";
+const ONDAMED_PAGE_IMAGE_MOBILE_FALLBACK = "/manus-storage/ondamedwlogo-page-720_6f3bbdb0.jpg";
 
 export default function Ondamed() {
   const [introExpanded, setIntroExpanded] = useState(false);
@@ -22,12 +25,20 @@ export default function Ondamed() {
             </header>
 
             <figure className="ondamed-page__figure">
-              <img
-                src={ONDAMED_PAGE_IMAGE}
-                alt="ONDAMED PEMF device with WellBeingFem branding"
-                width={1448}
-                height={1086}
-              />
+              <picture>
+                <source media="(max-width: 900px)" type="image/webp" srcSet={ONDAMED_PAGE_IMAGE_MOBILE_WEBP} />
+                <source media="(max-width: 900px)" type="image/jpeg" srcSet={ONDAMED_PAGE_IMAGE_MOBILE_FALLBACK} />
+                <source type="image/webp" srcSet={ONDAMED_PAGE_IMAGE_WEBP} />
+                <img
+                  src={ONDAMED_PAGE_IMAGE_FALLBACK}
+                  alt="ONDAMED PEMF device with WellBeingFem branding"
+                  width={1448}
+                  height={1086}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                />
+              </picture>
               <a className="ondamed-page__booking" href="/research#contact">
                 Make a Booking
               </a>

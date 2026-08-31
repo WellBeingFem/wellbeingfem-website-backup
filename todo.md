@@ -192,4 +192,14 @@
 - [x] Apply the new supplied instructions only to the existing ONDAMED page while preserving all other website pages and unmodified approved copy.
 - [x] Verify the resulting ONDAMED page wording, layout, interactions, focused tests, TypeScript, and production build.
 - [x] Save the verified ONDAMED update checkpoint and publish it automatically.
-- [ ] Confirm the new ONDAMED update is live on wellbeingfem.com.
+- [x] Confirm the new ONDAMED update is live on wellbeingfem.com.
+
+## ONDAMED Symptom List and Image Performance Update
+
+- [x] Preserve all ONDAMED page text, headings, controls, booking link, card appearance, and other pages unchanged.
+- [x] Display the existing symptom list in two columns on desktop and a single column on tablet/mobile while retaining its exact card styling.
+- [x] Create and upload responsive, visually clear, uncropped ONDAMED image WebP variants with fixed dimensions for desktop and mobile delivery.
+- [x] Serve the optimized image variants only on the ONDAMED page without changing image content, position, styling, proportions, or fallback behavior.
+- [x] Verify desktop/mobile symptom-list layout, image dimensions and source selection, image integrity, unchanged controls/links, focused tests, TypeScript, and production build.
+- [x] Save the verified ONDAMED optimization update checkpoint and publish it automatically.
+- [ ] Confirm the published ONDAMED update on wellbeingfem.com.
