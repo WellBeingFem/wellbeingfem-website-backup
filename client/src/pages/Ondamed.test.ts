@@ -68,17 +68,22 @@ describe("ONDAMED page image addition", () => {
     expect(styles).toContain("float: none");
   });
 
-  it("keeps the requested title hierarchy and three independent green More/Less controls", () => {
+  it("keeps the requested title hierarchy, support card, and four independent green More/Less controls", () => {
     const page = readProjectFile("client/src/pages/Ondamed.tsx");
     const styles = readProjectFile("client/src/index.css");
 
     expect(page).toContain('<h1 id="ondamed-page-heading">ONDAMED PEMF</h1>');
     expect(page).toContain('className="ondamed-page__subtitle">Wellbeing Sessions</p>');
-    expect(page.match(/className="ondamed-page__more"/g)).toHaveLength(3);
+    expect(page.match(/className="ondamed-page__more"/g)).toHaveLength(4);
     expect(page).toContain("setIntroExpanded");
     expect(page).toContain("setExpectationsExpanded");
+    expect(page).toContain("setWaterExpanded");
     expect(page).toContain("setApproachExpanded");
+    expect(page).toContain('className="ondamed-page__support-card"');
+    expect(page).toContain('id="ondamed-support-heading"');
     expect(styles).toContain(".ondamed-page__more");
     expect(styles).toContain("background: #3f6b4f;");
+    expect(styles).toContain(".ondamed-page__support-card");
+    expect(styles).toContain("border: 1px solid var(--wbf-green);");
   });
 });

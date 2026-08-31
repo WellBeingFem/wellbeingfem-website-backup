@@ -2118,8 +2118,13 @@
 /* Dedicated ONDAMED page: the supplied image sits beside the existing service
  * copy on desktop, allowing the text to continue below naturally. */
 .ondamed-page__intro {
-  max-width: 1120px;
+  max-width: 1280px;
   margin: 0 auto;
+}
+
+.ondamed-page .page-main__inner {
+  max-width: 1360px;
+  padding-inline: clamp(28px, 4vw, 56px);
 }
 
 .ondamed-page__intro::after {
@@ -2130,8 +2135,8 @@
 
 .ondamed-page__figure {
   float: left;
-  width: min(47%, 540px);
-  margin: 4px clamp(28px, 4vw, 56px) 28px 0;
+  width: min(44%, 540px);
+  margin: 4px clamp(28px, 3.5vw, 48px) 28px 0;
 }
 
 .ondamed-page__figure img {
@@ -2192,6 +2197,11 @@
 
 .ondamed-page__text h2 {
   margin: 32px 0 15px;
+  color: var(--wbf-green);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .ondamed-page__text > p {
@@ -2206,6 +2216,29 @@
 .ondamed-page__support-list li {
   margin: 0 0 8px;
   font-weight: 400;
+}
+
+.ondamed-page__support-card {
+  clear: left;
+  max-width: 560px;
+  margin: 30px 0 32px;
+  padding: 24px clamp(22px, 2.4vw, 30px) 18px;
+  border: 1px solid var(--wbf-green);
+  border-radius: 12px;
+  background: #fbf8f0;
+}
+
+.ondamed-page__support-card h2 {
+  margin: 0 0 16px;
+  color: var(--wbf-green);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.ondamed-page__support-card .ondamed-page__support-list {
+  margin-bottom: 0;
 }
 
 .ondamed-page__more {
@@ -2241,6 +2274,10 @@
 }
 
 @media (max-width: 900px) {
+  .ondamed-page .page-main__inner {
+    padding-inline: 28px;
+  }
+
   .ondamed-page__figure {
     float: none;
     width: min(100%, 720px);
@@ -2258,5 +2295,10 @@
   .ondamed-page__text > p,
   .ondamed-page__support-list {
     max-width: 65ch;
+  }
+
+  .ondamed-page__support-card {
+    max-width: 65ch;
+    margin-top: 26px;
   }
 }

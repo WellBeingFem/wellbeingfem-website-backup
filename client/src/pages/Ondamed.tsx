@@ -7,6 +7,7 @@ const ONDAMED_PAGE_IMAGE = "/manus-storage/ondamedwlogo-page_477a3f15.png";
 export default function Ondamed() {
   const [introExpanded, setIntroExpanded] = useState(false);
   const [expectationsExpanded, setExpectationsExpanded] = useState(false);
+  const [waterExpanded, setWaterExpanded] = useState(false);
   const [approachExpanded, setApproachExpanded] = useState(false);
 
   return (
@@ -65,18 +66,20 @@ export default function Ondamed() {
                 allows each session to be shaped around what appears most relevant for you at that time.
               </p>
 
-              <p>Women may choose ONDAMED to support:</p>
-              <ul className="ondamed-page__support-list">
-                <li>Stress regulation and nervous system balance</li>
-                <li>Poor sleep and rest disruption</li>
-                <li>Low energy and physical depletion</li>
-                <li>Hormonal change, perimenopause and menopause</li>
-                <li>Digestive wellbeing and bloating-related concerns</li>
-                <li>Inflammation-related wellbeing concerns</li>
-                <li>Metabolic wellbeing and weight-management concerns</li>
-                <li>Emotional overwhelm and body disconnection</li>
-                <li>Recovery, restoration and resilience</li>
-              </ul>
+              <section className="ondamed-page__support-card" aria-labelledby="ondamed-support-heading">
+                <h2 id="ondamed-support-heading">Women may choose ONDAMED to support:</h2>
+                <ul className="ondamed-page__support-list">
+                  <li>Stress regulation and nervous system balance</li>
+                  <li>Poor sleep and rest disruption</li>
+                  <li>Low energy and physical depletion</li>
+                  <li>Hormonal change, perimenopause and menopause</li>
+                  <li>Digestive wellbeing and bloating-related concerns</li>
+                  <li>Inflammation-related wellbeing concerns</li>
+                  <li>Metabolic wellbeing and weight-management concerns</li>
+                  <li>Emotional overwhelm and body disconnection</li>
+                  <li>Recovery, restoration and resilience</li>
+                </ul>
+              </section>
 
               <h2>What to Expect During Your ONDAMED Session</h2>
               <p>Your ONDAMED session lasts approximately 60 minutes.</p>
@@ -112,14 +115,27 @@ export default function Ondamed() {
                 As an optional addition to your ONDAMED experience, clients can receive water prepared using
                 selected ONDAMED frequencies focused around women’s wellbeing.
               </p>
-              <p>
-                Many clients enjoy bringing their own water bottle to each session so they can take their
-                frequency-charged water home and continue enjoying it after their appointment.
-              </p>
-              <p>
-                ONDAMED guidance states that charged water can be diluted at a ratio of 1 part charged water to
-                5 parts water.
-              </p>
+              <button
+                className="ondamed-page__more"
+                type="button"
+                aria-expanded={waterExpanded}
+                aria-controls="ondamed-water-more"
+                onClick={() => setWaterExpanded((expanded) => !expanded)}
+              >
+                {waterExpanded ? "Less" : "More"}
+              </button>
+              {waterExpanded ? (
+                <div id="ondamed-water-more">
+                  <p>
+                    Many clients enjoy bringing their own water bottle to each session so they can take their
+                    frequency-charged water home and continue enjoying it after their appointment.
+                  </p>
+                  <p>
+                    ONDAMED guidance states that charged water can be diluted at a ratio of 1 part charged water to
+                    5 parts water.
+                  </p>
+                </div>
+              ) : null}
 
               <h2>A Personalised Approach to Wellbeing</h2>
               <p>

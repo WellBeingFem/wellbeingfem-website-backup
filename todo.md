@@ -184,4 +184,12 @@
 - [x] Preserve all approved ONDAMED wording, booking button, links, colors, and all other pages unchanged.
 - [x] Verify desktop/mobile layout, exact text, three disclosure controls, booking route, focused tests, TypeScript, and production build.
 - [x] Save the verified ONDAMED layout update checkpoint and publish it automatically.
-- [ ] Confirm the published ONDAMED layout update on wellbeingfem.com.
+- [x] Confirm the published ONDAMED layout update on wellbeingfem.com.
+
+## ONDAMED Supplied Instruction Update
+
+- [x] Read pasted_content_13.txt and identify only the explicitly requested ONDAMED page changes.
+- [x] Apply the new supplied instructions only to the existing ONDAMED page while preserving all other website pages and unmodified approved copy.
+- [x] Verify the resulting ONDAMED page wording, layout, interactions, focused tests, TypeScript, and production build.
+- [x] Save the verified ONDAMED update checkpoint and publish it automatically.
+- [ ] Confirm the new ONDAMED update is live on wellbeingfem.com.
