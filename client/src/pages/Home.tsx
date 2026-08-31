@@ -15,9 +15,12 @@ import {
 
 const HERO_URL = "/manus-storage/NewHeroAug13_e95140e6.png";
 const DESKTOP_HERO_URL = "/manus-storage/DeaktopHeroWBF_921006d2.png";
+const HERO_WEBP_URL = "/manus-storage/NewHeroAug13-900_4621e54c.webp";
+const DESKTOP_HERO_WEBP_URL = "/manus-storage/DeaktopHeroWBF-1600_b63db271.webp";
 const ONDAMED_IMAGE_URL = "/manus-storage/ondamedwlogo_d68ec81a.png";
 const HEALY_IMAGE_URL = "/manus-storage/Healyandphone_52ac329b.png";
 const GUIDED_MEDITATIONS_IMAGE_URL = "/manus-storage/06_WBF_QR_YouTube_Channel_d57f9130.png";
+const WELLBEINGFEM_YOUTUBE_URL = "https://www.youtube.com/@wellbeingfem";
 const WOMENS_WISDOM_IMAGE_URL = "/manus-storage/WomensWisdom1image_c8dbd7a7.png";
 
 const clientExperienceCards = [
@@ -54,12 +57,17 @@ export default function Home() {
         <section className="hero-image-container" aria-label="WellBeingFem ONDAMED PEMF">
           <div className="hero-media">
             <picture className="hero-picture">
+              <source media="(min-width: 1025px)" type="image/webp" srcSet={DESKTOP_HERO_WEBP_URL} />
               <source media="(min-width: 1025px)" srcSet={DESKTOP_HERO_URL} />
+              <source type="image/webp" srcSet={HERO_WEBP_URL} />
               <img
                 src={HERO_URL}
                 alt="ONDAMED PEMF Healy Frequency Sessions for Women, with a Contact WellBeingFem button"
                 width="1448"
                 height="1086"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
               />
             </picture>
             <a
@@ -67,9 +75,7 @@ export default function Home() {
               href="/research#contact"
               aria-label="Open the Research page for the Contact and Booking Form"
             >
-              <span className="visually-hidden">
-                Open the Research page for the Contact and Booking Form
-              </span>
+              <span>Contact WellBeingFem</span>
             </a>
           </div>
         </section>
@@ -99,7 +105,7 @@ export default function Home() {
                 </div>
                 <div className="service-card__actions">
                   <a className="service-card-button" href="/research#ondamed">Learn More</a>
-                  <a className="service-card-button" href="/research#contact">Make a Booking</a>
+                  <a className="service-card-button service-card-button--primary" href="/research#contact">Make a Booking</a>
                 </div>
               </div>
             </article>
@@ -122,7 +128,7 @@ export default function Home() {
                 </div>
                 <div className="service-card__actions">
                   <a className="service-card-button" href="/research#healy">Learn More</a>
-                  <a className="service-card-button" href="/research#contact">Make a Booking</a>
+                  <a className="service-card-button service-card-button--primary" href="/research#contact">Make a Booking</a>
                 </div>
               </div>
             </article>
@@ -135,15 +141,15 @@ export default function Home() {
                 <div className="service-card__intro">
                   <h2>Guided Meditations</h2>
                   <p className="service-card__subheading">Free Guided Meditations</p>
-                  <p>Explore guided meditation journeys and wellbeing practices through the Imagine Well YouTube Channel.</p>
+                  <p>Explore guided meditation journeys and wellbeing practices through the WellBeingFem YouTube Channel.</p>
                 </div>
                 <div className="service-card__fees" aria-label="Guided Meditations access information">
                   <p>Free access on YouTube</p>
                   <p>Duration: Varies by meditation</p>
-                  <p>Access to the Imagine Well Members’ Library — Coming Soon</p>
+                  <p>WellBeingFem Members’ Library — Coming Soon</p>
                 </div>
                 <div className="service-card__actions service-card__actions--single">
-                  <button className="service-card-button" type="button" disabled title="Imagine Well YouTube destination to be supplied">Visit Imagine Well on YouTube</button>
+                  <a className="service-card-button" href={WELLBEINGFEM_YOUTUBE_URL} target="_blank" rel="noreferrer">Visit WellBeingFem on YouTube</a>
                 </div>
               </div>
             </article>
@@ -167,7 +173,7 @@ export default function Home() {
             <p className="homepage-philosophy__closing">Rest • Reflect • Renew</p>
           </section>
 
-          <section className="client-experiences" aria-labelledby="client-experiences-heading">
+          <section className="client-experiences" aria-labelledby="client-experiences-heading" hidden>
             <header className="client-experiences__heading">
               <div className="homepage-gold-divider" aria-hidden="true" />
               <h2 id="client-experiences-heading">Client Experiences</h2>

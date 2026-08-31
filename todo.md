@@ -104,8 +104,28 @@
 - [x] Remove the private-draft `noindex`/`nofollow` directives and ensure the public robots configuration does not block indexing.
 - [x] Inspect the current wellbeingfem.com maintenance page, HTTPS certificate, and domain response without changing DNS or publishing.
 - [x] Save a new production-ready checkpoint before the user publishes.
-- [ ] Guide the user to publish through the Management UI and bind wellbeingfem.com as the primary custom domain while preserving HTTPS.
-- [ ] After the user completes publication, verify wellbeingfem.com, maintenance-page removal, desktop/mobile rendering, routes, assets, footer, HTTPS, and public crawler settings.
-- [ ] Report the live URL and concise post-publication test checklist.
+- [x] Guide the user to publish through the Management UI and bind wellbeingfem.com as the primary custom domain while preserving HTTPS.
+- [x] After the user completes publication, verify wellbeingfem.com, maintenance-page removal, desktop/mobile rendering, routes, assets, footer, HTTPS, and public crawler settings.
+- [x] Report the live URL and concise post-publication test checklist.
 - [x] Add deployment-only route aliases so existing ONDAMED, Healy, and Guided Meditations navigation URLs resolve to their recovered content instead of the 404 page.
 - [x] Verify every alias preserves the existing URL structure and redirects only to approved recovered homepage or Research sections.
+
+## Primary CTA and Hero Performance Update
+
+- [x] Change only main booking, contact, gift-card, and enquiry buttons to `#3F6B4F` with light text.
+- [x] Preserve the existing softer sage treatment for Learn More and all More/Less secondary controls.
+- [x] Generate visually equivalent, uncropped WebP hero variants sized appropriately for desktop and mobile.
+- [x] Upload optimized hero variants to managed static storage and preserve the original source assets outside the project.
+- [x] Serve responsive hero sources with explicit dimensions, eager loading, high fetch priority, and no layout change.
+- [x] Verify desktop/mobile appearance, button hierarchy, image integrity, responsive routes, focused tests, TypeScript, and production build.
+- [x] Keep these changes in the private working draft without saving a checkpoint, because checkpoints auto-publish this project.
+
+## Final Pre-Publication Corrections
+
+- [x] Keep the hero Contact action linked to `/research#contact` and apply the stronger primary green without altering the supplied hero image or layout.
+- [x] Remove Imagine Well wording from the Guided Meditations card and restore the specified WellBeingFem wording and existing WellBeingFem YouTube destination.
+- [x] Hide Client Experiences from the public homepage without deleting its existing project component or content.
+- [x] Replace the Women’s Wisdom desktop grid with an image-left float so the exact existing text wraps right and continues beneath, while retaining mobile image-first stacking.
+- [x] Verify desktop/mobile display, hero Contact target and color, Guided Meditations copy and destination, hidden carousel, Women’s Wisdom controls, tests, and production build.
+- [ ] Save the approved final checkpoint and publish it to wellbeingfem.com.
+- [ ] Recheck the live domain’s homepage, mobile layout, navigation, Contact target, assets, footer, crawler settings, and HTTPS after publication.

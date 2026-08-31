@@ -30,10 +30,56 @@ describe("Women’s Wisdom homepage recovery section", () => {
     expect(homeSource).toContain('{membersLibraryOpen ? "Less" : "More"}');
   });
 
-  it("keeps the image whole and stacks it first on mobile", () => {
+  it("keeps the image whole, stacks it first on mobile, and wraps desktop text around it", () => {
     expect(styleSource).toContain(".womens-wisdom__image-wrap img {");
     expect(styleSource).toContain("object-fit: contain;");
-    expect(styleSource).toContain(".womens-wisdom {\n  display: grid;");
-    expect(styleSource).toContain("@media (max-width: 760px) {\n  .womens-wisdom {\n    grid-template-columns: minmax(0, 1fr);");
+    expect(styleSource).not.toContain(".womens-wisdom {\n  display: grid;");
+    expect(styleSource).toContain("@media (min-width: 1025px) {\n  .womens-wisdom__image-wrap {\n    float: left;");
+  });
+});
+
+describe("Final pre-publication corrections", () => {
+  it("keeps the hero Contact action on the existing Contact Form with the stronger primary treatment", () => {
+    expect(homeSource).toContain('className="hero-booking-link"');
+    expect(homeSource).toContain('href="/research#contact"');
+    expect(homeSource).toContain("Contact WellBeingFem");
+    expect(styleSource).toContain(".hero-booking-link {\n  position: absolute;");
+    expect(styleSource).toContain("background: #3f6b4f;");
+  });
+
+  it("restores WellBeingFem-only Guided Meditations copy and its existing YouTube destination", () => {
+    expect(homeSource).toContain('const WELLBEINGFEM_YOUTUBE_URL = "https://www.youtube.com/@wellbeingfem";');
+    expect(homeSource).toContain("Explore guided meditation journeys and wellbeing practices through the WellBeingFem YouTube Channel.");
+    expect(homeSource).toContain("WellBeingFem Members’ Library — Coming Soon");
+    expect(homeSource).toContain("Visit WellBeingFem on YouTube");
+    expect(homeSource).toContain('href={WELLBEINGFEM_YOUTUBE_URL}');
+    expect(homeSource).not.toContain("Imagine Well");
+  });
+
+  it("keeps Client Experiences in source while hiding it from the public homepage", () => {
+    expect(homeSource).toContain("const clientExperienceCards = [");
+    expect(homeSource).toContain('<section className="client-experiences" aria-labelledby="client-experiences-heading" hidden>');
+  });
+});
+
+describe("Primary CTA and hero performance update", () => {
+  it("serves responsive WebP hero sources without lazy loading", () => {
+    expect(homeSource).toContain('const HERO_WEBP_URL = "/manus-storage/NewHeroAug13-900_4621e54c.webp";');
+    expect(homeSource).toContain('const DESKTOP_HERO_WEBP_URL = "/manus-storage/DeaktopHeroWBF-1600_b63db271.webp";');
+    expect(homeSource).toContain('<source media="(min-width: 1025px)" type="image/webp" srcSet={DESKTOP_HERO_WEBP_URL} />');
+    expect(homeSource).toContain('<source type="image/webp" srcSet={HERO_WEBP_URL} />');
+    expect(homeSource).toContain('loading="eager"');
+    expect(homeSource).toContain('fetchPriority="high"');
+    expect(homeSource).not.toContain('loading="lazy"');
+  });
+
+  it("uses stronger green only for primary homepage actions", () => {
+    expect(homeSource.match(/service-card-button service-card-button--primary/g)).toHaveLength(2);
+    expect(homeSource).toContain('className="service-card-button" href="/research#ondamed">Learn More');
+    expect(homeSource).toContain('className="service-card-button" href="/research#healy">Learn More');
+    expect(styleSource).toContain(".service-card-button--primary,\n.homepage-contact-button {\n  background: #3f6b4f;");
+    expect(styleSource).toContain(".womens-wisdom__more,\n.womens-wisdom__launch-button {");
+    expect(styleSource).toContain("background: var(--wbf-sage);");
+    expect(styleSource).toContain(".womens-wisdom__launch-button {\n  display: flex;\n  width: fit-content;\n  margin-top: 30px;\n  background: #3f6b4f;");
   });
 });
