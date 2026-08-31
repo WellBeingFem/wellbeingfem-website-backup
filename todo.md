@@ -202,4 +202,14 @@
 - [x] Serve the optimized image variants only on the ONDAMED page without changing image content, position, styling, proportions, or fallback behavior.
 - [x] Verify desktop/mobile symptom-list layout, image dimensions and source selection, image integrity, unchanged controls/links, focused tests, TypeScript, and production build.
 - [x] Save the verified ONDAMED optimization update checkpoint and publish it automatically.
-- [ ] Confirm the published ONDAMED update on wellbeingfem.com.
+- [x] Confirm the published ONDAMED update on wellbeingfem.com.
+
+## Research Page Content Restoration
+
+- [x] Preserve pasted_content_14.txt wording, citations, disclaimers, and source links exactly within the existing Research page only.
+- [x] Replace only the superseded ONDAMED/PEMF, Healy, Reiki/Distant Reiki, and Guided Meditation Research content named in the supplied document.
+- [x] Keep Reiki & Distant Reiki within the Healy & Frequency-Based Wellbeing Resources section and do not create a separate Reiki research section or new research buttons.
+- [x] Preserve the existing WellBeingFem Research-page styling, responsive layout, Contact Form, policies, and all non-Research routes.
+- [x] Verify the three Research sections, citations/links/disclaimers, omissions of specified retired content, page-only scope, focused tests, TypeScript, and production build.
+- [x] Save the verified Research page update checkpoint and publish it automatically.
+- [ ] Confirm the restored Research page is live on wellbeingfem.com.

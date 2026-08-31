@@ -1,7 +1,8 @@
 /**
  * WellBeingFem restoration reminder: the supplied Contact Form leads this page;
- * research sections remain only anchored placeholders pending source restoration.
+ * supplied cited research is isolated in the existing Research page only.
  */
+import ResearchResources from "@/components/ResearchResources";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { PrivacyPolicyDocument, TermsAndConditionsDocument } from "@/components/PolicyDocuments";
@@ -179,27 +180,7 @@ export default function Research() {
             ) : null}
           </section>
 
-          <div id="research-content" className="research-content-anchor">
-            <nav className="research-category-navigation" aria-label="Research categories">
-              <a href="#ondamed">ONDAMED</a>
-              <a href="#healy">Healy</a>
-              <a href="#guided-meditations">Guided Meditations</a>
-            </nav>
-
-            <section id="ondamed" className="research-anchor-section" aria-labelledby="ondamed-heading">
-              <h2 id="ondamed-heading">ONDAMED Research</h2>
-            </section>
-            <section id="healy" className="research-anchor-section" aria-labelledby="healy-heading">
-              <h2 id="healy-heading">Healy Research</h2>
-            </section>
-            <section
-              id="guided-meditations"
-              className="research-anchor-section"
-              aria-labelledby="guided-meditations-heading"
-            >
-              <h2 id="guided-meditations-heading">Guided Meditations Research</h2>
-            </section>
-          </div>
+          <ResearchResources />
         </div>
       </main>
       <SiteFooter />

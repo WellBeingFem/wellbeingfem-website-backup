@@ -1316,10 +1316,105 @@
 }
 
 .research-anchor-section {
-  min-height: 132px;
+  min-height: 0;
   padding: 37px 0;
   border-bottom: 1px solid color-mix(in srgb, var(--wbf-gold) 28%, transparent);
   scroll-margin-top: 24px;
+}
+
+.research-content-heading {
+  max-width: 820px;
+  margin: 30px 0 4px;
+}
+
+.research-content-heading p:first-child {
+  margin: 0 0 12px;
+  color: var(--wbf-gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(20px, 2.2vw, 27px);
+  line-height: 1.2;
+}
+
+.research-content-heading p:last-child {
+  margin: 0;
+  max-width: 760px;
+}
+
+.research-anchor-section > h2 {
+  padding-bottom: 14px;
+  border-bottom: 1px solid color-mix(in srgb, var(--wbf-gold) 45%, transparent);
+}
+
+.research-resource-list {
+  display: grid;
+  gap: 0;
+  margin: 12px 0 0;
+}
+
+.research-resource {
+  padding: 27px 0 28px;
+  border-bottom: 1px solid color-mix(in srgb, var(--wbf-gold) 28%, transparent);
+}
+
+.research-resource h3,
+.research-subsection > h3,
+.research-note h3,
+.research-note h4 {
+  margin: 0 0 10px;
+  color: var(--wbf-green);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(18px, 2vw, 23px);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.research-note h4 {
+  font-size: clamp(17px, 1.8vw, 21px);
+}
+
+.research-resource p,
+.research-note p {
+  margin: 0 0 11px;
+  max-width: 880px;
+}
+
+.research-resource__citation {
+  color: var(--wbf-ink);
+  font-style: italic;
+}
+
+.research-resource a {
+  color: var(--wbf-green);
+  text-decoration-color: var(--wbf-gold);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.research-resource a:hover,
+.research-resource a:focus-visible {
+  color: var(--wbf-ink);
+}
+
+.research-note {
+  margin: 26px 0 0;
+  padding: 18px 20px 8px;
+  border-left: 2px solid var(--wbf-gold);
+  background: var(--wbf-cream-deep);
+}
+
+.research-note h3,
+.research-note h4 {
+  margin-bottom: 9px;
+}
+
+.research-subsection {
+  margin: 38px 0 0;
+  padding: 30px 0 0;
+  border-top: 1px solid color-mix(in srgb, var(--wbf-gold) 45%, transparent);
+}
+
+.research-subsection > h3 {
+  font-size: clamp(21px, 2.3vw, 27px);
 }
 
 .resources-page {
