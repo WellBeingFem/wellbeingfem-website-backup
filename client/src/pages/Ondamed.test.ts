@@ -99,5 +99,8 @@ describe("ONDAMED page image addition", () => {
     expect(styles).toContain("margin: 0 0 24px;");
     expect(styles).toContain("grid-template-columns: repeat(2, minmax(0, 1fr));");
     expect(styles).toContain("grid-template-columns: minmax(0, 1fr);");
+    expect(styles).toContain(".ondamed-page__support-list li::before");
+    expect(styles).toContain('background-image: url("/manus-storage/WBFFlowerfromlogo_60274cdc.png")');
+    expect(styles).toContain("list-style: none;");
   });
 });

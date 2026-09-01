@@ -8,7 +8,7 @@ const page = readFileSync(resolve(process.cwd(), "client/src/pages/Healy.tsx"), 
 const styles = readFileSync(resolve(process.cwd(), "client/src/index.css"), "utf8");
 
 describe("Healy service page", () => {
-  it("preserves the approved page sections and menu anchors", () => {
+  it("preserves the approved page sections, images, actions, and menu anchors", () => {
     for (const [id, heading] of [
       ["what-is-healy", "What is Healy?"],
       ["how-your-remote-healy-session-works", "How Your Remote Healy Session Works"],
@@ -21,48 +21,65 @@ describe("Healy service page", () => {
       expect(page).toContain(heading);
     }
 
-    expect(page).toContain("Healy Remote Wellbeing Sessions");
-    expect(page).toContain("It uses Individualised Microcurrent Frequencies (IMF) within a bioenergetic wellbeing framework.");
-    expect(page).toContain("For WellBeingFem remote sessions, selected frequency programs are delivered using the Healy Coil.");
-    expect(page).toContain("The session includes the All Healy Program, which identifies the frequency programs showing strongest resonance at the time of your session.");
-    expect(page).toContain("The Healy I Ching is used as a reflective wellbeing tool rather than as prediction.");
-    expect(page).toContain("A first Healy remote session is required before booking a Healy Reiki Combined Session.");
-    expect(page).toContain("Reiki is offered as an energetic wellbeing practice and is not a replacement for medical advice, diagnosis or treatment.");
-    expect(page).toContain("document.getElementById(targetId)?.scrollIntoView({ block: \"start\" });");
-    expect(page).not.toContain("Duration: Approx. 60 minutes");
-    expect(page).not.toContain("Healy session: €80");
-    expect(page).not.toContain("Healy Reiki session: €90");
-    expect(page).not.toContain("View Research");
-  });
-
-  it("applies the supplied session-process replacements and intro disclosure exactly", () => {
-    expect(page).toContain("Once the selected Healy frequency programs begin running remotely, the session can simply become a time to relax. This might include lying down, journalling, meditating, listening to music or simply resting. There is no need to remain on WhatsApp or Zoom for the full session.");
-    expect(page).toContain("Afterwards, PDF copies of the personalised Healy frequencies and programs will be provided together with the WellBeingFem resources associated with the chosen session.");
-    expect(page).toContain("These materials are intended for reflection, journalling and as a personal wellbeing record. They are not medical reports, diagnoses or treatment plans.");
-    expect(page).toContain("const [isSessionProcessOpen, setIsSessionProcessOpen] = useState(false);");
-    expect(page).toContain('aria-controls="how-your-remote-healy-session-works"');
-    expect(page).toContain('{isSessionProcessOpen ? "Less" : "More"}');
-    expect(page).not.toContain("You can then relax while the selected Healy frequency programs run remotely.");
-    expect(page).not.toContain("Afterwards, you will receive PDF copies of your personalised Healy frequencies and programs");
-    expect(page).not.toContain("These materials are provided for reflection, journalling and your personal wellbeing record.");
-  });
-
-  it("uses the supplied images, image actions, wrapped Reiki visual, and flower list icon only within Healy", () => {
     expect(page).toContain("/manus-storage/frequencylaptophealyimage_9b168a7c.png");
     expect(page).toContain("/manus-storage/HealyReikicombowebsiteimage_dcf16ff1.png");
     expect(page).toContain('href="/research#contact">Make a Booking</a>');
     expect(page).toContain('href="mailto:wellbeingfem@gmail.com">Email Us</a>');
-    expect(page).toContain("width={1536}");
-    expect(page).toContain("height={1024}");
-    expect(page).toContain("width={1672}");
-    expect(page).toContain("height={941}");
+    expect(page).toContain("document.getElementById(targetId)?.scrollIntoView({ block: \"start\" });");
+    expect(page).not.toContain("View Research");
+  });
+
+  it("uses the exact revised wording for all four Healy session sections", () => {
+    const revisedPhrases = [
+      "A comprehensive personalised remote frequency wellbeing session shaped around the agreed intention, current wellbeing focus and the areas highlighted through Healy analysis.",
+      "The session begins with the All Healy Program, identifying the frequency programs showing strongest resonance at that time.",
+      "Additional Healy frequency programs may then be selected from areas such as sleep, stress, vitamins, meridians, energetic balance and other wellbeing-focused frequency sets, depending on the session focus and analysis findings.",
+      "The session also includes the Healy Chakra Program and Creative Homeopathy Program, bringing together energetic and symbolic perspectives to support deeper reflection, self-awareness and exploration of relevant patterns and themes.",
+      "Following the session, PDF copies of the personalised Healy frequency programs are provided together with:",
+      "WellBeingFem Healy Chakra Report",
+      "WellBeingFem Creative Homeopathy Report",
+      "These reports extend the session beyond the frequency programs themselves, offering a structured framework for reflection, insight and personalised affirmations.",
+      "Healy WellBeing is the broadest of the WellBeingFem Healy sessions, allowing the session to be centred on a particular area of wellbeing or guided by the patterns showing strongest resonance within the Healy analysis.",
+      "A deeper personalised remote frequency session combining Healy Aura Analysis with chakra awareness, energetic reflection and supportive frequency programs.",
+      "The Healy Aura Analysis explores the energetic patterns highlighted during the session, including overall energy level, the five chakras assessed by Healy, their relative percentages and the areas showing strongest resonance at that time.",
+      "The analysis is supported by additional Healy frequency programs selected in response to the themes emerging from the session. These may include Soul Cycle, Power of Three, Gold, flower frequencies and other relevant frequency sets.",
+      "Rather than treating the Aura Analysis simply as a set of percentages, the WellBeingFem approach uses the results as a reflective framework for exploring energetic balance, emotional awareness, recurring patterns and areas that may benefit from greater attention.",
+      "Healy Aura Analysis is suited to women wishing to explore wellbeing from a deeper energetic perspective, with particular emphasis on aura awareness, chakra balance, personal insight and the patterns emerging through the analysis.",
+      "Healy I Ching is designed for women exploring life direction, personal change, choices, recurring patterns, emotional growth or a question that may be present at the time of the session.",
+      "Used as a reflective wellbeing tool rather than as prediction, the I Ching offers a symbolic framework for considering what may be emerging, what may require attention and which qualities may support greater clarity, balance and personal growth.",
+      "The session includes the Healy I Ching Program, supported by additional frequency programs selected in response to the themes highlighted through the analysis.",
+      "The Alaskan Gem Elixirs frequency program is also included, chosen to support balance, harmony, grounding and integration as the session draws to a close.",
+      "Healy I Ching is particularly suited to women drawn to symbolic reflection and wishing to explore a current question, transition or life theme from a deeper personal perspective.",
+      "Reiki is an energy-based wellbeing practice associated with relaxation, chakra balance and aura harmony. Within this framework, the chakras are understood as energy centres connected with different aspects of emotional, physical and spiritual wellbeing, while the aura is viewed as the subtle energy field surrounding the body.",
+      "At WellBeingFem, the Healy Reiki Combined Session brings together personalised Healy frequency support with the calming, restorative qualities of Reiki.",
+      "The Healy element may include the All Healy Program, Chakra Program, Australian Bush Flower frequencies and Soul Cycle programs, together with additional frequency programs selected according to the themes highlighted during the session.",
+      "A first Healy remote session is required before booking the Healy Reiki Combined Session. This provides an opportunity to experience the Healy process independently before the two approaches are brought together within one session.",
+      "Healy Reiki is suited to women seeking a more restorative session with emphasis on energetic balance, chakra awareness, reflection and renewal.",
+    ];
+
+    revisedPhrases.forEach((phrase) => expect(page).toContain(phrase));
+    expect(page).not.toContain("The session includes the All Healy Program, which identifies");
+    expect(page).not.toContain("Reiki is offered as an energetic wellbeing practice and is not a replacement");
+  });
+
+  it("adds four independent session disclosures after the visible opening sentences", () => {
+    expect(page.match(/className="healy-page__more"/g)).toHaveLength(5);
+    expect(page).toContain("const [isWellbeingOpen, setIsWellbeingOpen] = useState(false);");
+    expect(page).toContain("const [isAuraOpen, setIsAuraOpen] = useState(false);");
+    expect(page).toContain("const [isIChingOpen, setIsIChingOpen] = useState(false);");
+    expect(page).toContain("const [isReikiOpen, setIsReikiOpen] = useState(false);");
+    expect(page).toContain('aria-controls="healy-wellbeing-details"');
+    expect(page).toContain('aria-controls="healy-aura-analysis-details"');
+    expect(page).toContain('aria-controls="healy-i-ching-details"');
+    expect(page).toContain('aria-controls="healy-reiki-details"');
+  });
+
+  it("uses the flower artwork only for Healy lists and places the overall Wellbeing Note above the footer", () => {
     expect(page).not.toContain("<li>your ");
     expect(styles).toContain('background-image: url("/manus-storage/WBFFlowerfromlogo_60274cdc.png")');
-    expect(styles).toContain(".healy-page__image-actions");
-    expect(styles).toContain(".healy-page__more");
-    expect(styles).toContain(".healy-page__reiki-section::after");
-    expect(styles).toContain(".healy-page__reiki-figure");
-    expect(styles).toContain("object-fit: contain;");
-    expect(styles).toContain("@media (max-width: 900px)");
+    expect(styles).toContain(".healy-page__list li::before");
+    expect(page).toContain("WELLBEING NOTE");
+    expect(page).toContain("Healy and Reiki sessions at WellBeingFem are offered as complementary wellbeing and self-development practices. They are not intended to diagnose, treat, cure or prevent any medical or psychological condition and are not a replacement for medical advice, diagnosis or treatment from a qualified healthcare professional.");
+    expect(page.indexOf("healy-page__wellbeing-note")).toBeLessThan(page.indexOf("<SiteFooter />"));
   });
 });

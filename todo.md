@@ -248,4 +248,14 @@
 - [x] Preserve every other page, section, shared style, image, navigation item, footer element, and unrelated content unchanged.
 - [x] Verify the exact Healy changes, flower list icons, desktop/tablet/mobile layout, anchors, focused tests, TypeScript, and production build.
 - [x] Save the verified Healy-only update checkpoint and publish it automatically.
-- [ ] Confirm the published Healy update on wellbeingfem.com.
+- [x] Confirm the published Healy update on wellbeingfem.com.
+
+- [x] Use the supplied WBF flower artwork as a small consistent bullet icon only for the four Healy report/resource lists and the ONDAMED support-card list, never for headings.
+- [x] Preserve the ONDAMED support card’s two-column desktop and one-column tablet/mobile layout while changing only its bullet symbol.
+- [x] Replace the Healy WellBeing, Aura Analysis, I Ching, and Reiki Combined Session copy with the exact revised wording in pasted_content_18.txt.
+- [x] Add four independent green More/Less controls after each revised Healy session’s first two sentences, with all remaining approved section content inside its disclosure.
+- [x] Remove the Reiki-specific wellbeing note and add the exact overall Wellbeing Note immediately above the Healy footer.
+- [x] Preserve all other wording, headings, images, layouts, buttons, colours, links, navigation, and pages unchanged.
+- [x] Verify exact revised copy, four disclosures, flower bullets, responsive list/layout behavior, anchors, focused tests, TypeScript, and production build.
+- [x] Save the verified Healy/ONDAMED list update checkpoint and publish it automatically.
+- [ ] Confirm the published Healy disclosures and ONDAMED flower bullets on wellbeingfem.com.

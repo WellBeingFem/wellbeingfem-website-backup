@@ -7,6 +7,10 @@ const HEALY_REIKI_IMAGE = "/manus-storage/HealyReikicombowebsiteimage_dcf16ff1.p
 
 export default function Healy() {
   const [isSessionProcessOpen, setIsSessionProcessOpen] = useState(false);
+  const [isWellbeingOpen, setIsWellbeingOpen] = useState(false);
+  const [isAuraOpen, setIsAuraOpen] = useState(false);
+  const [isIChingOpen, setIsIChingOpen] = useState(false);
+  const [isReikiOpen, setIsReikiOpen] = useState(false);
 
   useEffect(() => {
     const targetId = window.location.hash.slice(1);
@@ -82,48 +86,87 @@ export default function Healy() {
 
           <section id="healy-wellbeing" className="healy-page__section" aria-labelledby="healy-wellbeing-heading">
             <h2 id="healy-wellbeing-heading">Healy WellBeing</h2>
-            <p>A comprehensive personalised remote frequency wellbeing session tailored to your intention, current wellbeing focus and the areas highlighted through your Healy analysis.</p>
-            <p>The session includes the All Healy Program, which identifies the frequency programs showing strongest resonance at the time of your session.</p>
-            <p>Depending on your intention and analysis, additional Healy frequency programs may also be selected from areas such as sleep, stress, vitamins, meridians, energetic balance and other wellbeing-focused frequency sets.</p>
-            <p>The session also includes the Healy Chakra Program and Creative Homeopathy Program, bringing together energetic and symbolic perspectives that can support deeper reflection, self-awareness and understanding of patterns that may be relevant for you at this time.</p>
-            <p>After your session, you will receive PDF copies of your personalised Healy frequency programs together with:</p>
-            <ul className="healy-page__list">
-              <li>personalised WellBeingFem Healy Chakra Report</li>
-              <li>personalised WellBeingFem Creative Homeopathy Report</li>
-            </ul>
-            <p>These reports are designed to help you explore the themes emerging from your session and continue working with them through reflection and personalised affirmations.</p>
-            <p>Healy Wellbeing is the broadest of the WellBeingFem Healy sessions and can be centred on a particular wellbeing concern or guided by the areas showing strongest resonance within your Healy analysis.</p>
+            <p>A comprehensive personalised remote frequency wellbeing session shaped around the agreed intention, current wellbeing focus and the areas highlighted through Healy analysis.</p>
+            <p>The session begins with the All Healy Program, identifying the frequency programs showing strongest resonance at that time.</p>
+            <button
+              type="button"
+              className="healy-page__more"
+              aria-expanded={isWellbeingOpen}
+              aria-controls="healy-wellbeing-details"
+              onClick={() => setIsWellbeingOpen((current) => !current)}
+            >
+              {isWellbeingOpen ? "Less" : "More"}
+            </button>
+            {isWellbeingOpen && (
+              <div id="healy-wellbeing-details" className="healy-page__disclosure">
+                <p>Additional Healy frequency programs may then be selected from areas such as sleep, stress, vitamins, meridians, energetic balance and other wellbeing-focused frequency sets, depending on the session focus and analysis findings.</p>
+                <p>The session also includes the Healy Chakra Program and Creative Homeopathy Program, bringing together energetic and symbolic perspectives to support deeper reflection, self-awareness and exploration of relevant patterns and themes.</p>
+                <p>Following the session, PDF copies of the personalised Healy frequency programs are provided together with:</p>
+                <ul className="healy-page__list">
+                  <li>WellBeingFem Healy Chakra Report</li>
+                  <li>WellBeingFem Creative Homeopathy Report</li>
+                </ul>
+                <p>These reports extend the session beyond the frequency programs themselves, offering a structured framework for reflection, insight and personalised affirmations.</p>
+                <p>Healy WellBeing is the broadest of the WellBeingFem Healy sessions, allowing the session to be centred on a particular area of wellbeing or guided by the patterns showing strongest resonance within the Healy analysis.</p>
+              </div>
+            )}
           </section>
 
           <section id="healy-aura-analysis" className="healy-page__section" aria-labelledby="healy-aura-analysis-heading">
             <h2 id="healy-aura-analysis-heading">Healy Aura Analysis</h2>
-            <p>A deeper personalised remote frequency session combining the Healy Aura Analysis with chakra awareness, energetic reflection and supportive frequency programs.</p>
-            <p>The Healy Aura Analysis explores the energetic patterns highlighted through your session, including your overall energy level, the five chakras assessed by Healy, their relative percentages and the areas showing strongest resonance at that time.</p>
-            <p>The session brings together the Healy Aura Analysis with additional frequency programs selected according to the themes emerging from your analysis. These may include Soul Cycle, Power of Three, Gold, flower frequencies and other supportive Healy programs highlighted during the session.</p>
-            <p>Rather than viewing the Aura Analysis simply as a set of percentages, the WellBeingFem approach uses the results as a reflective framework for exploring energetic balance, emotional awareness, personal patterns and areas that may benefit from greater attention or support.</p>
-            <p>After your session, you will receive:</p>
-            <ul className="healy-page__list">
-              <li>personalised WellBeingFem Healy Aura Analysis Report</li>
-              <li>the WellBeingFem Aura Analysis Guide</li>
-              <li>PDF copies of personalised Healy frequency programs</li>
-            </ul>
-            <p>Healy Aura Analysis is particularly suited to women who would like to explore their wellbeing from a deeper energetic perspective, with a focus on the aura, chakra awareness, personal insight and the patterns emerging through their Healy analysis.</p>
+            <p>A deeper personalised remote frequency session combining Healy Aura Analysis with chakra awareness, energetic reflection and supportive frequency programs.</p>
+            <p>The Healy Aura Analysis explores the energetic patterns highlighted during the session, including overall energy level, the five chakras assessed by Healy, their relative percentages and the areas showing strongest resonance at that time.</p>
+            <button
+              type="button"
+              className="healy-page__more"
+              aria-expanded={isAuraOpen}
+              aria-controls="healy-aura-analysis-details"
+              onClick={() => setIsAuraOpen((current) => !current)}
+            >
+              {isAuraOpen ? "Less" : "More"}
+            </button>
+            {isAuraOpen && (
+              <div id="healy-aura-analysis-details" className="healy-page__disclosure">
+                <p>The analysis is supported by additional Healy frequency programs selected in response to the themes emerging from the session. These may include Soul Cycle, Power of Three, Gold, flower frequencies and other relevant frequency sets.</p>
+                <p>Rather than treating the Aura Analysis simply as a set of percentages, the WellBeingFem approach uses the results as a reflective framework for exploring energetic balance, emotional awareness, recurring patterns and areas that may benefit from greater attention.</p>
+                <p>Following the session, the client receives:</p>
+                <ul className="healy-page__list">
+                  <li>WellBeingFem Healy Aura Analysis Report</li>
+                  <li>WellBeingFem Aura Analysis Guide</li>
+                  <li>PDF copies of the personalised Healy frequency programs</li>
+                </ul>
+                <p>Healy Aura Analysis is suited to women wishing to explore wellbeing from a deeper energetic perspective, with particular emphasis on aura awareness, chakra balance, personal insight and the patterns emerging through the analysis.</p>
+              </div>
+            )}
           </section>
 
           <section id="healy-i-ching" className="healy-page__section" aria-labelledby="healy-i-ching-heading">
             <h2 id="healy-i-ching-heading">Healy I Ching</h2>
             <p>A personalised remote frequency session combining the Healy I Ching program with symbolic reflection, personal insight and supportive frequency programs.</p>
-            <p>This option is designed for women exploring life direction, personal change, choices, recurring patterns, emotional growth or a question they may be holding at the time of the session.</p>
-            <p>The Healy I Ching is used as a reflective wellbeing tool rather than as prediction. It offers a symbolic framework for exploring what may be emerging, what may need attention and which qualities may support greater clarity, balance and personal growth.</p>
-            <p>The session includes the Healy I Ching Program, together with additional frequency support selected according to the themes highlighted during your analysis.</p>
-            <p>It also includes the Alaskan Gem Elixirs frequency program, chosen to support balance, harmony, grounding and integration at the close of the session.</p>
-            <p>After your session, you will receive:</p>
-            <ul className="healy-page__list">
-              <li>the WellBeingFem I Ching Reflection Guide</li>
-              <li>personalised WellBeingFem Alaskan Gem Elixirs Report</li>
-              <li>PDF copies of personalised Healy frequency programs</li>
-            </ul>
-            <p>Healy I Ching is particularly suited to women who are drawn to symbolic reflection and would like to explore a current question, transition or life theme from a deeper personal perspective.</p>
+            <p>Healy I Ching is designed for women exploring life direction, personal change, choices, recurring patterns, emotional growth or a question that may be present at the time of the session.</p>
+            <button
+              type="button"
+              className="healy-page__more"
+              aria-expanded={isIChingOpen}
+              aria-controls="healy-i-ching-details"
+              onClick={() => setIsIChingOpen((current) => !current)}
+            >
+              {isIChingOpen ? "Less" : "More"}
+            </button>
+            {isIChingOpen && (
+              <div id="healy-i-ching-details" className="healy-page__disclosure">
+                <p>Used as a reflective wellbeing tool rather than as prediction, the I Ching offers a symbolic framework for considering what may be emerging, what may require attention and which qualities may support greater clarity, balance and personal growth.</p>
+                <p>The session includes the Healy I Ching Program, supported by additional frequency programs selected in response to the themes highlighted through the analysis.</p>
+                <p>The Alaskan Gem Elixirs frequency program is also included, chosen to support balance, harmony, grounding and integration as the session draws to a close.</p>
+                <p>Following the session, the client receives:</p>
+                <ul className="healy-page__list">
+                  <li>WellBeingFem I Ching Reflection Guide</li>
+                  <li>WellBeingFem Alaskan Gem Elixirs Report</li>
+                  <li>PDF copies of the personalised Healy frequency programs</li>
+                </ul>
+                <p>Healy I Ching is particularly suited to women drawn to symbolic reflection and wishing to explore a current question, transition or life theme from a deeper personal perspective.</p>
+              </div>
+            )}
           </section>
 
           <section id="healy-reiki" className="healy-page__section healy-page__reiki-section" aria-labelledby="healy-reiki-heading">
@@ -138,17 +181,35 @@ export default function Healy() {
               />
             </figure>
             <h3>Support for Balance, Rest &amp; Renewal</h3>
-            <p>Reiki is an energy-based wellbeing practice that supports relaxation, chakra balance and aura harmony. The chakras are traditionally understood as energy centres connected with different aspects of emotional, physical and spiritual wellbeing, while the aura is viewed as the subtle energy field around the body.</p>
-            <p>At WellBeingFem, a Healy / Reiki Remote Wellbeing session brings together the personalised frequency support of Healy with the calming, restorative support of Reiki.</p>
-            <p>The Healy element of this combined session may include the All Healy Program, Chakra Program, Australian Bush Flower frequencies and Soul Cycle programs, together with any additional Healy frequency programs highlighted during the session.</p>
-            <p>After your session, you will receive:</p>
-            <ul className="healy-page__list">
-              <li>the WellBeingFem Reiki &amp; Healy Chakra Reflection Guide</li>
-              <li>personalised WellBeingFem Australian Bush Flowers Report</li>
-              <li>PDF copies of personalised Healy frequency programs</li>
-            </ul>
-            <p>A first Healy remote session is required before booking a Healy Reiki Combined Session. This allows you to experience the Healy process first and helps ensure the combined session is offered in a way that feels clear, grounded and supportive.</p>
-            <p>Reiki is offered as an energetic wellbeing practice and is not a replacement for medical advice, diagnosis or treatment.</p>
+            <p>Reiki is an energy-based wellbeing practice associated with relaxation, chakra balance and aura harmony. Within this framework, the chakras are understood as energy centres connected with different aspects of emotional, physical and spiritual wellbeing, while the aura is viewed as the subtle energy field surrounding the body.</p>
+            <button
+              type="button"
+              className="healy-page__more"
+              aria-expanded={isReikiOpen}
+              aria-controls="healy-reiki-details"
+              onClick={() => setIsReikiOpen((current) => !current)}
+            >
+              {isReikiOpen ? "Less" : "More"}
+            </button>
+            {isReikiOpen && (
+              <div id="healy-reiki-details" className="healy-page__disclosure">
+                <p>At WellBeingFem, the Healy Reiki Combined Session brings together personalised Healy frequency support with the calming, restorative qualities of Reiki.</p>
+                <p>The Healy element may include the All Healy Program, Chakra Program, Australian Bush Flower frequencies and Soul Cycle programs, together with additional frequency programs selected according to the themes highlighted during the session.</p>
+                <p>Following the session, the client receives:</p>
+                <ul className="healy-page__list">
+                  <li>WellBeingFem Reiki &amp; Healy Chakra Reflection Guide</li>
+                  <li>WellBeingFem Australian Bush Flowers Report</li>
+                  <li>PDF copies of the personalised Healy frequency programs</li>
+                </ul>
+                <p>A first Healy remote session is required before booking the Healy Reiki Combined Session. This provides an opportunity to experience the Healy process independently before the two approaches are brought together within one session.</p>
+                <p>Healy Reiki is suited to women seeking a more restorative session with emphasis on energetic balance, chakra awareness, reflection and renewal.</p>
+              </div>
+            )}
+          </section>
+
+          <section className="healy-page__section healy-page__wellbeing-note" aria-labelledby="healy-wellbeing-note-heading">
+            <h2 id="healy-wellbeing-note-heading">WELLBEING NOTE</h2>
+            <p>Healy and Reiki sessions at WellBeingFem are offered as complementary wellbeing and self-development practices. They are not intended to diagnose, treat, cure or prevent any medical or psychological condition and are not a replacement for medical advice, diagnosis or treatment from a qualified healthcare professional.</p>
           </section>
         </div>
       </main>

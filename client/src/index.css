@@ -2327,12 +2327,27 @@
   column-gap: clamp(22px, 3vw, 42px);
   row-gap: 8px;
   margin: 0 0 20px;
-  padding-left: 1.25rem;
+  padding-left: 0;
+  list-style: none;
 }
 
 .ondamed-page__support-list li {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
   margin: 0;
   font-weight: 400;
+}
+
+.ondamed-page__support-list li::before {
+  width: 34px;
+  height: 23px;
+  background-image: url("/manus-storage/WBFFlowerfromlogo_60274cdc.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
 }
 
 .ondamed-page__support-card {
@@ -2627,14 +2642,14 @@
 
 .healy-page__list li {
   display: grid;
-  grid-template-columns: 38px minmax(0, 1fr);
+  grid-template-columns: 34px minmax(0, 1fr);
   align-items: center;
   gap: 9px;
 }
 
 .healy-page__list li::before {
-  width: 38px;
-  height: 25px;
+  width: 34px;
+  height: 23px;
   background-image: url("/manus-storage/WBFFlowerfromlogo_60274cdc.png");
   background-position: center;
   background-repeat: no-repeat;
