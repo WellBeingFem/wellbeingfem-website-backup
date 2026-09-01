@@ -278,4 +278,4 @@
 - [x] Preserve all other wording, images, colours, navigation design, footer, links, and unrelated layouts unchanged.
 - [x] Verify the single ONDAMED disclosure, italic Healy note, Reiki anchor/button, opening positions, focused tests, TypeScript, and production build.
 - [x] Save the verified update checkpoint and publish it automatically.
-- [ ] Confirm the published changes on wellbeingfem.com.
+- [x] Confirm the published changes on wellbeingfem.com.
