@@ -21,7 +21,7 @@ const navigation: NavigationItem[] = [
   {
     label: "Healy",
     children: [
-      { label: "What is Healy", href: "/healy#what-is-healy" },
+      { label: "What is Healy", href: "/healy" },
       { label: "Healy WellBeing", href: "/healy#healy-wellbeing" },
       { label: "Healy Aura Analysis", href: "/healy#healy-aura-analysis" },
       { label: "Healy I Ching", href: "/healy#healy-i-ching" },

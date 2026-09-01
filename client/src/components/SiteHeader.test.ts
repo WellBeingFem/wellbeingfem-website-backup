@@ -22,7 +22,7 @@ describe("WellBeingFem navigation color hierarchy", () => {
   });
 
   it("routes every Healy menu item to its matching Healy page section", () => {
-    expect(header).toContain('{ label: "What is Healy", href: "/healy#what-is-healy" }');
+    expect(header).toContain('{ label: "What is Healy", href: "/healy" }');
     expect(header).toContain('{ label: "Healy WellBeing", href: "/healy#healy-wellbeing" }');
     expect(header).toContain('{ label: "Healy Aura Analysis", href: "/healy#healy-aura-analysis" }');
     expect(header).toContain('{ label: "Healy I Ching", href: "/healy#healy-i-ching" }');

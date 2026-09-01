@@ -34,7 +34,7 @@ describe("WellBeingFem production readiness", () => {
     expect(appSource).toContain('<Route path="/healy" component={Healy} />');
     expect(appSource.match(/<Route path="\/healy\//g)).toHaveLength(5);
     expect(appSource).not.toContain('<RouteAlias to="/research#healy" />');
-    expect(appSource).toContain('<RouteAlias to="/healy#what-is-healy" />');
+    expect(appSource).toContain('<RouteAlias to="/healy" />');
     expect(appSource).toContain('<RouteAlias to="/healy#healy-wellbeing" />');
     expect(appSource).toContain('<RouteAlias to="/healy#healy-aura-analysis" />');
     expect(appSource).toContain('<RouteAlias to="/healy#healy-i-ching" />');

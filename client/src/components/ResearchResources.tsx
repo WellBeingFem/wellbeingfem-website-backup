@@ -217,8 +217,8 @@ export default function ResearchResources() {
           </p>
         </aside>
 
-        <div className="research-subsection" role="group" aria-labelledby="reiki-heading">
-          <h3 id="reiki-heading">Reiki &amp; Distant Reiki Resources</h3>
+        <div className="research-subsection" role="group" aria-labelledby="reiki-research">
+          <h3 id="reiki-research">Reiki &amp; Distant Reiki Research</h3>
           <aside className="research-note" aria-label="Reiki and Distant Reiki opening note">
             <p>
               The following resources are offered for educational interest only. They explore Reiki as a

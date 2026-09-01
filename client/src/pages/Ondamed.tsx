@@ -1,6 +1,6 @@
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const ONDAMED_PAGE_IMAGE_FALLBACK = "/manus-storage/ondamedwlogo-page-1448_147a2994.jpg";
 const ONDAMED_PAGE_IMAGE_WEBP = "/manus-storage/ondamedwlogo-page-1448_113a94c2.webp";
@@ -9,7 +9,17 @@ const ONDAMED_PAGE_IMAGE_MOBILE_FALLBACK = "/manus-storage/ondamedwlogo-page-720
 
 export default function Ondamed() {
   const [introExpanded, setIntroExpanded] = useState(false);
-  const [whyExpanded, setWhyExpanded] = useState(false);
+
+  useEffect(() => {
+    const openAtTop = () => window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    const frame = window.requestAnimationFrame(openAtTop);
+    const timer = window.setTimeout(openAtTop, 120);
+
+    return () => {
+      window.cancelAnimationFrame(frame);
+      window.clearTimeout(timer);
+    };
+  }, []);
 
   return (
     <div className="site-shell ondamed-route">
@@ -52,13 +62,6 @@ export default function Ondamed() {
               </p>
               <p>
                 At WellBeingFem, ONDAMED sessions are offered in Dublin
-                {introExpanded ? (
-                  <span id="ondamed-intro-more">
-                    {" "}for women seeking deeper support around stress regulation, nervous system calm,
-                    sleep, low energy, hormonal change and transition, digestive wellbeing and
-                    inflammation-related concerns.
-                  </span>
-                ) : null}
               </p>
               <button
                 className="ondamed-page__more"
@@ -69,19 +72,13 @@ export default function Ondamed() {
               >
                 {introExpanded ? "Less" : "More"}
               </button>
-
-              <h2>Why Choose ONDAMED PEMF?</h2>
-              <button
-                className="ondamed-page__more"
-                type="button"
-                aria-expanded={whyExpanded}
-                aria-controls="ondamed-why-more"
-                onClick={() => setWhyExpanded((expanded) => !expanded)}
-              >
-                {whyExpanded ? "Less" : "More"}
-              </button>
-              {whyExpanded ? (
-                <div id="ondamed-why-more">
+              {introExpanded ? (
+                <div id="ondamed-intro-more" className="ondamed-page__disclosure">
+                  <p>
+                    for women seeking deeper support around stress regulation, nervous system calm, sleep, low
+                    energy, hormonal change and transition, digestive wellbeing and inflammation-related concerns.
+                  </p>
+                  <h2>Why Choose ONDAMED PEMF?</h2>
                   <p>ONDAMED is a German-developed system that combines focused PEMF stimulation with biofeedback.</p>
                   <p>
                     Rather than using a standard one-size-fits-all PEMF approach, ONDAMED uses your body’s

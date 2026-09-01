@@ -25,8 +25,10 @@ describe("Healy service page", () => {
     expect(page).toContain("/manus-storage/HealyReikicombowebsiteimage_dcf16ff1.png");
     expect(page).toContain('href="/research#contact">Make a Booking</a>');
     expect(page).toContain('href="mailto:wellbeingfem@gmail.com">Email Us</a>');
+    expect(page).toContain('href="/research#reiki-research"> View Reiki Research </a>');
     expect(page).toContain("document.getElementById(targetId)?.scrollIntoView({ block: \"start\" });");
-    expect(page).not.toContain("View Research");
+    expect(page).toContain('targetId === "what-is-healy"');
+    expect(page).toContain('window.scrollTo({ top: 0, left: 0, behavior: "auto" })');
   });
 
   it("uses the exact revised wording for all four Healy session sections", () => {
@@ -80,6 +82,7 @@ describe("Healy service page", () => {
     expect(styles).toContain(".healy-page__list li::before");
     expect(page).toContain("WELLBEING NOTE");
     expect(page).toContain("Healy and Reiki sessions at WellBeingFem are offered as complementary wellbeing and self-development practices. They are not intended to diagnose, treat, cure or prevent any medical or psychological condition and are not a replacement for medical advice, diagnosis or treatment from a qualified healthcare professional.");
+    expect(page).toContain("<p><em>Healy and Reiki sessions at WellBeingFem are offered as complementary wellbeing and self-development practices.");
     expect(page.indexOf("healy-page__wellbeing-note")).toBeLessThan(page.indexOf("<SiteFooter />"));
   });
 });

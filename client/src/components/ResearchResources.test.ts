@@ -12,7 +12,8 @@ describe("supplied Research page resource restoration", () => {
     expect(source).toContain('id="healy"');
     expect(source).toContain("Healy &amp; Frequency-Based Wellbeing Resources");
     expect(source).toContain('className="research-subsection"');
-    expect(source).toContain("Reiki &amp; Distant Reiki Resources");
+    expect(source).toContain('id="reiki-research"');
+    expect(source).toContain("Reiki &amp; Distant Reiki Research");
     expect(source).not.toContain('id="reiki"');
     expect(source).toContain('id="guided-meditations"');
     expect(source).toContain("Guided Meditation Journeys &amp; Inner Imagery Research");

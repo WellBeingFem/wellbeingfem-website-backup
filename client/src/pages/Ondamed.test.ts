@@ -77,15 +77,15 @@ describe("ONDAMED page image addition", () => {
     expect(styles).toContain("float: none");
   });
 
-  it("keeps the requested title hierarchy, centered support card, and the two approved More/Less controls", () => {
+  it("keeps the requested title hierarchy, centered support card, and the single approved opening More/Less control", () => {
     const page = readProjectFile("client/src/pages/Ondamed.tsx");
     const styles = readProjectFile("client/src/index.css");
 
     expect(page).toContain('<h1 id="ondamed-page-heading">ONDAMED PEMF</h1>');
     expect(page).toContain('className="ondamed-page__subtitle">Wellbeing Sessions</p>');
-    expect(page.match(/className="ondamed-page__more"/g)).toHaveLength(2);
+    expect(page.match(/className="ondamed-page__more"/g)).toHaveLength(1);
     expect(page).toContain("setIntroExpanded");
-    expect(page).toContain("setWhyExpanded");
+    expect(page).not.toContain("setWhyExpanded");
     expect(page).not.toContain("setExpectationsExpanded");
     expect(page).not.toContain("setWaterExpanded");
     expect(page).not.toContain("setApproachExpanded");
@@ -105,13 +105,15 @@ describe("ONDAMED page image addition", () => {
     expect(styles).toContain("list-style: none;");
   });
 
-  it("adds the responsive booking fee, collapsible Why Choose copy, and final wellbeing note verbatim", () => {
+  it("adds the responsive booking fee, keeps Why Choose inside the opening disclosure, and retains the final wellbeing note verbatim", () => {
     const page = readProjectFile("client/src/pages/Ondamed.tsx").replace(/\s+/g, " ");
     const styles = readProjectFile("client/src/index.css");
 
     expect(page).toContain("Session Fee: €120 | Course of 3: €300");
     expect(page).toContain('className="ondamed-page__booking-row"');
-    expect(page).toContain('aria-controls="ondamed-why-more"');
+    expect(page).toContain('aria-controls="ondamed-intro-more"');
+    expect(page).toContain('<div id="ondamed-intro-more" className="ondamed-page__disclosure">');
+    expect(page).not.toContain('id="ondamed-why-more"');
     expect(page).toContain("ONDAMED is a German-developed system that combines focused PEMF stimulation with biofeedback.");
     expect(page).toContain("Rather than using a standard one-size-fits-all PEMF approach, ONDAMED uses your body’s responses to help guide the selection of frequencies, applicators and areas of focus. This allows each session to be shaped around what appears most relevant for you at that time.");
     expect(page).toContain("ONDAMED sessions at WellBeingFem are offered as complementary wellbeing support. They are not intended to diagnose, treat, cure or prevent any medical condition and are not a replacement for medical advice, diagnosis or treatment from a qualified healthcare professional.");

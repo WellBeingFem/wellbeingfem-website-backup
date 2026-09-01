@@ -18,6 +18,10 @@ export default function Research() {
       if (!targetId) return;
 
       window.requestAnimationFrame(() => {
+        if (targetId === "contact") {
+          window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+          return;
+        }
         document.getElementById(targetId)?.scrollIntoView({ block: "start" });
       });
     };

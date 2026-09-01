@@ -14,9 +14,12 @@ export default function Healy() {
 
   useEffect(() => {
     const targetId = window.location.hash.slice(1);
-    if (!targetId) return;
 
     const scrollToTarget = () => {
+      if (!targetId || targetId === "what-is-healy") {
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+        return;
+      }
       document.getElementById(targetId)?.scrollIntoView({ block: "start" });
     };
 
@@ -205,11 +208,14 @@ export default function Healy() {
                 <p>Healy Reiki is suited to women seeking a more restorative session with emphasis on energetic balance, chakra awareness, reflection and renewal.</p>
               </div>
             )}
+            <a className="healy-page__action healy-page__research-action" href="/research#reiki-research">
+              View Reiki Research
+            </a>
           </section>
 
           <section className="healy-page__section healy-page__wellbeing-note" aria-labelledby="healy-wellbeing-note-heading">
             <h2 id="healy-wellbeing-note-heading">WELLBEING NOTE</h2>
-            <p>Healy and Reiki sessions at WellBeingFem are offered as complementary wellbeing and self-development practices. They are not intended to diagnose, treat, cure or prevent any medical or psychological condition and are not a replacement for medical advice, diagnosis or treatment from a qualified healthcare professional.</p>
+            <p><em>Healy and Reiki sessions at WellBeingFem are offered as complementary wellbeing and self-development practices. They are not intended to diagnose, treat, cure or prevent any medical or psychological condition and are not a replacement for medical advice, diagnosis or treatment from a qualified healthcare professional.</em></p>
           </section>
         </div>
       </main>

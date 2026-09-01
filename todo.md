@@ -267,4 +267,15 @@
 - [x] Preserve all other pages, wording, images, navigation, footer, branding, links, and layouts unchanged.
 - [x] Verify ONDAMED disclosures/fee/note and homepage top-position behavior on desktop/tablet/mobile, focused tests, TypeScript, and production build.
 - [x] Save the verified update checkpoint and publish it automatically.
-- [ ] Confirm the published ONDAMED and homepage-position changes on wellbeingfem.com.
+- [x] Confirm the published ONDAMED and homepage-position changes on wellbeingfem.com.
+
+- [x] Keep only the first opening ONDAMED More/Less control and move the full Why Choose ONDAMED PEMF? heading and unchanged body copy inside that disclosure.
+- [x] Remove the separate Why Choose More/Less control without rewriting any ONDAMED wording.
+- [x] Keep the Healy WELLBEING NOTE heading non-italic and make its entire exact paragraph italic.
+- [x] Add the direct Reiki & Distant Reiki Research anchor within the existing Healy Research category and add a green View Reiki Research button at the end of the Healy Reiki Combined Session section.
+- [x] Keep Reiki Research nested within Healy, preserve all Research wording, and avoid any separate Reiki page or main Research navigation category.
+- [x] Make ONDAMED and What is Healy open at their page tops with the full header visible, and Contact open at the form with header-aware offset on desktop/tablet/mobile.
+- [x] Preserve all other wording, images, colours, navigation design, footer, links, and unrelated layouts unchanged.
+- [x] Verify the single ONDAMED disclosure, italic Healy note, Reiki anchor/button, opening positions, focused tests, TypeScript, and production build.
+- [x] Save the verified update checkpoint and publish it automatically.
+- [ ] Confirm the published changes on wellbeingfem.com.

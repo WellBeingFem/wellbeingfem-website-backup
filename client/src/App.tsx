@@ -28,7 +28,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/ondamed" component={Ondamed} />
       <Route path="/healy" component={Healy} />
-      <Route path="/healy/what-is-healy">{() => <RouteAlias to="/healy#what-is-healy" />}</Route>
+      <Route path="/healy/what-is-healy">{() => <RouteAlias to="/healy" />}</Route>
       <Route path="/healy/wellbeing">{() => <RouteAlias to="/healy#healy-wellbeing" />}</Route>
       <Route path="/healy/aura-analysis">{() => <RouteAlias to="/healy#healy-aura-analysis" />}</Route>
       <Route path="/healy/i-ching">{() => <RouteAlias to="/healy#healy-i-ching" />}</Route>
