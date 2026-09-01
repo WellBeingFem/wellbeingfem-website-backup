@@ -9,9 +9,6 @@ const ONDAMED_PAGE_IMAGE_MOBILE_FALLBACK = "/manus-storage/ondamedwlogo-page-720
 
 export default function Ondamed() {
   const [introExpanded, setIntroExpanded] = useState(false);
-  const [expectationsExpanded, setExpectationsExpanded] = useState(false);
-  const [waterExpanded, setWaterExpanded] = useState(false);
-  const [approachExpanded, setApproachExpanded] = useState(false);
 
   return (
     <div className="site-shell ondamed-route">
@@ -98,55 +95,29 @@ export default function Ondamed() {
                 During your session, the ONDAMED biofeedback system helps guide the frequencies and
                 applicators selected.
               </p>
-              <button
-                className="ondamed-page__more"
-                type="button"
-                aria-expanded={expectationsExpanded}
-                aria-controls="ondamed-expectations-more"
-                onClick={() => setExpectationsExpanded((expanded) => !expanded)}
-              >
-                {expectationsExpanded ? "Less" : "More"}
-              </button>
-              {expectationsExpanded ? (
-                <div id="ondamed-expectations-more">
-                  <p>
-                    Focused pulsed electromagnetic field stimulation is then delivered through applicators
-                    positioned on or near selected areas of the body. The session is non-invasive and designed to
-                    support the body’s natural capacity for regulation, restoration and balance.
-                  </p>
-                  <p>
-                    You remain fully clothed throughout and can simply sit or recline comfortably while the
-                    session runs.
-                  </p>
-                </div>
-              ) : null}
+              <p>
+                Focused pulsed electromagnetic field stimulation is then delivered through applicators
+                positioned on or near selected areas of the body. The session is non-invasive and designed to
+                support the body’s natural capacity for regulation, restoration and balance.
+              </p>
+              <p>
+                You remain fully clothed throughout and can simply sit or recline comfortably while the
+                session runs.
+              </p>
 
               <h2>ONDAMED Frequency-Charged Water</h2>
               <p>
                 As an optional addition to your ONDAMED experience, clients can receive water prepared using
                 selected ONDAMED frequencies focused around women’s wellbeing.
               </p>
-              <button
-                className="ondamed-page__more"
-                type="button"
-                aria-expanded={waterExpanded}
-                aria-controls="ondamed-water-more"
-                onClick={() => setWaterExpanded((expanded) => !expanded)}
-              >
-                {waterExpanded ? "Less" : "More"}
-              </button>
-              {waterExpanded ? (
-                <div id="ondamed-water-more">
-                  <p>
-                    Many clients enjoy bringing their own water bottle to each session so they can take their
-                    frequency-charged water home and continue enjoying it after their appointment.
-                  </p>
-                  <p>
-                    ONDAMED guidance states that charged water can be diluted at a ratio of 1 part charged water to
-                    5 parts water.
-                  </p>
-                </div>
-              ) : null}
+              <p>
+                Many clients enjoy bringing their own water bottle to each session so they can take their
+                frequency-charged water home and continue enjoying it after their appointment.
+              </p>
+              <p>
+                ONDAMED guidance states that charged water can be diluted at a ratio of 1 part charged water to
+                5 parts water.
+              </p>
 
               <h2>A Personalised Approach to Wellbeing</h2>
               <p>
@@ -154,29 +125,16 @@ export default function Ondamed() {
                 balance has shifted — perhaps through stress, poor sleep, low energy, hormonal change,
                 digestive imbalance, metabolic changes or periods of nervous system overwhelm.
               </p>
-              <button
-                className="ondamed-page__more"
-                type="button"
-                aria-expanded={approachExpanded}
-                aria-controls="ondamed-approach-more"
-                onClick={() => setApproachExpanded((expanded) => !expanded)}
-              >
-                {approachExpanded ? "Less" : "More"}
-              </button>
-              {approachExpanded ? (
-                <div id="ondamed-approach-more">
-                  <p>
-                    Some women choose ONDAMED as part of an ongoing wellbeing routine, while others prefer a short
-                    course of sessions when they feel depleted, overstimulated or simply no longer quite like
-                    themselves.
-                  </p>
-                  <p>
-                    Every session is individual. Clients may notice changes in areas such as energy, sleep, stress
-                    response, body awareness, emotional balance, focus, digestion and physical comfort. Some
-                    experiences may be gradual, while others can feel more immediate or deeply restorative.
-                  </p>
-                </div>
-              ) : null}
+              <p>
+                Some women choose ONDAMED as part of an ongoing wellbeing routine, while others prefer a short
+                course of sessions when they feel depleted, overstimulated or simply no longer quite like
+                themselves.
+              </p>
+              <p>
+                Every session is individual. Clients may notice changes in areas such as energy, sleep, stress
+                response, body awareness, emotional balance, focus, digestion and physical comfort. Some
+                experiences may be gradual, while others can feel more immediate or deeply restorative.
+              </p>
             </div>
           </section>
         </div>

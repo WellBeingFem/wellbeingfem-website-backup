@@ -223,4 +223,14 @@
 - [x] Preserve the Research page, ONDAMED page, colours, images, and unrelated content unchanged.
 - [x] Verify desktop/mobile actions, email subject, YouTube destinations, Healy section anchors, dropdown routing, focused tests, TypeScript, and production build.
 - [x] Save the verified homepage and Healy navigation checkpoint and publish it automatically.
-- [ ] Confirm the published changes on wellbeingfem.com.
+- [x] Confirm the published changes on wellbeingfem.com.
+
+## ONDAMED Benefits and Homepage Members’ Library Update
+
+- [x] Center and widen the existing ONDAMED benefits card on desktop, preserve its two-column desktop/one-column tablet-mobile list, and increase only the heading-to-list spacing.
+- [x] Remove the More/Less controls from What to Expect During Your ONDAMED Session, ONDAMED Frequency-Charged Water, and A Personalised Approach to Wellbeing while showing each section’s full existing text.
+- [x] Remove only the homepage WellBeingFem Members’ Library More/Less control and show its full existing text at all times without changing wording, heading, spacing, colours, or surrounding Women’s Wisdom content.
+- [x] Preserve every other page, control, link, colour, image, and approved wording unchanged.
+- [x] Verify desktop/mobile layout, full text visibility, remaining introductory ONDAMED disclosure, Women’s Wisdom actions, focused tests, TypeScript, and production build.
+- [x] Save the verified update checkpoint and publish it automatically.
+- [ ] Confirm the published ONDAMED card/disclosure and homepage Members’ Library changes on wellbeingfem.com.

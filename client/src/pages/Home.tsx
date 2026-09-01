@@ -39,7 +39,6 @@ const clientExperiencePlaceholder =
 
 export default function Home() {
   const [changeDetailsOpen, setChangeDetailsOpen] = useState(false);
-  const [membersLibraryOpen, setMembersLibraryOpen] = useState(false);
 
   useEffect(() => {
     const targetId = window.location.hash.slice(1);
@@ -231,21 +230,10 @@ export default function Home() {
 
               <h3 id="members-library">WellBeingFem Members’ Library</h3>
               <p>The launch of Women’s Wisdom in Times of Change will also open the WellBeingFem online Members Library, where the first meditation series and companion book will be included with membership.</p>
-              <button
-                className="womens-wisdom__more"
-                type="button"
-                aria-expanded={membersLibraryOpen}
-                aria-controls="womens-wisdom-members-details"
-                onClick={() => setMembersLibraryOpen((open) => !open)}
-              >
-                {membersLibraryOpen ? "Less" : "More"}
-              </button>
-              {membersLibraryOpen ? (
-                <div id="womens-wisdom-members-details" className="womens-wisdom__details">
-                  <p>Members will also receive access to two monthly guided meditations aligned with each month’s New Moon for intention, creation and new beginnings, and Full Moon for reflection, release and renewal.</p>
-                  <p>The series will continue with future companion books exploring deeper reflection, energy awareness, spiritual dialogue and self-understanding.</p>
-                </div>
-              ) : null}
+              <div className="womens-wisdom__details">
+                <p>Members will also receive access to two monthly guided meditations aligned with each month’s New Moon for intention, creation and new beginnings, and Full Moon for reflection, release and renewal.</p>
+                <p>The series will continue with future companion books exploring deeper reflection, energy awareness, spiritual dialogue and self-understanding.</p>
+              </div>
 
               <div className="womens-wisdom__actions">
                 <a

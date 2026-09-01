@@ -26,13 +26,13 @@ describe("Women’s Wisdom homepage recovery section", () => {
     expect(homeSource).toContain("Be notified when Women’s Wisdom in Times of Change becomes available.");
   });
 
-  it("provides independent More/Less controls for both expandable blocks", () => {
+  it("keeps the first More/Less control and shows the complete Members’ Library text at all times", () => {
     expect(homeSource).toContain("const [changeDetailsOpen, setChangeDetailsOpen] = useState(false);");
-    expect(homeSource).toContain("const [membersLibraryOpen, setMembersLibraryOpen] = useState(false);");
+    expect(homeSource).not.toContain("membersLibraryOpen");
     expect(homeSource).toContain('aria-controls="womens-wisdom-change-details"');
-    expect(homeSource).toContain('aria-controls="womens-wisdom-members-details"');
+    expect(homeSource).not.toContain('aria-controls="womens-wisdom-members-details"');
     expect(homeSource).toContain('{changeDetailsOpen ? "Less" : "More"}');
-    expect(homeSource).toContain('{membersLibraryOpen ? "Less" : "More"}');
+    expect(homeSource.match(/className="womens-wisdom__more"/g)).toHaveLength(1);
   });
 
   it("keeps the image whole, stacks it first on mobile, and wraps desktop text around it", () => {
