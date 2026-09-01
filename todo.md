@@ -233,4 +233,12 @@
 - [x] Preserve every other page, control, link, colour, image, and approved wording unchanged.
 - [x] Verify desktop/mobile layout, full text visibility, remaining introductory ONDAMED disclosure, Women’s Wisdom actions, focused tests, TypeScript, and production build.
 - [x] Save the verified update checkpoint and publish it automatically.
-- [ ] Confirm the published ONDAMED card/disclosure and homepage Members’ Library changes on wellbeingfem.com.
+- [x] Confirm the published ONDAMED card/disclosure and homepage Members’ Library changes on wellbeingfem.com.
+
+- [x] Replace all existing Healy page body copy with the exact supplied remote-session, What is Healy, session process, WellBeing, Aura Analysis, I Ching, and Healy Reiki Combined Session wording without duplication.
+- [x] Upload and use the supplied Healy laptop image at the top-left of the Healy page with desktop text wrap and uncropped image-first tablet/mobile stacking.
+- [x] Insert the supplied Healy Reiki Combined Session image immediately before that section as a generous full-width visual break without cropping or stretching.
+- [x] Preserve the existing Healy section anchors, WellBeingFem branding, navigation, footer, buttons, and all unrelated pages unchanged; do not add an FAQ.
+- [x] Verify the exact Healy copy, image integrity, desktop/tablet/mobile layout, section anchors, focused tests, TypeScript, and production build.
+- [x] Save the verified Healy page replacement checkpoint and publish it automatically.
+- [ ] Confirm the published Healy page copy, images, layout, and anchors on wellbeingfem.com.
