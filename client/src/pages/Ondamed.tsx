@@ -9,6 +9,7 @@ const ONDAMED_PAGE_IMAGE_MOBILE_FALLBACK = "/manus-storage/ondamedwlogo-page-720
 
 export default function Ondamed() {
   const [introExpanded, setIntroExpanded] = useState(false);
+  const [whyExpanded, setWhyExpanded] = useState(false);
 
   return (
     <div className="site-shell ondamed-route">
@@ -36,9 +37,12 @@ export default function Ondamed() {
                   decoding="async"
                 />
               </picture>
-              <a className="ondamed-page__booking" href="/research#contact">
-                Make a Booking
-              </a>
+              <div className="ondamed-page__booking-row">
+                <a className="ondamed-page__booking" href="/research#contact">
+                  Make a Booking
+                </a>
+                <p className="ondamed-page__fee">Session Fee: €120 | Course of 3: €300</p>
+              </div>
             </figure>
 
             <div className="ondamed-page__text">
@@ -67,12 +71,25 @@ export default function Ondamed() {
               </button>
 
               <h2>Why Choose ONDAMED PEMF?</h2>
-              <p>ONDAMED is a German-developed system that combines focused PEMF stimulation with biofeedback.</p>
-              <p>
-                Rather than using a standard one-size-fits-all PEMF approach, ONDAMED uses your body’s
-                responses to help guide the selection of frequencies, applicators and areas of focus. This
-                allows each session to be shaped around what appears most relevant for you at that time.
-              </p>
+              <button
+                className="ondamed-page__more"
+                type="button"
+                aria-expanded={whyExpanded}
+                aria-controls="ondamed-why-more"
+                onClick={() => setWhyExpanded((expanded) => !expanded)}
+              >
+                {whyExpanded ? "Less" : "More"}
+              </button>
+              {whyExpanded ? (
+                <div id="ondamed-why-more">
+                  <p>ONDAMED is a German-developed system that combines focused PEMF stimulation with biofeedback.</p>
+                  <p>
+                    Rather than using a standard one-size-fits-all PEMF approach, ONDAMED uses your body’s
+                    responses to help guide the selection of frequencies, applicators and areas of focus. This
+                    allows each session to be shaped around what appears most relevant for you at that time.
+                  </p>
+                </div>
+              ) : null}
 
               <section className="ondamed-page__support-card" aria-labelledby="ondamed-support-heading">
                 <h2 id="ondamed-support-heading">Women may choose ONDAMED to support:</h2>
@@ -138,6 +155,16 @@ export default function Ondamed() {
             </div>
           </section>
         </div>
+        <section className="ondamed-page__wellbeing-note" aria-labelledby="ondamed-wellbeing-note-heading">
+          <h2 id="ondamed-wellbeing-note-heading">WELLBEING NOTE</h2>
+          <p>
+            <em>
+              ONDAMED sessions at WellBeingFem are offered as complementary wellbeing support. They are not
+              intended to diagnose, treat, cure or prevent any medical condition and are not a replacement for
+              medical advice, diagnosis or treatment from a qualified healthcare professional.
+            </em>
+          </p>
+        </section>
       </main>
       <SiteFooter />
     </div>

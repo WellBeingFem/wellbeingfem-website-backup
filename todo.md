@@ -258,4 +258,13 @@
 - [x] Preserve all other wording, headings, images, layouts, buttons, colours, links, navigation, and pages unchanged.
 - [x] Verify exact revised copy, four disclosures, flower bullets, responsive list/layout behavior, anchors, focused tests, TypeScript, and production build.
 - [x] Save the verified Healy/ONDAMED list update checkpoint and publish it automatically.
-- [ ] Confirm the published Healy disclosures and ONDAMED flower bullets on wellbeingfem.com.
+- [x] Confirm the published Healy disclosures and ONDAMED flower bullets on wellbeingfem.com.
+
+- [x] Add the exact ONDAMED session fee text beside the existing Make a Booking button on desktop with clean stacking on tablet/mobile, without changing the button design.
+- [x] Keep Why Choose ONDAMED PEMF? visible and place its full unchanged body text behind an existing-style green More/Less control.
+- [x] Add the exact non-italic WELLBEING NOTE heading and italic supplied disclaimer immediately above the ONDAMED footer.
+- [x] Ensure direct homepage loads start at scroll position zero with the full header/navigation visible and no automatic anchor jump, without changing hero or homepage content.
+- [x] Preserve all other pages, wording, images, navigation, footer, branding, links, and layouts unchanged.
+- [x] Verify ONDAMED disclosures/fee/note and homepage top-position behavior on desktop/tablet/mobile, focused tests, TypeScript, and production build.
+- [x] Save the verified update checkpoint and publish it automatically.
+- [ ] Confirm the published ONDAMED and homepage-position changes on wellbeingfem.com.

@@ -3,7 +3,7 @@
  * It must remain complete, unedited, uncropped, and free of extra visible overlays.
  */
 import SiteHeader from "@/components/SiteHeader";
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import SiteFooter from "@/components/SiteFooter";
 import {
   Carousel,
@@ -40,13 +40,32 @@ const clientExperiencePlaceholder =
 export default function Home() {
   const [changeDetailsOpen, setChangeDetailsOpen] = useState(false);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const targetId = window.location.hash.slice(1);
-    if (!targetId) return;
+    const previousScrollRestoration = window.history.scrollRestoration;
+    window.history.scrollRestoration = "manual";
 
-    window.requestAnimationFrame(() => {
+    if (!targetId || targetId === "about") {
+      const scrollHomeToTop = () => window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      scrollHomeToTop();
+      const frame = window.requestAnimationFrame(scrollHomeToTop);
+      const timer = window.setTimeout(scrollHomeToTop, 120);
+
+      return () => {
+        window.cancelAnimationFrame(frame);
+        window.clearTimeout(timer);
+        window.history.scrollRestoration = previousScrollRestoration;
+      };
+    }
+
+    const frame = window.requestAnimationFrame(() => {
       document.getElementById(targetId)?.scrollIntoView({ block: "start" });
     });
+
+    return () => {
+      window.cancelAnimationFrame(frame);
+      window.history.scrollRestoration = previousScrollRestoration;
+    };
   }, []);
 
   return (

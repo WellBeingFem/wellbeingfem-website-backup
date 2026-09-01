@@ -43,6 +43,16 @@ describe("Women’s Wisdom homepage recovery section", () => {
   });
 });
 
+describe("Homepage opening position", () => {
+  it("starts direct and About-home loads at the full header while preserving intentional section anchors", () => {
+    expect(homeSource).toContain('import { useLayoutEffect, useState } from "react";');
+    expect(homeSource).toContain('window.history.scrollRestoration = "manual";');
+    expect(homeSource).toContain('if (!targetId || targetId === "about")');
+    expect(homeSource).toContain('window.scrollTo({ top: 0, left: 0, behavior: "auto" })');
+    expect(homeSource).toContain('document.getElementById(targetId)?.scrollIntoView({ block: "start" });');
+  });
+});
+
 describe("Final pre-publication corrections", () => {
   it("keeps the hero Contact action on the existing Contact Form with the stronger primary treatment", () => {
     expect(homeSource).toContain('className="hero-booking-link"');

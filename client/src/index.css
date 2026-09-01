@@ -2262,7 +2262,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: 18px;
+  margin-top: 0;
   padding: 11px 22px;
   border: 1px solid var(--wbf-gold);
   border-radius: 2px;
@@ -2273,6 +2273,21 @@
   line-height: 1.2;
   text-decoration: none;
   transition: transform 160ms var(--ease-out), background-color 160ms var(--ease-out);
+}
+
+.ondamed-page__booking-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.ondamed-page__fee {
+  margin: 0;
+  color: var(--wbf-green);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.96rem;
+  line-height: 1.35;
 }
 
 .ondamed-page__booking:hover,
@@ -2406,6 +2421,30 @@
   margin: -6px 0 22px;
 }
 
+.ondamed-page__wellbeing-note {
+  width: min(calc(100% - 56px), 1248px);
+  margin: 20px auto 0;
+  padding: 24px 0 28px;
+  border-top: 1px solid var(--wbf-gold);
+  color: var(--wbf-green);
+}
+
+.ondamed-page__wellbeing-note h2 {
+  margin: 0 0 12px;
+  color: var(--wbf-green);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(20px, 2vw, 26px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.ondamed-page__wellbeing-note p {
+  max-width: 86ch;
+  margin: 0;
+  line-height: 1.7;
+}
+
 @media (max-width: 900px) {
   .ondamed-page .page-main__inner {
     padding-inline: 28px;
@@ -2421,7 +2460,10 @@
     margin-bottom: 22px;
   }
 
-  .ondamed-page__booking {
+  .ondamed-page__booking-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
     margin-top: 16px;
   }
 
@@ -2438,6 +2480,10 @@
     width: 100%;
     max-width: 65ch;
     margin: 26px auto 32px;
+  }
+
+  .ondamed-page__wellbeing-note {
+    width: min(calc(100% - 56px), 65ch);
   }
 }
 

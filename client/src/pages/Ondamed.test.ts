@@ -77,14 +77,15 @@ describe("ONDAMED page image addition", () => {
     expect(styles).toContain("float: none");
   });
 
-  it("keeps the requested title hierarchy, centered support card, and only the introductory More/Less control", () => {
+  it("keeps the requested title hierarchy, centered support card, and the two approved More/Less controls", () => {
     const page = readProjectFile("client/src/pages/Ondamed.tsx");
     const styles = readProjectFile("client/src/index.css");
 
     expect(page).toContain('<h1 id="ondamed-page-heading">ONDAMED PEMF</h1>');
     expect(page).toContain('className="ondamed-page__subtitle">Wellbeing Sessions</p>');
-    expect(page.match(/className="ondamed-page__more"/g)).toHaveLength(1);
+    expect(page.match(/className="ondamed-page__more"/g)).toHaveLength(2);
     expect(page).toContain("setIntroExpanded");
+    expect(page).toContain("setWhyExpanded");
     expect(page).not.toContain("setExpectationsExpanded");
     expect(page).not.toContain("setWaterExpanded");
     expect(page).not.toContain("setApproachExpanded");
@@ -102,5 +103,23 @@ describe("ONDAMED page image addition", () => {
     expect(styles).toContain(".ondamed-page__support-list li::before");
     expect(styles).toContain('background-image: url("/manus-storage/WBFFlowerfromlogo_60274cdc.png")');
     expect(styles).toContain("list-style: none;");
+  });
+
+  it("adds the responsive booking fee, collapsible Why Choose copy, and final wellbeing note verbatim", () => {
+    const page = readProjectFile("client/src/pages/Ondamed.tsx").replace(/\s+/g, " ");
+    const styles = readProjectFile("client/src/index.css");
+
+    expect(page).toContain("Session Fee: €120 | Course of 3: €300");
+    expect(page).toContain('className="ondamed-page__booking-row"');
+    expect(page).toContain('aria-controls="ondamed-why-more"');
+    expect(page).toContain("ONDAMED is a German-developed system that combines focused PEMF stimulation with biofeedback.");
+    expect(page).toContain("Rather than using a standard one-size-fits-all PEMF approach, ONDAMED uses your body’s responses to help guide the selection of frequencies, applicators and areas of focus. This allows each session to be shaped around what appears most relevant for you at that time.");
+    expect(page).toContain("ONDAMED sessions at WellBeingFem are offered as complementary wellbeing support. They are not intended to diagnose, treat, cure or prevent any medical condition and are not a replacement for medical advice, diagnosis or treatment from a qualified healthcare professional.");
+    expect(page).toContain('<h2 id="ondamed-wellbeing-note-heading">WELLBEING NOTE</h2>');
+    expect(page).toContain("<em>");
+    expect(styles).toContain(".ondamed-page__booking-row {");
+    expect(styles).toContain("flex-direction: column;");
+    expect(styles).toContain(".ondamed-page__wellbeing-note {");
+    expect(styles).toContain("font-style: normal;");
   });
 });
