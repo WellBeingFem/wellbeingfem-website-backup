@@ -31,9 +31,14 @@ describe("WellBeingFem production readiness", () => {
 
     expect(appSource).toContain('<Route path="/ondamed" component={Ondamed} />');
     expect(appSource).not.toContain('<RouteAlias to="/research#ondamed" />');
-    expect(appSource).toContain('<Route path="/healy">');
+    expect(appSource).toContain('<Route path="/healy" component={Healy} />');
     expect(appSource.match(/<Route path="\/healy\//g)).toHaveLength(5);
-    expect(appSource.match(/<RouteAlias to="\/research#healy" \/>/g)).toHaveLength(6);
+    expect(appSource).not.toContain('<RouteAlias to="/research#healy" />');
+    expect(appSource).toContain('<RouteAlias to="/healy#what-is-healy" />');
+    expect(appSource).toContain('<RouteAlias to="/healy#healy-wellbeing" />');
+    expect(appSource).toContain('<RouteAlias to="/healy#healy-aura-analysis" />');
+    expect(appSource).toContain('<RouteAlias to="/healy#healy-i-ching" />');
+    expect(appSource).toContain('<RouteAlias to="/healy#healy-reiki" />');
     expect(appSource).toContain('<Route path="/guided-meditations">');
     expect(appSource).toContain('<RouteAlias to="/research#guided-meditations" />');
     expect(appSource).toContain('<Route path="/guided-meditations/womens-wisdom">');

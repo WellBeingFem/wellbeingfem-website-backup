@@ -18,6 +18,11 @@ describe("Women’s Wisdom homepage recovery section", () => {
     expect(homeSource).toContain("Members will also receive access to two monthly guided meditations aligned with each month’s New Moon for intention, creation and new beginnings, and Full Moon for reflection, release and renewal.");
     expect(homeSource).toContain("The series will continue with future companion books exploring deeper reflection, energy awareness, spiritual dialogue and self-understanding.");
     expect(homeSource).toContain("Join the Women’s Wisdom Launch List");
+    expect(homeSource).toContain('href="mailto:WellBeingFem@gmail.com?subject=Women%E2%80%99s%20Wisdom%20Launch%20List"');
+    expect(homeSource).toContain("WellBeingFem Meditations");
+    expect(homeSource).toContain('target="_blank"');
+    expect(styleSource).toContain(".womens-wisdom__actions {");
+    expect(styleSource).toContain("flex-direction: column;");
     expect(homeSource).toContain("Be notified when Women’s Wisdom in Times of Change becomes available.");
   });
 
@@ -81,6 +86,6 @@ describe("Primary CTA and hero performance update", () => {
     expect(styleSource).toContain(".service-card-button--primary,\n.homepage-contact-button {\n  background: #3f6b4f;");
     expect(styleSource).toContain(".womens-wisdom__more,\n.womens-wisdom__launch-button {");
     expect(styleSource).toContain("background: var(--wbf-sage);");
-    expect(styleSource).toContain(".womens-wisdom__launch-button {\n  display: flex;\n  width: fit-content;\n  margin-top: 30px;\n  background: #3f6b4f;");
+    expect(styleSource).toContain(".womens-wisdom__launch-button {\n  display: flex;\n  width: fit-content;\n  margin-top: 0;\n  background: #3f6b4f;");
   });
 });

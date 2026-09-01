@@ -212,4 +212,15 @@
 - [x] Preserve the existing WellBeingFem Research-page styling, responsive layout, Contact Form, policies, and all non-Research routes.
 - [x] Verify the three Research sections, citations/links/disclaimers, omissions of specified retired content, page-only scope, focused tests, TypeScript, and production build.
 - [x] Save the verified Research page update checkpoint and publish it automatically.
-- [ ] Confirm the restored Research page is live on wellbeingfem.com.
+- [x] Confirm the restored Research page is live on wellbeingfem.com.
+
+## Women’s Wisdom Actions and Healy Page
+
+- [x] Change the Women’s Wisdom launch-list action to an email for WellBeingFem@gmail.com with subject Women’s Wisdom Launch List, and add a matching WellBeingFem Meditations YouTube action beside it with mobile stacking.
+- [x] Replace Guided Meditations menu text Members’ Library with WBF YouTube Channel and link it to the existing WellBeingFem YouTube Channel.
+- [x] Create the five requested anchored Healy page sections using only Healy content already supplied in the project: What is Healy?, Healy WellBeing, Healy Aura Analysis, Healy I Ching, and Healy Reiki.
+- [x] Route all existing Healy dropdown items to their matching Healy page sections and remove their incorrect Research-page destinations.
+- [x] Preserve the Research page, ONDAMED page, colours, images, and unrelated content unchanged.
+- [x] Verify desktop/mobile actions, email subject, YouTube destinations, Healy section anchors, dropdown routing, focused tests, TypeScript, and production build.
+- [x] Save the verified homepage and Healy navigation checkpoint and publish it automatically.
+- [ ] Confirm the published changes on wellbeingfem.com.

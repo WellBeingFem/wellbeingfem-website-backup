@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import Healy from "./pages/Healy";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Ondamed from "./pages/Ondamed";
@@ -26,12 +27,12 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/ondamed" component={Ondamed} />
-      <Route path="/healy">{() => <RouteAlias to="/research#healy" />}</Route>
-      <Route path="/healy/what-is-healy">{() => <RouteAlias to="/research#healy" />}</Route>
-      <Route path="/healy/wellbeing">{() => <RouteAlias to="/research#healy" />}</Route>
-      <Route path="/healy/aura-analysis">{() => <RouteAlias to="/research#healy" />}</Route>
-      <Route path="/healy/i-ching">{() => <RouteAlias to="/research#healy" />}</Route>
-      <Route path="/healy/reiki">{() => <RouteAlias to="/research#healy" />}</Route>
+      <Route path="/healy" component={Healy} />
+      <Route path="/healy/what-is-healy">{() => <RouteAlias to="/healy#what-is-healy" />}</Route>
+      <Route path="/healy/wellbeing">{() => <RouteAlias to="/healy#healy-wellbeing" />}</Route>
+      <Route path="/healy/aura-analysis">{() => <RouteAlias to="/healy#healy-aura-analysis" />}</Route>
+      <Route path="/healy/i-ching">{() => <RouteAlias to="/healy#healy-i-ching" />}</Route>
+      <Route path="/healy/reiki">{() => <RouteAlias to="/healy#healy-reiki" />}</Route>
       <Route path="/guided-meditations">
         {() => <RouteAlias to="/research#guided-meditations" />}
       </Route>

@@ -10,8 +10,10 @@ const LOGO_URL = "/manus-storage/WellBeingfemlogofinal_e0e51dae.png";
 type NavigationItem = {
   label: string;
   href?: string;
-  children?: Array<{ label: string; href: string }>;
+  children?: Array<{ label: string; href: string; external?: boolean }>;
 };
+
+const WELLBEINGFEM_YOUTUBE_URL = "https://www.youtube.com/@wellbeingfem";
 
 const navigation: NavigationItem[] = [
   { label: "About", href: "/#about" },
@@ -19,18 +21,18 @@ const navigation: NavigationItem[] = [
   {
     label: "Healy",
     children: [
-      { label: "What is Healy", href: "/healy/what-is-healy" },
-      { label: "Healy WellBeing", href: "/healy/wellbeing" },
-      { label: "Healy Aura Analysis", href: "/healy/aura-analysis" },
-      { label: "Healy I Ching", href: "/healy/i-ching" },
-      { label: "Healy Reiki", href: "/healy/reiki" },
+      { label: "What is Healy", href: "/healy#what-is-healy" },
+      { label: "Healy WellBeing", href: "/healy#healy-wellbeing" },
+      { label: "Healy Aura Analysis", href: "/healy#healy-aura-analysis" },
+      { label: "Healy I Ching", href: "/healy#healy-i-ching" },
+      { label: "Healy Reiki", href: "/healy#healy-reiki" },
     ],
   },
   {
     label: "Guided Meditations",
     children: [
       { label: "Women's Wisdom", href: "/guided-meditations/womens-wisdom" },
-      { label: "Members' Library", href: "/guided-meditations/members-library" },
+      { label: "WBF YouTube Channel", href: WELLBEINGFEM_YOUTUBE_URL, external: true },
     ],
   },
   { label: "Resources", href: "/resources" },
@@ -95,7 +97,13 @@ export default function SiteHeader() {
                     <ul className="desktop-submenu" aria-label={`${item.label} submenu`}>
                       {item.children.map((child) => (
                         <li key={child.label}>
-                          <a href={child.href}>{child.label}</a>
+                          <a
+                            href={child.href}
+                            target={child.external ? "_blank" : undefined}
+                            rel={child.external ? "noreferrer" : undefined}
+                          >
+                            {child.label}
+                          </a>
                         </li>
                       ))}
                     </ul>
@@ -150,7 +158,13 @@ export default function SiteHeader() {
                   <ul>
                     {item.children.map((child) => (
                       <li key={child.label}>
-                        <a href={child.href}>{child.label}</a>
+                        <a
+                          href={child.href}
+                          target={child.external ? "_blank" : undefined}
+                          rel={child.external ? "noreferrer" : undefined}
+                        >
+                          {child.label}
+                        </a>
                       </li>
                     ))}
                   </ul>

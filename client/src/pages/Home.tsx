@@ -247,7 +247,22 @@ export default function Home() {
                 </div>
               ) : null}
 
-              <a className="womens-wisdom__launch-button" href="/research#contact">Join the Women’s Wisdom Launch List</a>
+              <div className="womens-wisdom__actions">
+                <a
+                  className="womens-wisdom__launch-button"
+                  href="mailto:WellBeingFem@gmail.com?subject=Women%E2%80%99s%20Wisdom%20Launch%20List"
+                >
+                  Join the Women’s Wisdom Launch List
+                </a>
+                <a
+                  className="womens-wisdom__launch-button"
+                  href={WELLBEINGFEM_YOUTUBE_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  WellBeingFem Meditations
+                </a>
+              </div>
               <p className="womens-wisdom__notice">Be notified when Women’s Wisdom in Times of Change becomes available.</p>
             </div>
           </section>
