@@ -375,4 +375,4 @@
 - [x] Set every site footer background to exactly `#3F6B4F`, using only necessary existing light/gold contrast colours and introducing no additional green shades or unrelated background changes.
 - [x] Preserve homepage wording, service sections, Women’s Wisdom, Contact Form, Research content, resource cards/carousel, navigation styling, and all unrelated site content/layout unchanged.
 - [x] Update Vitest coverage and verify route absence, exact header/footer destinations, header-safe anchor opening, footer colour/contrast, and desktop/tablet/mobile behavior.
-- [ ] Save the verified checkpoint, publish automatically, and confirm the live header/footer links, anchor position, removed standalone route, and footer colour on wellbeingfem.com.
+- [x] Save the verified checkpoint, publish automatically, and confirm the live header/footer links, anchor position, removed standalone route, and footer colour on wellbeingfem.com.
