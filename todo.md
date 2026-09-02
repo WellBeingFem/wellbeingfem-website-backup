@@ -308,3 +308,14 @@
 - [x] Preserve the page image, other wording, navigation, footer, branding, and unrelated site content/layout unchanged.
 - [x] Add/update Vitest coverage and verify both disclosures, research action, title/image integration, and cards on desktop, tablet, and mobile.
 - [x] Save the verified checkpoint, publish automatically, and confirm the updated live page and interactions on wellbeingfem.com.
+
+## About WBF Meditations Subtitle, Buttons, and Card Icons
+
+- [x] Keep `GUIDED MEDITATION JOURNEYS` above the unchanged left image, and move the exact gold subtitle into the right copy column directly above and aligned with the opening paragraph.
+- [x] Make the Personal Transformation More/Less and View Research actions exactly equal in width, height, padding, font size, green/gold styling, and centred text, aligned side by side on desktop with clean mobile stacking when needed.
+- [x] Remove only the repeated `REST • REFLECT • RENEW` heading above the cards while retaining the individual REST, REFLECT, and RENEW card titles and all existing card wording.
+- [x] Add restrained gold line-art crescent moon, lotus, and rising-growth symbols above the respective card titles, preserving accessible semantics and the existing image.
+- [x] Enhance the three equal-height cards with increased padding, centred icon/title hierarchy, warm cream surfaces, thin gold borders, soft rounding, and restrained inner/detail depth while keeping dark-green text and clean tablet/mobile stacking.
+- [x] Preserve all wording, navigation, footer, page image, research destination, branding, and unrelated page/site layout unchanged.
+- [x] Update Vitest coverage and verify the subtitle placement, equal buttons, removed repeated heading, icons, cards, and responsive layout on desktop, tablet, and mobile.
+- [ ] Save the verified checkpoint, publish automatically, and confirm the updated live page and interactions on wellbeingfem.com.

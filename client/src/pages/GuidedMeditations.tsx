@@ -1,5 +1,6 @@
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+import { Flower2, MoonStar, Sunrise } from "lucide-react";
 import { useState } from "react";
 
 const GUIDED_MEDITATIONS_IMAGE = "/manus-storage/GuidedMedsite_26b6689f.png";
@@ -18,7 +19,6 @@ export default function GuidedMeditations() {
             <div className="guided-meditations-page__media-panel">
               <header className="guided-meditations-page__heading">
                 <h1>GUIDED MEDITATION JOURNEYS</h1>
-                <p>Women’s Wisdom &amp; Mind–Body–Spirit Wellbeing</p>
               </header>
               <figure className="guided-meditations-page__figure">
                 <img
@@ -40,6 +40,7 @@ export default function GuidedMeditations() {
               </figure>
             </div>
 
+            <p className="guided-meditations-page__subtitle">Women’s Wisdom &amp; Mind–Body–Spirit Wellbeing</p>
             <p>Women carry deep wisdom through every stage of life. At times it feels close and familiar; at others, it can become obscured beneath responsibility, change, grief, uncertainty or the demands of everyday life.</p>
             <p>WellBeingFem Guided Meditation Journeys create a doorway inward.</p>
             <button
@@ -62,15 +63,20 @@ export default function GuidedMeditations() {
             <section className="guided-meditations-page__section" aria-labelledby="personal-transformation-heading">
               <h2 id="personal-transformation-heading">PERSONAL TRANSFORMATION &amp; WELLBEING</h2>
               <p>Research into meditation and guided imagery suggests that structured inner practices may support stress regulation, emotional balance, body awareness, resilience and overall wellbeing. WellBeingFem Meditation Journeys draw on this research-informed understanding while remaining rooted in women’s wisdom, symbolic reflection and mind–body–spirit awareness.</p>
-              <button
-                type="button"
-                className="guided-meditations-page__more"
-                aria-expanded={transformationExpanded}
-                aria-controls="guided-meditations-transformation-details"
-                onClick={() => setTransformationExpanded((current) => !current)}
-              >
-                {transformationExpanded ? "Less" : "More"}
-              </button>
+              <div className="guided-meditations-page__section-actions">
+                <button
+                  type="button"
+                  className="guided-meditations-page__more"
+                  aria-expanded={transformationExpanded}
+                  aria-controls="guided-meditations-transformation-details"
+                  onClick={() => setTransformationExpanded((current) => !current)}
+                >
+                  {transformationExpanded ? "Less" : "More"}
+                </button>
+                <a className="guided-meditations-page__action" href="/research#guided-meditations">
+                  View Research
+                </a>
+              </div>
               {transformationExpanded && (
                 <div id="guided-meditations-transformation-details" className="guided-meditations-page__disclosure">
                   <p>Each journey is personal. There is simply an invitation to relax, listen and allow the images, symbols and inner landscape to unfold in their own way.</p>
@@ -79,23 +85,22 @@ export default function GuidedMeditations() {
                   <p>Begin with a free WellBeingFem Guided Meditation and allow yourself time to step away from the outer world, journey inward and return with whatever insight, stillness or renewed awareness the experience may offer.</p>
                 </div>
               )}
-              <a className="guided-meditations-page__action" href="/research#guided-meditations">
-                View Research
-              </a>
             </section>
 
-            <section className="guided-meditations-page__section guided-meditations-page__renewal" aria-labelledby="rest-reflect-renew-heading">
-              <h2 id="rest-reflect-renew-heading">REST • REFLECT • RENEW</h2>
+            <section className="guided-meditations-page__section guided-meditations-page__renewal" aria-label="Rest, Reflect and Renew">
               <div className="guided-meditations-page__renewal-items">
                 <div className="guided-meditations-page__renewal-card">
+                  <MoonStar className="guided-meditations-page__renewal-icon" aria-hidden="true" />
                   <h3>REST</h3>
                   <p>Step away from the noise of everyday life and enter a space created for rest, sleep, restoration and emotional renewal.</p>
                 </div>
                 <div className="guided-meditations-page__renewal-card">
+                  <Flower2 className="guided-meditations-page__renewal-icon" aria-hidden="true" />
                   <h3>REFLECT</h3>
                   <p>Create space for stillness, perspective and deeper reflection, allowing the mind to quieten and inner wisdom to become easier to hear.</p>
                 </div>
                 <div className="guided-meditations-page__renewal-card">
+                  <Sunrise className="guided-meditations-page__renewal-icon" aria-hidden="true" />
                   <h3>RENEW</h3>
                   <p>Reconnect with energy, confidence and a renewed sense of possibility through times of change, personal challenge, perimenopause or menopause.</p>
                 </div>

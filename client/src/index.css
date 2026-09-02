@@ -2824,6 +2824,7 @@
 .guided-meditations-page__action,
 .guided-meditations-page__more {
   display: inline-flex;
+  width: 136px;
   min-height: 43px;
   align-items: center;
   justify-content: center;
@@ -2845,15 +2846,23 @@
 }
 
 .guided-meditations-page__more {
-  min-height: 38px;
   margin-top: 16px;
-  padding: 8px 18px;
   cursor: pointer;
 }
 
 .guided-meditations-page__action {
-  width: fit-content;
-  margin-top: 24px;
+  margin: 0;
+}
+
+.guided-meditations-page__section-actions {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.guided-meditations-page__section-actions .guided-meditations-page__more {
+  margin: 0;
 }
 
 .guided-meditations-page__youtube-button:hover,
@@ -2895,11 +2904,15 @@
   line-height: 1.12;
 }
 
-.guided-meditations-page__heading p {
-  margin: 9px 0 0;
+.guided-meditations-page__content > .guided-meditations-page__subtitle {
+  margin: 0 0 12px;
   color: var(--wbf-gold);
   font-size: clamp(17px, 1.65vw, 21px);
   line-height: 1.3;
+}
+
+.guided-meditations-page__content > .guided-meditations-page__subtitle + p {
+  margin-top: 0;
 }
 
 .guided-meditations-page__content > p,
@@ -2940,23 +2953,32 @@
 .guided-meditations-page__renewal-card {
   display: flex;
   min-height: 100%;
-  padding: 29px 30px 31px;
+  padding: 36px 32px 34px;
   flex-direction: column;
   border: 1px solid color-mix(in srgb, var(--wbf-gold) 68%, transparent);
   border-radius: 14px;
   background: #fbf8f0;
-  box-shadow: 0 10px 25px rgb(65 86 72 / 6%);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--wbf-gold) 13%, transparent), 0 12px 28px rgb(65 86 72 / 7%);
+}
+
+.guided-meditations-page__renewal-icon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 20px;
+  color: var(--wbf-gold);
+  stroke-width: 1.35;
 }
 
 .guided-meditations-page__renewal h3 {
-  margin: 0 0 19px;
-  padding-bottom: 13px;
+  margin: 0 0 22px;
+  padding-bottom: 15px;
   border-bottom: 1px solid color-mix(in srgb, var(--wbf-gold) 52%, transparent);
   color: var(--wbf-green);
-  font-size: 21px;
+  font-size: 23px;
   font-weight: 700;
   letter-spacing: 0.07em;
   line-height: 1.25;
+  text-align: center;
 }
 
 .guided-meditations-page__wellbeing-note h2 {
@@ -2984,6 +3006,17 @@
   }
 
   .guided-meditations-page__renewal-card {
-    padding: 25px 25px 27px;
+    padding: 31px 27px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .guided-meditations-page__section-actions {
+    flex-direction: column;
+  }
+
+  .guided-meditations-page__section-actions .guided-meditations-page__more,
+  .guided-meditations-page__section-actions .guided-meditations-page__action {
+    width: 100%;
   }
 }

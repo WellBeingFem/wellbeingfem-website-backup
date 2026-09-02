@@ -7,14 +7,14 @@ const page = pageSource.replace(/&amp;/g, "&").replace(/\s+/g, " ");
 const styles = readFileSync(resolve(process.cwd(), "client/src/index.css"), "utf8");
 
 describe("Guided Meditation Journeys page", () => {
-  it("keeps the supplied image unchanged and integrates the exact title within its left media panel", () => {
+  it("keeps the supplied image unchanged, the title above it, and the gold subtitle in the right copy column", () => {
     expect(page).toContain('const GUIDED_MEDITATIONS_IMAGE = "/manus-storage/GuidedMedsite_26b6689f.png";');
     expect(page).toContain("width={1672}");
     expect(page).toContain("height={941}");
     expect(page).toContain('className="guided-meditations-page__media-panel"');
     expect(page.indexOf('className="guided-meditations-page__media-panel"')).toBeLessThan(page.indexOf("GUIDED MEDITATION JOURNEYS"));
     expect(page.indexOf("GUIDED MEDITATION JOURNEYS")).toBeLessThan(page.indexOf('className="guided-meditations-page__figure"'));
-    expect(page).toContain("Women’s Wisdom & Mind–Body–Spirit Wellbeing");
+    expect(page).toContain('</div> <p className="guided-meditations-page__subtitle">Women’s Wisdom & Mind–Body–Spirit Wellbeing</p> <p>Women carry deep wisdom');
     expect(styles).toContain(".guided-meditations-page__media-panel {");
     expect(styles).toContain("float: left;");
     expect(styles).toContain("object-fit: contain;");
@@ -40,7 +40,6 @@ describe("Guided Meditation Journeys page", () => {
       "There is no right or wrong experience.",
       "No two journeys are ever quite the same.",
       "Begin with a free WellBeingFem Guided Meditation and allow yourself time to step away from the outer world, journey inward and return with whatever insight, stillness or renewed awareness the experience may offer.",
-      "REST • REFLECT • RENEW",
       "Step away from the noise of everyday life and enter a space created for rest, sleep, restoration and emotional renewal.",
       "Create space for stillness, perspective and deeper reflection, allowing the mind to quieten and inner wisdom to become easier to hear.",
       "Reconnect with energy, confidence and a renewed sense of possibility through times of change, personal challenge, perimenopause or menopause.",
@@ -61,6 +60,12 @@ describe("Guided Meditation Journeys page", () => {
     expect(page).toContain('{transformationExpanded ? "Less" : "More"}');
     expect(page.indexOf("WellBeingFem Guided Meditation Journeys create a doorway inward.")).toBeLessThan(page.indexOf('aria-controls="guided-meditations-opening-details"'));
     expect(page.indexOf("Research into meditation and guided imagery suggests")).toBeLessThan(page.indexOf('aria-controls="guided-meditations-transformation-details"'));
+    expect(page).toContain('className="guided-meditations-page__section-actions"');
+    expect(styles).toContain(".guided-meditations-page__action,\n.guided-meditations-page__more {");
+    expect(styles).toContain("width: 136px;");
+    expect(styles).toContain("min-height: 43px;");
+    expect(styles).toContain("padding: 10px 18px;");
+    expect(styles).toContain("font-size: 15px;");
   });
 
   it("links directly to existing Guided Meditation research and keeps the note typography", () => {
@@ -70,13 +75,20 @@ describe("Guided Meditation Journeys page", () => {
     expect(styles).toContain(".guided-meditations-page__wellbeing-note h2 {\n  font-style: normal;");
   });
 
-  it("uses three equal-height refined Rest, Reflect, and Renew cards with mobile stacking", () => {
+  it("removes the repeated renewal heading and uses three icon-led equal-height premium cards with mobile stacking", () => {
     expect(page.match(/className="guided-meditations-page__renewal-card"/g)).toHaveLength(3);
+    expect(page).not.toContain("REST • REFLECT • RENEW");
+    expect(page).toContain('<MoonStar className="guided-meditations-page__renewal-icon" aria-hidden="true" />');
+    expect(page).toContain('<Flower2 className="guided-meditations-page__renewal-icon" aria-hidden="true" />');
+    expect(page).toContain('<Sunrise className="guided-meditations-page__renewal-icon" aria-hidden="true" />');
+    expect(page.match(/className="guided-meditations-page__renewal-icon"/g)).toHaveLength(3);
     expect(styles).toContain("grid-template-columns: repeat(3, minmax(0, 1fr));");
     expect(styles).toContain("align-items: stretch;");
     expect(styles).toContain("border-radius: 14px;");
     expect(styles).toContain("background: #fbf8f0;");
-    expect(styles).toContain("box-shadow: 0 10px 25px rgb(65 86 72 / 6%);");
+    expect(styles).toContain("box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--wbf-gold) 13%, transparent), 0 12px 28px rgb(65 86 72 / 7%);");
+    expect(styles).toContain(".guided-meditations-page__renewal-icon {");
+    expect(styles).toContain("text-align: center;");
     expect(styles).toContain(".guided-meditations-page__renewal-items {\n    grid-template-columns: minmax(0, 1fr);");
   });
 });
