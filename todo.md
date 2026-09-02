@@ -318,4 +318,4 @@
 - [x] Enhance the three equal-height cards with increased padding, centred icon/title hierarchy, warm cream surfaces, thin gold borders, soft rounding, and restrained inner/detail depth while keeping dark-green text and clean tablet/mobile stacking.
 - [x] Preserve all wording, navigation, footer, page image, research destination, branding, and unrelated page/site layout unchanged.
 - [x] Update Vitest coverage and verify the subtitle placement, equal buttons, removed repeated heading, icons, cards, and responsive layout on desktop, tablet, and mobile.
-- [ ] Save the verified checkpoint, publish automatically, and confirm the updated live page and interactions on wellbeingfem.com.
+- [x] Save the verified checkpoint, publish automatically, and confirm the updated live page and interactions on wellbeingfem.com.
