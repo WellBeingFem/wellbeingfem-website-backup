@@ -336,4 +336,4 @@
 - [x] Preserve the tablet/mobile no-wrap sequence: title, image, YouTube button, subtitle, opening text, then remaining sections.
 - [x] Preserve all wording, More/Less behavior, buttons, colours, image dimensions/crop, cards, navigation, footer, and unrelated site content/layout unchanged.
 - [x] Update Vitest coverage and verify desktop wrap geometry plus tablet/mobile stacking without overflow or regressions.
-- [ ] Save the verified checkpoint, publish automatically, and confirm the wrapped opening layout live on wellbeingfem.com.
+- [x] Save the verified checkpoint, publish automatically, and confirm the wrapped opening layout live on wellbeingfem.com.

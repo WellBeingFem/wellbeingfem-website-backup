@@ -9,3 +9,7 @@ Desktop visual capture confirms the Personal Transformation heading occupies the
 The complete verification run passes all 9 Vitest files and 36 tests, `pnpm run check`, and `pnpm run build`. Existing managed-storage resolution and bundle-size messages remain non-blocking advisories.
 
 The initial `b1eace1b` auto-publication attempt encountered a temporary hosting service-quota error before the new bundle propagated. The verified implementation and live existing site remained intact; a fresh documentation checkpoint is used solely to retry publication without modifying website code.
+
+The fresh checkpoint `36c9bfc1` successfully propagated with live assets `index-Br66AbNt.js` and `index-C12Ck8lY.css`. Once the managed image loaded, the public page visually confirmed Personal Transformation beginning in the available right column beneath the first More control and its text returning to full width below the unchanged media block; the tablet/mobile presentation remains covered by the pre-publication responsive captures.
+
+Live computed geometry confirms the section is `clear: none`, begins at 580.14px while the media float influences layout through 729.06px, and therefore starts beside the media block. Its first copy line begins at the right-column x-position of 683.69px, while subsequent lines below the media influence return to the full-width x-position of 36px. The gap after the first More control is the intended 43px section spacing, the image is loaded, and no horizontal overflow is present.
