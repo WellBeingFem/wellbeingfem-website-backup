@@ -297,3 +297,14 @@
 - [x] Preserve all other pages, wording, navigation items, images, footer, styling, and established cream/sage/green/gold branding.
 - [x] Add/update Vitest coverage and verify the new page and menu on desktop, tablet, and mobile without cropping, stretching, or altering the supplied image.
 - [x] Save the verified checkpoint, publish automatically, and confirm the live page, navigation, image, YouTube action, and responsive layout on wellbeingfem.com.
+
+## Guided Meditation Journeys Layout, Disclosures, and Cards
+
+- [x] Move the exact page title and subtitle into an elegant integrated left image/title area while keeping the uploaded image unchanged and retaining desktop text wrap plus tablet/mobile stacking.
+- [x] Keep `WellBeingFem Guided Meditation Journeys create a doorway inward.` visible, then place all remaining opening explanation behind one existing-style green More/Less control without changing wording.
+- [x] Keep the Personal Transformation & Wellbeing heading and its first two sentences visible, then place the remaining section text behind a second independent green More/Less control without changing wording.
+- [x] Add an existing-style green `View Research` action at the end of Personal Transformation & Wellbeing, linked directly to the existing Guided Meditation / Guided Visualisation Research heading on `/research` without changing research content.
+- [x] Refine the existing REST, REFLECT, and RENEW cards with equal-height desktop layout, warm pale surfaces, thin gold borders, soft rounding, generous padding/spacing, stronger heading hierarchy, understated depth, and clean tablet/mobile stacking while preserving all card wording.
+- [x] Preserve the page image, other wording, navigation, footer, branding, and unrelated site content/layout unchanged.
+- [x] Add/update Vitest coverage and verify both disclosures, research action, title/image integration, and cards on desktop, tablet, and mobile.
+- [ ] Save the verified checkpoint, publish automatically, and confirm the updated live page and interactions on wellbeingfem.com.
