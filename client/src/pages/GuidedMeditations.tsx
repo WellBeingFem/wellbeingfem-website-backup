@@ -60,7 +60,7 @@ export default function GuidedMeditations() {
               </div>
             )}
 
-            <section className="guided-meditations-page__section" aria-labelledby="personal-transformation-heading">
+            <section className="guided-meditations-page__section guided-meditations-page__section--wrap" aria-labelledby="personal-transformation-heading">
               <h2 id="personal-transformation-heading">PERSONAL TRANSFORMATION &amp; WELLBEING</h2>
               <p>Research into meditation and guided imagery suggests that structured inner practices may support stress regulation, emotional balance, body awareness, resilience and overall wellbeing. WellBeingFem Meditation Journeys draw on this research-informed understanding while remaining rooted in women’s wisdom, symbolic reflection and mind–body–spirit awareness.</p>
               <div className="guided-meditations-page__section-actions">

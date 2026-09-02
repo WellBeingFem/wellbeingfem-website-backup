@@ -2942,6 +2942,10 @@
   border-top: 1px solid color-mix(in srgb, var(--wbf-gold) 38%, transparent);
 }
 
+.guided-meditations-page__section--wrap {
+  clear: none;
+}
+
 .guided-meditations-page__section h2 {
   margin: 0 0 18px;
   font-size: clamp(24px, 2.6vw, 34px);

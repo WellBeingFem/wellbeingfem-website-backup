@@ -328,3 +328,12 @@
 - [x] Preserve all wording, card layout, navigation, footer, image, links, other icons, branding, and unrelated page/site content unchanged.
 - [x] Update Vitest coverage and verify the three corrections on desktop, tablet, and mobile without overflow or regressions.
 - [x] Save the verified checkpoint, publish automatically, and confirm the three corrections live on wellbeingfem.com.
+
+## About WBF Meditations True Desktop Editorial Wrap
+
+- [x] Replace only the desktop opening flow so the existing left title/image/compact-YouTube media block floats while the right subtitle, opening copy, first disclosure control, and Personal Transformation section continue naturally beside it.
+- [x] Allow content to return naturally to full available width after passing below the media block, removing the large empty cream area without changing any wording or interaction behavior.
+- [x] Preserve the tablet/mobile no-wrap sequence: title, image, YouTube button, subtitle, opening text, then remaining sections.
+- [x] Preserve all wording, More/Less behavior, buttons, colours, image dimensions/crop, cards, navigation, footer, and unrelated site content/layout unchanged.
+- [x] Update Vitest coverage and verify desktop wrap geometry plus tablet/mobile stacking without overflow or regressions.
+- [ ] Save the verified checkpoint, publish automatically, and confirm the wrapped opening layout live on wellbeingfem.com.
