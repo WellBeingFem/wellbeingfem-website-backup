@@ -7,3 +7,7 @@ Rendered DOM inspection confirms `Get Free Resource` is now an anchor with the e
 The complete verification run passes all 9 Vitest files and 40 tests, `pnpm run check`, and `pnpm run build`. Existing managed-storage resolution and bundle-size messages remain non-blocking advisories.
 
 Activating `Get Free Resource` from the private homepage opened the exact supplied URL `https://wellbeingfem.kit.com/21bbc416b2`. The destination loaded successfully with the title `Receive Living in Frequency`, email and first-name fields, and its `Send me the Free Resource` action. The source anchor’s `target="_blank"` preserves the WellBeingFem homepage in the original tab.
+
+Checkpoint `c83a4517` propagated to `wellbeingfem.com` with live bundle `index-HXErkUEJ.js`. The published action is an anchor with the exact Kit destination, `target="_blank"`, and `rel="noopener noreferrer"`; it retains its 44px height, `rgb(63, 107, 79)` green fill, gold border, cream text, and Georgia typography. Resource 02 remains a non-linked `Coming Soon` paragraph and the live page has no horizontal overflow.
+
+Activating the published `Get Free Resource` action opened the exact Kit destination successfully. The public `Receive Living in Frequency` form rendered its email and first-name fields plus the `Send me the Free Resource` action, confirming the live end-to-end link.

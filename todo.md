@@ -363,4 +363,4 @@
 - [x] Convert only the existing Resource 01 `Get Free Resource` action into a link to `https://wellbeingfem.kit.com/21bbc416b2` that opens in a new tab with safe external-link attributes.
 - [x] Preserve the Resource 01 image, copy, button styling, carousel layout, Resource 02, homepage content, navigation, footer, and all unrelated site elements unchanged.
 - [x] Update Vitest coverage and verify the exact URL, new-tab behavior, styling, and responsive presentation on desktop, tablet, and mobile.
-- [ ] Save the verified checkpoint, publish automatically, and confirm the live Resource 01 Kit action on wellbeingfem.com.
+- [x] Save the verified checkpoint, publish automatically, and confirm the live Resource 01 Kit action on wellbeingfem.com.
