@@ -113,6 +113,10 @@ export default function Healy() {
                 <p>Healy WellBeing is the broadest of the WellBeingFem Healy sessions, allowing the session to be centred on a particular area of wellbeing or guided by the patterns showing strongest resonance within the Healy analysis.</p>
               </div>
             )}
+            <div className="healy-page__session-booking">
+              <a className="healy-page__action" href="/research#contact">Make a Booking</a>
+              <p className="healy-page__session-fee">Session Fee: €80</p>
+            </div>
           </section>
 
           <section id="healy-aura-analysis" className="healy-page__section" aria-labelledby="healy-aura-analysis-heading">
@@ -141,6 +145,10 @@ export default function Healy() {
                 <p>Healy Aura Analysis is suited to women wishing to explore wellbeing from a deeper energetic perspective, with particular emphasis on aura awareness, chakra balance, personal insight and the patterns emerging through the analysis.</p>
               </div>
             )}
+            <div className="healy-page__session-booking">
+              <a className="healy-page__action" href="/research#contact">Make a Booking</a>
+              <p className="healy-page__session-fee">Session Fee: €80</p>
+            </div>
           </section>
 
           <section id="healy-i-ching" className="healy-page__section" aria-labelledby="healy-i-ching-heading">
@@ -170,6 +178,10 @@ export default function Healy() {
                 <p>Healy I Ching is particularly suited to women drawn to symbolic reflection and wishing to explore a current question, transition or life theme from a deeper personal perspective.</p>
               </div>
             )}
+            <div className="healy-page__session-booking">
+              <a className="healy-page__action" href="/research#contact">Make a Booking</a>
+              <p className="healy-page__session-fee">Session Fee: €80</p>
+            </div>
           </section>
 
           <section id="healy-reiki" className="healy-page__section healy-page__reiki-section" aria-labelledby="healy-reiki-heading">
@@ -211,6 +223,10 @@ export default function Healy() {
             <a className="healy-page__action healy-page__research-action" href="/research#reiki-research">
               View Reiki Research
             </a>
+            <div className="healy-page__session-booking">
+              <a className="healy-page__action" href="/research#contact">Make a Booking</a>
+              <p className="healy-page__session-fee">Session Fee: €90</p>
+            </div>
           </section>
 
           <section className="healy-page__section healy-page__wellbeing-note" aria-labelledby="healy-wellbeing-note-heading">

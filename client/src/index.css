@@ -2727,6 +2727,25 @@
   margin-top: 0;
 }
 
+.healy-page__session-booking {
+  display: flex;
+  clear: both;
+  align-items: center;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.healy-page__session-booking .healy-page__action {
+  flex: 0 1 220px;
+}
+
+.healy-page__section .healy-page__session-fee {
+  margin: 0;
+  color: var(--wbf-green);
+  font-size: 16px;
+  line-height: 1.35;
+}
+
 @media (max-width: 900px) {
   .healy-page__reiki-figure {
     float: none;
@@ -2741,6 +2760,17 @@
   .healy-page__list li::before {
     width: 34px;
     height: 23px;
+  }
+
+  .healy-page__session-booking {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .healy-page__session-booking .healy-page__action {
+    flex: 0 0 auto;
+    min-width: 190px;
   }
 }
 

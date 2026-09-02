@@ -279,3 +279,11 @@
 - [x] Verify the single ONDAMED disclosure, italic Healy note, Reiki anchor/button, opening positions, focused tests, TypeScript, and production build.
 - [x] Save the verified update checkpoint and publish it automatically.
 - [x] Confirm the published changes on wellbeingfem.com.
+
+## Healy Session Pricing and Booking Actions
+
+- [x] Add one existing-style `Make a Booking` action linked to `/research#contact` at the end of each Healy WellBeing, Healy Aura Analysis, Healy I Ching, and Healy Reiki Combined Session section.
+- [x] Add exact session fees of €80, €80, €80, and €90 respectively without changing any session wording or other page content.
+- [x] Keep each button and fee on one neat desktop row, with responsive tablet/mobile stacking when needed, and add no session-level Email Us actions.
+- [x] Add/update Vitest coverage and verify the Healy page on desktop, tablet, and mobile with the existing WellBeingFem green button styling preserved.
+- [ ] Save the verified checkpoint, publish automatically, and confirm the updated live Healy page on wellbeingfem.com.

@@ -76,6 +76,18 @@ describe("Healy service page", () => {
     expect(page).toContain('aria-controls="healy-reiki-details"');
   });
 
+  it("adds the exact booking action and fee at the end of each Healy session", () => {
+    expect(page.match(/className="healy-page__session-booking"/g)).toHaveLength(4);
+    expect(page.match(/href="\/research#contact">Make a Booking<\/a>/g)).toHaveLength(5);
+    expect(page.match(/Session Fee: €80/g)).toHaveLength(3);
+    expect(page.match(/Session Fee: €90/g)).toHaveLength(1);
+    expect(page.match(/href="mailto:wellbeingfem@gmail.com">Email Us<\/a>/g)).toHaveLength(1);
+
+    expect(styles).toContain(".healy-page__session-booking");
+    expect(styles).toContain("flex-direction: column;");
+    expect(styles).toContain(".healy-page__session-fee");
+  });
+
   it("uses the flower artwork only for Healy lists and places the overall Wellbeing Note above the footer", () => {
     expect(page).not.toContain("<li>your ");
     expect(styles).toContain('background-image: url("/manus-storage/WBFFlowerfromlogo_60274cdc.png")');
