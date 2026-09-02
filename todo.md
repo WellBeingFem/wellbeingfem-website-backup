@@ -286,4 +286,4 @@
 - [x] Add exact session fees of €80, €80, €80, and €90 respectively without changing any session wording or other page content.
 - [x] Keep each button and fee on one neat desktop row, with responsive tablet/mobile stacking when needed, and add no session-level Email Us actions.
 - [x] Add/update Vitest coverage and verify the Healy page on desktop, tablet, and mobile with the existing WellBeingFem green button styling preserved.
-- [ ] Save the verified checkpoint, publish automatically, and confirm the updated live Healy page on wellbeingfem.com.
+- [x] Save the verified checkpoint, publish automatically, and confirm the updated live Healy page on wellbeingfem.com.
