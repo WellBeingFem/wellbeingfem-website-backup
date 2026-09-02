@@ -344,3 +344,16 @@
 - [x] Preserve the heading wording, paragraph wording, disclosures, buttons, image, cards, navigation, footer, colours, and all unrelated page/site content unchanged.
 - [x] Update Vitest coverage and verify the corrected heading placement on desktop, tablet, and mobile without overflow or regressions.
 - [x] Save the verified checkpoint, publish automatically, and confirm the corrected heading position live on wellbeingfem.com.
+
+## Homepage Free WellBeingFem Resources Carousel
+
+- [x] Add `Free WellBeingFem Resources` immediately after the unchanged Our Philosophy section and before the next existing homepage section, using the exact supplied introduction copy.
+- [x] Upload and display both supplied portrait resource images unchanged, uncropped, unstretched, and at identical displayed dimensions without repeating their embedded titles, numbers, subtitles, or dates below them.
+- [x] Add only the exact Resource 01 description and a non-linked existing-style `Get Free Resource` button ready for a future Kit destination.
+- [x] Add only the exact Resource 02 description and a non-clickable `Coming Soon` status, with no download, signup link, or action button.
+- [x] Build a data-driven expandable carousel that shows both cards centered side by side on desktop, preserves side-by-side tablet presentation where space permits, and supports one-card-at-a-time mobile swipe plus simple navigation/indicators.
+- [x] Hide carousel navigation automatically whenever all available resource cards fit, and allow navigation to appear automatically when future cards overflow.
+- [x] Keep the surrounding treatment simple and premium with warm cream, dark green, restrained gold borders/details, soft rounding, generous spacing, and no extra decorative graphics or effects.
+- [x] Preserve Our Philosophy, Women’s Wisdom, service sections, navigation, footer, Contact Form, unrelated buttons, and all other homepage/site content unchanged.
+- [x] Add/update Vitest coverage and verify exact placement, copy, image proportions, non-link/button behavior, responsive carousel layout, swipe/navigation, and no cropping/overflow on desktop, tablet, and mobile.
+- [ ] Save the verified checkpoint, publish automatically, and confirm the live homepage resource carousel on wellbeingfem.com.

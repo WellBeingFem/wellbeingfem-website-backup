@@ -3,9 +3,10 @@
  * It must remain complete, unedited, uncropped, and free of extra visible overlays.
  */
 import SiteHeader from "@/components/SiteHeader";
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import SiteFooter from "@/components/SiteFooter";
 import {
+  type CarouselApi,
   Carousel,
   CarouselContent,
   CarouselItem,
@@ -22,6 +23,27 @@ const HEALY_IMAGE_URL = "/manus-storage/Healyandphone_52ac329b.png";
 const GUIDED_MEDITATIONS_IMAGE_URL = "/manus-storage/06_WBF_QR_YouTube_Channel_d57f9130.png";
 const WELLBEINGFEM_YOUTUBE_URL = "https://www.youtube.com/@wellbeingfem";
 const WOMENS_WISDOM_IMAGE_URL = "/manus-storage/WomensWisdom1image_c8dbd7a7.png";
+const RESOURCE_01_IMAGE_URL = "/manus-storage/WBfResource01CardImage_2ee9605d.png";
+const RESOURCE_02_IMAGE_URL = "/manus-storage/WBfResource02CardImage_3dc660c3.png";
+
+const resourceCards = [
+  {
+    id: "resource-01",
+    imageUrl: RESOURCE_01_IMAGE_URL,
+    imageAlt: "WellBeingFem Resource 01 — Living in Frequency — June 2026",
+    description:
+      "Explore frequency, rhythm, fractals and the patterns woven through nature, the body and everyday wellbeing.",
+    status: "available",
+  },
+  {
+    id: "resource-02",
+    imageUrl: RESOURCE_02_IMAGE_URL,
+    imageAlt: "WellBeingFem Resource 02 — The Power of the Imagination — Seeing Is Believing — August 2026",
+    description:
+      "Explore imagination as an inner resource for wellbeing, resilience, symbolism, balance, harmony and a deeper sense of inner safety.",
+    status: "coming-soon",
+  },
+] as const;
 
 const clientExperienceCards = [
   "Healy Wellbeing",
@@ -39,6 +61,10 @@ const clientExperiencePlaceholder =
 
 export default function Home() {
   const [changeDetailsOpen, setChangeDetailsOpen] = useState(false);
+  const [resourceCarouselApi, setResourceCarouselApi] = useState<CarouselApi>();
+  const [resourceSelectedIndex, setResourceSelectedIndex] = useState(0);
+  const [resourceSnapCount, setResourceSnapCount] = useState<number>(resourceCards.length);
+  const [resourceCanNavigate, setResourceCanNavigate] = useState(false);
 
   useLayoutEffect(() => {
     const targetId = window.location.hash.slice(1);
@@ -67,6 +93,27 @@ export default function Home() {
       window.history.scrollRestoration = previousScrollRestoration;
     };
   }, []);
+
+  useEffect(() => {
+    if (!resourceCarouselApi) return;
+
+    const updateResourceCarousel = () => {
+      setResourceSelectedIndex(resourceCarouselApi.selectedScrollSnap());
+      setResourceSnapCount(resourceCarouselApi.scrollSnapList().length);
+      setResourceCanNavigate(
+        resourceCarouselApi.canScrollPrev() || resourceCarouselApi.canScrollNext(),
+      );
+    };
+
+    updateResourceCarousel();
+    resourceCarouselApi.on("select", updateResourceCarousel);
+    resourceCarouselApi.on("reInit", updateResourceCarousel);
+
+    return () => {
+      resourceCarouselApi.off("select", updateResourceCarousel);
+      resourceCarouselApi.off("reInit", updateResourceCarousel);
+    };
+  }, [resourceCarouselApi]);
 
   return (
     <div className="site-shell">
@@ -187,6 +234,72 @@ export default function Home() {
             <p>Through guided meditations, personalised wellbeing sessions, educational resources and reflective practices, we support women in developing lasting habits that nurture wellbeing in everyday life.</p>
             <p>Our aim is not simply to offer individual sessions, but to create a supportive wellbeing journey that encourages learning, self-awareness and personal reflection long after each session has ended.</p>
             <p className="homepage-philosophy__closing">Rest • Reflect • Renew</p>
+          </section>
+
+          <section className="homepage-resources" aria-labelledby="homepage-resources-heading">
+            <header className="homepage-resources__heading">
+              <h2 id="homepage-resources-heading">Free WellBeingFem Resources</h2>
+              <p>Explore a growing collection of free WellBeingFem resources created to support reflection, learning and everyday wellbeing.</p>
+              <p>New resources will be added regularly.</p>
+            </header>
+
+            <Carousel
+              className="homepage-resources__carousel"
+              opts={{ align: "start", containScroll: "trimSnaps", loop: false }}
+              setApi={setResourceCarouselApi}
+            >
+              <CarouselContent className="homepage-resources__track">
+                {resourceCards.map((resource) => (
+                  <CarouselItem className="homepage-resources__slide" key={resource.id}>
+                    <article className="homepage-resource-card">
+                      <img
+                        className="homepage-resource-card__image"
+                        src={resource.imageUrl}
+                        alt={resource.imageAlt}
+                        width="1122"
+                        height="1402"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <p className="homepage-resource-card__description">{resource.description}</p>
+                      {resource.status === "available" ? (
+                        <button
+                          className="homepage-resource-card__button"
+                          type="button"
+                          aria-disabled="true"
+                          title="Kit link will be added later"
+                        >
+                          Get Free Resource
+                        </button>
+                      ) : (
+                        <p className="homepage-resource-card__status" aria-label="Resource status: Coming Soon">
+                          Coming Soon
+                        </p>
+                      )}
+                    </article>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+
+              {resourceCanNavigate ? (
+                <div className="homepage-resources__navigation" aria-label="Resource carousel navigation">
+                  <CarouselPrevious className="homepage-resources__previous" />
+                  <div className="homepage-resources__indicators" aria-label="Choose a resource slide">
+                    {Array.from({ length: resourceSnapCount }, (_, index) => (
+                      <button
+                        key={`resource-slide-${index}`}
+                        className="homepage-resources__indicator"
+                        type="button"
+                        aria-label={`Show resource slide ${index + 1}`}
+                        aria-current={resourceSelectedIndex === index ? "true" : undefined}
+                        onClick={() => resourceCarouselApi?.scrollTo(index)}
+                      />
+                    ))}
+                  </div>
+                  <CarouselNext className="homepage-resources__next" />
+                </div>
+              ) : null}
+            </Carousel>
           </section>
 
           <section className="client-experiences" aria-labelledby="client-experiences-heading" hidden>

@@ -43,9 +43,59 @@ describe("Women’s Wisdom homepage recovery section", () => {
   });
 });
 
+describe("Free WellBeingFem Resources homepage carousel", () => {
+  it("places the exact new section after Our Philosophy and before the next existing section", () => {
+    const philosophyIndex = homeSource.indexOf('<section className="homepage-philosophy"');
+    const resourcesIndex = homeSource.indexOf('<section className="homepage-resources"');
+    const clientExperiencesIndex = homeSource.indexOf('<section className="client-experiences"');
+
+    expect(philosophyIndex).toBeGreaterThan(-1);
+    expect(resourcesIndex).toBeGreaterThan(philosophyIndex);
+    expect(clientExperiencesIndex).toBeGreaterThan(resourcesIndex);
+    expect(homeSource).toContain("Free WellBeingFem Resources");
+    expect(homeSource).toContain("Explore a growing collection of free WellBeingFem resources created to support reflection, learning and everyday wellbeing.");
+    expect(homeSource).toContain("New resources will be added regularly.");
+  });
+
+  it("uses both supplied portrait images unchanged and only the approved supporting copy", () => {
+    expect(homeSource).toContain('const RESOURCE_01_IMAGE_URL = "/manus-storage/WBfResource01CardImage_2ee9605d.png";');
+    expect(homeSource).toContain('const RESOURCE_02_IMAGE_URL = "/manus-storage/WBfResource02CardImage_3dc660c3.png";');
+    expect(homeSource).toContain("const resourceCards = [");
+    expect(homeSource.match(/id: "resource-0[12]"/g)).toHaveLength(2);
+    expect(homeSource).toContain('width="1122"');
+    expect(homeSource).toContain('height="1402"');
+    expect(styleSource).toContain("aspect-ratio: 561 / 701;");
+    expect(styleSource).toContain("object-fit: contain;");
+    expect(homeSource).toContain("Explore frequency, rhythm, fractals and the patterns woven through nature, the body and everyday wellbeing.");
+    expect(homeSource).toContain("Explore imagination as an inner resource for wellbeing, resilience, symbolism, balance, harmony and a deeper sense of inner safety.");
+  });
+
+  it("keeps Resource 01 ready for a future Kit link and Resource 02 as a non-clickable status", () => {
+    expect(homeSource).toContain("Get Free Resource");
+    expect(homeSource).toContain('type="button"');
+    expect(homeSource).toContain('aria-disabled="true"');
+    expect(homeSource).not.toContain("KIT_");
+    expect(homeSource).toContain('className="homepage-resource-card__status"');
+    expect(homeSource).toContain("Coming Soon");
+    expect(homeSource).not.toContain('href="Coming Soon"');
+  });
+
+  it("uses a data-driven responsive carousel with automatic overflow navigation and mobile one-card slides", () => {
+    expect(homeSource).toContain("const resourceCards = [");
+    expect(homeSource).toContain("resourceCards.map((resource)");
+    expect(homeSource).toContain('setApi={setResourceCarouselApi}');
+    expect(homeSource).toContain("resourceCarouselApi.canScrollPrev() || resourceCarouselApi.canScrollNext()");
+    expect(homeSource).toContain("resourceCanNavigate ? (");
+    expect(homeSource).toContain("resourceCarouselApi?.scrollTo(index)");
+    expect(styleSource).toContain(".homepage-resources__slide {\n  display: flex;\n  flex: 0 0 50%;");
+    expect(styleSource).toContain("@media (max-width: 640px)");
+    expect(styleSource).toContain(".homepage-resources__slide {\n    flex-basis: 100%;");
+  });
+});
+
 describe("Homepage opening position", () => {
   it("starts direct and About-home loads at the full header while preserving intentional section anchors", () => {
-    expect(homeSource).toContain('import { useLayoutEffect, useState } from "react";');
+    expect(homeSource).toContain('import { useEffect, useLayoutEffect, useState } from "react";');
     expect(homeSource).toContain('window.history.scrollRestoration = "manual";');
     expect(homeSource).toContain('if (!targetId || targetId === "about")');
     expect(homeSource).toContain('window.scrollTo({ top: 0, left: 0, behavior: "auto" })');
@@ -86,7 +136,11 @@ describe("Primary CTA and hero performance update", () => {
     expect(homeSource).toContain('<source type="image/webp" srcSet={HERO_WEBP_URL} />');
     expect(homeSource).toContain('loading="eager"');
     expect(homeSource).toContain('fetchPriority="high"');
-    expect(homeSource).not.toContain('loading="lazy"');
+    const heroPictureSource = homeSource.slice(
+      homeSource.indexOf('<picture className="hero-picture">'),
+      homeSource.indexOf("</picture>"),
+    );
+    expect(heroPictureSource).not.toContain('loading="lazy"');
   });
 
   it("uses stronger green only for primary homepage actions", () => {
