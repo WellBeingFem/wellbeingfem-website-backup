@@ -7,3 +7,7 @@ Rendered desktop inspection reports image natural dimensions 1672×941, `object-
 The desktop Guided Meditations submenu shows exactly the newly added `About WBF Meditations` destination plus the preserved `Women’s Wisdom` and `WBF YouTube Channel` entries. The rest of the primary navigation, page footer, and unrelated routes remain unchanged.
 
 The full verification run passes all 9 Vitest files and 33 tests, `pnpm run check`, and `pnpm run build`. The existing managed-storage resolution and bundle-size messages remain non-blocking advisories.
+
+Checkpoint `96efc556` propagated to `wellbeingfem.com`. The live `/guided-meditations` route renders the complete supplied copy and managed image. Live computed inspection confirms the original 1672×941 natural image dimensions, proportional `object-fit: contain` rendering, desktop left float, no horizontal overflow, green `rgb(63, 107, 79)` YouTube action, correct `https://www.youtube.com/@wellbeingfem` destination with `_blank` and `noreferrer`, a normal WELLBEING NOTE heading, and a fully italic note paragraph.
+
+The published Guided Meditations submenu exposes `About WBF Meditations` → `/guided-meditations` alongside the preserved `Women’s Wisdom` and `WBF YouTube Channel` entries. Selecting the new item opens the dedicated page directly. HTTPS checks returned HTTP 200 for the page, managed image, and preserved Women’s Wisdom route.

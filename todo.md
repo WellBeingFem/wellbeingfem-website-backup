@@ -296,4 +296,4 @@
 - [x] Add the supplied Guided Meditation Journeys text exactly, including the requested headings, REST • REFLECT • RENEW content, and non-italic WELLBEING NOTE heading with fully italic paragraph.
 - [x] Preserve all other pages, wording, navigation items, images, footer, styling, and established cream/sage/green/gold branding.
 - [x] Add/update Vitest coverage and verify the new page and menu on desktop, tablet, and mobile without cropping, stretching, or altering the supplied image.
-- [ ] Save the verified checkpoint, publish automatically, and confirm the live page, navigation, image, YouTube action, and responsive layout on wellbeingfem.com.
+- [x] Save the verified checkpoint, publish automatically, and confirm the live page, navigation, image, YouTube action, and responsive layout on wellbeingfem.com.
