@@ -327,4 +327,4 @@
 - [x] Replace only the REFLECT card flower with a refined small gold line-art journal/open-notebook icon consistent with the REST and RENEW icons.
 - [x] Preserve all wording, card layout, navigation, footer, image, links, other icons, branding, and unrelated page/site content unchanged.
 - [x] Update Vitest coverage and verify the three corrections on desktop, tablet, and mobile without overflow or regressions.
-- [ ] Save the verified checkpoint, publish automatically, and confirm the three corrections live on wellbeingfem.com.
+- [x] Save the verified checkpoint, publish automatically, and confirm the three corrections live on wellbeingfem.com.

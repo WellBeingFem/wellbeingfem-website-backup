@@ -9,3 +9,5 @@ Rendered inspection confirms the YouTube action retains its exact label, existin
 Text-range geometry confirms the subtitle text begins at 309.66px, only 1.30px below the image top at 308.36px, providing the requested visual top alignment while retaining the original gold styling and paragraph alignment.
 
 The complete verification run passes all 9 Vitest files and 36 tests, `pnpm run check`, and `pnpm run build`. Existing managed-storage resolution and bundle-size messages remain non-blocking advisories.
+
+Checkpoint `7c45267d` propagated to `wellbeingfem.com` with live assets `index-Cytt6I7r.js` and `index-CP_HhGO2.css`. Live text-range geometry confirms the gold subtitle starts only 1.30px below the unchanged image top and shares the opening paragraph’s exact 683.69px left edge. The YouTube action is 260px wide beneath the 596.5px figure and retains its existing URL, green fill, gold border, and Georgia typography. The REFLECT card contains a 52×52px gold `lucide-book-open` SVG, contains no flower icon, and the page has no horizontal overflow.
