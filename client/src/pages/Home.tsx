@@ -25,6 +25,7 @@ const WELLBEINGFEM_YOUTUBE_URL = "https://www.youtube.com/@wellbeingfem";
 const WOMENS_WISDOM_IMAGE_URL = "/manus-storage/WomensWisdom1image_c8dbd7a7.png";
 const RESOURCE_01_IMAGE_URL = "/manus-storage/WBfResource01CardImage_2ee9605d.png";
 const RESOURCE_02_IMAGE_URL = "/manus-storage/WBfResource02CardImage_3dc660c3.png";
+const RESOURCE_01_KIT_URL = "https://wellbeingfem.kit.com/21bbc416b2";
 
 const resourceCards = [
   {
@@ -263,14 +264,14 @@ export default function Home() {
                       />
                       <p className="homepage-resource-card__description">{resource.description}</p>
                       {resource.status === "available" ? (
-                        <button
+                        <a
                           className="homepage-resource-card__button"
-                          type="button"
-                          aria-disabled="true"
-                          title="Kit link will be added later"
+                          href={RESOURCE_01_KIT_URL}
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           Get Free Resource
-                        </button>
+                        </a>
                       ) : (
                         <p className="homepage-resource-card__status" aria-label="Resource status: Coming Soon">
                           Coming Soon

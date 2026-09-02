@@ -357,3 +357,10 @@
 - [x] Preserve Our Philosophy, Women’s Wisdom, service sections, navigation, footer, Contact Form, unrelated buttons, and all other homepage/site content unchanged.
 - [x] Add/update Vitest coverage and verify exact placement, copy, image proportions, non-link/button behavior, responsive carousel layout, swipe/navigation, and no cropping/overflow on desktop, tablet, and mobile.
 - [x] Save the verified checkpoint, publish automatically, and confirm the live homepage resource carousel on wellbeingfem.com.
+
+## Homepage Resource 01 Kit Link
+
+- [x] Convert only the existing Resource 01 `Get Free Resource` action into a link to `https://wellbeingfem.kit.com/21bbc416b2` that opens in a new tab with safe external-link attributes.
+- [x] Preserve the Resource 01 image, copy, button styling, carousel layout, Resource 02, homepage content, navigation, footer, and all unrelated site elements unchanged.
+- [x] Update Vitest coverage and verify the exact URL, new-tab behavior, styling, and responsive presentation on desktop, tablet, and mobile.
+- [ ] Save the verified checkpoint, publish automatically, and confirm the live Resource 01 Kit action on wellbeingfem.com.
