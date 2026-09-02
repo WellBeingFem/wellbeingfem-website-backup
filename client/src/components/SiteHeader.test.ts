@@ -16,6 +16,8 @@ describe("WellBeingFem navigation color hierarchy", () => {
 
   it("uses the existing WellBeingFem YouTube destination in the Guided Meditations menu", () => {
     expect(header).toContain('const WELLBEINGFEM_YOUTUBE_URL = "https://www.youtube.com/@wellbeingfem";');
+    expect(header).toContain('{ label: "About WBF Meditations", href: "/guided-meditations" }');
+    expect(header).toContain('{ label: "Women\'s Wisdom", href: "/guided-meditations/womens-wisdom" }');
     expect(header).toContain('{ label: "WBF YouTube Channel", href: WELLBEINGFEM_YOUTUBE_URL, external: true }');
     expect(header).not.toContain("Members' Library");
     expect(header).toContain('target={child.external ? "_blank" : undefined}');

@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import GuidedMeditations from "./pages/GuidedMeditations";
 import Healy from "./pages/Healy";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
@@ -33,9 +34,7 @@ function Router() {
       <Route path="/healy/aura-analysis">{() => <RouteAlias to="/healy#healy-aura-analysis" />}</Route>
       <Route path="/healy/i-ching">{() => <RouteAlias to="/healy#healy-i-ching" />}</Route>
       <Route path="/healy/reiki">{() => <RouteAlias to="/healy#healy-reiki" />}</Route>
-      <Route path="/guided-meditations">
-        {() => <RouteAlias to="/research#guided-meditations" />}
-      </Route>
+      <Route path="/guided-meditations" component={GuidedMeditations} />
       <Route path="/guided-meditations/womens-wisdom">
         {() => <RouteAlias to="/#womens-wisdom" />}
       </Route>

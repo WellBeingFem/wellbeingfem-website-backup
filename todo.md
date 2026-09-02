@@ -287,3 +287,13 @@
 - [x] Keep each button and fee on one neat desktop row, with responsive tablet/mobile stacking when needed, and add no session-level Email Us actions.
 - [x] Add/update Vitest coverage and verify the Healy page on desktop, tablet, and mobile with the existing WellBeingFem green button styling preserved.
 - [x] Save the verified checkpoint, publish automatically, and confirm the updated live Healy page on wellbeingfem.com.
+
+## Guided Meditation Journeys Page and Menu
+
+- [x] Add only `About WBF Meditations` beneath the existing Guided Meditations menu, linking to the dedicated Guided Meditation Journeys page while preserving Women’s Wisdom, the WellBeingFem YouTube Channel, and all other navigation.
+- [x] Upload and use the supplied `GuidedMedsite.png` unchanged at the page’s top left, with desktop text wrapping beside and beneath it and tablet/mobile image-first stacking.
+- [x] Add the existing-style green/gold `WellBeingFem YouTube Channel` button directly beneath the image, opening the website’s existing YouTube URL in a new tab.
+- [x] Add the supplied Guided Meditation Journeys text exactly, including the requested headings, REST • REFLECT • RENEW content, and non-italic WELLBEING NOTE heading with fully italic paragraph.
+- [x] Preserve all other pages, wording, navigation items, images, footer, styling, and established cream/sage/green/gold branding.
+- [x] Add/update Vitest coverage and verify the new page and menu on desktop, tablet, and mobile without cropping, stretching, or altering the supplied image.
+- [ ] Save the verified checkpoint, publish automatically, and confirm the live page, navigation, image, YouTube action, and responsive layout on wellbeingfem.com.

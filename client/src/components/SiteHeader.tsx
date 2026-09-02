@@ -31,6 +31,7 @@ const navigation: NavigationItem[] = [
   {
     label: "Guided Meditations",
     children: [
+      { label: "About WBF Meditations", href: "/guided-meditations" },
       { label: "Women's Wisdom", href: "/guided-meditations/womens-wisdom" },
       { label: "WBF YouTube Channel", href: WELLBEINGFEM_YOUTUBE_URL, external: true },
     ],

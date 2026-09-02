@@ -39,8 +39,9 @@ describe("WellBeingFem production readiness", () => {
     expect(appSource).toContain('<RouteAlias to="/healy#healy-aura-analysis" />');
     expect(appSource).toContain('<RouteAlias to="/healy#healy-i-ching" />');
     expect(appSource).toContain('<RouteAlias to="/healy#healy-reiki" />');
-    expect(appSource).toContain('<Route path="/guided-meditations">');
-    expect(appSource).toContain('<RouteAlias to="/research#guided-meditations" />');
+    expect(appSource).toContain('import GuidedMeditations from "./pages/GuidedMeditations";');
+    expect(appSource).toContain('<Route path="/guided-meditations" component={GuidedMeditations} />');
+    expect(appSource).not.toContain('<RouteAlias to="/research#guided-meditations" />');
     expect(appSource).toContain('<Route path="/guided-meditations/womens-wisdom">');
     expect(appSource).toContain('<RouteAlias to="/#womens-wisdom" />');
     expect(appSource).toContain('<Route path="/guided-meditations/members-library">');
