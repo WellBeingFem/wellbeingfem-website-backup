@@ -343,4 +343,4 @@
 - [x] Restore `PERSONAL TRANSFORMATION & WELLBEING` to the left beneath the Guided Meditations image and compact YouTube button, directly above its existing paragraph.
 - [x] Preserve the heading wording, paragraph wording, disclosures, buttons, image, cards, navigation, footer, colours, and all unrelated page/site content unchanged.
 - [x] Update Vitest coverage and verify the corrected heading placement on desktop, tablet, and mobile without overflow or regressions.
-- [ ] Save the verified checkpoint, publish automatically, and confirm the corrected heading position live on wellbeingfem.com.
+- [x] Save the verified checkpoint, publish automatically, and confirm the corrected heading position live on wellbeingfem.com.
