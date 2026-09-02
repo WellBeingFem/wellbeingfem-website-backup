@@ -9,3 +9,7 @@ The `View Research` action uses the established `rgb(63, 107, 79)` green and lin
 The desktop REST, REFLECT, and RENEW cards measure equal heights of approximately 235.44px. Each uses the warm pale `rgb(251, 248, 240)` surface, 14px rounded corners, thin gold-toned border, generous 29px/30px/31px padding, restrained six-percent green shadow, stronger green headings, and generous heading-to-body spacing. Tablet and mobile stack the three cards cleanly with comfortable gaps.
 
 The complete verification run passes all 9 Vitest files and 36 tests, `pnpm run check`, and `pnpm run build`. The existing managed-storage resolution and bundle-size messages remain non-blocking advisories.
+
+Checkpoint `96300feb` propagated to `wellbeingfem.com`. Live computed inspection confirms the exact title remains inside the left-floated media panel, the unchanged image retains its natural 1672×941 dimensions, both controls begin as More with their detail panels absent, the research action retains `/research#guided-meditations` and the established green, all three cards retain identical 235.44px desktop heights and refined styling, and the page has no horizontal overflow.
+
+Both published disclosures independently change to Less and reveal only their unchanged remaining copy. Activating the published View Research action reaches the exact existing `H2` heading `Guided Meditation Journeys & Inner Imagery Research` inside the existing `#guided-meditations` research section.

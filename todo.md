@@ -307,4 +307,4 @@
 - [x] Refine the existing REST, REFLECT, and RENEW cards with equal-height desktop layout, warm pale surfaces, thin gold borders, soft rounding, generous padding/spacing, stronger heading hierarchy, understated depth, and clean tablet/mobile stacking while preserving all card wording.
 - [x] Preserve the page image, other wording, navigation, footer, branding, and unrelated site content/layout unchanged.
 - [x] Add/update Vitest coverage and verify both disclosures, research action, title/image integration, and cards on desktop, tablet, and mobile.
-- [ ] Save the verified checkpoint, publish automatically, and confirm the updated live page and interactions on wellbeingfem.com.
+- [x] Save the verified checkpoint, publish automatically, and confirm the updated live page and interactions on wellbeingfem.com.
