@@ -319,3 +319,12 @@
 - [x] Preserve all wording, navigation, footer, page image, research destination, branding, and unrelated page/site layout unchanged.
 - [x] Update Vitest coverage and verify the subtitle placement, equal buttons, removed repeated heading, icons, cards, and responsive layout on desktop, tablet, and mobile.
 - [x] Save the verified checkpoint, publish automatically, and confirm the updated live page and interactions on wellbeingfem.com.
+
+## About WBF Meditations Final Visual Corrections
+
+- [x] Lower the exact gold subtitle in the right column so its top aligns visually with the top of the unchanged Guided Meditations image while remaining left-aligned with the opening paragraph.
+- [x] Reduce the existing WellBeingFem YouTube Channel action to a compact normal button beneath the image without changing its green fill, gold border, typography, link, or placement.
+- [x] Replace only the REFLECT card flower with a refined small gold line-art journal/open-notebook icon consistent with the REST and RENEW icons.
+- [x] Preserve all wording, card layout, navigation, footer, image, links, other icons, branding, and unrelated page/site content unchanged.
+- [x] Update Vitest coverage and verify the three corrections on desktop, tablet, and mobile without overflow or regressions.
+- [ ] Save the verified checkpoint, publish automatically, and confirm the three corrections live on wellbeingfem.com.

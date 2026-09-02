@@ -20,6 +20,8 @@ describe("Guided Meditation Journeys page", () => {
     expect(styles).toContain("object-fit: contain;");
     expect(styles).not.toContain(".guided-meditations-page__figure img {\n  object-fit: cover;");
     expect(styles).toContain(".guided-meditations-page__media-panel {\n    float: none;");
+    expect(styles).toContain("padding-top: 74px;");
+    expect(styles).toContain(".guided-meditations-page__content > .guided-meditations-page__subtitle {\n    padding-top: 0;");
   });
 
   it("preserves the existing YouTube action and exact page wording", () => {
@@ -27,6 +29,7 @@ describe("Guided Meditation Journeys page", () => {
     expect(page).toContain("WellBeingFem YouTube Channel");
     expect(page).toContain('target="_blank"');
     expect(page).toContain('rel="noreferrer"');
+    expect(styles).toContain(".guided-meditations-page__youtube-button {\n  width: fit-content;\n  min-width: 260px;\n  max-width: 100%;");
 
     const suppliedCopy = [
       "Women carry deep wisdom through every stage of life. At times it feels close and familiar; at others, it can become obscured beneath responsibility, change, grief, uncertainty or the demands of everyday life.",
@@ -79,7 +82,8 @@ describe("Guided Meditation Journeys page", () => {
     expect(page.match(/className="guided-meditations-page__renewal-card"/g)).toHaveLength(3);
     expect(page).not.toContain("REST • REFLECT • RENEW");
     expect(page).toContain('<MoonStar className="guided-meditations-page__renewal-icon" aria-hidden="true" />');
-    expect(page).toContain('<Flower2 className="guided-meditations-page__renewal-icon" aria-hidden="true" />');
+    expect(page).toContain('<BookOpen className="guided-meditations-page__renewal-icon" aria-hidden="true" />');
+    expect(page).not.toContain('<Flower2 className="guided-meditations-page__renewal-icon"');
     expect(page).toContain('<Sunrise className="guided-meditations-page__renewal-icon" aria-hidden="true" />');
     expect(page.match(/className="guided-meditations-page__renewal-icon"/g)).toHaveLength(3);
     expect(styles).toContain("grid-template-columns: repeat(3, minmax(0, 1fr));");

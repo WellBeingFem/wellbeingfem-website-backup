@@ -1,6 +1,6 @@
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
-import { Flower2, MoonStar, Sunrise } from "lucide-react";
+import { BookOpen, MoonStar, Sunrise } from "lucide-react";
 import { useState } from "react";
 
 const GUIDED_MEDITATIONS_IMAGE = "/manus-storage/GuidedMedsite_26b6689f.png";
@@ -95,7 +95,7 @@ export default function GuidedMeditations() {
                   <p>Step away from the noise of everyday life and enter a space created for rest, sleep, restoration and emotional renewal.</p>
                 </div>
                 <div className="guided-meditations-page__renewal-card">
-                  <Flower2 className="guided-meditations-page__renewal-icon" aria-hidden="true" />
+                  <BookOpen className="guided-meditations-page__renewal-icon" aria-hidden="true" />
                   <h3>REFLECT</h3>
                   <p>Create space for stillness, perspective and deeper reflection, allowing the mind to quieten and inner wisdom to become easier to hear.</p>
                 </div>

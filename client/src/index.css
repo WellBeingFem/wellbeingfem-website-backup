@@ -2817,6 +2817,8 @@
 }
 
 .guided-meditations-page__figure figcaption {
+  display: flex;
+  justify-content: flex-start;
   margin-top: 14px;
 }
 
@@ -2842,7 +2844,9 @@
 }
 
 .guided-meditations-page__youtube-button {
-  width: 100%;
+  width: fit-content;
+  min-width: 260px;
+  max-width: 100%;
 }
 
 .guided-meditations-page__more {
@@ -2906,6 +2910,7 @@
 
 .guided-meditations-page__content > .guided-meditations-page__subtitle {
   margin: 0 0 12px;
+  padding-top: 74px;
   color: var(--wbf-gold);
   font-size: clamp(17px, 1.65vw, 21px);
   line-height: 1.3;
@@ -2998,6 +3003,10 @@
 
   .guided-meditations-page__content {
     font-size: 16px;
+  }
+
+  .guided-meditations-page__content > .guided-meditations-page__subtitle {
+    padding-top: 0;
   }
 
   .guided-meditations-page__renewal-items {
