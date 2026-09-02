@@ -356,4 +356,4 @@
 - [x] Keep the surrounding treatment simple and premium with warm cream, dark green, restrained gold borders/details, soft rounding, generous spacing, and no extra decorative graphics or effects.
 - [x] Preserve Our Philosophy, Women’s Wisdom, service sections, navigation, footer, Contact Form, unrelated buttons, and all other homepage/site content unchanged.
 - [x] Add/update Vitest coverage and verify exact placement, copy, image proportions, non-link/button behavior, responsive carousel layout, swipe/navigation, and no cropping/overflow on desktop, tablet, and mobile.
-- [ ] Save the verified checkpoint, publish automatically, and confirm the live homepage resource carousel on wellbeingfem.com.
+- [x] Save the verified checkpoint, publish automatically, and confirm the live homepage resource carousel on wellbeingfem.com.
