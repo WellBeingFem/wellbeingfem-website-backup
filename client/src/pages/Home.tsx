@@ -62,6 +62,9 @@ const clientExperiencePlaceholder =
 
 export default function Home() {
   const [changeDetailsOpen, setChangeDetailsOpen] = useState(false);
+  const [resourcesAnchorActive, setResourcesAnchorActive] = useState(
+    () => window.location.hash === "#free-wellbeingfem-resources",
+  );
   const [resourceCarouselApi, setResourceCarouselApi] = useState<CarouselApi>();
   const [resourceSelectedIndex, setResourceSelectedIndex] = useState(0);
   const [resourceSnapCount, setResourceSnapCount] = useState<number>(resourceCards.length);
@@ -96,6 +99,16 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    const updateResourcesAnchorState = () => {
+      setResourcesAnchorActive(window.location.hash === "#free-wellbeingfem-resources");
+    };
+
+    updateResourcesAnchorState();
+    window.addEventListener("hashchange", updateResourcesAnchorState);
+    return () => window.removeEventListener("hashchange", updateResourcesAnchorState);
+  }, []);
+
+  useEffect(() => {
     if (!resourceCarouselApi) return;
 
     const updateResourceCarousel = () => {
@@ -117,7 +130,7 @@ export default function Home() {
   }, [resourceCarouselApi]);
 
   return (
-    <div className="site-shell">
+    <div className={`site-shell${resourcesAnchorActive ? " site-shell--resources-anchor" : ""}`}>
       <SiteHeader />
       <main id="about">
         <section className="hero-image-container" aria-label="WellBeingFem ONDAMED PEMF">
@@ -237,7 +250,11 @@ export default function Home() {
             <p className="homepage-philosophy__closing">Rest • Reflect • Renew</p>
           </section>
 
-          <section className="homepage-resources" aria-labelledby="homepage-resources-heading">
+          <section
+            id="free-wellbeingfem-resources"
+            className="homepage-resources"
+            aria-labelledby="homepage-resources-heading"
+          >
             <header className="homepage-resources__heading">
               <h2 id="homepage-resources-heading">Free WellBeingFem Resources</h2>
               <p>Explore a growing collection of free WellBeingFem resources created to support reflection, learning and everyday wellbeing.</p>

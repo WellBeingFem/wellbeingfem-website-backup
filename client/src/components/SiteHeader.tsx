@@ -36,7 +36,7 @@ const navigation: NavigationItem[] = [
       { label: "WBF YouTube Channel", href: WELLBEINGFEM_YOUTUBE_URL, external: true },
     ],
   },
-  { label: "Resources", href: "/resources" },
+  { label: "Resources", href: "/#free-wellbeingfem-resources" },
   {
     label: "Research",
     href: "/research#research-content",
@@ -171,7 +171,12 @@ export default function SiteHeader() {
                   </ul>
                 </details>
               ) : (
-                <a href={item.href}>{item.label}</a>
+                <a
+                  href={item.href}
+                  onClick={item.label === "Resources" ? () => setMobileOpen(false) : undefined}
+                >
+                  {item.label}
+                </a>
               )}
             </li>
           ))}

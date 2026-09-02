@@ -46,6 +46,8 @@ describe("WellBeingFem production readiness", () => {
     expect(appSource).toContain('<RouteAlias to="/#womens-wisdom" />');
     expect(appSource).toContain('<Route path="/guided-meditations/members-library">');
     expect(appSource).toContain('<RouteAlias to="/#members-library" />');
+    expect(appSource).not.toContain('import Resources from "./pages/Resources";');
+    expect(appSource).not.toContain('<Route path="/resources"');
   });
 
   it("keeps the approved homepage targets available for guided-meditation aliases", () => {
@@ -53,5 +55,6 @@ describe("WellBeingFem production readiness", () => {
 
     expect(homeSource).toContain('id="womens-wisdom"');
     expect(homeSource).toContain('id="members-library"');
+    expect(homeSource).toContain('id="free-wellbeingfem-resources"');
   });
 });

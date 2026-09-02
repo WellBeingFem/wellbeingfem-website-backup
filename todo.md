@@ -364,3 +364,15 @@
 - [x] Preserve the Resource 01 image, copy, button styling, carousel layout, Resource 02, homepage content, navigation, footer, and all unrelated site elements unchanged.
 - [x] Update Vitest coverage and verify the exact URL, new-tab behavior, styling, and responsive presentation on desktop, tablet, and mobile.
 - [x] Save the verified checkpoint, publish automatically, and confirm the live Resource 01 Kit action on wellbeingfem.com.
+
+## Homepage Resources Navigation and Site Footer Update
+
+- [x] Remove the standalone Resources route from the live route table without deleting its page file, resource files, or assets, and leave the Research page unchanged.
+- [x] Add/use the clean homepage anchor `#free-wellbeingfem-resources` on the existing Free WellBeingFem Resources section without changing its carousel, Resource 01, Resource 02, Kit link, or copy.
+- [x] Change only the header/navigation Resources destination to `/#free-wellbeingfem-resources`, retaining the exact `Resources` label and existing navigation design.
+- [x] Change the existing footer Resources destination to the same homepage anchor while preserving its wording and all other footer content, links, logo, and layout.
+- [x] Add a responsive header-safe anchor offset so header and footer Resources links show the full section title below the visible navigation on desktop, tablet, and mobile.
+- [x] Set every site footer background to exactly `#3F6B4F`, using only necessary existing light/gold contrast colours and introducing no additional green shades or unrelated background changes.
+- [x] Preserve homepage wording, service sections, Women’s Wisdom, Contact Form, Research content, resource cards/carousel, navigation styling, and all unrelated site content/layout unchanged.
+- [x] Update Vitest coverage and verify route absence, exact header/footer destinations, header-safe anchor opening, footer colour/contrast, and desktop/tablet/mobile behavior.
+- [ ] Save the verified checkpoint, publish automatically, and confirm the live header/footer links, anchor position, removed standalone route, and footer colour on wellbeingfem.com.

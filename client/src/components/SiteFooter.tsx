@@ -9,7 +9,7 @@ const footerLinks = [
   { label: "ONDAMED", href: "/ondamed" },
   { label: "Healy", href: "/healy" },
   { label: "Guided Meditations", href: "/guided-meditations" },
-  { label: "Resources", href: "/resources" },
+  { label: "Resources", href: "/#free-wellbeingfem-resources" },
   { label: "Research", href: "/research#research-content" },
   { label: "Contact", href: "/research#contact" },
   { label: "Policies & Client Information", href: "/research#policies-client-information" },

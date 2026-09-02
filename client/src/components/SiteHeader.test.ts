@@ -35,4 +35,10 @@ describe("WellBeingFem navigation color hierarchy", () => {
     expect(header).not.toContain('{ label: "Healy I Ching", href: "/research#healy" }');
     expect(header).not.toContain('{ label: "Healy Reiki", href: "/research#healy" }');
   });
+
+  it("routes Resources to the header-safe homepage resources anchor without changing its label", () => {
+    expect(header).toContain('{ label: "Resources", href: "/#free-wellbeingfem-resources" }');
+    expect(header).not.toContain('{ label: "Resources", href: "/resources" }');
+    expect(header).toContain('item.label === "Resources" ? () => setMobileOpen(false) : undefined');
+  });
 });

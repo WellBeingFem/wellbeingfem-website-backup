@@ -46,12 +46,13 @@ describe("Women’s Wisdom homepage recovery section", () => {
 describe("Free WellBeingFem Resources homepage carousel", () => {
   it("places the exact new section after Our Philosophy and before the next existing section", () => {
     const philosophyIndex = homeSource.indexOf('<section className="homepage-philosophy"');
-    const resourcesIndex = homeSource.indexOf('<section className="homepage-resources"');
+    const resourcesIndex = homeSource.indexOf('className="homepage-resources"');
     const clientExperiencesIndex = homeSource.indexOf('<section className="client-experiences"');
 
     expect(philosophyIndex).toBeGreaterThan(-1);
     expect(resourcesIndex).toBeGreaterThan(philosophyIndex);
     expect(clientExperiencesIndex).toBeGreaterThan(resourcesIndex);
+    expect(homeSource).toContain('id="free-wellbeingfem-resources"');
     expect(homeSource).toContain("Free WellBeingFem Resources");
     expect(homeSource).toContain("Explore a growing collection of free WellBeingFem resources created to support reflection, learning and everyday wellbeing.");
     expect(homeSource).toContain("New resources will be added regularly.");
@@ -91,6 +92,13 @@ describe("Free WellBeingFem Resources homepage carousel", () => {
     expect(styleSource).toContain(".homepage-resources__slide {\n  display: flex;\n  flex: 0 0 50%;");
     expect(styleSource).toContain("@media (max-width: 640px)");
     expect(styleSource).toContain(".homepage-resources__slide {\n    flex-basis: 100%;");
+    expect(styleSource).toContain("scroll-margin-top: 135px;");
+    expect(styleSource).toContain("scroll-margin-top: 119px;");
+    expect(styleSource).toContain("scroll-margin-top: 105px;");
+    expect(homeSource).toContain('window.location.hash === "#free-wellbeingfem-resources"');
+    expect(homeSource).toContain('window.addEventListener("hashchange", updateResourcesAnchorState)');
+    expect(homeSource).toContain('site-shell--resources-anchor');
+    expect(styleSource).toContain(".site-shell--resources-anchor > .site-header {");
   });
 });
 
