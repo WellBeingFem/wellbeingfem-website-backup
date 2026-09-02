@@ -63,8 +63,9 @@ describe("Guided Meditation Journeys page", () => {
     expect(page).toContain('{transformationExpanded ? "Less" : "More"}');
     expect(page.indexOf("WellBeingFem Guided Meditation Journeys create a doorway inward.")).toBeLessThan(page.indexOf('aria-controls="guided-meditations-opening-details"'));
     expect(page.indexOf("Research into meditation and guided imagery suggests")).toBeLessThan(page.indexOf('aria-controls="guided-meditations-transformation-details"'));
-    expect(page).toContain('className="guided-meditations-page__section guided-meditations-page__section--wrap"');
-    expect(styles).toContain(".guided-meditations-page__section--wrap {\n  clear: none;");
+    expect(page).toContain('<section className="guided-meditations-page__section" aria-labelledby="personal-transformation-heading">');
+    expect(page).not.toContain("guided-meditations-page__section--wrap");
+    expect(styles).not.toContain(".guided-meditations-page__section--wrap");
     expect(styles).toContain(".guided-meditations-page__section {\n  clear: both;");
     expect(styles).toContain(".guided-meditations-page__media-panel {\n    float: none;");
     expect(page).toContain('className="guided-meditations-page__section-actions"');
