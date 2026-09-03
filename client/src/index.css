@@ -309,44 +309,32 @@
   object-position: center;
 }
 
-.hero-booking-link {
+.hero-action-link {
   position: absolute;
   z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 80.11%;
-  left: 4.56%;
-  width: 46.13%;
-  height: 9.39%;
-  border: 1px solid var(--wbf-gold);
-  border-radius: 1.35rem;
-  background: #3f6b4f;
-  color: var(--wbf-cream);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(13px, 2.15vw, 25px);
-  line-height: 1.1;
-  text-align: center;
-  text-decoration: none;
-  transition:
-    background-color 170ms cubic-bezier(0.23, 1, 0.32, 1),
-    transform 140ms cubic-bezier(0.23, 1, 0.32, 1);
+  top: 78.81%;
+  height: 10.36%;
+  border: 0;
+  background: transparent;
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
   outline: none;
+  box-shadow: none;
 }
 
-.hero-booking-link:hover,
-.hero-booking-link:focus-visible {
-  background: #355b43;
-  color: var(--wbf-cream);
+.hero-action-link--sessions {
+  left: 6.08%;
+  width: 20.89%;
 }
 
-.hero-booking-link:active {
-  transform: scale(0.98);
+.hero-action-link--resource {
+  left: 28.39%;
+  width: 19.67%;
 }
 
-.hero-booking-link:focus-visible {
-  outline: 2px solid var(--wbf-gold);
-  outline-offset: -2px;
+.homepage-services {
+  scroll-margin-top: 24px;
 }
 
 /* WellBeingFem homepage restoration: retain the provided hero above this quiet,
@@ -1705,6 +1693,21 @@
   display: grid;
   gap: 18px;
   margin-top: 28px;
+  scroll-margin-top: 24px;
+}
+
+.resources-hub__privacy {
+  max-width: 620px;
+  margin: 0;
+  color: var(--wbf-ink);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.resources-hub__privacy a {
+  color: #3F6B4F;
+  font-weight: 600;
+  text-underline-offset: 3px;
 }
 
 .resources-hub__action {
@@ -2170,10 +2173,6 @@
     width: 100%;
   }
 
-  .hero-booking-link {
-    border-radius: 0.85rem;
-  }
-
   .research-route main {
     min-height: calc(100vh - 89px);
   }
@@ -2189,7 +2188,7 @@
   .hero-media,
   .hero-picture {
     width: 100%;
-    max-width: 1600px;
+    max-width: 1279.32px;
   }
 
   .hero-image-container img,
@@ -2197,31 +2196,25 @@
     display: block;
     width: 100%;
     height: auto;
-    max-height: 720px;
+    max-height: none;
     object-fit: contain;
     object-position: center;
-  }
-
-  .hero-booking-link {
-    top: 74.5%;
-    left: 7.18%;
-    width: 33.79%;
-    height: 9.14%;
   }
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
-  .hero-image-container,
-  .hero-picture {
+  .hero-image-container {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
     padding: 0;
   }
 
-  .hero-media {
+  .hero-media,
+  .hero-picture {
     width: 100%;
-    max-width: 100%;
+    max-width: 923.96px;
+    margin: 0 auto;
   }
 
   .hero-image-container img,
@@ -2229,7 +2222,7 @@
     display: block;
     width: 100%;
     height: auto;
-    max-height: 520px;
+    max-height: none;
     object-fit: contain;
     object-position: center;
   }
@@ -2549,17 +2542,7 @@
 }
 
 /* Final button-color correction: retain every established control’s geometry,
- * text, existing borders, and destinations while unifying its background. The
- * hero overlay border is transparent so the original embedded gold outline is
- * the sole visible border. */
-.hero-booking-link {
-  border-color: transparent;
-  background: #3f6b4f;
-  background-clip: padding-box;
-}
-
-.hero-booking-link:hover,
-.hero-booking-link:focus-visible,
+ * text, existing borders, and destinations while unifying its background. */
 .service-card-button:hover,
 .service-card-button:focus-visible,
 .homepage-contact-button:hover,
@@ -2622,12 +2605,12 @@
   color: #2f4336;
 }
 
-/* The restored hero artwork contains the only visible Contact button. This
- * anchor exactly matches the embedded button footprint but remains fully
- * transparent and borderless so it supplies interaction only. */
-.hero-booking-link,
-.hero-booking-link:hover,
-.hero-booking-link:focus-visible {
+/* The supplied hero artwork contains the only visible action buttons. These
+ * anchors match the embedded footprints but remain fully transparent and
+ * borderless so they supply interaction only. */
+.hero-action-link,
+.hero-action-link:hover,
+.hero-action-link:focus-visible {
   border: 0 !important;
   border-radius: 0 !important;
   background: transparent !important;
@@ -2638,7 +2621,7 @@
   box-shadow: none !important;
 }
 
-.hero-booking-link:active {
+.hero-action-link:active {
   transform: none !important;
 }
 

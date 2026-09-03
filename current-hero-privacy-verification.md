@@ -1,0 +1,15 @@
+# Homepage Hero and Resources Privacy Verification
+
+The supplied `HerowithFreeResource.png` renders as the complete 1672×941 composition without cropping, stretching, regeneration, or altered content. Desktop capture at 1280×900 shows the proportional 1279.32×720 hero directly beneath the unchanged full navigation. Tablet capture at 768×900 shows the proportional full image within the existing 520px maximum-height treatment, and mobile capture at 375×812 shows the complete wide composition at full available width. Both embedded visual buttons remain visible in their original positions, with no duplicate text, visible overlay styling, or additional hero controls.
+
+The existing service-card section, headings, cards, navigation, and surrounding homepage content retain their established presentation at all three breakpoints.
+
+Rendered desktop inspection confirms the managed hero loads at its original 1672×941 natural dimensions and displays at the exact 1.7768 ratio with `object-fit: contain`. The Explore Sessions hotspot occupies the image-relative rectangle left 6.08%, top 78.81%, width 20.89%, height 10.36%; the Free Resource hotspot occupies left 28.39%, top 78.81%, width 19.67%, height 10.36%. Both align with the embedded button footprints, use the exact requested destinations, and compute with transparent backgrounds, no borders, no outlines, no shadows, and no visible text. No horizontal overflow appears.
+
+Independent Chromium measurements at 1280×900, 768×900, and 375×812 confirm both hotspots retain those same image-relative percentages at every breakpoint, and each hotspot is the actual center-point hit target over its corresponding embedded visual button. All three viewports load the original 1672×941 managed image, preserve the 1.7768 ratio with contain scaling, and have no horizontal overflow.
+
+Activating Explore Sessions at each breakpoint reaches `/#homepage-services` and positions the existing service section approximately 24px from the viewport top with its heading visible. Activating Start with a Free Resource reaches `/resources#living-in-frequency-form`; the initial form is visible at every breakpoint. The exact privacy notice appears beneath that form, its Privacy Policy link targets `/research#privacy-policy-gdpr-notice`, and the notice contains no checkbox.
+
+The full desktop Resources capture confirms the notice is visually placed immediately after the existing `Get the Free Guide` action within the initial form, uses restrained readable typography and the action-green linked words `Privacy Policy`, and leaves the existing resource image, form fields, card layout, header, and footer unchanged.
+
+Activating the notice’s `Privacy Policy` link reaches `/research#privacy-policy-gdpr-notice` and lands on the existing `Privacy Policy / GDPR Notice` card without changing Research content. The complete verification run passes all 12 Vitest files and 52 tests, `pnpm run check`, and `pnpm run build`; the existing managed-storage resolution and bundle-size messages remain non-blocking advisories.

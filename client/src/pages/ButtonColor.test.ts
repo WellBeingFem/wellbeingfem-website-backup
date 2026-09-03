@@ -5,8 +5,10 @@ import { describe, expect, it } from "vitest";
 const styles = readFileSync(resolve(process.cwd(), "client/src/index.css"), "utf8");
 
 describe("Hero design restoration and unified button color correction", () => {
-  it("keeps the hero click target entirely invisible so the embedded original button is the only visible control", () => {
-    expect(styles).toContain(".hero-booking-link {\n  position: absolute;");
+  it("keeps both hero click targets entirely invisible so the embedded image buttons are the only visible controls", () => {
+    expect(styles).toContain(".hero-action-link {\n  position: absolute;");
+    expect(styles).toContain(".hero-action-link--sessions {");
+    expect(styles).toContain(".hero-action-link--resource {");
     expect(styles).toContain("border: 0 !important;\n  border-radius: 0 !important;\n  background: transparent !important;");
     expect(styles).toContain("font-size: 0 !important;");
   });

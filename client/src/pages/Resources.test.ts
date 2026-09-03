@@ -24,6 +24,12 @@ describe("permanent WellBeingFem Free Resources hub", () => {
     expect(resourcesSource).toContain('name="firstName"');
     expect(resourcesSource).toContain('name="email"');
     expect(resourcesSource).toContain('fetch("/api/resources/request"');
+    expect(resourcesSource).toContain('id="living-in-frequency-form"');
+    expect(normalizedResourcesSource).toContain(
+      'Your details will be used to provide the resource you requested. See our{" "} <a href="/research#privacy-policy-gdpr-notice">Privacy Policy</a> for information about how WellBeingFem uses and protects your personal data.',
+    );
+    expect(resourcesSource).not.toMatch(/privacy[^\n]*checkbox|checkbox[^\n]*privacy/i);
+    expect(styles).toContain(".resources-hub__privacy {");
   });
 
   it("shows independent guide access before the optional unticked Resource List invitation", () => {

@@ -1,6 +1,6 @@
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
-import { type FormEvent, useState } from "react";
+import { type FormEvent, useLayoutEffect, useState } from "react";
 
 const RESOURCE_01_IMAGE_URL = "/manus-storage/WBfResource01CardImage_2ee9605d.png";
 const RESOURCE_LIST_CONSENT =
@@ -20,6 +20,16 @@ export default function Resources() {
   const [consentSubmitting, setConsentSubmitting] = useState(false);
   const [consentJoined, setConsentJoined] = useState(false);
   const [consentError, setConsentError] = useState("");
+
+  useLayoutEffect(() => {
+    if (window.location.hash !== "#living-in-frequency-form") return;
+
+    const frame = window.requestAnimationFrame(() => {
+      document.getElementById("living-in-frequency-form")?.scrollIntoView({ block: "start" });
+    });
+
+    return () => window.cancelAnimationFrame(frame);
+  }, []);
 
   const handleResourceRequest = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -107,7 +117,11 @@ export default function Resources() {
                 </p>
 
                 {!requestToken ? (
-                  <form className="resources-hub__form" onSubmit={handleResourceRequest}>
+                  <form
+                    id="living-in-frequency-form"
+                    className="resources-hub__form"
+                    onSubmit={handleResourceRequest}
+                  >
                     <label className="form-field">
                       <span>First name</span>
                       <input name="firstName" type="text" autoComplete="given-name" maxLength={100} required />
@@ -120,6 +134,11 @@ export default function Resources() {
                     <button className="resources-hub__action" type="submit" disabled={requestSubmitting}>
                       {requestSubmitting ? "Preparing…" : "Get the Free Guide"}
                     </button>
+                    <p className="resources-hub__privacy">
+                      Your details will be used to provide the resource you requested. See our{" "}
+                      <a href="/research#privacy-policy-gdpr-notice">Privacy Policy</a> for information
+                      about how WellBeingFem uses and protects your personal data.
+                    </p>
                   </form>
                 ) : (
                   <section className="resources-hub__ready" aria-labelledby="resource-ready-heading">

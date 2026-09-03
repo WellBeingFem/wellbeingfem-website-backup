@@ -397,3 +397,14 @@
 - [x] Preserve navigation, footer, Research page, SEO, all images, Women’s Wisdom content, other resource cards, and all unrelated website content/layout unchanged.
 - [x] Add/update Vitest coverage and verify database separation, validation, first-step success, independent download access, optional-consent behavior, preserved content, and desktop/tablet/mobile layouts.
 - [x] Save the verified checkpoint, publish automatically, and confirm the live `/resources` flow, homepage button destination, and separate data persistence on wellbeingfem.com.
+
+## Homepage Hero Replacement and Resources Privacy Notice
+
+- [x] Upload and replace only the homepage hero with the supplied `HerowithFreeResource.png` exactly as provided, preserving its complete 1672×941 composition without crop, stretch, regeneration, redesign, or altered content.
+- [x] Add one transparent, invisible overlay precisely over the embedded `Explore Sessions` button and link it to the existing homepage service-cards section.
+- [x] Add one transparent, invisible overlay precisely over the embedded `Start with a Free Resource` button and link it directly to `/resources` at the Living in Frequency sign-up form.
+- [x] Keep both embedded hero buttons as the only visible controls, with no duplicate text, visible overlay styling, extra buttons, or additional hero content.
+- [x] Add the exact privacy notice directly beneath the initial Living in Frequency name/email form and link only `Privacy Policy` to the existing Privacy Policy section, with no additional checkbox.
+- [x] Preserve the rest of the homepage, Resources content/images, navigation, footer, SEO, service cards, Women’s Wisdom, other layouts, and all unrelated site content unchanged.
+- [x] Update Vitest coverage and verify exact hero asset/dimensions, proportional contain behavior, overlay alignment and destinations, header-safe service scrolling, direct Resources-form opening, privacy link, and desktop/tablet/mobile presentation.
+- [ ] Save the verified checkpoint, publish automatically, and confirm the live hero, both actions, and Resources privacy notice on wellbeingfem.com.

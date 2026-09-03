@@ -113,12 +113,18 @@ describe("Homepage opening position", () => {
 });
 
 describe("Final pre-publication corrections", () => {
-  it("keeps the hero Contact action on the existing Contact Form with the stronger primary treatment", () => {
-    expect(homeSource).toContain('className="hero-booking-link"');
-    expect(homeSource).toContain('href="/research#contact"');
-    expect(homeSource).toContain('alt="ONDAMED PEMF Healy Frequency Sessions for Women, with a Contact WellBeingFem button"');
-    expect(homeSource).not.toContain("<span>Contact WellBeingFem</span>");
-    expect(styleSource).toContain(".hero-booking-link {\n  position: absolute;");
+  it("uses the supplied complete hero with two transparent, accessible action hotspots", () => {
+    expect(homeSource).toContain('const HERO_URL = "/manus-storage/HerowithFreeResource_2a7a0eb6.png";');
+    expect(homeSource).toContain('width="1672"');
+    expect(homeSource).toContain('height="941"');
+    expect(homeSource).toContain('className="hero-action-link hero-action-link--sessions"');
+    expect(homeSource).toContain('href="#homepage-services"');
+    expect(homeSource).toContain('className="hero-action-link hero-action-link--resource"');
+    expect(homeSource).toContain('href="/resources#living-in-frequency-form"');
+    expect(homeSource).toContain('id="homepage-services"');
+    expect(styleSource).toContain(".hero-action-link {\n  position: absolute;");
+    expect(styleSource).toContain(".hero-action-link--sessions {\n  left: 6.08%;\n  width: 20.89%;");
+    expect(styleSource).toContain(".hero-action-link--resource {\n  left: 28.39%;\n  width: 19.67%;");
     expect(styleSource).toContain("border: 0 !important;\n  border-radius: 0 !important;\n  background: transparent !important;");
   });
 
@@ -138,11 +144,8 @@ describe("Final pre-publication corrections", () => {
 });
 
 describe("Primary CTA and hero performance update", () => {
-  it("serves responsive WebP hero sources without lazy loading", () => {
-    expect(homeSource).toContain('const HERO_WEBP_URL = "/manus-storage/NewHeroAug13-contact-green-900_f5dca042.webp";');
-    expect(homeSource).toContain('const DESKTOP_HERO_WEBP_URL = "/manus-storage/DeaktopHeroWBF-contact-green-1600_0b9672ec.webp";');
-    expect(homeSource).toContain('<source media="(min-width: 1025px)" type="image/webp" srcSet={DESKTOP_HERO_WEBP_URL} />');
-    expect(homeSource).toContain('<source type="image/webp" srcSet={HERO_WEBP_URL} />');
+  it("serves the supplied hero unchanged, eagerly, and proportionally at every breakpoint", () => {
+    expect(homeSource).toContain('src={HERO_URL}');
     expect(homeSource).toContain('loading="eager"');
     expect(homeSource).toContain('fetchPriority="high"');
     const heroPictureSource = homeSource.slice(
@@ -150,6 +153,9 @@ describe("Primary CTA and hero performance update", () => {
       homeSource.indexOf("</picture>"),
     );
     expect(heroPictureSource).not.toContain('loading="lazy"');
+    expect(styleSource).toContain("max-width: 1279.32px;");
+    expect(styleSource).toContain("max-width: 923.96px;");
+    expect(styleSource).toContain("object-fit: contain;");
   });
 
   it("uses stronger green only for primary homepage actions", () => {

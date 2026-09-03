@@ -14,10 +14,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-const HERO_URL = "/manus-storage/NewHeroAug13-contact-green_24848412.png";
-const DESKTOP_HERO_URL = "/manus-storage/DeaktopHeroWBF-contact-green_7266dbc9.png";
-const HERO_WEBP_URL = "/manus-storage/NewHeroAug13-contact-green-900_f5dca042.webp";
-const DESKTOP_HERO_WEBP_URL = "/manus-storage/DeaktopHeroWBF-contact-green-1600_0b9672ec.webp";
+const HERO_URL = "/manus-storage/HerowithFreeResource_2a7a0eb6.png";
 const ONDAMED_IMAGE_URL = "/manus-storage/ondamedwlogo_d68ec81a.png";
 const HEALY_IMAGE_URL = "/manus-storage/Healyandphone_52ac329b.png";
 const GUIDED_MEDITATIONS_IMAGE_URL = "/manus-storage/06_WBF_QR_YouTube_Channel_d57f9130.png";
@@ -132,31 +129,33 @@ export default function Home() {
     <div className={`site-shell${resourcesAnchorActive ? " site-shell--resources-anchor" : ""}`}>
       <SiteHeader />
       <main id="about">
-        <section className="hero-image-container" aria-label="WellBeingFem ONDAMED PEMF">
+        <section className="hero-image-container" aria-label="WellBeingFem frequency-based wellbeing">
           <div className="hero-media">
             <picture className="hero-picture">
-              <source media="(min-width: 1025px)" type="image/webp" srcSet={DESKTOP_HERO_WEBP_URL} />
-              <source media="(min-width: 1025px)" srcSet={DESKTOP_HERO_URL} />
-              <source type="image/webp" srcSet={HERO_WEBP_URL} />
               <img
                 src={HERO_URL}
-                alt="ONDAMED PEMF Healy Frequency Sessions for Women, with a Contact WellBeingFem button"
-                width="1448"
-                height="1086"
+                alt="Frequency-Based Wellbeing for Women, with Explore Sessions and Start with a Free Resource buttons"
+                width="1672"
+                height="941"
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
               />
             </picture>
             <a
-              className="hero-booking-link"
-              href="/research#contact"
-              aria-label="Open the Research page for the Contact and Booking Form"
+              className="hero-action-link hero-action-link--sessions"
+              href="#homepage-services"
+              aria-label="Explore WellBeingFem sessions"
+            />
+            <a
+              className="hero-action-link hero-action-link--resource"
+              href="/resources#living-in-frequency-form"
+              aria-label="Start with the free Living in Frequency resource"
             />
           </div>
         </section>
 
-        <section className="homepage-services" aria-labelledby="homepage-services-heading">
+        <section id="homepage-services" className="homepage-services" aria-labelledby="homepage-services-heading">
           <header className="homepage-services__heading">
             <p>Frequencies for Women’s Wellbeing</p>
             <h1 id="homepage-services-heading">Women’s Wellbeing Sessions: ONDAMED PEMF, Healy &amp; Guided Meditations</h1>
