@@ -407,4 +407,4 @@
 - [x] Add the exact privacy notice directly beneath the initial Living in Frequency name/email form and link only `Privacy Policy` to the existing Privacy Policy section, with no additional checkbox.
 - [x] Preserve the rest of the homepage, Resources content/images, navigation, footer, SEO, service cards, Women’s Wisdom, other layouts, and all unrelated site content unchanged.
 - [x] Update Vitest coverage and verify exact hero asset/dimensions, proportional contain behavior, overlay alignment and destinations, header-safe service scrolling, direct Resources-form opening, privacy link, and desktop/tablet/mobile presentation.
-- [ ] Save the verified checkpoint, publish automatically, and confirm the live hero, both actions, and Resources privacy notice on wellbeingfem.com.
+- [x] Save the verified checkpoint, publish automatically, and confirm the live hero, both actions, and Resources privacy notice on wellbeingfem.com.
