@@ -13,6 +13,7 @@ import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Ondamed from "./pages/Ondamed";
 import Research from "./pages/Research";
+import Resources from "./pages/Resources";
 
 function RouteAlias({ to }: { to: string }) {
   useEffect(() => {
@@ -40,6 +41,7 @@ function Router() {
       <Route path="/guided-meditations/members-library">
         {() => <RouteAlias to="/#members-library" />}
       </Route>
+      <Route path="/resources" component={Resources} />
       <Route path="/research" component={Research} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />

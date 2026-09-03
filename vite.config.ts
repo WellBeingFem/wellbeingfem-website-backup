@@ -1,10 +1,12 @@
 import { jsxLocPlugin } from "@builder.io/vite-plugin-jsx-loc";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
+import express from "express";
 import fs from "node:fs";
 import path from "node:path";
 import { defineConfig, type Plugin, type ViteDevServer } from "vite";
 import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
+import { createResourceApiRouter } from "./server/resourceApi";
 
 // =============================================================================
 // Manus Debug Collector - Vite Plugin
@@ -203,7 +205,18 @@ function vitePluginStorageProxy(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()];
+function vitePluginResourceApi(): Plugin {
+  return {
+    name: "wellbeingfem-resource-api",
+    configureServer(server: ViteDevServer) {
+      const resourceApi = express();
+      resourceApi.use(createResourceApiRouter());
+      server.middlewares.use("/api/resources", resourceApi);
+    },
+  };
+}
+
+const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginResourceApi(), vitePluginStorageProxy()];
 
 export default defineConfig({
   plugins,

@@ -46,8 +46,8 @@ describe("WellBeingFem production readiness", () => {
     expect(appSource).toContain('<RouteAlias to="/#womens-wisdom" />');
     expect(appSource).toContain('<Route path="/guided-meditations/members-library">');
     expect(appSource).toContain('<RouteAlias to="/#members-library" />');
-    expect(appSource).not.toContain('import Resources from "./pages/Resources";');
-    expect(appSource).not.toContain('<Route path="/resources"');
+    expect(appSource).toContain('import Resources from "./pages/Resources";');
+    expect(appSource).toContain('<Route path="/resources" component={Resources} />');
   });
 
   it("keeps the approved homepage targets available for guided-meditation aliases", () => {

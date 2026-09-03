@@ -1628,6 +1628,205 @@
   min-height: calc(100vh - 290px);
 }
 
+.resources-hub__heading {
+  max-width: 820px;
+}
+
+.resources-hub__heading > p:last-child {
+  max-width: 720px;
+  margin: 18px 0 0;
+  color: var(--wbf-green);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.resources-hub__catalog {
+  display: grid;
+  gap: 34px;
+  margin-top: 44px;
+}
+
+.resources-hub__resource {
+  display: grid;
+  grid-template-columns: minmax(260px, 390px) minmax(0, 1fr);
+  gap: clamp(30px, 5vw, 58px);
+  padding: clamp(22px, 3.4vw, 38px);
+  border: 1px solid color-mix(in srgb, var(--wbf-gold) 58%, transparent);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--wbf-cream) 91%, white);
+  box-shadow: 0 14px 34px rgb(65 86 72 / 8%);
+}
+
+.resources-hub__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 561 / 701;
+  object-fit: contain;
+  border: 1px solid color-mix(in srgb, var(--wbf-gold) 42%, transparent);
+  border-radius: 14px;
+}
+
+.resources-hub__content {
+  align-self: start;
+  min-width: 0;
+}
+
+.resources-hub__number {
+  margin: 0 0 10px;
+  color: var(--wbf-gold);
+  font-size: 13px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.resources-hub__content h2,
+.resources-hub__ready h3,
+.resources-hub__optional h3 {
+  color: var(--wbf-ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.resources-hub__content h2 {
+  margin: 0 0 15px;
+  font-size: clamp(29px, 3.2vw, 42px);
+  line-height: 1.08;
+}
+
+.resources-hub__content > p:not(.resources-hub__number) {
+  margin: 0;
+  color: var(--wbf-ink);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.resources-hub__form {
+  display: grid;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.resources-hub__action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 44px;
+  margin-top: 5px;
+  padding: 10px 22px;
+  border: 1px solid var(--wbf-gold);
+  border-radius: 6px;
+  background: #3F6B4F;
+  color: var(--wbf-cream);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  line-height: 1.2;
+  text-align: center;
+  transition:
+    background-color 170ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 140ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.resources-hub__action:hover:not(:disabled),
+.resources-hub__action:focus-visible:not(:disabled) {
+  background: color-mix(in srgb, #3F6B4F 88%, black);
+  outline: 2px solid color-mix(in srgb, var(--wbf-gold) 72%, transparent);
+  outline-offset: 2px;
+}
+
+.resources-hub__action:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.resources-hub__action:disabled,
+.resources-hub__action[aria-disabled="true"] {
+  cursor: default;
+  opacity: 0.78;
+}
+
+.resources-hub__ready {
+  margin-top: 30px;
+  padding-top: 27px;
+  border-top: 1px solid color-mix(in srgb, var(--wbf-gold) 45%, transparent);
+}
+
+.resources-hub__ready > h3,
+.resources-hub__optional h3 {
+  margin: 0 0 14px;
+  font-size: clamp(22px, 2.4vw, 29px);
+  line-height: 1.25;
+}
+
+.resources-hub__optional {
+  margin-top: 36px;
+  padding-top: 30px;
+  border-top: 1px solid color-mix(in srgb, var(--wbf-gold) 45%, transparent);
+}
+
+.resources-hub__optional > p {
+  margin: 0 0 22px;
+  color: var(--wbf-ink);
+  line-height: 1.6;
+}
+
+.resources-hub__consent {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  color: var(--wbf-ink);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.resources-hub__consent input {
+  width: 18px;
+  height: 18px;
+  margin: 3px 0 0;
+  accent-color: #3F6B4F;
+}
+
+.resources-hub__optional form {
+  display: grid;
+  gap: 17px;
+}
+
+.resources-hub__error,
+.resources-hub__success {
+  margin: 0;
+  color: var(--wbf-green);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.resources-hub__error {
+  color: #7a3c34;
+}
+
+@media (max-width: 820px) {
+  .resources-hub__resource {
+    grid-template-columns: 1fr;
+  }
+
+  .resources-hub__media {
+    width: min(100%, 440px);
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 639px) {
+  .resources-hub__resource {
+    gap: 26px;
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .resources-hub__action {
+    width: 100%;
+  }
+}
+
 .site-footer {
   width: 100%;
   background: #3F6B4F;

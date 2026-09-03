@@ -383,3 +383,17 @@
 - [x] Preserve the action’s exact wording and styling plus the Resources section, Resource 01 card/image/copy, Resource 02, carousel, homepage, navigation, footer, and all unrelated content unchanged.
 - [x] Update Vitest coverage and verify the inactive no-URL behavior and unchanged presentation on desktop, tablet, and mobile.
 - [x] Save the verified checkpoint, publish automatically, and confirm the inactive action live on wellbeingfem.com.
+
+## Permanent Free Resources Hub and Living in Frequency Request Flow
+
+- [x] Restore the standalone `/resources` route and retain the existing Resources source/assets as the permanent WellBeingFem Free Resources hub, structured for future resource additions.
+- [x] Ensure `/resources` contains no duplicated Women’s Wisdom section and leave the original homepage Women’s Wisdom section completely unchanged.
+- [x] On the homepage, change only the existing Living in Frequency `Get Free Resource` button from inactive to `/resources`, preserving its wording, styling, card, carousel, and every other homepage element.
+- [x] On `/resources`, present the existing Living in Frequency resource with the exact first-step fields `First name`, `Email address`, and `Get the Free Guide` in the established cream, sage, gold, and action-green branding.
+- [x] After a valid first-step submission, show the exact message `Your Living in Frequency guide is ready.` and a visible inactive `Download the Guide` button ready for the revised PDF connection.
+- [x] Below the download area, add the exact separate optional Resource List invitation, one unticked checkbox with the approved consent wording, and `Join the WellBeingFem Resource List` action.
+- [x] Allow guide access without optional consent; prevent optional-list submission unless the checkbox is actively ticked; add no pop-ups, recommendations, advertising consent, pre-ticked/automatic opt-in, Kit links/forms, or third-party landing pages.
+- [x] Store each original free-resource request separately from optional future-email consent, including a dedicated consent date, without storing consent when the visitor does not opt in.
+- [x] Preserve navigation, footer, Research page, SEO, all images, Women’s Wisdom content, other resource cards, and all unrelated website content/layout unchanged.
+- [x] Add/update Vitest coverage and verify database separation, validation, first-step success, independent download access, optional-consent behavior, preserved content, and desktop/tablet/mobile layouts.
+- [ ] Save the verified checkpoint, publish automatically, and confirm the live `/resources` flow, homepage button destination, and separate data persistence on wellbeingfem.com.

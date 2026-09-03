@@ -280,13 +280,12 @@ export default function Home() {
                       />
                       <p className="homepage-resource-card__description">{resource.description}</p>
                       {resource.status === "available" ? (
-                        <button
+                        <a
                           className="homepage-resource-card__button"
-                          type="button"
-                          aria-disabled="true"
+                          href="/resources"
                         >
                           Get Free Resource
-                        </button>
+                        </a>
                       ) : (
                         <p className="homepage-resource-card__status" aria-label="Resource status: Coming Soon">
                           Coming Soon
