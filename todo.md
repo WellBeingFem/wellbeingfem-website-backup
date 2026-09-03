@@ -382,4 +382,4 @@
 - [x] Remove only the Kit URL from the existing Living in Frequency `Get Free Resource` action and render it as a visible, temporarily inactive button.
 - [x] Preserve the action’s exact wording and styling plus the Resources section, Resource 01 card/image/copy, Resource 02, carousel, homepage, navigation, footer, and all unrelated content unchanged.
 - [x] Update Vitest coverage and verify the inactive no-URL behavior and unchanged presentation on desktop, tablet, and mobile.
-- [ ] Save the verified checkpoint, publish automatically, and confirm the inactive action live on wellbeingfem.com.
+- [x] Save the verified checkpoint, publish automatically, and confirm the inactive action live on wellbeingfem.com.
