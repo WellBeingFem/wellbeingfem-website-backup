@@ -71,12 +71,13 @@ describe("Free WellBeingFem Resources homepage carousel", () => {
     expect(homeSource).toContain("Explore imagination as an inner resource for wellbeing, resilience, symbolism, balance, harmony and a deeper sense of inner safety.");
   });
 
-  it("links only Resource 01 to the supplied Kit form in a new tab and keeps Resource 02 non-clickable", () => {
+  it("keeps Resource 01 visible but inactive without the former Kit URL and keeps Resource 02 non-clickable", () => {
     expect(homeSource).toContain("Get Free Resource");
-    expect(homeSource).toContain('const RESOURCE_01_KIT_URL = "https://wellbeingfem.kit.com/21bbc416b2";');
-    expect(homeSource).toContain('href={RESOURCE_01_KIT_URL}');
-    expect(homeSource).toContain('target="_blank"');
-    expect(homeSource).toContain('rel="noopener noreferrer"');
+    expect(homeSource).toContain('className="homepage-resource-card__button"');
+    expect(homeSource).toContain('type="button"');
+    expect(homeSource).toContain('aria-disabled="true"');
+    expect(homeSource).not.toContain("RESOURCE_01_KIT_URL");
+    expect(homeSource).not.toContain("https://wellbeingfem.kit.com/21bbc416b2");
     expect(homeSource).toContain('className="homepage-resource-card__status"');
     expect(homeSource).toContain("Coming Soon");
     expect(homeSource).not.toContain('href="Coming Soon"');
