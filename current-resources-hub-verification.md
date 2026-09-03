@@ -21,3 +21,13 @@ The complete automated suite passes all 12 Vitest files and 52 tests, `pnpm run 
 The existing homepage `Get Free Resource` action remains inside the unchanged Resource 01 carousel card and now links directly to `/resources`. Activating it opens the restored first-party hub and its initial two-field form. The original homepage Women’s Wisdom section remains present immediately after the resources carousel, while `/resources` contains no Women’s Wisdom copy.
 
 Full-page captures at 1280×720, 768×1024, and 375×812 confirm the restored hub’s branded resource card, proportional unchanged image, readable fields, responsive one-column stacking at tablet/mobile widths, full-width mobile action, preserved header/footer, and absence of horizontal overflow.
+
+Checkpoint `0b2f20fc` propagated to `wellbeingfem.com` with live bundle `index-CeTyLRAN.js`. The published `/resources` initial state contains exactly the required first-name and email fields plus `Get the Free Guide`, retains the image’s 1122×1402 natural dimensions, contains no duplicated Women’s Wisdom or Kit content, and has no horizontal overflow.
+
+The live form accepts the synthetic first name and email and enters its disabled `Preparing…` submission state. Final production API completion is checked separately before the release is marked fully verified.
+
+The published first-step submission completed and displayed the guide-ready/download area plus the separate unticked Resource List invitation. Database inspection confirms one dated `resource_requests` row for the synthetic live identity and zero consent rows before opt-in. A fresh page load correctly returns to the initial form without persisting personal details in browser state.
+
+The published API also rejects a false-consent submission with HTTP 400 and accepts explicit true consent with HTTP 201. Production database inspection confirmed the guide-only synthetic request remained without consent, while the explicit-opt-in request had one separately stored `resource_email_consents` row linked by request ID, containing the exact approved statement and its own later `consented_at` timestamp. Both synthetic production requests were deleted by exact `.invalid` addresses, cascading the consent cleanup and leaving zero verification rows.
+
+The published homepage Resource 01 action retains its existing green/gold presentation, image, copy, and carousel position. Activating it opens `https://wellbeingfem.com/resources`, where the initial first-party form renders normally. The homepage Women’s Wisdom section remains unchanged below the carousel, and the live hub contains no duplicate of it.

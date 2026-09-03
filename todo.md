@@ -396,4 +396,4 @@
 - [x] Store each original free-resource request separately from optional future-email consent, including a dedicated consent date, without storing consent when the visitor does not opt in.
 - [x] Preserve navigation, footer, Research page, SEO, all images, Women’s Wisdom content, other resource cards, and all unrelated website content/layout unchanged.
 - [x] Add/update Vitest coverage and verify database separation, validation, first-step success, independent download access, optional-consent behavior, preserved content, and desktop/tablet/mobile layouts.
-- [ ] Save the verified checkpoint, publish automatically, and confirm the live `/resources` flow, homepage button destination, and separate data persistence on wellbeingfem.com.
+- [x] Save the verified checkpoint, publish automatically, and confirm the live `/resources` flow, homepage button destination, and separate data persistence on wellbeingfem.com.
