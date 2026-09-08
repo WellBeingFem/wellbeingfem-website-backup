@@ -376,6 +376,16 @@
   line-height: 1.17;
 }
 
+.homepage-services__heading > .homepage-services__intro {
+  max-width: 850px;
+  margin: 17px auto 0;
+  color: var(--wbf-green);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(16px, 1.5vw, 19px);
+  letter-spacing: normal;
+  line-height: 1.5;
+}
+
 .service-card-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1468,6 +1478,14 @@
 .page-heading h1 {
   font-size: clamp(38px, 4.1vw, 58px);
   line-height: 1.04;
+}
+
+.page-heading__intro {
+  margin: 16px 0 0;
+  color: var(--wbf-green);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.5;
 }
 
 .contact-form-area {
@@ -2718,6 +2736,15 @@
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(20px, 2.3vw, 28px);
   line-height: 1.2;
+}
+
+.ondamed-page__crawlable-intro {
+  max-width: 720px;
+  margin: 14px 0 0;
+  color: var(--wbf-green);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.5;
 }
 
 .ondamed-page__text h2 {

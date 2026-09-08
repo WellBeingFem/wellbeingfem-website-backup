@@ -28,8 +28,11 @@ export default function Ondamed() {
         <div className="page-main__inner">
           <section className="ondamed-page__intro" aria-labelledby="ondamed-page-heading">
             <header className="ondamed-page__title-group">
-              <h1 id="ondamed-page-heading">ONDAMED PEMF</h1>
+              <h1 id="ondamed-page-heading">ONDAMED PEMF Sessions in Dublin</h1>
               <p className="ondamed-page__subtitle">Wellbeing Sessions</p>
+              <p className="ondamed-page__crawlable-intro">
+                WellBeingFem offers in-person ONDAMED PEMF wellbeing sessions in Dublin.
+              </p>
             </header>
 
             <figure className="ondamed-page__figure">

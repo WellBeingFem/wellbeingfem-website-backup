@@ -92,8 +92,7 @@ export default function Resources() {
             <p className="page-eyebrow">WellBeingFem</p>
             <h1>Free WellBeingFem Resources</h1>
             <p>
-              Explore a growing collection of free WellBeingFem resources created to support
-              reflection, learning and everyday wellbeing.
+              Explore complimentary wellbeing guides, practices and future resources.
             </p>
           </header>
 

@@ -425,3 +425,17 @@
 - [x] Preserve both mobile transparent hero tap areas, the desktop hero and links, Resources page design, navigation, footer, SEO, and all other website content unchanged.
 - [x] Update regression coverage and verify mobile asset selection, visual fidelity, no-crop behavior, action destinations, preload priority, and desktop/tablet preservation.
 - [x] Save the verified checkpoint, publish automatically, and confirm the live mobile resource action and optimized hero delivery on wellbeingfem.com.
+
+## Public Page Crawlable HTML Content
+
+- [x] Ensure the homepage has exactly one visible real-HTML H1 `Frequency-Based Wellbeing for Women` and the exact requested visible introduction without duplicating existing HTML text.
+- [x] Ensure the ONDAMED page has one visible real-HTML H1 `ONDAMED PEMF Sessions in Dublin` and a short visible HTML introduction explaining the in-person Dublin wellbeing sessions.
+- [x] Ensure the Healy page has one visible real-HTML H1 `Healy Frequency Sessions` and a short visible HTML introduction explaining personalised resonance analysis, frequency-based wellbeing sessions, and remote options.
+- [x] Ensure the Guided Meditations page has one visible real-HTML H1 `WellBeingFem Guided Meditations` and a short visible HTML introduction describing breath, imagery, reflection, and nature-based themes.
+- [x] Ensure the Resources page has one visible real-HTML H1 `Free WellBeingFem Resources` and a short visible HTML introduction about complimentary wellbeing guides, practices, and future resources.
+- [x] Ensure the Research page has one visible real-HTML H1 `Research & References` and a short visible HTML introduction describing research and references related to WellBeingFem approaches.
+- [x] Keep the Women’s Wisdom section as existing real HTML content, ensuring its main heading and introduction remain crawlable without creating or changing a separate route.
+- [x] Add only useful, appropriate image alt text where needed and preserve all existing detailed HTML copy without hidden SEO text or duplicate visible text.
+- [x] Preserve SEO metadata, images, design, layout, navigation, colours, buttons, forms, functionality, service content, and all unrelated website content unchanged.
+- [x] Add/update Vitest coverage and verify exactly one visible H1 and the requested visible introductory HTML text on every specified page at desktop, tablet, and mobile.
+- [ ] Save the verified checkpoint, publish automatically, and confirm live crawlable headings and introductions across the public pages.

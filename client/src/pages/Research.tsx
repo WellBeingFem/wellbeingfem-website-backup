@@ -51,8 +51,8 @@ export default function Research() {
           >
             <header className="contact-form-heading">
               <p className="page-eyebrow">WellBeingFem</p>
-              <h1>Contact Form</h1>
-              <p>For general WellBeingFem enquiries.</p>
+              <h1>Research &amp; References</h1>
+              <p>This page brings together research and references related to the approaches discussed across WellBeingFem.</p>
             </header>
 
             <fieldset className="contact-fieldset">

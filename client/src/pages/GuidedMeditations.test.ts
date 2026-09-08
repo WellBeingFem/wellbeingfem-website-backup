@@ -12,9 +12,9 @@ describe("Guided Meditation Journeys page", () => {
     expect(page).toContain("width={1672}");
     expect(page).toContain("height={941}");
     expect(page).toContain('className="guided-meditations-page__media-panel"');
-    expect(page.indexOf('className="guided-meditations-page__media-panel"')).toBeLessThan(page.indexOf("GUIDED MEDITATION JOURNEYS"));
-    expect(page.indexOf("GUIDED MEDITATION JOURNEYS")).toBeLessThan(page.indexOf('className="guided-meditations-page__figure"'));
-    expect(page).toContain('</div> <p className="guided-meditations-page__subtitle">Women’s Wisdom & Mind–Body–Spirit Wellbeing</p> <p>Women carry deep wisdom');
+    expect(page.indexOf('className="guided-meditations-page__media-panel"')).toBeLessThan(page.indexOf("WellBeingFem Guided Meditations"));
+    expect(page.indexOf("WellBeingFem Guided Meditations")).toBeLessThan(page.indexOf('className="guided-meditations-page__figure"'));
+    expect(page).toContain('</div> <p className="guided-meditations-page__subtitle">Women’s Wisdom & Mind–Body–Spirit Wellbeing</p> <p> The meditation collection includes guided practices using breath, imagery, reflection and nature-based themes. </p> <p>Women carry deep wisdom');
     expect(styles).toContain(".guided-meditations-page__media-panel {");
     expect(styles).toContain("float: left;");
     expect(styles).toContain("object-fit: contain;");
@@ -33,6 +33,7 @@ describe("Guided Meditation Journeys page", () => {
 
     const suppliedCopy = [
       "Women carry deep wisdom through every stage of life. At times it feels close and familiar; at others, it can become obscured beneath responsibility, change, grief, uncertainty or the demands of everyday life.",
+      "The meditation collection includes guided practices using breath, imagery, reflection and nature-based themes.",
       "WellBeingFem Guided Meditation Journeys create a doorway inward.",
       "Through imagined landscapes, archetypal symbols, evocative imagery and the creative intelligence of the imagination, each journey invites deeper awareness, reconnection with inner wisdom and discovery of aspects of the self that may have been forgotten, hidden from view or not yet fully known.",
       "These journeys are more than relaxation recordings. They are structured meditation and guided visualisation experiences designed to support rest, reflection, emotional regulation and inner renewal.",

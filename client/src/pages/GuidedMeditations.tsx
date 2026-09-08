@@ -18,7 +18,7 @@ export default function GuidedMeditations() {
           <article className="guided-meditations-page__content">
             <div className="guided-meditations-page__media-panel">
               <header className="guided-meditations-page__heading">
-                <h1>GUIDED MEDITATION JOURNEYS</h1>
+                <h1>WellBeingFem Guided Meditations</h1>
               </header>
               <figure className="guided-meditations-page__figure">
                 <img
@@ -41,6 +41,9 @@ export default function GuidedMeditations() {
             </div>
 
             <p className="guided-meditations-page__subtitle">Women’s Wisdom &amp; Mind–Body–Spirit Wellbeing</p>
+            <p>
+              The meditation collection includes guided practices using breath, imagery, reflection and nature-based themes.
+            </p>
             <p>Women carry deep wisdom through every stage of life. At times it feels close and familiar; at others, it can become obscured beneath responsibility, change, grief, uncertainty or the demands of everyday life.</p>
             <p>WellBeingFem Guided Meditation Journeys create a doorway inward.</p>
             <button

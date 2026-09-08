@@ -39,7 +39,10 @@ export default function Healy() {
         <div className="page-main__inner healy-page__inner">
           <header className="page-heading healy-page__heading">
             <p className="page-kicker">WELLBEINGFEM</p>
-            <h1>Healy Remote Wellbeing Sessions</h1>
+            <h1>Healy Frequency Sessions</h1>
+            <p className="page-heading__intro">
+              WellBeingFem offers personalised Healy resonance analysis and frequency-based wellbeing sessions, including remote options.
+            </p>
           </header>
 
           <section className="healy-page__intro" aria-label="Healy Remote Wellbeing Sessions introduction">

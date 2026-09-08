@@ -198,7 +198,10 @@ export default function Home() {
         <section id="homepage-services" className="homepage-services" aria-labelledby="homepage-services-heading">
           <header className="homepage-services__heading">
             <p>Frequencies for Women’s Wellbeing</p>
-            <h1 id="homepage-services-heading">Women’s Wellbeing Sessions: ONDAMED PEMF, Healy &amp; Guided Meditations</h1>
+            <h1 id="homepage-services-heading">Frequency-Based Wellbeing for Women</h1>
+            <p className="homepage-services__intro">
+              WellBeingFem offers ONDAMED PEMF sessions in Dublin, Healy Frequency Sessions, guided meditations and free wellbeing resources for women.
+            </p>
           </header>
 
           <div className="service-card-grid">

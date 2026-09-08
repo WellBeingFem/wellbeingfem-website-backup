@@ -81,8 +81,9 @@ describe("ONDAMED page image addition", () => {
     const page = readProjectFile("client/src/pages/Ondamed.tsx");
     const styles = readProjectFile("client/src/index.css");
 
-    expect(page).toContain('<h1 id="ondamed-page-heading">ONDAMED PEMF</h1>');
+    expect(page).toContain('<h1 id="ondamed-page-heading">ONDAMED PEMF Sessions in Dublin</h1>');
     expect(page).toContain('className="ondamed-page__subtitle">Wellbeing Sessions</p>');
+    expect(page).toContain("WellBeingFem offers in-person ONDAMED PEMF wellbeing sessions in Dublin.");
     expect(page.match(/className="ondamed-page__more"/g)).toHaveLength(1);
     expect(page).toContain("setIntroExpanded");
     expect(page).not.toContain("setWhyExpanded");
