@@ -29,3 +29,9 @@ At the 375px mobile viewport, the browser selects the 720px WebP candidate, redu
 ## Automated verification
 
 The focused homepage, document preload, and social metadata suite passed. The complete run passed 13 Vitest files and 53 tests, `pnpm exec tsc --noEmit`, and `pnpm run build`. Existing managed-storage resolution and bundle-size messages remain non-blocking build advisories.
+
+## Live verification
+
+Checkpoint `7f7ebb45` propagated to `https://wellbeingfem.com`. Live responsive checks confirmed that desktop and tablet still use the original desktop PNG and retain `/resources#living-in-frequency-form`; the 375px mobile viewport selects `/manus-storage/HeroforMobile-720_030db73b.webp` through `currentSrc`, retains both transparent and center-hit-testable hotspots, and sends the Resource action to `/resources`.
+
+The published `/resources` route opens at the visible **Free WellBeingFem Resources** heading and Living in Frequency card, before the name/email form. The published hero maintains full proportional rendering, `object-fit: contain`, and no horizontal overflow.

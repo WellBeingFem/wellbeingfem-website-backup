@@ -424,4 +424,4 @@
 - [x] Prioritize the mobile above-the-fold hero through responsive image selection and preload behavior without changing desktop hero delivery.
 - [x] Preserve both mobile transparent hero tap areas, the desktop hero and links, Resources page design, navigation, footer, SEO, and all other website content unchanged.
 - [x] Update regression coverage and verify mobile asset selection, visual fidelity, no-crop behavior, action destinations, preload priority, and desktop/tablet preservation.
-- [ ] Save the verified checkpoint, publish automatically, and confirm the live mobile resource action and optimized hero delivery on wellbeingfem.com.
+- [x] Save the verified checkpoint, publish automatically, and confirm the live mobile resource action and optimized hero delivery on wellbeingfem.com.
