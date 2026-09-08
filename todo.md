@@ -438,4 +438,4 @@
 - [x] Add only useful, appropriate image alt text where needed and preserve all existing detailed HTML copy without hidden SEO text or duplicate visible text.
 - [x] Preserve SEO metadata, images, design, layout, navigation, colours, buttons, forms, functionality, service content, and all unrelated website content unchanged.
 - [x] Add/update Vitest coverage and verify exactly one visible H1 and the requested visible introductory HTML text on every specified page at desktop, tablet, and mobile.
-- [ ] Save the verified checkpoint, publish automatically, and confirm live crawlable headings and introductions across the public pages.
+- [x] Save the verified checkpoint, publish automatically, and confirm live crawlable headings and introductions across the public pages.
