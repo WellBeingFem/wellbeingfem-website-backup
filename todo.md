@@ -415,6 +415,6 @@
 - [x] Upload and set the supplied `NewSocialMediaimageSept8th2026.png` unchanged as the main absolute `og:image` and `twitter:image` without changing other SEO content.
 - [x] Preserve the desktop hero, navigation, footer, homepage text/layout, Resources flow, service cards, all unrelated images, and all other website content unchanged.
 - [x] Update regression coverage and verify desktop/tablet/mobile hero asset selection, full-image contain behavior, hotspot destinations, and social-sharing metadata.
-- [ ] Save the verified checkpoint, publish automatically, and confirm the live mobile hero, desktop hero preservation, functional actions, and social-sharing image metadata on wellbeingfem.com.
+- [x] Save the verified checkpoint, publish automatically, and confirm the live mobile hero, desktop hero preservation, functional actions, and social-sharing image metadata on wellbeingfem.com.
 
 - [x] Use the supplied mobile hero without adding visible button artwork; retain only the existing invisible functional tap areas at their prior proportional positions, as confirmed by the user.
