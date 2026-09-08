@@ -1,0 +1,11 @@
+# Supplied Green Desktop and Mobile Hero Verification
+
+The 1280×720 desktop capture confirms the supplied GreenHeroDesktop composition is presented without added visible controls or text. The 768×1024 tablet capture retains that complete proportional wide composition and its embedded action-button artwork. The 375×812 mobile capture selects the supplied tall HeroMobileGreen composition, shows the complete image without cropping or stretching, and retains only the image’s two embedded button visuals.
+
+Private Chromium geometry confirms the desktop and tablet image source is the supplied GreenHeroDesktop asset delivered as the 1280px WebP candidate, with exact 1.7778 proportion and `object-fit: contain`. The desktop/tablet Explore Sessions and Start with a Free Resource hotspots measure 5.60% / 73.54% / 19.44% / 9.78% and 26.44% / 73.54% / 18.30% / 9.78% respectively; both are transparent, borderless, centre-point hit-testable, and use the requested `#ondamed-service-card` and `/resources` destinations.
+
+At 375×812, the supplied tall HeroMobileGreen asset is delivered as the 480px WebP candidate at 375×666.41px, retaining its 0.5627 image proportion. Its transparent, borderless, centre-hit-testable actions measure 8.82% / 75.18% / 75.77% / 6.28% for Explore Sessions and 8.82% / 82.48% / 75.77% / 6.10% for Start with a Free Resource. Explore Sessions scrolls to the existing ONDAMED card at the visible top offset; Start with a Free Resource uses `/resources`.
+
+The complete pre-publication validation passes all 14 Vitest files and 60 tests, TypeScript validation, and the production build. The build retains only the existing managed-storage resolution notice and bundle-size advisory, both non-blocking.
+
+Direct managed-storage measurements confirm the supplied 2,149,748-byte desktop PNG has full-composition WebP alternatives of 143,182 bytes at 1280px and 192,380 bytes at 1600px; the supplied 1,989,192-byte mobile PNG has full-composition WebP alternatives of 75,624 bytes at 480px and 132,906 bytes at 720px. Every optimized candidate returns `image/webp` with HTTP 200.

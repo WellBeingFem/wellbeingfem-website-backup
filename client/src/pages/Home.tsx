@@ -14,10 +14,12 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-const HERO_URL = "/manus-storage/HerowithFreeResource_2a7a0eb6.png";
-const MOBILE_HERO_FALLBACK_URL = "/manus-storage/HeroforMobile_90337218.png";
-const MOBILE_HERO_WEBP_720 = "/manus-storage/HeroforMobile-720_030db73b.webp";
-const MOBILE_HERO_WEBP_1200 = "/manus-storage/HeroforMobile-1200_265c9fb8.webp";
+const DESKTOP_HERO_FALLBACK_URL = "/manus-storage/GreenHeroDesktop_79969576.png";
+const DESKTOP_HERO_WEBP_1280 = "/manus-storage/GreenHeroDesktop-1280_752dae66.webp";
+const DESKTOP_HERO_WEBP_1600 = "/manus-storage/GreenHeroDesktop-1600_66805239.webp";
+const MOBILE_HERO_FALLBACK_URL = "/manus-storage/HeroMobileGreen_d405d98b.png";
+const MOBILE_HERO_WEBP_480 = "/manus-storage/HeroMobileGreen-480_be09d5f5.webp";
+const MOBILE_HERO_WEBP_720 = "/manus-storage/HeroMobileGreen-720_26a8d16d.webp";
 const MOBILE_HERO_MEDIA_QUERY = "(max-width: 767px)";
 const ONDAMED_IMAGE_URL = "/manus-storage/ondamedwlogo_d68ec81a.png";
 const HEALY_IMAGE_URL = "/manus-storage/Healyandphone_52ac329b.png";
@@ -152,11 +154,11 @@ export default function Home() {
                 <img
                   className="hero-picture__image hero-picture__image--mobile"
                   src={MOBILE_HERO_FALLBACK_URL}
-                  srcSet={`${MOBILE_HERO_WEBP_720} 720w, ${MOBILE_HERO_WEBP_1200} 1200w`}
+                  srcSet={`${MOBILE_HERO_WEBP_480} 480w, ${MOBILE_HERO_WEBP_720} 720w`}
                   sizes="100vw"
-                  alt="Frequency-Based Wellbeing for Women"
-                  width="1672"
-                  height="941"
+                  alt="Frequency-Based Wellbeing for Women with Explore Sessions and Start with a Free Resource buttons"
+                  width="941"
+                  height="1672"
                   loading="eager"
                   fetchPriority="high"
                   decoding="async"
@@ -164,7 +166,9 @@ export default function Home() {
               ) : (
                 <img
                   className="hero-picture__image hero-picture__image--desktop"
-                  src={HERO_URL}
+                  src={DESKTOP_HERO_FALLBACK_URL}
+                  srcSet={`${DESKTOP_HERO_WEBP_1280} 1280w, ${DESKTOP_HERO_WEBP_1600} 1600w`}
+                  sizes="(min-width: 1025px) 1279px, 924px"
                   alt="Frequency-Based Wellbeing for Women, with Explore Sessions and Start with a Free Resource buttons"
                   width="1672"
                   height="941"
@@ -176,22 +180,14 @@ export default function Home() {
             </picture>
             <a
               className="hero-action-link hero-action-link--sessions"
-              href="#homepage-services"
-              aria-label="Explore WellBeingFem sessions"
+              href="#ondamed-service-card"
+              aria-label="Explore ONDAMED sessions"
             />
-            {mobileHeroActive ? (
-              <a
-                className="hero-action-link hero-action-link--resource"
-                href="/resources"
-                aria-label="Browse free WellBeingFem resources"
-              />
-            ) : (
-              <a
-                className="hero-action-link hero-action-link--resource"
-                href="/resources#living-in-frequency-form"
-                aria-label="Start with the free Living in Frequency resource"
-              />
-            )}
+            <a
+              className="hero-action-link hero-action-link--resource"
+              href="/resources"
+              aria-label="Browse free WellBeingFem resources"
+            />
           </div>
         </section>
 
@@ -205,7 +201,7 @@ export default function Home() {
           </header>
 
           <div className="service-card-grid">
-            <article className="service-card">
+            <article id="ondamed-service-card" className="service-card">
               <div className="service-card__image">
                 <img src={ONDAMED_IMAGE_URL} alt="ONDAMED equipment with WellBeingFem branding" width="1448" height="1086" />
               </div>

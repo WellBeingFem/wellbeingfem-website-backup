@@ -114,26 +114,31 @@ describe("Homepage opening position", () => {
 
 describe("Final pre-publication corrections", () => {
   it("uses the supplied complete hero with two transparent, accessible action hotspots", () => {
-    expect(homeSource).toContain('const HERO_URL = "/manus-storage/HerowithFreeResource_2a7a0eb6.png";');
-    expect(homeSource).toContain('const MOBILE_HERO_FALLBACK_URL = "/manus-storage/HeroforMobile_90337218.png";');
-    expect(homeSource).toContain('const MOBILE_HERO_WEBP_720 = "/manus-storage/HeroforMobile-720_030db73b.webp";');
-    expect(homeSource).toContain('const MOBILE_HERO_WEBP_1200 = "/manus-storage/HeroforMobile-1200_265c9fb8.webp";');
+    expect(homeSource).toContain('const DESKTOP_HERO_FALLBACK_URL = "/manus-storage/GreenHeroDesktop_79969576.png";');
+    expect(homeSource).toContain('const DESKTOP_HERO_WEBP_1280 = "/manus-storage/GreenHeroDesktop-1280_752dae66.webp";');
+    expect(homeSource).toContain('const DESKTOP_HERO_WEBP_1600 = "/manus-storage/GreenHeroDesktop-1600_66805239.webp";');
+    expect(homeSource).toContain('const MOBILE_HERO_FALLBACK_URL = "/manus-storage/HeroMobileGreen_d405d98b.png";');
+    expect(homeSource).toContain('const MOBILE_HERO_WEBP_480 = "/manus-storage/HeroMobileGreen-480_be09d5f5.webp";');
+    expect(homeSource).toContain('const MOBILE_HERO_WEBP_720 = "/manus-storage/HeroMobileGreen-720_26a8d16d.webp";');
     expect(homeSource).toContain('window.matchMedia(MOBILE_HERO_MEDIA_QUERY).matches');
     expect(homeSource).toContain('className="hero-picture__image hero-picture__image--mobile"');
-    expect(homeSource).toContain('srcSet={`${MOBILE_HERO_WEBP_720} 720w, ${MOBILE_HERO_WEBP_1200} 1200w`}');
+    expect(homeSource).toContain('srcSet={`${MOBILE_HERO_WEBP_480} 480w, ${MOBILE_HERO_WEBP_720} 720w`}');
+    expect(homeSource).toContain('srcSet={`${DESKTOP_HERO_WEBP_1280} 1280w, ${DESKTOP_HERO_WEBP_1600} 1600w`}');
     expect(homeSource).toContain('sizes="100vw"');
-    expect(homeSource).toContain('width="1672"');
-    expect(homeSource).toContain('height="941"');
+    expect(homeSource).toContain('width="941"');
+    expect(homeSource).toContain('height="1672"');
     expect(homeSource).toContain('className="hero-action-link hero-action-link--sessions"');
-    expect(homeSource).toContain('href="#homepage-services"');
+    expect(homeSource).toContain('href="#ondamed-service-card"');
     expect(homeSource).toContain('className="hero-action-link hero-action-link--resource"');
-    expect(homeSource).toContain('href="/resources#living-in-frequency-form"');
     expect(homeSource).toContain('href="/resources"');
     expect(homeSource).toContain('aria-label="Browse free WellBeingFem resources"');
     expect(homeSource).toContain('id="homepage-services"');
+    expect(homeSource).toContain('id="ondamed-service-card"');
     expect(styleSource).toContain(".hero-action-link {\n  position: absolute;");
-    expect(styleSource).toContain(".hero-action-link--sessions {\n  left: 6.08%;\n  width: 20.89%;");
-    expect(styleSource).toContain(".hero-action-link--resource {\n  left: 28.39%;\n  width: 19.67%;");
+    expect(styleSource).toContain(".hero-action-link--sessions {\n  left: 5.60%;\n  width: 19.44%;");
+    expect(styleSource).toContain(".hero-action-link--resource {\n  left: 26.44%;\n  width: 18.30%;");
+    expect(styleSource).toContain("top: 75.18%;\n    left: 8.82%;\n    width: 75.77%;\n    height: 6.28%;");
+    expect(styleSource).toContain("top: 82.48%;\n    left: 8.82%;\n    width: 75.77%;\n    height: 6.10%;");
     expect(styleSource).toContain("border: 0 !important;\n  border-radius: 0 !important;\n  background: transparent !important;");
   });
 
@@ -154,9 +159,10 @@ describe("Final pre-publication corrections", () => {
 
 describe("Primary CTA and hero performance update", () => {
   it("serves the supplied hero unchanged, eagerly, and proportionally at every breakpoint", () => {
-    expect(homeSource).toContain('src={HERO_URL}');
+    expect(homeSource).toContain('src={DESKTOP_HERO_FALLBACK_URL}');
     expect(homeSource).toContain('src={MOBILE_HERO_FALLBACK_URL}');
-    expect(homeSource).toContain('srcSet={`${MOBILE_HERO_WEBP_720} 720w, ${MOBILE_HERO_WEBP_1200} 1200w`}');
+    expect(homeSource).toContain('srcSet={`${MOBILE_HERO_WEBP_480} 480w, ${MOBILE_HERO_WEBP_720} 720w`}');
+    expect(homeSource).toContain('srcSet={`${DESKTOP_HERO_WEBP_1280} 1280w, ${DESKTOP_HERO_WEBP_1600} 1600w`}');
     expect(homeSource).toContain('loading="eager"');
     expect(homeSource).toContain('fetchPriority="high"');
     const heroPictureSource = homeSource.slice(

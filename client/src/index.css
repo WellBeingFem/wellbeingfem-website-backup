@@ -312,8 +312,8 @@
 .hero-action-link {
   position: absolute;
   z-index: 2;
-  top: 78.81%;
-  height: 10.36%;
+  top: 73.54%;
+  height: 9.78%;
   border: 0;
   background: transparent;
   color: transparent;
@@ -324,16 +324,20 @@
 }
 
 .hero-action-link--sessions {
-  left: 6.08%;
-  width: 20.89%;
+  left: 5.60%;
+  width: 19.44%;
 }
 
 .hero-action-link--resource {
-  left: 28.39%;
-  width: 19.67%;
+  left: 26.44%;
+  width: 18.30%;
 }
 
 .homepage-services {
+  scroll-margin-top: 24px;
+}
+
+#ondamed-service-card {
   scroll-margin-top: 24px;
 }
 
@@ -2268,6 +2272,20 @@
     max-height: none;
     object-fit: contain;
     object-position: center;
+  }
+
+  .hero-action-link--sessions {
+    top: 75.18%;
+    left: 8.82%;
+    width: 75.77%;
+    height: 6.28%;
+  }
+
+  .hero-action-link--resource {
+    top: 82.48%;
+    left: 8.82%;
+    width: 75.77%;
+    height: 6.10%;
   }
 
   .page-main__inner {

@@ -439,3 +439,15 @@
 - [x] Preserve SEO metadata, images, design, layout, navigation, colours, buttons, forms, functionality, service content, and all unrelated website content unchanged.
 - [x] Add/update Vitest coverage and verify exactly one visible H1 and the requested visible introductory HTML text on every specified page at desktop, tablet, and mobile.
 - [x] Save the verified checkpoint, publish automatically, and confirm live crawlable headings and introductions across the public pages.
+
+## Homepage Supplied Desktop and Mobile Green Heroes
+
+- [x] Replace only the desktop homepage hero with the supplied `GreenHeroDesktop.png` unchanged, preserving its full 1672×941 composition without crop, stretch, regeneration, redesign, extra visible text, or altered content.
+- [x] Replace only the mobile homepage hero with the supplied `HeroMobileGreen.png` unchanged, preserving its full 941×1672 composition without crop, stretch, regeneration, redesign, extra visible text, or altered content.
+- [x] Add precisely aligned transparent overlays over the embedded `Explore Sessions` visual button in both supplied heroes, opening the existing homepage ONDAMED service-card section.
+- [x] Add precisely aligned transparent overlays over the embedded `Start with a Free Resource` visual button in both supplied heroes, opening the top of `/resources`.
+- [x] Keep both hero image button visuals as the only visible hero controls, with no duplicate button text or visible overlay styling.
+- [x] Create and serve efficient full-composition responsive desktop and mobile image variants with explicit sizing and preload/high priority while ensuring each supplied hero is served only at its intended breakpoint.
+- [x] Preserve navigation, page text, service cards, Resources content, footer, social/SEO metadata, and all other website content/layout unchanged.
+- [x] Update Vitest coverage and verify supplied-image selection, full-image contain behavior, transfer optimization, overlay geometry, destinations, and no overflow on desktop, tablet, and mobile.
+- [ ] Save the verified checkpoint, publish automatically, and confirm the live supplied desktop/mobile heroes and actions on wellbeingfem.com.

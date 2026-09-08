@@ -19,10 +19,11 @@ describe("WellBeingFem production readiness", () => {
   it("preloads the optimized desktop hero and responsive mobile hero without changing desktop delivery", () => {
     const indexHtml = readProjectFile("client/index.html");
 
-    expect(indexHtml).toContain('href="/manus-storage/DeaktopHeroWBF-contact-green-1600_0b9672ec.webp"');
+    expect(indexHtml).toContain('href="/manus-storage/GreenHeroDesktop-1600_66805239.webp"');
     expect(indexHtml).toContain('media="(min-width: 1025px)"');
-    expect(indexHtml).toContain('href="/manus-storage/HeroforMobile-1200_265c9fb8.webp"');
-    expect(indexHtml).toContain('imagesrcset="/manus-storage/HeroforMobile-720_030db73b.webp 720w, /manus-storage/HeroforMobile-1200_265c9fb8.webp 1200w"');
+    expect(indexHtml).toContain('imagesrcset="/manus-storage/GreenHeroDesktop-1280_752dae66.webp 1280w, /manus-storage/GreenHeroDesktop-1600_66805239.webp 1600w"');
+    expect(indexHtml).toContain('href="/manus-storage/HeroMobileGreen-720_26a8d16d.webp"');
+    expect(indexHtml).toContain('imagesrcset="/manus-storage/HeroMobileGreen-480_be09d5f5.webp 480w, /manus-storage/HeroMobileGreen-720_26a8d16d.webp 720w"');
     expect(indexHtml).toContain('imagesizes="100vw"');
     expect(indexHtml).toContain('media="(max-width: 767px)"');
     expect(indexHtml.match(/fetchpriority="high"/g)).toHaveLength(2);
