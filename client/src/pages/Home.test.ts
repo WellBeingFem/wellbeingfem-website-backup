@@ -115,6 +115,11 @@ describe("Homepage opening position", () => {
 describe("Final pre-publication corrections", () => {
   it("uses the supplied complete hero with two transparent, accessible action hotspots", () => {
     expect(homeSource).toContain('const HERO_URL = "/manus-storage/HerowithFreeResource_2a7a0eb6.png";');
+    expect(homeSource).toContain('const MOBILE_HERO_URL = "/manus-storage/HeroforMobile_90337218.png";');
+    expect(homeSource).toContain('className="hero-picture__image hero-picture__image--desktop"');
+    expect(homeSource).toContain('className="hero-picture__image hero-picture__image--mobile"');
+    expect(styleSource).toContain(".hero-picture__image--mobile {\n  display: none !important;");
+    expect(styleSource).toContain("@media (max-width: 767px) {\n  .hero-picture__image--desktop {\n    display: none !important;");
     expect(homeSource).toContain('width="1672"');
     expect(homeSource).toContain('height="941"');
     expect(homeSource).toContain('className="hero-action-link hero-action-link--sessions"');
@@ -146,6 +151,7 @@ describe("Final pre-publication corrections", () => {
 describe("Primary CTA and hero performance update", () => {
   it("serves the supplied hero unchanged, eagerly, and proportionally at every breakpoint", () => {
     expect(homeSource).toContain('src={HERO_URL}');
+    expect(homeSource).toContain('src={MOBILE_HERO_URL}');
     expect(homeSource).toContain('loading="eager"');
     expect(homeSource).toContain('fetchPriority="high"');
     const heroPictureSource = homeSource.slice(

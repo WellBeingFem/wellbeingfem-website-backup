@@ -1,0 +1,9 @@
+# Mobile Hero and Social-Sharing Image Verification
+
+Initial visual captures at 1280×720 and 768×1024 confirm the existing desktop hero remains unchanged and fully visible. The 375×812 capture confirms the supplied mobile hero source was not selected despite the added `<source>` element: the fallback desktop image remained visible. The mobile source-selection behavior must be corrected and re-verified before publication. No checkpoint will be created until that required mobile image selection passes.
+
+The final implementation replaces the unreliable picture source with explicit CSS-selected unchanged images. Headless-browser verification confirms that, at 1280×900 and 768×900, the original `/manus-storage/HerowithFreeResource_2a7a0eb6.png` is the only visible hero image and the mobile source is `display: none`. At 375×812, the original desktop image is `display: none` and the exact supplied `/manus-storage/HeroforMobile_90337218.png` is the visible 375×211.05px, uncropped 1.7768-ratio image with `object-fit: contain` and no horizontal overflow.
+
+At each desktop, tablet, and mobile viewport, both existing hotspots remain transparent, borderless, center-point hit-testable, and retain their prior proportional locations. Explore Sessions reaches `/#homepage-services` with the service heading visible; Start with a Free Resource reaches `/resources#living-in-frequency-form` with the initial form visible. The exact privacy notice retains the existing Privacy Policy target and has no checkbox. The static document includes the supplied absolute wide `https://wellbeingfem.com/manus-storage/NewSocialMediaimageSept8th2026_74736364.png` in both `og:image` and `twitter:image`.
+
+The complete verification run passes all 13 Vitest files and 53 tests, `pnpm exec tsc --noEmit`, and `pnpm run build`. Existing managed-storage resolution and bundle-size messages remain non-blocking build advisories.

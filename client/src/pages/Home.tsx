@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/carousel";
 
 const HERO_URL = "/manus-storage/HerowithFreeResource_2a7a0eb6.png";
+const MOBILE_HERO_URL = "/manus-storage/HeroforMobile_90337218.png";
 const ONDAMED_IMAGE_URL = "/manus-storage/ondamedwlogo_d68ec81a.png";
 const HEALY_IMAGE_URL = "/manus-storage/Healyandphone_52ac329b.png";
 const GUIDED_MEDITATIONS_IMAGE_URL = "/manus-storage/06_WBF_QR_YouTube_Channel_d57f9130.png";
@@ -133,8 +134,19 @@ export default function Home() {
           <div className="hero-media">
             <picture className="hero-picture">
               <img
+                className="hero-picture__image hero-picture__image--desktop"
                 src={HERO_URL}
                 alt="Frequency-Based Wellbeing for Women, with Explore Sessions and Start with a Free Resource buttons"
+                width="1672"
+                height="941"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+              />
+              <img
+                className="hero-picture__image hero-picture__image--mobile"
+                src={MOBILE_HERO_URL}
+                alt="Frequency-Based Wellbeing for Women"
                 width="1672"
                 height="941"
                 loading="eager"

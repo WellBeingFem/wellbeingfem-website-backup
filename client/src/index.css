@@ -298,6 +298,10 @@
   max-width: 100%;
 }
 
+.hero-picture__image--mobile {
+  display: none !important;
+}
+
 .hero-image-container img,
 .hero-picture img {
   display: block;
@@ -2229,6 +2233,14 @@
 }
 
 @media (max-width: 767px) {
+  .hero-picture__image--desktop {
+    display: none !important;
+  }
+
+  .hero-picture__image--mobile {
+    display: block !important;
+  }
+
   .hero-image-container,
   .hero-picture {
     width: 100%;

@@ -408,3 +408,13 @@
 - [x] Preserve the rest of the homepage, Resources content/images, navigation, footer, SEO, service cards, Women’s Wisdom, other layouts, and all unrelated site content unchanged.
 - [x] Update Vitest coverage and verify exact hero asset/dimensions, proportional contain behavior, overlay alignment and destinations, header-safe service scrolling, direct Resources-form opening, privacy link, and desktop/tablet/mobile presentation.
 - [x] Save the verified checkpoint, publish automatically, and confirm the live hero, both actions, and Resources privacy notice on wellbeingfem.com.
+
+- [x] Upload and serve the supplied `HeroforMobile.png` unchanged as the mobile-only homepage hero while preserving the current desktop hero image exactly.
+- [x] Keep the supplied mobile hero fully visible without unnecessary cropping, stretching, regeneration, or altered content, and preserve the visible Frequency-Based Wellbeing for Women treatment and embedded action area.
+- [x] Recalibrate the existing transparent mobile Explore Sessions and Start with a Free Resource overlays so they remain aligned with the supplied mobile hero and retain their existing destinations.
+- [x] Upload and set the supplied `NewSocialMediaimageSept8th2026.png` unchanged as the main absolute `og:image` and `twitter:image` without changing other SEO content.
+- [x] Preserve the desktop hero, navigation, footer, homepage text/layout, Resources flow, service cards, all unrelated images, and all other website content unchanged.
+- [x] Update regression coverage and verify desktop/tablet/mobile hero asset selection, full-image contain behavior, hotspot destinations, and social-sharing metadata.
+- [ ] Save the verified checkpoint, publish automatically, and confirm the live mobile hero, desktop hero preservation, functional actions, and social-sharing image metadata on wellbeingfem.com.
+
+- [x] Use the supplied mobile hero without adding visible button artwork; retain only the existing invisible functional tap areas at their prior proportional positions, as confirmed by the user.
