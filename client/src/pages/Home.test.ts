@@ -115,17 +115,21 @@ describe("Homepage opening position", () => {
 describe("Final pre-publication corrections", () => {
   it("uses the supplied complete hero with two transparent, accessible action hotspots", () => {
     expect(homeSource).toContain('const HERO_URL = "/manus-storage/HerowithFreeResource_2a7a0eb6.png";');
-    expect(homeSource).toContain('const MOBILE_HERO_URL = "/manus-storage/HeroforMobile_90337218.png";');
-    expect(homeSource).toContain('className="hero-picture__image hero-picture__image--desktop"');
+    expect(homeSource).toContain('const MOBILE_HERO_FALLBACK_URL = "/manus-storage/HeroforMobile_90337218.png";');
+    expect(homeSource).toContain('const MOBILE_HERO_WEBP_720 = "/manus-storage/HeroforMobile-720_030db73b.webp";');
+    expect(homeSource).toContain('const MOBILE_HERO_WEBP_1200 = "/manus-storage/HeroforMobile-1200_265c9fb8.webp";');
+    expect(homeSource).toContain('window.matchMedia(MOBILE_HERO_MEDIA_QUERY).matches');
     expect(homeSource).toContain('className="hero-picture__image hero-picture__image--mobile"');
-    expect(styleSource).toContain(".hero-picture__image--mobile {\n  display: none !important;");
-    expect(styleSource).toContain("@media (max-width: 767px) {\n  .hero-picture__image--desktop {\n    display: none !important;");
+    expect(homeSource).toContain('srcSet={`${MOBILE_HERO_WEBP_720} 720w, ${MOBILE_HERO_WEBP_1200} 1200w`}');
+    expect(homeSource).toContain('sizes="100vw"');
     expect(homeSource).toContain('width="1672"');
     expect(homeSource).toContain('height="941"');
     expect(homeSource).toContain('className="hero-action-link hero-action-link--sessions"');
     expect(homeSource).toContain('href="#homepage-services"');
     expect(homeSource).toContain('className="hero-action-link hero-action-link--resource"');
     expect(homeSource).toContain('href="/resources#living-in-frequency-form"');
+    expect(homeSource).toContain('href="/resources"');
+    expect(homeSource).toContain('aria-label="Browse free WellBeingFem resources"');
     expect(homeSource).toContain('id="homepage-services"');
     expect(styleSource).toContain(".hero-action-link {\n  position: absolute;");
     expect(styleSource).toContain(".hero-action-link--sessions {\n  left: 6.08%;\n  width: 20.89%;");
@@ -151,7 +155,8 @@ describe("Final pre-publication corrections", () => {
 describe("Primary CTA and hero performance update", () => {
   it("serves the supplied hero unchanged, eagerly, and proportionally at every breakpoint", () => {
     expect(homeSource).toContain('src={HERO_URL}');
-    expect(homeSource).toContain('src={MOBILE_HERO_URL}');
+    expect(homeSource).toContain('src={MOBILE_HERO_FALLBACK_URL}');
+    expect(homeSource).toContain('srcSet={`${MOBILE_HERO_WEBP_720} 720w, ${MOBILE_HERO_WEBP_1200} 1200w`}');
     expect(homeSource).toContain('loading="eager"');
     expect(homeSource).toContain('fetchPriority="high"');
     const heroPictureSource = homeSource.slice(

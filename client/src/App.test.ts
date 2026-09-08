@@ -16,13 +16,15 @@ describe("WellBeingFem production readiness", () => {
     expect(robots).toContain("Allow: /");
   });
 
-  it("preloads the optimized hero for desktop and mobile", () => {
+  it("preloads the optimized desktop hero and responsive mobile hero without changing desktop delivery", () => {
     const indexHtml = readProjectFile("client/index.html");
 
     expect(indexHtml).toContain('href="/manus-storage/DeaktopHeroWBF-contact-green-1600_0b9672ec.webp"');
     expect(indexHtml).toContain('media="(min-width: 1025px)"');
-    expect(indexHtml).toContain('href="/manus-storage/NewHeroAug13-contact-green-900_f5dca042.webp"');
-    expect(indexHtml).toContain('media="(max-width: 1024px)"');
+    expect(indexHtml).toContain('href="/manus-storage/HeroforMobile-1200_265c9fb8.webp"');
+    expect(indexHtml).toContain('imagesrcset="/manus-storage/HeroforMobile-720_030db73b.webp 720w, /manus-storage/HeroforMobile-1200_265c9fb8.webp 1200w"');
+    expect(indexHtml).toContain('imagesizes="100vw"');
+    expect(indexHtml).toContain('media="(max-width: 767px)"');
     expect(indexHtml.match(/fetchpriority="high"/g)).toHaveLength(2);
   });
 

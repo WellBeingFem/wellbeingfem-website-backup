@@ -15,7 +15,10 @@ import {
 } from "@/components/ui/carousel";
 
 const HERO_URL = "/manus-storage/HerowithFreeResource_2a7a0eb6.png";
-const MOBILE_HERO_URL = "/manus-storage/HeroforMobile_90337218.png";
+const MOBILE_HERO_FALLBACK_URL = "/manus-storage/HeroforMobile_90337218.png";
+const MOBILE_HERO_WEBP_720 = "/manus-storage/HeroforMobile-720_030db73b.webp";
+const MOBILE_HERO_WEBP_1200 = "/manus-storage/HeroforMobile-1200_265c9fb8.webp";
+const MOBILE_HERO_MEDIA_QUERY = "(max-width: 767px)";
 const ONDAMED_IMAGE_URL = "/manus-storage/ondamedwlogo_d68ec81a.png";
 const HEALY_IMAGE_URL = "/manus-storage/Healyandphone_52ac329b.png";
 const GUIDED_MEDITATIONS_IMAGE_URL = "/manus-storage/06_WBF_QR_YouTube_Channel_d57f9130.png";
@@ -59,6 +62,9 @@ const clientExperiencePlaceholder =
 
 export default function Home() {
   const [changeDetailsOpen, setChangeDetailsOpen] = useState(false);
+  const [mobileHeroActive, setMobileHeroActive] = useState(
+    () => window.matchMedia(MOBILE_HERO_MEDIA_QUERY).matches,
+  );
   const [resourcesAnchorActive, setResourcesAnchorActive] = useState(
     () => window.location.hash === "#free-wellbeingfem-resources",
   );
@@ -93,6 +99,15 @@ export default function Home() {
       window.cancelAnimationFrame(frame);
       window.history.scrollRestoration = previousScrollRestoration;
     };
+  }, []);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia(MOBILE_HERO_MEDIA_QUERY);
+    const updateMobileHero = () => setMobileHeroActive(mediaQuery.matches);
+
+    updateMobileHero();
+    mediaQuery.addEventListener("change", updateMobileHero);
+    return () => mediaQuery.removeEventListener("change", updateMobileHero);
   }, []);
 
   useEffect(() => {
@@ -133,37 +148,50 @@ export default function Home() {
         <section className="hero-image-container" aria-label="WellBeingFem frequency-based wellbeing">
           <div className="hero-media">
             <picture className="hero-picture">
-              <img
-                className="hero-picture__image hero-picture__image--desktop"
-                src={HERO_URL}
-                alt="Frequency-Based Wellbeing for Women, with Explore Sessions and Start with a Free Resource buttons"
-                width="1672"
-                height="941"
-                loading="eager"
-                fetchPriority="high"
-                decoding="async"
-              />
-              <img
-                className="hero-picture__image hero-picture__image--mobile"
-                src={MOBILE_HERO_URL}
-                alt="Frequency-Based Wellbeing for Women"
-                width="1672"
-                height="941"
-                loading="eager"
-                fetchPriority="high"
-                decoding="async"
-              />
+              {mobileHeroActive ? (
+                <img
+                  className="hero-picture__image hero-picture__image--mobile"
+                  src={MOBILE_HERO_FALLBACK_URL}
+                  srcSet={`${MOBILE_HERO_WEBP_720} 720w, ${MOBILE_HERO_WEBP_1200} 1200w`}
+                  sizes="100vw"
+                  alt="Frequency-Based Wellbeing for Women"
+                  width="1672"
+                  height="941"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                />
+              ) : (
+                <img
+                  className="hero-picture__image hero-picture__image--desktop"
+                  src={HERO_URL}
+                  alt="Frequency-Based Wellbeing for Women, with Explore Sessions and Start with a Free Resource buttons"
+                  width="1672"
+                  height="941"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                />
+              )}
             </picture>
             <a
               className="hero-action-link hero-action-link--sessions"
               href="#homepage-services"
               aria-label="Explore WellBeingFem sessions"
             />
-            <a
-              className="hero-action-link hero-action-link--resource"
-              href="/resources#living-in-frequency-form"
-              aria-label="Start with the free Living in Frequency resource"
-            />
+            {mobileHeroActive ? (
+              <a
+                className="hero-action-link hero-action-link--resource"
+                href="/resources"
+                aria-label="Browse free WellBeingFem resources"
+              />
+            ) : (
+              <a
+                className="hero-action-link hero-action-link--resource"
+                href="/resources#living-in-frequency-form"
+                aria-label="Start with the free Living in Frequency resource"
+              />
+            )}
           </div>
         </section>
 
