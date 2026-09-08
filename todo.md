@@ -450,4 +450,4 @@
 - [x] Create and serve efficient full-composition responsive desktop and mobile image variants with explicit sizing and preload/high priority while ensuring each supplied hero is served only at its intended breakpoint.
 - [x] Preserve navigation, page text, service cards, Resources content, footer, social/SEO metadata, and all other website content/layout unchanged.
 - [x] Update Vitest coverage and verify supplied-image selection, full-image contain behavior, transfer optimization, overlay geometry, destinations, and no overflow on desktop, tablet, and mobile.
-- [ ] Save the verified checkpoint, publish automatically, and confirm the live supplied desktop/mobile heroes and actions on wellbeingfem.com.
+- [x] Save the verified checkpoint, publish automatically, and confirm the live supplied desktop/mobile heroes and actions on wellbeingfem.com.
