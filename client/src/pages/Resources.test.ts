@@ -37,6 +37,9 @@ describe("permanent WellBeingFem Free Resources hub", () => {
     const optionalIndex = resourcesSource.indexOf("Would you like future free WellBeingFem resources?");
 
     expect(resourcesSource).toContain("Your Living in Frequency guide is ready.");
+    expect(resourcesSource).toContain("/manus-storage/Final_WellBeingFem_Living_in_Frequency_Final_Clickable_060c3b15.pdf");
+    expect(resourcesSource).toContain('download="Living_in_Frequency.pdf"');
+    expect(resourcesSource).toContain('href={LIVING_IN_FREQUENCY_PDF_URL}');
     expect(downloadIndex).toBeGreaterThan(0);
     expect(optionalIndex).toBeGreaterThan(downloadIndex);
     expect(resourcesSource).toContain('const [consentChecked, setConsentChecked] = useState(false)');

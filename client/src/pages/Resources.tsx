@@ -3,6 +3,7 @@ import SiteHeader from "@/components/SiteHeader";
 import { type FormEvent, useLayoutEffect, useState } from "react";
 
 const RESOURCE_01_IMAGE_URL = "/manus-storage/WBfResource01CardImage_2ee9605d.png";
+const LIVING_IN_FREQUENCY_PDF_URL = "/manus-storage/Final_WellBeingFem_Living_in_Frequency_Final_Clickable_060c3b15.pdf";
 const RESOURCE_LIST_CONSENT =
   "Yes, I would like to receive future WellBeingFem resources and occasional updates by email. I can unsubscribe at any time.";
 
@@ -142,9 +143,13 @@ export default function Resources() {
                 ) : (
                   <section className="resources-hub__ready" aria-labelledby="resource-ready-heading">
                     <h3 id="resource-ready-heading">Your Living in Frequency guide is ready.</h3>
-                    <button className="resources-hub__action" type="button" aria-disabled="true">
+                    <a
+                      className="resources-hub__action"
+                      href={LIVING_IN_FREQUENCY_PDF_URL}
+                      download="Living_in_Frequency.pdf"
+                    >
                       Download the Guide
-                    </button>
+                    </a>
 
                     <div className="resources-hub__optional">
                       <h3>Would you like future free WellBeingFem resources?</h3>

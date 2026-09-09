@@ -470,3 +470,14 @@
 - [x] Add/update regression coverage and verify all affected page images plus homepage heroes load successfully on desktop, tablet, and mobile with no overflow or layout change.
 - [x] Save the verified diagnostic checkpoint. No source or asset repair was required, so this records evidence only and leaves the already live website content unchanged.
 - [x] Confirm that no source or asset repair was needed because every tested existing service image and responsive homepage hero source completed successfully in the live browser.
+
+## Final Living in Frequency PDF Connection
+
+- [x] Upload the supplied final Living in Frequency PDF to persistent managed storage.
+- [x] Connect only the existing `Download the Guide` action to the stored PDF.
+- [x] Preserve the existing form, thank-you/download area, privacy notice, unticked Resource List invitation, consent records, and page design unchanged.
+- [x] Confirm guide access does not require Resource List consent and no non-consenting visitor receives an automatic marketing/subscription email.
+- [x] Add/update targeted regression coverage and run tests, type-check, and production build.
+- [ ] Verify the complete `/resources` journey and PDF download live, then save a checkpoint and publish automatically.
+- [ ] Report the persistent PDF URL and published checkpoint.
+
