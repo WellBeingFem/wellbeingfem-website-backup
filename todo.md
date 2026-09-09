@@ -460,3 +460,13 @@
 - [x] Preserve all other website images, text, layout, navigation, SEO, footer, and content unchanged.
 - [x] Verify hero action hit areas and destinations on desktop, tablet, and mobile; verify the updated QR card image rendering and QR-link destination; run tests, type-check, and build.
 - [x] Save the verified checkpoint, publish automatically, and confirm the live hero actions and updated QR image on wellbeingfem.com.
+
+## Existing Page Image Loading Repair
+
+- [x] Diagnose only the live broken image references, managed-storage URLs, responsive sources, and lazy-loading behavior affecting Healy, ONDAMED, and Guided Meditations.
+- [x] Repair only broken references using the existing correct page images, preserving their content, sizes, placements, image layouts, and responsive behavior without regeneration or replacement.
+- [x] Confirm the existing desktop and mobile homepage hero images continue to load correctly after the repair.
+- [x] Preserve all text, navigation, SEO, forms, buttons, colours, footer, layouts, resource content, and unrelated website content unchanged.
+- [x] Add/update regression coverage and verify all affected page images plus homepage heroes load successfully on desktop, tablet, and mobile with no overflow or layout change.
+- [x] Save the verified diagnostic checkpoint. No source or asset repair was required, so this records evidence only and leaves the already live website content unchanged.
+- [x] Confirm that no source or asset repair was needed because every tested existing service image and responsive homepage hero source completed successfully in the live browser.
