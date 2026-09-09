@@ -135,6 +135,7 @@ describe("Final pre-publication corrections", () => {
     expect(homeSource).toContain('id="homepage-services"');
     expect(homeSource).toContain('id="ondamed-service-card"');
     expect(styleSource).toContain(".hero-action-link {\n  position: absolute;");
+    expect(styleSource).toContain("display: block;\n  top: 73.54%;\n  height: 9.78%;\n  pointer-events: auto !important;\n  touch-action: manipulation;");
     expect(styleSource).toContain(".hero-action-link--sessions {\n  left: 5.60%;\n  width: 19.44%;");
     expect(styleSource).toContain(".hero-action-link--resource {\n  left: 26.44%;\n  width: 18.30%;");
     expect(styleSource).toContain("top: 75.18%;\n    left: 8.82%;\n    width: 75.77%;\n    height: 6.28%;");
@@ -144,10 +145,12 @@ describe("Final pre-publication corrections", () => {
 
   it("restores WellBeingFem-only Guided Meditations copy and its existing YouTube destination", () => {
     expect(homeSource).toContain('const WELLBEINGFEM_YOUTUBE_URL = "https://www.youtube.com/@wellbeingfem";');
+    expect(homeSource).toContain('const GUIDED_MEDITATIONS_IMAGE_URL = "/manus-storage/WBFUpdatedYTQR_cf8434a2.png";');
     expect(homeSource).toContain("Explore guided meditation journeys and wellbeing practices through the WellBeingFem YouTube Channel.");
     expect(homeSource).toContain("WellBeingFem Members’ Library — Coming Soon");
     expect(homeSource).toContain("Visit WellBeingFem on YouTube");
     expect(homeSource).toContain('href={WELLBEINGFEM_YOUTUBE_URL}');
+    expect(homeSource).toContain('alt="WellBeingFem YouTube Channel QR code" width="1254" height="1254"');
     expect(homeSource).not.toContain("Imagine Well");
   });
 

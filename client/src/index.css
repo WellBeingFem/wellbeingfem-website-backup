@@ -312,8 +312,13 @@
 .hero-action-link {
   position: absolute;
   z-index: 2;
+  display: block;
   top: 73.54%;
   height: 9.78%;
+  pointer-events: auto !important;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
   border: 0;
   background: transparent;
   color: transparent;

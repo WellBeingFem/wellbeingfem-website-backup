@@ -451,3 +451,12 @@
 - [x] Preserve navigation, page text, service cards, Resources content, footer, social/SEO metadata, and all other website content/layout unchanged.
 - [x] Update Vitest coverage and verify supplied-image selection, full-image contain behavior, transfer optimization, overlay geometry, destinations, and no overflow on desktop, tablet, and mobile.
 - [x] Save the verified checkpoint, publish automatically, and confirm the live supplied desktop/mobile heroes and actions on wellbeingfem.com.
+
+## Homepage Hero Actions and Updated YouTube QR Card
+
+- [x] Make the existing transparent Explore Sessions hit area cover the full embedded visual button on both desktop and mobile and scroll to the existing ONDAMED homepage service card.
+- [x] Make the existing transparent Start with a Free Resource hit area cover the full embedded visual button on both desktop and mobile and open the top of `/resources`.
+- [x] Replace only the homepage Guided Meditations YouTube QR card image with the supplied unchanged `WBFUpdatedYTQR.png`, preserving its QR code, card wording, styling, size, layout, link, and surrounding content.
+- [x] Preserve all other website images, text, layout, navigation, SEO, footer, and content unchanged.
+- [x] Verify hero action hit areas and destinations on desktop, tablet, and mobile; verify the updated QR card image rendering and QR-link destination; run tests, type-check, and build.
+- [ ] Save the verified checkpoint, publish automatically, and confirm the live hero actions and updated QR image on wellbeingfem.com.
