@@ -459,4 +459,4 @@
 - [x] Replace only the homepage Guided Meditations YouTube QR card image with the supplied unchanged `WBFUpdatedYTQR.png`, preserving its QR code, card wording, styling, size, layout, link, and surrounding content.
 - [x] Preserve all other website images, text, layout, navigation, SEO, footer, and content unchanged.
 - [x] Verify hero action hit areas and destinations on desktop, tablet, and mobile; verify the updated QR card image rendering and QR-link destination; run tests, type-check, and build.
-- [ ] Save the verified checkpoint, publish automatically, and confirm the live hero actions and updated QR image on wellbeingfem.com.
+- [x] Save the verified checkpoint, publish automatically, and confirm the live hero actions and updated QR image on wellbeingfem.com.
