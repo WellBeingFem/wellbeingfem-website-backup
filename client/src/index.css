@@ -338,7 +338,7 @@
   width: 18.30%;
 }
 
-.mobile-hero-action-link {
+.mobile-hero-anchor {
   display: none;
 }
 
@@ -2355,12 +2355,12 @@
     .hero-action-link {
     display: none;
   }
-  .mobile-hero-action-link {
+  .mobile-hero-anchor {
     position: absolute;
     z-index: 3;
     display: block;
-    left: 8.82%;
-    width: 75.77%;
+    left: 9.0%;
+    width: 82.0%;
     pointer-events: auto;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
@@ -2372,13 +2372,13 @@
     outline: none;
     box-shadow: none;
   }
-  .mobile-hero-action-link--sessions {
-    top: 75.18%;
-    height: 6.28%;
-  }
-  .mobile-hero-action-link--resource {
-    top: 82.48%;
+  .mobile-hero-anchor--sessions {
+    top: 72.35%;
     height: 6.10%;
+  }
+  .mobile-hero-anchor--resource {
+    top: 83.18%;
+    height: 6.40%;
   }
 
   .page-main__inner {

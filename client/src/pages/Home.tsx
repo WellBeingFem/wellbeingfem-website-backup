@@ -17,9 +17,9 @@ import {
 const DESKTOP_HERO_FALLBACK_URL = "/manus-storage/GreenHeroDesktop_79969576.png";
 const DESKTOP_HERO_WEBP_1280 = "/manus-storage/GreenHeroDesktop-1280_752dae66.webp";
 const DESKTOP_HERO_WEBP_1600 = "/manus-storage/GreenHeroDesktop-1600_66805239.webp";
-const MOBILE_HERO_FALLBACK_URL = "/manus-storage/HeroMobileGreen_d405d98b.png";
-const MOBILE_HERO_WEBP_480 = "/manus-storage/HeroMobileGreen-480_be09d5f5.webp";
-const MOBILE_HERO_WEBP_720 = "/manus-storage/HeroMobileGreen-720_26a8d16d.webp";
+const MOBILE_HERO_FALLBACK_URL = "/manus-storage/mobileHerowithflower_fbd04612.png";
+const MOBILE_HERO_WEBP_480 = "/manus-storage/mobileHerowithflower-480_c468ad6b.webp";
+const MOBILE_HERO_WEBP_720 = "/manus-storage/mobileHerowithflower-720_46706bfe.webp";
 const MOBILE_HERO_MEDIA_QUERY = "(max-width: 767px)";
 const ONDAMED_IMAGE_URL = "/manus-storage/ondamedwlogo_d68ec81a.png";
 const HEALY_IMAGE_URL = "/manus-storage/Healyandphone_52ac329b.png";
@@ -174,26 +174,34 @@ export default function Home() {
                 />
               )}
             </picture>
-            <a
-              className="hero-action-link hero-action-link--sessions"
-              href="/#ondamed-service-card"
-              aria-label="Explore ONDAMED sessions"
-            />
-            <a
-              className="hero-action-link hero-action-link--resource"
-              href="/resources"
-              aria-label="Browse free WellBeingFem resources"
-            />
-            <a
-              className="mobile-hero-action-link mobile-hero-action-link--sessions"
-              href="/#ondamed-service-card"
-              aria-label="Explore ONDAMED sessions"
-            />
-            <a
-              className="mobile-hero-action-link mobile-hero-action-link--resource"
-              href="/resources"
-              aria-label="Browse free WellBeingFem resources"
-            />
+            {!mobileHeroActive && (
+              <>
+                <a
+                  className="hero-action-link hero-action-link--sessions"
+                  href="/#ondamed-service-card"
+                  aria-label="Explore ONDAMED sessions"
+                />
+                <a
+                  className="hero-action-link hero-action-link--resource"
+                  href="/resources"
+                  aria-label="Browse free WellBeingFem resources"
+                />
+              </>
+            )}
+            {mobileHeroActive && (
+              <>
+                <a
+                  className="mobile-hero-anchor mobile-hero-anchor--sessions"
+                  href="/#ondamed-service-card"
+                  aria-label="Explore ONDAMED sessions"
+                />
+                <a
+                  className="mobile-hero-anchor mobile-hero-anchor--resource"
+                  href="/resources"
+                  aria-label="Browse free WellBeingFem resources"
+                />
+              </>
+            )}
           </div>
         </section>
 

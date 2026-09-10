@@ -534,5 +534,13 @@
 - [x] Change the homepage Healy service-card Learn More link to `/healy`.
 - [x] Remove the Guided Meditations card duration / “varies by meditation” line only.
 - [x] Remove gold horizontal dividers from all homepage service cards while preserving the remaining card layout and spacing.
-- [ ] Run tests, type-check, build, responsive checks, publish, and live-verify the scoped homepage fixes.
+- [x] Run tests, type-check, build, responsive checks, publish, and live-verify the scoped homepage fixes.
 
+
+## Mobile Portrait Hero Replacement
+
+- [x] Upload the supplied `mobileHerowithflower.png` unchanged to persistent managed storage and use it only for the mobile homepage hero.
+- [x] Remove the existing mobile hero overlays/links and recreate exactly two separate standard HTML anchors for the visible buttons.
+- [x] Link Explore Sessions to `/#ondamed-service-card` and Start with a Free Resource to `/resources`, with a clear non-clickable gap around the central gold flower and no overlap.
+- [x] Preserve the desktop hero, all other website content, SEO, navigation, footer, and page layouts unchanged.
+- [ ] Optimize mobile delivery without changing the supplied image appearance; run tests, responsive touch/visual checks, publish, and live-verify.
