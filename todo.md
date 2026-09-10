@@ -510,5 +510,5 @@
 - [x] Determine whether the site is client-rendered only and whether Googlebot receives meaningful initial HTML.
 - [x] Implement the minimum SSR, pre-rendering, or static-generation correction if crawlable content is missing, without redesigning the site.
 - [x] Run regression tests, type-check, build, and crawler-facing validation across public routes.
-- [ ] Verify the live published HTML and crawl signals, document exact findings and changes, and report the outcome.
+- [x] Verify the live published HTML and crawl signals, document exact findings and changes, and report the outcome.
 

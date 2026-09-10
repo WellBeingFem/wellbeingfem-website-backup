@@ -19,3 +19,9 @@ All 64 Vitest tests passed. TypeScript validation passed. The production client 
 ## Remaining release verification
 
 The next release checkpoint will publish the SSR/pre-render correction. After propagation, the same raw-HTML, robots, sitemap, canonical, redirect, noindex, structured-data, link, and image-alt checks must be repeated against `https://wellbeingfem.com`.
+
+## Final live verification after publication
+
+Checkpoint `a0693af7` is live on `https://wellbeingfem.com`. The homepage and `/ondamed`, `/healy`, `/guided-meditations`, `/resources`, and `/research` each return HTTP 200 and contain the actual pre-rendered page copy in the initial response. Every audited route has exactly one title, one H1, one meta description, one self-referencing canonical, one JSON-LD block, and real anchor links; none contains a `noindex` directive.
+
+The live `robots.txt` returns HTTP 200, allows crawling, and links to `https://wellbeingfem.com/sitemap.xml`. The live sitemap returns HTTP 200 as `application/xml` and lists all six public HTTPS URLs. HTTP and both www/non-www entrypoints normalize to the canonical `https://wellbeingfem.com/` URL. The homepage returns HTTP 200 with HTTPS and HSTS enabled. The live HTML now contains meaningful page headings, copy, service names, links, structured data, and image markup before JavaScript executes.
