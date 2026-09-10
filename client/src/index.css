@@ -338,7 +338,7 @@
   width: 18.30%;
 }
 
-.mobile-hero-anchor {
+.mobile-hero-button-link {
   display: none;
 }
 
@@ -2355,7 +2355,7 @@
     .hero-action-link {
     display: none;
   }
-  .mobile-hero-anchor {
+  .mobile-hero-button-link {
     position: absolute;
     z-index: 3;
     display: block;
@@ -2372,11 +2372,11 @@
     outline: none;
     box-shadow: none;
   }
-  .mobile-hero-anchor--sessions {
+  .mobile-hero-button-link--sessions {
     top: 72.35%;
     height: 6.10%;
   }
-  .mobile-hero-anchor--resource {
+  .mobile-hero-button-link--resource {
     top: 83.18%;
     height: 6.40%;
   }

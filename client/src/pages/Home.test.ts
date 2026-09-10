@@ -130,9 +130,10 @@ describe("Final pre-publication corrections", () => {
     expect(homeSource).toContain('height="1672"');
     expect(homeSource).toContain('className="hero-action-link hero-action-link--sessions"');
     expect(homeSource).toContain('className="hero-action-link hero-action-link--resource"');
-    expect(homeSource).toContain('className="mobile-hero-anchor mobile-hero-anchor--sessions"');
-    expect(homeSource).toContain('className="mobile-hero-anchor mobile-hero-anchor--resource"');
-    expect(homeSource.match(/className="mobile-hero-anchor/g)).toHaveLength(2);
+    expect(homeSource).toContain('className="mobile-hero-button-link mobile-hero-button-link--sessions"');
+    expect(homeSource).toContain('className="mobile-hero-button-link mobile-hero-button-link--resource"');
+    expect(homeSource.match(/className="mobile-hero-button-link/g)).toHaveLength(2);
+    expect(homeSource).not.toContain('mobile-hero-anchor');
     expect(homeSource).not.toContain('mobile-hero-action-link');
     expect(homeSource).toContain('href="/#ondamed-service-card"');
     expect(homeSource).toContain('href="/resources"');
@@ -151,9 +152,9 @@ describe("Final pre-publication corrections", () => {
     expect(styleSource).toContain("display: block;\n  top: 73.54%;\n  height: 9.78%;\n  pointer-events: auto !important;\n  touch-action: manipulation;");
     expect(styleSource).toContain(".hero-action-link--sessions {\n  left: 5.60%;\n  width: 19.44%;");
     expect(styleSource).toContain(".hero-action-link--resource {\n  left: 26.44%;\n  width: 18.30%;");
-    expect(styleSource).toContain(".mobile-hero-anchor {\n    position: absolute;");
-    expect(styleSource).toContain(".mobile-hero-anchor--sessions {\n    top: 72.35%;\n    height: 6.10%;");
-    expect(styleSource).toContain(".mobile-hero-anchor--resource {\n    top: 83.18%;\n    height: 6.40%;");
+    expect(styleSource).toContain(".mobile-hero-button-link {\n    position: absolute;");
+    expect(styleSource).toContain(".mobile-hero-button-link--sessions {\n    top: 72.35%;\n    height: 6.10%;");
+    expect(styleSource).toContain(".mobile-hero-button-link--resource {\n    top: 83.18%;\n    height: 6.40%;");
     expect(styleSource).toContain("width: 82.0%;");
     expect(styleSource).toContain(".hero-action-link {\n    display: none;");
     expect(styleSource).toContain("border: 0 !important;\n  border-radius: 0 !important;\n  background: transparent !important;");

@@ -188,20 +188,16 @@ export default function Home() {
                 />
               </>
             )}
-            {mobileHeroActive && (
-              <>
-                <a
-                  className="mobile-hero-anchor mobile-hero-anchor--sessions"
-                  href="/#ondamed-service-card"
-                  aria-label="Explore ONDAMED sessions"
-                />
-                <a
-                  className="mobile-hero-anchor mobile-hero-anchor--resource"
-                  href="/resources"
-                  aria-label="Browse free WellBeingFem resources"
-                />
-              </>
-            )}
+            <a
+              className="mobile-hero-button-link mobile-hero-button-link--sessions"
+              href="/#ondamed-service-card"
+              aria-label="Explore ONDAMED sessions"
+            />
+            <a
+              className="mobile-hero-button-link mobile-hero-button-link--resource"
+              href="/resources"
+              aria-label="Browse free WellBeingFem resources"
+            />
           </div>
         </section>
 

@@ -9,3 +9,7 @@ Preview checks at desktop, tablet, and mobile confirmed the desktop/tablet hero 
 ## Live post-publication verification
 
 After propagation, `https://wellbeingfem.com` returned HTTP 200 and its published HTML referenced the new portrait WebP candidates. The old `HeroMobileGreen` mobile references and old `mobile-hero-action-link` class were absent from the live response. The 480px WebP returned HTTP 200 with `image/webp` and 76,118 bytes; the 720px WebP returned HTTP 200 with `image/webp` and 130,030 bytes; the supplied PNG fallback returned HTTP 200 with `image/png` and 1,964,852 bytes. Preview browser interaction checks at desktop, tablet, and mobile verified the standard anchor hrefs, full touch footprints, clear flower gap, and no overflow; the published bundle and assets were then confirmed directly on the live domain.
+
+## From-scratch mobile link rebuild
+
+The previous mobile-only anchors were removed and recreated as two fresh `mobile-hero-button-link` HTML anchors. A real mobile-size pointer-input check at 375px confirmed exactly two anchor elements, each center-hit correctly. Their 31.53px vertical gap keeps the gold flower non-clickable. Clicking Explore Sessions reached `/#ondamed-service-card` with the ONDAMED card visible; clicking Start with a Free Resource reached `/resources` at scroll position zero with the `Free WellBeingFem Resources` heading visible. The mobile screenshot confirmed that the current portrait image and its embedded artwork are unchanged. The full suite passed: 65 tests, TypeScript validation, and production build.
