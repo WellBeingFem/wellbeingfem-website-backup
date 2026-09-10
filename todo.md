@@ -478,6 +478,20 @@
 - [x] Preserve the existing form, thank-you/download area, privacy notice, unticked Resource List invitation, consent records, and page design unchanged.
 - [x] Confirm guide access does not require Resource List consent and no non-consenting visitor receives an automatic marketing/subscription email.
 - [x] Add/update targeted regression coverage and run tests, type-check, and production build.
-- [ ] Verify the complete `/resources` journey and PDF download live, then save a checkpoint and publish automatically.
-- [ ] Report the persistent PDF URL and published checkpoint.
+- [x] Verify the complete `/resources` journey and PDF download live, then save a checkpoint and publish automatically.
+- [x] Report the persistent PDF URL and published checkpoint.
+
+
+## Supplied Service Image Replacement and Site Image Audit
+
+- [x] Upload the supplied Guided Meditations replacement image unchanged to persistent managed storage.
+- [x] Upload the supplied Healy Reiki Combined Session replacement image unchanged to persistent managed storage.
+- [x] Replace only the existing Guided Meditations image reference with the supplied managed asset.
+- [x] Replace only the existing Healy Reiki Combined Session image reference with the supplied managed asset and ensure it is a prompt responsive image element.
+- [x] Preserve all page wording, links, navigation, layouts, colours, typography, card dimensions, footer, and image compositions.
+- [x] Audit every visible public-site image, including heroes, service cards, ONDAMED, Healy, Reiki, Women’s Wisdom, Resources, client-experience imagery, logos, footer logos, and QR codes.
+- [x] Verify image completion, current asset references, alt text, responsive rendering, refresh stability, and no layout overflow at desktop, tablet, and mobile widths.
+- [x] Add/update targeted image regression coverage and run the full test, type-check, and production-build validation.
+- [ ] Complete live responsive verification, save a checkpoint, and publish automatically.
+- [ ] Report the updated managed image paths and image-audit outcome.
 

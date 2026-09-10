@@ -10,3 +10,6 @@ The stored PDF URL was opened successfully through the public storage proxy and 
 
 Validation completed: 60 Vitest tests passed, TypeScript passed, and the production build passed. The only build output remains the pre-existing unresolved-at-build-time managed flower-image reference, which is a runtime storage URL and unrelated to this PDF connection.
 
+
+Live verification after deployment propagation confirmed that `https://wellbeingfem.com/resources` serves the updated bundle. A synthetic first-name/email request reached the existing guide-ready area. The live `Download the Guide` anchor points to `/manus-storage/Final_WellBeingFem_Living_in_Frequency_Final_Clickable_060c3b15.pdf`, uses the filename `Living_in_Frequency.pdf`, and is visible. The separate Resource List checkbox remained `false`/unticked, while its explicit consent form remained present below the download. The public managed-storage URL resolved to the final eight-page PDF.
+

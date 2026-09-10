@@ -22,7 +22,9 @@ describe("Healy service page", () => {
     }
 
     expect(page).toContain("/manus-storage/frequencylaptophealyimage_9b168a7c.png");
-    expect(page).toContain("/manus-storage/HealyReikicombowebsiteimage_dcf16ff1.png");
+    expect(page).toContain("/manus-storage/updatedgreenReikiCombocard_192f43bc.png");
+    expect(page).toContain('loading="eager"');
+    expect(page).toContain('fetchPriority="high"');
     expect(page).toContain('href="/research#contact">Make a Booking</a>');
     expect(page).toContain('href="mailto:wellbeingfem@gmail.com">Email Us</a>');
     expect(page).toContain('href="/research#reiki-research"> View Reiki Research </a>');

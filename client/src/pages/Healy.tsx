@@ -3,7 +3,7 @@ import SiteHeader from "@/components/SiteHeader";
 import { useEffect, useState } from "react";
 
 const HEALY_LAPTOP_IMAGE = "/manus-storage/frequencylaptophealyimage_9b168a7c.png";
-const HEALY_REIKI_IMAGE = "/manus-storage/HealyReikicombowebsiteimage_dcf16ff1.png";
+const HEALY_REIKI_IMAGE = "/manus-storage/updatedgreenReikiCombocard_192f43bc.png";
 
 export default function Healy() {
   const [isSessionProcessOpen, setIsSessionProcessOpen] = useState(false);
@@ -195,7 +195,8 @@ export default function Healy() {
                 alt="Healy Reiki Combined Session — Rest, Reflect, Renew"
                 width={1672}
                 height={941}
-                loading="lazy"
+                loading="eager"
+                fetchPriority="high"
               />
             </figure>
             <h3>Support for Balance, Rest &amp; Renewal</h3>

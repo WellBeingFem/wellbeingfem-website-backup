@@ -3,7 +3,7 @@ import SiteHeader from "@/components/SiteHeader";
 import { BookOpen, MoonStar, Sunrise } from "lucide-react";
 import { useState } from "react";
 
-const GUIDED_MEDITATIONS_IMAGE = "/manus-storage/GuidedMedsite_26b6689f.png";
+const GUIDED_MEDITATIONS_IMAGE = "/manus-storage/UPdatedgreenmedcard_aaedad94.png";
 const WELLBEINGFEM_YOUTUBE_URL = "https://www.youtube.com/@wellbeingfem";
 
 export default function GuidedMeditations() {

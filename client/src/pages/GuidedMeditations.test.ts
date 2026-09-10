@@ -8,7 +8,7 @@ const styles = readFileSync(resolve(process.cwd(), "client/src/index.css"), "utf
 
 describe("Guided Meditation Journeys page", () => {
   it("keeps the supplied image unchanged, the title above it, and the gold subtitle in the right copy column", () => {
-    expect(page).toContain('const GUIDED_MEDITATIONS_IMAGE = "/manus-storage/GuidedMedsite_26b6689f.png";');
+    expect(page).toContain('const GUIDED_MEDITATIONS_IMAGE = "/manus-storage/UPdatedgreenmedcard_aaedad94.png";');
     expect(page).toContain("width={1672}");
     expect(page).toContain("height={941}");
     expect(page).toContain('className="guided-meditations-page__media-panel"');
