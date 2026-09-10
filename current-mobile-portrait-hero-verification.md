@@ -13,3 +13,7 @@ After propagation, `https://wellbeingfem.com` returned HTTP 200 and its publishe
 ## From-scratch mobile link rebuild
 
 The previous mobile-only anchors were removed and recreated as two fresh `mobile-hero-button-link` HTML anchors. A real mobile-size pointer-input check at 375px confirmed exactly two anchor elements, each center-hit correctly. Their 31.53px vertical gap keeps the gold flower non-clickable. Clicking Explore Sessions reached `/#ondamed-service-card` with the ONDAMED card visible; clicking Start with a Free Resource reached `/resources` at scroll position zero with the `Free WellBeingFem Resources` heading visible. The mobile screenshot confirmed that the current portrait image and its embedded artwork are unchanged. The full suite passed: 65 tests, TypeScript validation, and production build.
+
+## Published rebuild verification
+
+After the new checkpoint propagated, a fresh cache-busted 375px live pointer-input test confirmed the rebuilt `mobile-hero-button-link` anchors again. Explore Sessions opened `/#ondamed-service-card` and placed the ONDAMED card at 24.44px from the viewport top, visibly below the header. Start with a Free Resource opened `/resources` at scroll position zero with the Free WellBeingFem Resources heading present. Both center points resolved to their individual anchors, and the 31.53px flower gap remained free of either click target.
