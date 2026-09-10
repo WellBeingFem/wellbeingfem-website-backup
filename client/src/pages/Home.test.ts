@@ -120,7 +120,8 @@ describe("Final pre-publication corrections", () => {
     expect(homeSource).toContain('const MOBILE_HERO_FALLBACK_URL = "/manus-storage/HeroMobileGreen_d405d98b.png";');
     expect(homeSource).toContain('const MOBILE_HERO_WEBP_480 = "/manus-storage/HeroMobileGreen-480_be09d5f5.webp";');
     expect(homeSource).toContain('const MOBILE_HERO_WEBP_720 = "/manus-storage/HeroMobileGreen-720_26a8d16d.webp";');
-    expect(homeSource).toContain('window.matchMedia(MOBILE_HERO_MEDIA_QUERY).matches');
+    expect(homeSource).toContain('const [mobileHeroActive, setMobileHeroActive] = useState(false);');
+    expect(homeSource).toContain('const mediaQuery = window.matchMedia(MOBILE_HERO_MEDIA_QUERY);');
     expect(homeSource).toContain('className="hero-picture__image hero-picture__image--mobile"');
     expect(homeSource).toContain('srcSet={`${MOBILE_HERO_WEBP_480} 480w, ${MOBILE_HERO_WEBP_720} 720w`}');
     expect(homeSource).toContain('srcSet={`${DESKTOP_HERO_WEBP_1280} 1280w, ${DESKTOP_HERO_WEBP_1600} 1600w`}');

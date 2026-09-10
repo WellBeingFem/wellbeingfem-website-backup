@@ -15,3 +15,8 @@ Visual screenshots at desktop, tablet, and mobile confirmed that the supplied fu
 
 Validation completed: 60 Vitest tests passed, TypeScript passed, and the production build passed. The build retained the pre-existing runtime-managed flower asset warning only; it is unrelated to these replacement images.
 
+
+## Live Published Verification
+
+After deployment propagation, the live audit was rerun against `https://wellbeingfem.com`. All 18 route/breakpoint checks completed successfully. The new Healy Reiki asset was active on `/healy` at desktop, tablet, and mobile, with `complete: true`, natural dimensions 1672×941, and the existing useful alt text. The new Guided Meditations asset was active on `/guided-meditations` at desktop, tablet, and mobile, also complete at 1672×941 with its existing useful alt text. No audited image failed, no image had zero natural width, and no route reported horizontal overflow. The live homepage hero, ONDAMED imagery, Resources imagery, Research imagery, logos, footer logos, QR code, and Women’s Wisdom imagery also remained healthy.
+

@@ -64,12 +64,8 @@ const clientExperiencePlaceholder =
 
 export default function Home() {
   const [changeDetailsOpen, setChangeDetailsOpen] = useState(false);
-  const [mobileHeroActive, setMobileHeroActive] = useState(
-    () => window.matchMedia(MOBILE_HERO_MEDIA_QUERY).matches,
-  );
-  const [resourcesAnchorActive, setResourcesAnchorActive] = useState(
-    () => window.location.hash === "#free-wellbeingfem-resources",
-  );
+  const [mobileHeroActive, setMobileHeroActive] = useState(false);
+  const [resourcesAnchorActive, setResourcesAnchorActive] = useState(false);
   const [resourceCarouselApi, setResourceCarouselApi] = useState<CarouselApi>();
   const [resourceSelectedIndex, setResourceSelectedIndex] = useState(0);
   const [resourceSnapCount, setResourceSnapCount] = useState<number>(resourceCards.length);

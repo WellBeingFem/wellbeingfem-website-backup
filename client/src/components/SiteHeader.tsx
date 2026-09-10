@@ -20,6 +20,7 @@ const navigation: NavigationItem[] = [
   { label: "ONDAMED", href: "/ondamed" },
   {
     label: "Healy",
+    href: "/healy",
     children: [
       { label: "What is Healy", href: "/healy" },
       { label: "Healy WellBeing", href: "/healy#healy-wellbeing" },
@@ -30,6 +31,7 @@ const navigation: NavigationItem[] = [
   },
   {
     label: "Guided Meditations",
+    href: "/guided-meditations",
     children: [
       { label: "About WBF Meditations", href: "/guided-meditations" },
       { label: "Women's Wisdom", href: "/guided-meditations/womens-wisdom" },

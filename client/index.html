@@ -3,19 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <meta
-      name="description"
-      content="WellBeingFem offers ONDAMED PEMF, Healy frequency sessions and guided meditations for women’s wellbeing."
-    />
-    <meta name="robots" content="index, follow" />
-    <meta
-      property="og:image"
-      content="https://wellbeingfem.com/manus-storage/NewSocialMediaimageSept8th2026_74736364.png"
-    />
-    <meta
-      name="twitter:image"
-      content="https://wellbeingfem.com/manus-storage/NewSocialMediaimageSept8th2026_74736364.png"
-    />
+    <!--app-head-->
     <link rel="icon" type="image/png" href="/manus-storage/WellBeingfemlogofinal_e0e51dae.png" />
     <link
       rel="preload"
@@ -37,11 +25,10 @@
       media="(max-width: 767px)"
       fetchpriority="high"
     />
-    <title>WellBeingFem — Women’s Wellbeing Sessions</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div id="root"><!--app-html--></div>
+    <script type="module" src="/src/entry-client.tsx"></script>
     <script
       defer
       src="%VITE_ANALYTICS_ENDPOINT%/umami"

@@ -492,6 +492,23 @@
 - [x] Audit every visible public-site image, including heroes, service cards, ONDAMED, Healy, Reiki, Women’s Wisdom, Resources, client-experience imagery, logos, footer logos, and QR codes.
 - [x] Verify image completion, current asset references, alt text, responsive rendering, refresh stability, and no layout overflow at desktop, tablet, and mobile widths.
 - [x] Add/update targeted image regression coverage and run the full test, type-check, and production-build validation.
-- [ ] Complete live responsive verification, save a checkpoint, and publish automatically.
-- [ ] Report the updated managed image paths and image-audit outcome.
+- [x] Complete live responsive verification, save a checkpoint, and publish automatically.
+- [x] Report the updated managed image paths and image-audit outcome.
+
+
+## Complete Source ZIP Export
+
+- [x] Inspect and define the export contents without changing the live website.
+- [x] Assemble a ZIP containing frontend, backend, styles, configuration, tests, documentation, and required source assets.
+- [x] Validate the archive contents and deliver it as a downloadable attachment.
+
+
+## Technical SEO and Google Crawlability Audit
+
+- [x] Audit raw HTML before JavaScript for homepage and all main public pages, including visible copy, titles, H1s, descriptions, links, and image alt text.
+- [x] Check robots.txt, XML sitemap, canonical URLs, noindex signals, redirects, HTTPS, HTTP status, and structured data.
+- [x] Determine whether the site is client-rendered only and whether Googlebot receives meaningful initial HTML.
+- [x] Implement the minimum SSR, pre-rendering, or static-generation correction if crawlable content is missing, without redesigning the site.
+- [x] Run regression tests, type-check, build, and crawler-facing validation across public routes.
+- [ ] Verify the live published HTML and crawl signals, document exact findings and changes, and report the outcome.
 

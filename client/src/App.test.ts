@@ -10,10 +10,12 @@ describe("WellBeingFem production readiness", () => {
     const indexHtml = readProjectFile("client/index.html");
     const robots = readProjectFile("client/public/robots.txt");
 
-    expect(indexHtml).toContain('<meta name="robots" content="index, follow" />');
+    expect(indexHtml).toContain("<!--app-head-->");
+    expect(indexHtml).toContain("<!--app-html-->");
     expect(indexHtml).not.toMatch(/noindex|nofollow/i);
     expect(robots).toContain("User-agent: *");
     expect(robots).toContain("Allow: /");
+    expect(robots).toContain("Sitemap: https://wellbeingfem.com/sitemap.xml");
   });
 
   it("preloads the optimized desktop hero and responsive mobile hero without changing desktop delivery", () => {
