@@ -543,4 +543,4 @@
 - [x] Remove the existing mobile hero overlays/links and recreate exactly two separate standard HTML anchors for the visible buttons.
 - [x] Link Explore Sessions to `/#ondamed-service-card` and Start with a Free Resource to `/resources`, with a clear non-clickable gap around the central gold flower and no overlap.
 - [x] Preserve the desktop hero, all other website content, SEO, navigation, footer, and page layouts unchanged.
-- [ ] Optimize mobile delivery without changing the supplied image appearance; run tests, responsive touch/visual checks, publish, and live-verify.
+- [x] Optimize mobile delivery without changing the supplied image appearance; run tests, responsive touch/visual checks, publish, and live-verify.
