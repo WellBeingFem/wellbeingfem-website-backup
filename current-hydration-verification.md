@@ -7,3 +7,7 @@ The client bootstrap now checks `rootElement.firstElementChild`. Production pre-
 After the fix, the same preview URL produced no exception events. The page rendered one homepage H1, the expected page text, and the existing hero. The full suite passed with 65 tests, TypeScript passed, and the production build passed.
 
 Live production verification remains after the automatic publication checkpoint.
+
+## Final live verification
+
+After checkpoint `75f3334b` propagated, the same browser reproduction was run against `https://wellbeingfem.com/?from_webdev=1&hydration-check=1`. The browser reported no console exceptions, including no hydration mismatch. The document completed normally with six root children, the expected homepage H1 `Frequency-Based Wellbeing for Women`, and the existing homepage text intact.

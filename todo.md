@@ -518,4 +518,4 @@
 - [x] Reproduce the homepage hydration warning and isolate the server/client markup difference.
 - [x] Apply the smallest hydration-safe fix without changing visible design or page content.
 - [x] Add or update regression coverage and verify tests, type-check, build, and browser console output.
-- [ ] Publish and live-verify the homepage hydration fix, then document the cause and resolution.
+- [x] Publish and live-verify the homepage hydration fix, then document the cause and resolution.
