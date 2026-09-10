@@ -120,9 +120,11 @@ describe("Final pre-publication corrections", () => {
     expect(homeSource).toContain('const MOBILE_HERO_FALLBACK_URL = "/manus-storage/mobileHerowithflower_fbd04612.png";');
     expect(homeSource).toContain('const MOBILE_HERO_WEBP_480 = "/manus-storage/mobileHerowithflower-480_c468ad6b.webp";');
     expect(homeSource).toContain('const MOBILE_HERO_WEBP_720 = "/manus-storage/mobileHerowithflower-720_46706bfe.webp";');
-    expect(homeSource).toContain('const [mobileHeroActive, setMobileHeroActive] = useState(false);');
-    expect(homeSource).toContain('const mediaQuery = window.matchMedia(MOBILE_HERO_MEDIA_QUERY);');
-    expect(homeSource).toContain('className="hero-picture__image hero-picture__image--mobile"');
+    expect(homeSource).not.toContain("mobileHeroActive");
+    expect(homeSource).not.toContain("MOBILE_HERO_MEDIA_QUERY");
+    expect(homeSource).toContain('media="(max-width: 767px)"');
+    expect(homeSource).toContain('type="image/webp"');
+    expect(homeSource).toContain('className="hero-picture__image"');
     expect(homeSource).toContain('srcSet={`${MOBILE_HERO_WEBP_480} 480w, ${MOBILE_HERO_WEBP_720} 720w`}');
     expect(homeSource).toContain('srcSet={`${DESKTOP_HERO_WEBP_1280} 1280w, ${DESKTOP_HERO_WEBP_1600} 1600w`}');
     expect(homeSource).toContain('sizes="100vw"');
@@ -181,7 +183,7 @@ describe("Final pre-publication corrections", () => {
 describe("Primary CTA and hero performance update", () => {
   it("serves the supplied hero unchanged, eagerly, and proportionally at every breakpoint", () => {
     expect(homeSource).toContain('src={DESKTOP_HERO_FALLBACK_URL}');
-    expect(homeSource).toContain('src={MOBILE_HERO_FALLBACK_URL}');
+    expect(homeSource).toContain('srcSet={MOBILE_HERO_FALLBACK_URL}');
     expect(homeSource).toContain('srcSet={`${MOBILE_HERO_WEBP_480} 480w, ${MOBILE_HERO_WEBP_720} 720w`}');
     expect(homeSource).toContain('srcSet={`${DESKTOP_HERO_WEBP_1280} 1280w, ${DESKTOP_HERO_WEBP_1600} 1600w`}');
     expect(homeSource).toContain('loading="eager"');

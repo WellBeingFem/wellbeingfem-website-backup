@@ -20,7 +20,6 @@ const DESKTOP_HERO_WEBP_1600 = "/manus-storage/GreenHeroDesktop-1600_66805239.we
 const MOBILE_HERO_FALLBACK_URL = "/manus-storage/mobileHerowithflower_fbd04612.png";
 const MOBILE_HERO_WEBP_480 = "/manus-storage/mobileHerowithflower-480_c468ad6b.webp";
 const MOBILE_HERO_WEBP_720 = "/manus-storage/mobileHerowithflower-720_46706bfe.webp";
-const MOBILE_HERO_MEDIA_QUERY = "(max-width: 767px)";
 const ONDAMED_IMAGE_URL = "/manus-storage/ondamedwlogo_d68ec81a.png";
 const HEALY_IMAGE_URL = "/manus-storage/Healyandphone_52ac329b.png";
 const GUIDED_MEDITATIONS_IMAGE_URL = "/manus-storage/WBFUpdatedYTQR_cf8434a2.png";
@@ -64,7 +63,6 @@ const clientExperiencePlaceholder =
 
 export default function Home() {
   const [changeDetailsOpen, setChangeDetailsOpen] = useState(false);
-  const [mobileHeroActive, setMobileHeroActive] = useState(false);
   const [resourcesAnchorActive, setResourcesAnchorActive] = useState(false);
   const [resourceCarouselApi, setResourceCarouselApi] = useState<CarouselApi>();
   const [resourceSelectedIndex, setResourceSelectedIndex] = useState(0);
@@ -97,15 +95,6 @@ export default function Home() {
       window.cancelAnimationFrame(frame);
       window.history.scrollRestoration = previousScrollRestoration;
     };
-  }, []);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia(MOBILE_HERO_MEDIA_QUERY);
-    const updateMobileHero = () => setMobileHeroActive(mediaQuery.matches);
-
-    updateMobileHero();
-    mediaQuery.addEventListener("change", updateMobileHero);
-    return () => mediaQuery.removeEventListener("change", updateMobileHero);
   }, []);
 
   useEffect(() => {
@@ -146,48 +135,49 @@ export default function Home() {
         <section className="hero-image-container" aria-label="WellBeingFem frequency-based wellbeing">
           <div className="hero-media">
             <picture className="hero-picture">
-              {mobileHeroActive ? (
-                <img
-                  className="hero-picture__image hero-picture__image--mobile"
-                  src={MOBILE_HERO_FALLBACK_URL}
-                  srcSet={`${MOBILE_HERO_WEBP_480} 480w, ${MOBILE_HERO_WEBP_720} 720w`}
-                  sizes="100vw"
-                  alt="Frequency-Based Wellbeing for Women with Explore Sessions and Start with a Free Resource buttons"
-                  width="941"
-                  height="1672"
-                  loading="eager"
-                  fetchPriority="high"
-                  decoding="async"
-                />
-              ) : (
-                <img
-                  className="hero-picture__image hero-picture__image--desktop"
-                  src={DESKTOP_HERO_FALLBACK_URL}
-                  srcSet={`${DESKTOP_HERO_WEBP_1280} 1280w, ${DESKTOP_HERO_WEBP_1600} 1600w`}
-                  sizes="(min-width: 1025px) 1279px, 924px"
-                  alt="Frequency-Based Wellbeing for Women, with Explore Sessions and Start with a Free Resource buttons"
-                  width="1672"
-                  height="941"
-                  loading="eager"
-                  fetchPriority="high"
-                  decoding="async"
-                />
-              )}
+              <source
+                media="(max-width: 767px)"
+                type="image/webp"
+                srcSet={`${MOBILE_HERO_WEBP_480} 480w, ${MOBILE_HERO_WEBP_720} 720w`}
+                sizes="100vw"
+                width="941"
+                height="1672"
+              />
+              <source
+                media="(max-width: 767px)"
+                srcSet={MOBILE_HERO_FALLBACK_URL}
+                width="941"
+                height="1672"
+              />
+              <source
+                media="(min-width: 768px)"
+                type="image/webp"
+                srcSet={`${DESKTOP_HERO_WEBP_1280} 1280w, ${DESKTOP_HERO_WEBP_1600} 1600w`}
+                sizes="(min-width: 1025px) 1279px, 924px"
+                width="1672"
+                height="941"
+              />
+              <img
+                className="hero-picture__image"
+                src={DESKTOP_HERO_FALLBACK_URL}
+                alt="Frequency-Based Wellbeing for Women, with Explore Sessions and Start with a Free Resource buttons"
+                width="1672"
+                height="941"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+              />
             </picture>
-            {!mobileHeroActive && (
-              <>
-                <a
-                  className="hero-action-link hero-action-link--sessions"
-                  href="/#ondamed-service-card"
-                  aria-label="Explore ONDAMED sessions"
-                />
-                <a
-                  className="hero-action-link hero-action-link--resource"
-                  href="/resources"
-                  aria-label="Browse free WellBeingFem resources"
-                />
-              </>
-            )}
+            <a
+              className="hero-action-link hero-action-link--sessions"
+              href="/#ondamed-service-card"
+              aria-label="Explore ONDAMED sessions"
+            />
+            <a
+              className="hero-action-link hero-action-link--resource"
+              href="/resources"
+              aria-label="Browse free WellBeingFem resources"
+            />
             <a
               className="mobile-hero-button-link mobile-hero-button-link--sessions"
               href="/#ondamed-service-card"

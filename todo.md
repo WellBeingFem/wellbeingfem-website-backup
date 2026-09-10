@@ -551,3 +551,10 @@
 - [x] Recreate exactly two non-overlapping standard mobile HTML anchors: Explore Sessions to `/#ondamed-service-card` and Start with a Free Resource to `/resources`.
 - [x] Preserve a deliberate non-clickable gap around the gold flower and retain the current portrait image without altering any other website content.
 - [x] Test the two mobile touch targets, run regression checks, publish, and verify the live result.
+
+## Mobile Hero Interaction Root-Cause Repair
+
+- [x] Reproduce the reported mobile failure against the current implementation and inspect DOM duplication, hydration, stacking contexts, pointer interception, anchor geometry, and touch behavior.
+- [x] Identify and fix the underlying existing CSS/link/layering issue without adding another overlay or changing the hero image or visible content.
+- [x] Verify Explore Sessions reaches the homepage ONDAMED card and Start with a Free Resource opens the top of `/resources` using independent real mobile touch/pointer tests.
+- [ ] Run regression tests, type-check, production build, responsive visual checks, publish, and live-verify the root-cause repair.
