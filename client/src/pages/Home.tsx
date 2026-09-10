@@ -184,6 +184,16 @@ export default function Home() {
               href="/resources"
               aria-label="Browse free WellBeingFem resources"
             />
+            <a
+              className="mobile-hero-action-link mobile-hero-action-link--sessions"
+              href="/#ondamed-service-card"
+              aria-label="Explore ONDAMED sessions"
+            />
+            <a
+              className="mobile-hero-action-link mobile-hero-action-link--resource"
+              href="/resources"
+              aria-label="Browse free WellBeingFem resources"
+            />
           </div>
         </section>
 
@@ -237,7 +247,7 @@ export default function Home() {
                   <p>Healy Reiki session: €90</p>
                 </div>
                 <div className="service-card__actions">
-                  <a className="service-card-button" href="/research#healy">Learn More</a>
+                  <a className="service-card-button" href="/healy">Learn More</a>
                   <a className="service-card-button service-card-button--primary" href="/research#contact">Make a Booking</a>
                 </div>
               </div>
@@ -255,7 +265,6 @@ export default function Home() {
                 </div>
                 <div className="service-card__fees" aria-label="Guided Meditations access information">
                   <p>Free access on YouTube</p>
-                  <p>Duration: Varies by meditation</p>
                   <p>WellBeingFem Members’ Library — Coming Soon</p>
                 </div>
                 <div className="service-card__actions service-card__actions--single">

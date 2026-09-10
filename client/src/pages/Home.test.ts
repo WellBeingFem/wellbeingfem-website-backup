@@ -129,8 +129,11 @@ describe("Final pre-publication corrections", () => {
     expect(homeSource).toContain('width="941"');
     expect(homeSource).toContain('height="1672"');
     expect(homeSource).toContain('className="hero-action-link hero-action-link--sessions"');
-    expect(homeSource).toContain('href="/#ondamed-service-card"');
     expect(homeSource).toContain('className="hero-action-link hero-action-link--resource"');
+    expect(homeSource).toContain('className="mobile-hero-action-link mobile-hero-action-link--sessions"');
+    expect(homeSource).toContain('className="mobile-hero-action-link mobile-hero-action-link--resource"');
+    expect(homeSource.match(/className="mobile-hero-action-link/g)).toHaveLength(2);
+    expect(homeSource).toContain('href="/#ondamed-service-card"');
     expect(homeSource).toContain('href="/resources"');
     expect(homeSource).toContain('aria-label="Browse free WellBeingFem resources"');
     expect(homeSource).toContain('id="homepage-services"');
@@ -147,8 +150,10 @@ describe("Final pre-publication corrections", () => {
     expect(styleSource).toContain("display: block;\n  top: 73.54%;\n  height: 9.78%;\n  pointer-events: auto !important;\n  touch-action: manipulation;");
     expect(styleSource).toContain(".hero-action-link--sessions {\n  left: 5.60%;\n  width: 19.44%;");
     expect(styleSource).toContain(".hero-action-link--resource {\n  left: 26.44%;\n  width: 18.30%;");
-    expect(styleSource).toContain("top: 75.18%;\n    left: 8.82%;\n    width: 75.77%;\n    height: 6.28%;");
-    expect(styleSource).toContain("top: 82.48%;\n    left: 8.82%;\n    width: 75.77%;\n    height: 6.10%;");
+    expect(styleSource).toContain(".mobile-hero-action-link {\n    position: absolute;");
+    expect(styleSource).toContain(".mobile-hero-action-link--sessions {\n    top: 75.18%;\n    height: 6.28%;");
+    expect(styleSource).toContain(".mobile-hero-action-link--resource {\n    top: 82.48%;\n    height: 6.10%;");
+    expect(styleSource).toContain(".hero-action-link {\n    display: none;");
     expect(styleSource).toContain("border: 0 !important;\n  border-radius: 0 !important;\n  background: transparent !important;");
   });
 
@@ -157,6 +162,7 @@ describe("Final pre-publication corrections", () => {
     expect(homeSource).toContain('const GUIDED_MEDITATIONS_IMAGE_URL = "/manus-storage/WBFUpdatedYTQR_cf8434a2.png";');
     expect(homeSource).toContain("Explore guided meditation journeys and wellbeing practices through the WellBeingFem YouTube Channel.");
     expect(homeSource).toContain("WellBeingFem Members’ Library — Coming Soon");
+    expect(homeSource).not.toContain("Duration: Varies by meditation");
     expect(homeSource).toContain("Visit WellBeingFem on YouTube");
     expect(homeSource).toContain('href={WELLBEINGFEM_YOUTUBE_URL}');
     expect(homeSource).toContain('alt="WellBeingFem YouTube Channel QR code" width="1254" height="1254"');
@@ -190,7 +196,8 @@ describe("Primary CTA and hero performance update", () => {
   it("uses stronger green only for primary homepage actions", () => {
     expect(homeSource.match(/service-card-button service-card-button--primary/g)).toHaveLength(2);
     expect(homeSource).toContain('className="service-card-button" href="/ondamed">Learn More');
-    expect(homeSource).toContain('className="service-card-button" href="/research#healy">Learn More');
+    expect(homeSource).toContain('className="service-card-button" href="/healy">Learn More');
+    expect(styleSource).toContain(".service-card__fees {\n  margin-top: 20px;\n  padding-top: 15px;\n  border-top: 0;");
     expect(styleSource).toContain(".service-card-button--primary,\n.homepage-contact-button {\n  background: #3f6b4f;");
     expect(styleSource).toContain(".womens-wisdom__more,\n.womens-wisdom__launch-button {");
     expect(styleSource).toContain("background: var(--wbf-sage);");

@@ -338,6 +338,10 @@
   width: 18.30%;
 }
 
+.mobile-hero-action-link {
+  display: none;
+}
+
 .homepage-services {
   scroll-margin-top: 24px;
 }
@@ -473,7 +477,7 @@
 .service-card__fees {
   margin-top: 20px;
   padding-top: 15px;
-  border-top: 1px solid color-mix(in srgb, var(--wbf-gold) 36%, transparent);
+  border-top: 0;
 }
 
 .service-card__fees p {
@@ -2348,17 +2352,32 @@
     object-position: center;
   }
 
-  .hero-action-link--sessions {
-    top: 75.18%;
+    .hero-action-link {
+    display: none;
+  }
+  .mobile-hero-action-link {
+    position: absolute;
+    z-index: 3;
+    display: block;
     left: 8.82%;
     width: 75.77%;
+    pointer-events: auto;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    border: 0;
+    background: transparent;
+    color: transparent;
+    font-size: 0;
+    line-height: 0;
+    outline: none;
+    box-shadow: none;
+  }
+  .mobile-hero-action-link--sessions {
+    top: 75.18%;
     height: 6.28%;
   }
-
-  .hero-action-link--resource {
+  .mobile-hero-action-link--resource {
     top: 82.48%;
-    left: 8.82%;
-    width: 75.77%;
     height: 6.10%;
   }
 

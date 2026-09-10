@@ -526,3 +526,13 @@
 - [x] Correct the mobile hero touch targets so Explore Sessions reaches the homepage ONDAMED service card and Start with a Free Resource opens the top of `/resources`, without adding duplicate visible buttons.
 - [x] Preserve all other homepage and site content, layouts, navigation, SEO, images, footer, and desktop hero behavior unchanged.
 - [x] Run tests, type-check, build, responsive interaction checks, publish, and live-verify the scoped changes.
+
+## Homepage Hero Anchors and Card Cleanup
+
+- [x] Replace the current mobile hero overlays with two separate responsive HTML anchor links covering the visible mobile buttons without JavaScript click handlers or overlap.
+- [x] Make Explore Sessions link to `/#ondamed-service-card` and Start with a Free Resource link to `/resources`.
+- [x] Change the homepage Healy service-card Learn More link to `/healy`.
+- [x] Remove the Guided Meditations card duration / “varies by meditation” line only.
+- [x] Remove gold horizontal dividers from all homepage service cards while preserving the remaining card layout and spacing.
+- [ ] Run tests, type-check, build, responsive checks, publish, and live-verify the scoped homepage fixes.
+
