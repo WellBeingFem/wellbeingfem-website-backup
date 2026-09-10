@@ -512,3 +512,10 @@
 - [x] Run regression tests, type-check, build, and crawler-facing validation across public routes.
 - [x] Verify the live published HTML and crawl signals, document exact findings and changes, and report the outcome.
 
+
+## Homepage SSR Hydration Mismatch
+
+- [x] Reproduce the homepage hydration warning and isolate the server/client markup difference.
+- [x] Apply the smallest hydration-safe fix without changing visible design or page content.
+- [x] Add or update regression coverage and verify tests, type-check, build, and browser console output.
+- [ ] Publish and live-verify the homepage hydration fix, then document the cause and resolution.
