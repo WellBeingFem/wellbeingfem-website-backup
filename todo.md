@@ -557,4 +557,4 @@
 - [x] Reproduce the reported mobile failure against the current implementation and inspect DOM duplication, hydration, stacking contexts, pointer interception, anchor geometry, and touch behavior.
 - [x] Identify and fix the underlying existing CSS/link/layering issue without adding another overlay or changing the hero image or visible content.
 - [x] Verify Explore Sessions reaches the homepage ONDAMED card and Start with a Free Resource opens the top of `/resources` using independent real mobile touch/pointer tests.
-- [ ] Run regression tests, type-check, production build, responsive visual checks, publish, and live-verify the root-cause repair.
+- [x] Run regression tests, type-check, production build, responsive visual checks, publish, and live-verify the root-cause repair.
