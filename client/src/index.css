@@ -613,6 +613,75 @@
   letter-spacing: 0.08em;
 }
 
+.founders-note {
+  max-width: 800px;
+  margin: 76px auto 0;
+  padding: 36px 0 14px;
+  border-top: 1px solid color-mix(in srgb, var(--wbf-gold) 48%, transparent);
+  color: var(--wbf-green);
+  font-family: Georgia, "Times New Roman", serif;
+  text-align: left;
+}
+
+.founders-note__divider {
+  width: 74px;
+  height: 1px;
+  margin: 0 auto 23px;
+  background: var(--wbf-gold);
+}
+
+.founders-note h2 {
+  margin: 0;
+  color: var(--wbf-ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(29px, 3.1vw, 40px);
+  font-weight: 400;
+  line-height: 1.18;
+  text-align: center;
+}
+
+.founders-note > p,
+.founders-note blockquote {
+  margin: 20px 0 0;
+  color: var(--wbf-green);
+  font-size: clamp(16px, 1.5vw, 19px);
+  line-height: 1.62;
+}
+
+.founders-note blockquote {
+  margin: 26px 0 0;
+  padding: 18px 24px;
+  border-left: 2px solid var(--wbf-gold);
+  background: color-mix(in srgb, var(--wbf-cream-deep) 52%, transparent);
+}
+
+.founders-note blockquote p {
+  margin: 0;
+}
+
+.founders-note blockquote p + p {
+  margin-top: 13px;
+  color: var(--wbf-ink);
+  font-style: italic;
+}
+
+.founders-note cite {
+  display: block;
+  margin-top: 7px;
+  color: var(--wbf-gold);
+  font-style: normal;
+}
+
+.founders-note__signature {
+  color: var(--wbf-ink) !important;
+  font-size: clamp(17px, 1.6vw, 20px) !important;
+}
+
+.founders-note__signature span {
+  color: var(--wbf-gold);
+  font-size: 0.88em;
+}
+
 .homepage-resources {
   width: 100%;
   max-width: 980px;

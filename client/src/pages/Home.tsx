@@ -176,7 +176,7 @@ export default function Home() {
             </picture>
             <a
               className="hero-action-link hero-action-link--sessions"
-              href="#ondamed-service-card"
+              href="/#ondamed-service-card"
               aria-label="Explore ONDAMED sessions"
             />
             <a
@@ -434,6 +434,23 @@ export default function Home() {
               </div>
               <p className="womens-wisdom__notice">Be notified when Women’s Wisdom in Times of Change becomes available.</p>
             </div>
+          </section>
+
+          <section id="founders-note" className="founders-note" aria-labelledby="founders-note-heading">
+            <div className="founders-note__divider" aria-hidden="true" />
+            <h2 id="founders-note-heading">A Note from the Founder</h2>
+            <p>WellBeingFem grew from a long-standing curiosity about how we can actively cultivate our wellbeing in everyday life — particularly in the easier times, so that we are better resourced when life becomes more demanding.</p>
+            <p>I’m Suzanne, a Doctor of Education and an educator with more than 20 years of experience. Alongside my professional work, I have spent many years exploring approaches to health and wellbeing, from Reiki and meditation to natural, spiritual and frequency-based modalities.</p>
+            <p>WellBeingFem brings together the practices that have consistently supported me on my own wellbeing journey and which now form the heart of my personal wellbeing practice.</p>
+            <p>At the heart of WellBeingFem is the belief that every woman can take an active role in her own wellbeing, cultivate what supports her, and become more conscious of the frequency landscape she creates in everyday life.</p>
+            <blockquote>
+              <p>The words of Louise Hay well describe this philosophy:</p>
+              <p>“All that I seek is already within me.”</p>
+              <cite>— Louise Hay</cite>
+            </blockquote>
+            <p>My hope is that WellBeingFem encourages you to explore what supports you and to make those supportive practices part of the rhythm of your life.</p>
+            <p>Thank you for taking the time to explore WellBeingFem.</p>
+            <p className="founders-note__signature">Suzanne<br /><span>Founder, WellBeingFem</span></p>
           </section>
         </section>
       </main>

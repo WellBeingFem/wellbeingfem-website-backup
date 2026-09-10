@@ -519,3 +519,10 @@
 - [x] Apply the smallest hydration-safe fix without changing visible design or page content.
 - [x] Add or update regression coverage and verify tests, type-check, build, and browser console output.
 - [x] Publish and live-verify the homepage hydration fix, then document the cause and resolution.
+
+## Homepage Founder’s Note and Mobile Hero Links
+
+- [x] Add the exact Founder’s Note content near the bottom of the homepage before the footer, using the existing cream, sage, and gold styling.
+- [x] Correct the mobile hero touch targets so Explore Sessions reaches the homepage ONDAMED service card and Start with a Free Resource opens the top of `/resources`, without adding duplicate visible buttons.
+- [x] Preserve all other homepage and site content, layouts, navigation, SEO, images, footer, and desktop hero behavior unchanged.
+- [ ] Run tests, type-check, build, responsive interaction checks, publish, and live-verify the scoped changes.
