@@ -113,33 +113,28 @@ describe("Homepage opening position", () => {
 });
 
 describe("Final pre-publication corrections", () => {
-  it("uses the supplied complete hero with two transparent, accessible action hotspots", () => {
+  it("uses the supplied button-free mobile hero with two genuine accessible mobile actions", () => {
     expect(homeSource).toContain('const DESKTOP_HERO_FALLBACK_URL = "/manus-storage/GreenHeroDesktop_79969576.png";');
     expect(homeSource).toContain('const DESKTOP_HERO_WEBP_1280 = "/manus-storage/GreenHeroDesktop-1280_752dae66.webp";');
     expect(homeSource).toContain('const DESKTOP_HERO_WEBP_1600 = "/manus-storage/GreenHeroDesktop-1600_66805239.webp";');
-    expect(homeSource).toContain('const MOBILE_HERO_FALLBACK_URL = "/manus-storage/mobileHerowithflower_fbd04612.png";');
-    expect(homeSource).toContain('const MOBILE_HERO_WEBP_480 = "/manus-storage/mobileHerowithflower-480_c468ad6b.webp";');
-    expect(homeSource).toContain('const MOBILE_HERO_WEBP_720 = "/manus-storage/mobileHerowithflower-720_46706bfe.webp";');
+    expect(homeSource).toContain('const MOBILE_HERO_URL = "/manus-storage/MobileforManus_6583f17d.png";');
     expect(homeSource).not.toContain("mobileHeroActive");
     expect(homeSource).not.toContain("MOBILE_HERO_MEDIA_QUERY");
     expect(homeSource).toContain('media="(max-width: 767px)"');
-    expect(homeSource).toContain('type="image/webp"');
     expect(homeSource).toContain('className="hero-picture__image"');
-    expect(homeSource).toContain('srcSet={`${MOBILE_HERO_WEBP_480} 480w, ${MOBILE_HERO_WEBP_720} 720w`}');
+    expect(homeSource).toContain('srcSet={MOBILE_HERO_URL}');
     expect(homeSource).toContain('srcSet={`${DESKTOP_HERO_WEBP_1280} 1280w, ${DESKTOP_HERO_WEBP_1600} 1600w`}');
-    expect(homeSource).toContain('sizes="100vw"');
     expect(homeSource).toContain('width="941"');
     expect(homeSource).toContain('height="1672"');
     expect(homeSource).toContain('className="hero-action-link hero-action-link--sessions"');
     expect(homeSource).toContain('className="hero-action-link hero-action-link--resource"');
-    expect(homeSource).toContain('className="mobile-hero-button-link mobile-hero-button-link--sessions"');
-    expect(homeSource).toContain('className="mobile-hero-button-link mobile-hero-button-link--resource"');
-    expect(homeSource.match(/className="mobile-hero-button-link/g)).toHaveLength(2);
-    expect(homeSource).not.toContain('mobile-hero-anchor');
-    expect(homeSource).not.toContain('mobile-hero-action-link');
+    expect(homeSource).not.toContain('mobile-hero-button-link');
+    expect(homeSource).toContain('className="mobile-hero-actions"');
+    expect(homeSource).toContain('className="mobile-hero-action mobile-hero-action--sessions" href="/#ondamed-service-card"');
+    expect(homeSource).toContain('className="mobile-hero-action mobile-hero-action--resource" href="/resources"');
     expect(homeSource).toContain('href="/#ondamed-service-card"');
     expect(homeSource).toContain('href="/resources"');
-    expect(homeSource).toContain('aria-label="Browse free WellBeingFem resources"');
+    expect(homeSource).toContain('aria-label="WellBeingFem homepage actions"');
     expect(homeSource).toContain('id="homepage-services"');
     expect(homeSource).toContain('id="ondamed-service-card"');
     expect(homeSource).toContain('id="founders-note"');
@@ -154,10 +149,14 @@ describe("Final pre-publication corrections", () => {
     expect(styleSource).toContain("display: block;\n  top: 73.54%;\n  height: 9.78%;\n  pointer-events: auto !important;\n  touch-action: manipulation;");
     expect(styleSource).toContain(".hero-action-link--sessions {\n  left: 5.60%;\n  width: 19.44%;");
     expect(styleSource).toContain(".hero-action-link--resource {\n  left: 26.44%;\n  width: 18.30%;");
-    expect(styleSource).toContain(".mobile-hero-button-link {\n    position: absolute;");
-    expect(styleSource).toContain(".mobile-hero-button-link--sessions {\n    top: 72.35%;\n    height: 6.10%;");
-    expect(styleSource).toContain(".mobile-hero-button-link--resource {\n    top: 83.18%;\n    height: 6.40%;");
-    expect(styleSource).toContain("width: 82.0%;");
+    expect(homeSource).not.toContain("mobile-hero-button-link");
+    expect(homeSource).toContain('className="mobile-hero-actions"');
+    expect(homeSource).toContain('className="mobile-hero-action mobile-hero-action--sessions" href="/#ondamed-service-card"');
+    expect(homeSource).toContain('className="mobile-hero-action mobile-hero-action--resource" href="/resources"');
+    expect(styleSource).toContain(".mobile-hero-actions {\n    position: relative;");
+    expect(styleSource).toContain(".mobile-hero-action--sessions {\n    background: #3f6b4f;");
+    expect(styleSource).toContain(".mobile-hero-action--resource {\n    background: var(--wbf-cream);");
+    expect(styleSource).toContain("width: min(82%, 390px);");
     expect(styleSource).toContain(".hero-action-link {\n    display: none;");
     expect(styleSource).toContain("border: 0 !important;\n  border-radius: 0 !important;\n  background: transparent !important;");
   });
@@ -183,8 +182,9 @@ describe("Final pre-publication corrections", () => {
 describe("Primary CTA and hero performance update", () => {
   it("serves the supplied hero unchanged, eagerly, and proportionally at every breakpoint", () => {
     expect(homeSource).toContain('src={DESKTOP_HERO_FALLBACK_URL}');
-    expect(homeSource).toContain('srcSet={MOBILE_HERO_FALLBACK_URL}');
-    expect(homeSource).toContain('srcSet={`${MOBILE_HERO_WEBP_480} 480w, ${MOBILE_HERO_WEBP_720} 720w`}');
+    expect(homeSource).toContain('const MOBILE_HERO_URL = "/manus-storage/MobileforManus_6583f17d.png";');
+    expect(homeSource).toContain('srcSet={MOBILE_HERO_URL}');
+    expect(homeSource).not.toContain("MOBILE_HERO_WEBP_480");
     expect(homeSource).toContain('srcSet={`${DESKTOP_HERO_WEBP_1280} 1280w, ${DESKTOP_HERO_WEBP_1600} 1600w`}');
     expect(homeSource).toContain('loading="eager"');
     expect(homeSource).toContain('fetchPriority="high"');

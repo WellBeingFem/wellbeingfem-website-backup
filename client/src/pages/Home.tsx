@@ -17,9 +17,7 @@ import {
 const DESKTOP_HERO_FALLBACK_URL = "/manus-storage/GreenHeroDesktop_79969576.png";
 const DESKTOP_HERO_WEBP_1280 = "/manus-storage/GreenHeroDesktop-1280_752dae66.webp";
 const DESKTOP_HERO_WEBP_1600 = "/manus-storage/GreenHeroDesktop-1600_66805239.webp";
-const MOBILE_HERO_FALLBACK_URL = "/manus-storage/mobileHerowithflower_fbd04612.png";
-const MOBILE_HERO_WEBP_480 = "/manus-storage/mobileHerowithflower-480_c468ad6b.webp";
-const MOBILE_HERO_WEBP_720 = "/manus-storage/mobileHerowithflower-720_46706bfe.webp";
+const MOBILE_HERO_URL = "/manus-storage/MobileforManus_6583f17d.png";
 const ONDAMED_IMAGE_URL = "/manus-storage/ondamedwlogo_d68ec81a.png";
 const HEALY_IMAGE_URL = "/manus-storage/Healyandphone_52ac329b.png";
 const GUIDED_MEDITATIONS_IMAGE_URL = "/manus-storage/WBFUpdatedYTQR_cf8434a2.png";
@@ -137,15 +135,7 @@ export default function Home() {
             <picture className="hero-picture">
               <source
                 media="(max-width: 767px)"
-                type="image/webp"
-                srcSet={`${MOBILE_HERO_WEBP_480} 480w, ${MOBILE_HERO_WEBP_720} 720w`}
-                sizes="100vw"
-                width="941"
-                height="1672"
-              />
-              <source
-                media="(max-width: 767px)"
-                srcSet={MOBILE_HERO_FALLBACK_URL}
+                srcSet={MOBILE_HERO_URL}
                 width="941"
                 height="1672"
               />
@@ -160,7 +150,7 @@ export default function Home() {
               <img
                 className="hero-picture__image"
                 src={DESKTOP_HERO_FALLBACK_URL}
-                alt="Frequency-Based Wellbeing for Women, with Explore Sessions and Start with a Free Resource buttons"
+                alt="Frequency-Based Wellbeing for Women"
                 width="1672"
                 height="941"
                 loading="eager"
@@ -178,16 +168,14 @@ export default function Home() {
               href="/resources"
               aria-label="Browse free WellBeingFem resources"
             />
-            <a
-              className="mobile-hero-button-link mobile-hero-button-link--sessions"
-              href="/#ondamed-service-card"
-              aria-label="Explore ONDAMED sessions"
-            />
-            <a
-              className="mobile-hero-button-link mobile-hero-button-link--resource"
-              href="/resources"
-              aria-label="Browse free WellBeingFem resources"
-            />
+            <div className="mobile-hero-actions" role="group" aria-label="WellBeingFem homepage actions">
+              <a className="mobile-hero-action mobile-hero-action--sessions" href="/#ondamed-service-card">
+                Explore Sessions
+              </a>
+              <a className="mobile-hero-action mobile-hero-action--resource" href="/resources">
+                Start with a Free Resource
+              </a>
+            </div>
           </div>
         </section>
 

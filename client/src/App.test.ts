@@ -18,15 +18,14 @@ describe("WellBeingFem production readiness", () => {
     expect(robots).toContain("Sitemap: https://wellbeingfem.com/sitemap.xml");
   });
 
-  it("preloads the optimized desktop hero and responsive mobile hero without changing desktop delivery", () => {
+  it("preloads the optimized desktop hero and supplied mobile hero without changing desktop delivery", () => {
     const indexHtml = readProjectFile("client/index.html");
 
     expect(indexHtml).toContain('href="/manus-storage/GreenHeroDesktop-1600_66805239.webp"');
     expect(indexHtml).toContain('media="(min-width: 1025px)"');
     expect(indexHtml).toContain('imagesrcset="/manus-storage/GreenHeroDesktop-1280_752dae66.webp 1280w, /manus-storage/GreenHeroDesktop-1600_66805239.webp 1600w"');
-    expect(indexHtml).toContain('href="/manus-storage/mobileHerowithflower-720_46706bfe.webp"');
-    expect(indexHtml).toContain('imagesrcset="/manus-storage/mobileHerowithflower-480_c468ad6b.webp 480w, /manus-storage/mobileHerowithflower-720_46706bfe.webp 720w"');
-    expect(indexHtml).toContain('imagesizes="100vw"');
+    expect(indexHtml).toContain('href="/manus-storage/MobileforManus_6583f17d.png"');
+    expect(indexHtml).toContain('type="image/png"');
     expect(indexHtml).toContain('media="(max-width: 767px)"');
     expect(indexHtml.match(/fetchpriority="high"/g)).toHaveLength(2);
   });

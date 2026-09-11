@@ -558,3 +558,11 @@
 - [x] Identify and fix the underlying existing CSS/link/layering issue without adding another overlay or changing the hero image or visible content.
 - [x] Verify Explore Sessions reaches the homepage ONDAMED card and Start with a Free Resource opens the top of `/resources` using independent real mobile touch/pointer tests.
 - [x] Run regression tests, type-check, production build, responsive visual checks, publish, and live-verify the root-cause repair.
+
+## Button-Free Mobile Hero and Genuine Action Buttons
+
+- [x] Upload the supplied `MobileforManus.png` unchanged to persistent managed storage and use it only as the mobile homepage hero.
+- [x] Remove the mobile hero’s invisible action anchors and create two visible, responsive, genuine HTML anchor buttons beneath the existing mobile hero artwork.
+- [x] Link Explore Sessions to `/#ondamed-service-card` and Start with a Free Resource to `/resources`, preserving independent mobile touch targets and accessible button labels.
+- [x] Preserve the desktop hero, supplied mobile image composition, navigation, footer, SEO, and all unrelated website content unchanged.
+- [ ] Run regression tests, type-check, build, responsive visual/touch checks, publish, and live-verify the mobile-only update.

@@ -338,7 +338,7 @@
   width: 18.30%;
 }
 
-.mobile-hero-button-link {
+.mobile-hero-actions {
   display: none;
 }
 
@@ -2355,30 +2355,57 @@
     .hero-action-link {
     display: none;
   }
-  .mobile-hero-button-link {
-    position: absolute;
+  .mobile-hero-actions {
+    position: relative;
     z-index: 3;
-    display: block;
-    left: 9.0%;
-    width: 82.0%;
-    pointer-events: auto;
+    display: grid;
+    gap: 11px;
+    width: min(82%, 390px);
+    margin: -38vw auto 0;
+    padding: 0 0 28px;
+    line-height: 1.2;
+  }
+
+  .mobile-hero-action {
+    display: flex;
+    min-height: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+    border: 1px solid var(--wbf-gold);
+    border-radius: 10px;
+    font-family: var(--wbf-serif);
+    font-size: clamp(17px, 4.6vw, 21px);
+    font-weight: 500;
+    letter-spacing: 0.035em;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
-    border: 0;
-    background: transparent;
-    color: transparent;
-    font-size: 0;
-    line-height: 0;
-    outline: none;
-    box-shadow: none;
+    transition:
+      background-color 160ms cubic-bezier(0.23, 1, 0.32, 1),
+      color 160ms cubic-bezier(0.23, 1, 0.32, 1),
+      transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
   }
-  .mobile-hero-button-link--sessions {
-    top: 72.35%;
-    height: 6.10%;
+
+  .mobile-hero-action--sessions {
+    background: #3f6b4f;
+    color: var(--wbf-cream);
   }
-  .mobile-hero-button-link--resource {
-    top: 83.18%;
-    height: 6.40%;
+
+  .mobile-hero-action--resource {
+    background: var(--wbf-cream);
+    color: var(--wbf-green);
+  }
+
+  .mobile-hero-action:active {
+    transform: scale(0.98);
+  }
+
+  .mobile-hero-action:focus-visible {
+    outline: 2px solid var(--wbf-gold);
+    outline-offset: 3px;
   }
 
   .page-main__inner {
