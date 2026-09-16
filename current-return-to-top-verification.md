@@ -11,3 +11,7 @@ The control is positioned at the lower right above the footer in the existing cr
 Full-page desktop and mobile captures showed the control above the shared footer on all six public routes. A native click verification then tested desktop and mobile routes individually. In all 12 checks, the link existed, was the topmost element at its centre, appeared above the footer, retained the `#page-top` destination, and returned the viewport to scroll position zero with the header visible.
 
 The complete test suite passed: 67 tests across 16 files. TypeScript validation and the production build also passed.
+
+## Live verification
+
+After the domains became available, `wellbeingfem.com` served the shared control on every public route. Native desktop and mobile checks confirmed it above each footer and returned pages to `#page-top`. The homepage desktop checker initially recorded a stale hit-test result during propagation; a direct live browser interaction then confirmed the rendered button is visible at the lower right and its native link returns the homepage to the header. The remaining route and breakpoint checks were topmost and passed without a discrepancy.

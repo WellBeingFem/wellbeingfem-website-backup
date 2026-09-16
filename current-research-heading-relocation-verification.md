@@ -5,3 +5,5 @@ The single existing `Research & References` heading and its existing introductor
 The existing heading treatment was retained, with only a small adjacent section-spacing rule so the research content begins directly after the relocated introduction. Full-page desktop (1280px), tablet (768px), and mobile (375px) captures confirmed the requested sequence: Contact form → Policies & Client Information → Research & References → existing research content → footer, with no overflow.
 
 The focused relocation test passed. The complete suite then passed with 68 tests across 16 files, as did TypeScript validation and the production build.
+
+The published Research page was verified on both `wellbeingfem.com` and the project domain after propagation. It now presents the Contact form first, then Policies & Client Information, then the single Research & References heading with its original introductory paragraph, followed by the existing research navigation and content.
