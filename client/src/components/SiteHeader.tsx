@@ -64,7 +64,7 @@ export default function SiteHeader() {
   }, []);
 
   return (
-    <header className="site-header">
+    <header id="page-top" className="site-header">
       <div className="site-header__inner">
         <a className="brand-link" href="/" aria-label="WellBeingFem home">
           <img

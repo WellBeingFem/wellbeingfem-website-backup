@@ -6,6 +6,10 @@ const styles = readFileSync(resolve(process.cwd(), "client/src/index.css"), "utf
 const header = readFileSync(resolve(process.cwd(), "client/src/components/SiteHeader.tsx"), "utf8");
 
 describe("WellBeingFem navigation color hierarchy", () => {
+  it("provides the shared top-page anchor used by the footer return action", () => {
+    expect(header).toContain('<header id="page-top" className="site-header">');
+  });
+
   it("keeps desktop navigation, menu triggers, and mobile menu controls out of the primary action green", () => {
     expect(styles).toContain(".desktop-submenu {\n  position: absolute;");
     expect(styles).toContain("background: var(--wbf-cream);");

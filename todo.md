@@ -566,3 +566,10 @@
 - [x] Link Explore Sessions to `/#ondamed-service-card` and Start with a Free Resource to `/resources`, preserving independent mobile touch targets and accessible button labels.
 - [x] Preserve the desktop hero, supplied mobile image composition, navigation, footer, SEO, and all unrelated website content unchanged.
 - [x] Run regression tests, type-check, build, responsive visual/touch checks, publish, and live-verify the mobile-only update.
+
+## Shared Return to Top of Page Button
+
+- [x] Add a shared green Return to Top of Page button at the lower right above the footer on every public WellBeingFem page.
+- [x] Use a real anchor destination that returns visitors to the top while preserving existing routes, content, layout, images, navigation, and footer.
+- [x] Verify the button’s placement, visibility, and return-to-top behavior across the homepage, ONDAMED, Healy, Guided Meditations, Resources, and Research at desktop, tablet, and mobile widths.
+- [ ] Run regression tests, type-check, build, publish, and live-verify the shared control.

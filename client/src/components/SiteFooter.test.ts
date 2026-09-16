@@ -20,4 +20,12 @@ describe("WellBeingFem shared footer", () => {
     expect(styles).toContain(".footer-navigation a {\n  color: var(--wbf-cream);");
     expect(styles).toContain("color: #f3dfac !important;");
   });
+
+  it("adds one shared lower-right native return-to-top link above every footer", () => {
+    expect(footer).toContain('<div className="page-return-to-top">');
+    expect(footer).toContain('<a href="#page-top">Return to Top of Page</a>');
+    expect(styles).toContain(".page-return-to-top {\n  width: 100%;\n  display: flex;\n  justify-content: flex-end;");
+    expect(styles).toContain(".page-return-to-top a {\n  display: inline-flex;\n  min-height: 44px;");
+    expect(styles).toContain("background: #3F6B4F;");
+  });
 });

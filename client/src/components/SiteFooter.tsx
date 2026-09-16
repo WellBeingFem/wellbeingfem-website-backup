@@ -17,37 +17,42 @@ const footerLinks = [
 
 export default function SiteFooter() {
   return (
-    <footer className="site-footer">
-      <div className="site-footer__inner">
-        <div className="site-footer__identity">
-          <a className="footer-brand-link" href="/" aria-label="WellBeingFem home">
-            <img
-              className="footer-logo"
-              src={LOGO_URL}
-              alt="WellBeingFem"
-              width="1536"
-              height="1024"
-            />
-          </a>
-          <div className="footer-copy">
-            <p className="footer-name">WellBeingFem</p>
-            <p className="footer-tagline">Rest <span aria-hidden="true">•</span> Reflect <span aria-hidden="true">•</span> Renew</p>
-          </div>
-        </div>
-        <div className="footer-details">
-          <a href="https://wellbeingfem.com">wellbeingfem.com</a>
-          <a href="mailto:WellBeingFem@gmail.com">WellBeingFem@gmail.com</a>
-        </div>
-        <nav className="footer-navigation" aria-label="Footer navigation">
-          <ul>
-            {footerLinks.map((link) => (
-              <li key={link.label}>
-                <a href={link.href}>{link.label}</a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+    <>
+      <div className="page-return-to-top">
+        <a href="#page-top">Return to Top of Page</a>
       </div>
-    </footer>
+      <footer className="site-footer">
+        <div className="site-footer__inner">
+          <div className="site-footer__identity">
+            <a className="footer-brand-link" href="/" aria-label="WellBeingFem home">
+              <img
+                className="footer-logo"
+                src={LOGO_URL}
+                alt="WellBeingFem"
+                width="1536"
+                height="1024"
+              />
+            </a>
+            <div className="footer-copy">
+              <p className="footer-name">WellBeingFem</p>
+              <p className="footer-tagline">Rest <span aria-hidden="true">•</span> Reflect <span aria-hidden="true">•</span> Renew</p>
+            </div>
+          </div>
+          <div className="footer-details">
+            <a href="https://wellbeingfem.com">wellbeingfem.com</a>
+            <a href="mailto:WellBeingFem@gmail.com">WellBeingFem@gmail.com</a>
+          </div>
+          <nav className="footer-navigation" aria-label="Footer navigation">
+            <ul>
+              {footerLinks.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href}>{link.label}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </>
   );
 }
