@@ -49,12 +49,6 @@ export default function Research() {
             aria-label="WellBeingFem Contact Form"
             onSubmit={handleSubmit}
           >
-            <header className="contact-form-heading">
-              <p className="page-eyebrow">WellBeingFem</p>
-              <h1>Research &amp; References</h1>
-              <p>This page brings together research and references related to the approaches discussed across WellBeingFem.</p>
-            </header>
-
             <fieldset className="contact-fieldset">
               <legend>1. Contact Details</legend>
               <div className="contact-form-grid">
@@ -183,6 +177,12 @@ export default function Research() {
               </div>
             ) : null}
           </section>
+
+          <header className="contact-form-heading research-page-heading">
+            <p className="page-eyebrow">WellBeingFem</p>
+            <h1>Research &amp; References</h1>
+            <p>This page brings together research and references related to the approaches discussed across WellBeingFem.</p>
+          </header>
 
           <ResearchResources />
         </div>

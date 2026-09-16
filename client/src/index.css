@@ -1379,6 +1379,14 @@
   scroll-margin-top: 24px;
 }
 
+.research-page-heading {
+  margin-top: 68px;
+}
+
+.research-page-heading + .research-content-anchor {
+  margin-top: 34px;
+}
+
 .policies-client-information {
   margin-top: 68px;
   scroll-margin-top: 120px;
