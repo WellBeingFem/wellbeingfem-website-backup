@@ -1,0 +1,53 @@
+{
+  "projectName": "WellBeingFem",
+  "projectPathAtSnapshot": "/home/ubuntu/wellbeingfem-recovery-step1",
+  "snapshotCommit": "af602cd2617e119ea217993985a167cb4278d7b1",
+  "template": "web-db-user",
+  "capabilities": ["db", "server", "user"],
+  "commands": {
+    "development": "pnpm run dev",
+    "build": "pnpm run build",
+    "start": "pnpm start",
+    "typeCheck": "pnpm run check",
+    "test": "pnpm exec vitest run"
+  },
+  "runtime": {
+    "node": "22.x",
+    "packageManager": "pnpm",
+    "database": "MySQL/TiDB compatible",
+    "frontend": "React 19 + TypeScript + Vite + Tailwind CSS",
+    "router": "Wouter",
+    "server": "Express",
+    "rendering": "build-time pre-rendering with a server-side render entry"
+  },
+  "publicDomains": [
+    "https://wellbeingfem.com",
+    "https://www.wellbeingfem.com",
+    "https://wellfem1-ncaplfpr.manus.space"
+  ],
+  "requiredEnvironmentKeys": [
+    "DATABASE_URL",
+    "JWT_SECRET"
+  ],
+  "manusManagedEnvironmentKeysObserved": [
+    "BUILT_IN_FORGE_API_KEY",
+    "BUILT_IN_FORGE_API_URL",
+    "OAUTH_SERVER_URL",
+    "OWNER_NAME",
+    "OWNER_OPEN_ID",
+    "VITE_ANALYTICS_ENDPOINT",
+    "VITE_ANALYTICS_WEBSITE_ID",
+    "VITE_APP_ID",
+    "VITE_APP_LOGO",
+    "VITE_APP_TITLE",
+    "VITE_FRONTEND_FORGE_API_KEY",
+    "VITE_FRONTEND_FORGE_API_URL",
+    "VITE_OAUTH_PORTAL_URL"
+  ],
+  "secretValuesIncluded": false,
+  "notes": [
+    "Database and secret values are deliberately excluded from this file.",
+    "The existing project remote is a Manus artifact remote, not a user-owned GitHub remote.",
+    "The source snapshot includes a Git bundle for import into a user-owned private GitHub repository."
+  ]
+}

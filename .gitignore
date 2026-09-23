@@ -111,3 +111,12 @@ temp/
 # Manus version file (auto-generated, not part of source)
 client/public/__manus__/version.json
 .project-config.json
+
+# Protected migration data: never commit personal records or runtime secrets.
+migration/private-data/
+migration/database-data/
+*resource-request-submissions*.csv
+*resource-request-submissions*.json
+*resource-email-consent-records*.csv
+*resource-email-consent-records*.json
+*database-full.sql

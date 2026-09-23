@@ -1,0 +1,24 @@
+HTTP/2 301 
+date: Wed, 23 Sep 2026 18:05:53 GMT
+location: https://wellbeingfem.com/
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+x-content-type-options: nosniff
+server: cloudflare
+cf-ray: a3fb7ae32964a470-MRS
+
+HTTP/2 200 
+date: Wed, 23 Sep 2026 18:05:56 GMT
+content-type: text/html; charset=UTF-8
+cf-ray: a3fb7af709f60109-MRS
+accept-ranges: bytes
+cache-control: no-cache, no-store, must-revalidate
+x-content-type-options: nosniff
+expires: 0
+last-modified: Wed, 16 Sep 2026 17:55:38 GMT
+server: cloudflare
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+pragma: no-cache
+x-cloud-trace-context: aa1aea23dbb30a060b3a79dd5d0cc8f0;o=1
+x-manus-proxy-mode: transparent/1
+x-powered-by: Express
+

@@ -1,0 +1,25 @@
+HTTP/1.1 301 Moved Permanently
+Date: Wed, 23 Sep 2026 18:05:47 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Location: https://wellbeingfem.com/
+X-Content-Type-Options: nosniff
+Server: cloudflare
+CF-RAY: a3fb7ac0fab7f5a9-MRS
+
+HTTP/2 200 
+date: Wed, 23 Sep 2026 18:05:49 GMT
+content-type: text/html; charset=UTF-8
+cf-ray: a3fb7ad1d8c4e22f-MRS
+accept-ranges: bytes
+cache-control: no-cache, no-store, must-revalidate
+x-content-type-options: nosniff
+expires: 0
+last-modified: Wed, 16 Sep 2026 17:55:38 GMT
+server: cloudflare
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+pragma: no-cache
+x-cloud-trace-context: d6f6cc026e91dbe1ef3d1f0121fff416
+x-manus-proxy-mode: transparent/1
+x-powered-by: Express
+
